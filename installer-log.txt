@@ -1,0 +1,300 @@
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* VERSION: 1.2.26
+* STEP-1 START @ 08:05:31
+* NOTICE: Do NOT post this data to public sites or forums
+********************************************************************************
+PHP VERSION:	5.6.30 | SAPI: apache2handler
+PHP TIME LIMIT:	[0] time limit restriction disabled
+PHP MEMORY:	2048M | SUHOSIN: disabled
+SERVER:		Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30
+DOC ROOT:	C:/xampp/htdocs/mybooktravels.com
+DOC ROOT 755:	true
+LOG FILE 644:	true
+REQUEST URL:	http://localhost/mybooktravels.com/installer-backup.php
+--------------------------------------
+ARCHIVE EXTRACTION
+--------------------------------------
+NAME:	20171011_mybooktravels_d86c4384984427978977171011193611_archive.zip
+SIZE:	123.77MB
+ZIP:	Enabled (ZipArchive Support)
+
+** PACKAGE EXTRACTION IS IN MANUAL MODE ** 
+
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to *.171011200531.orig
+- Reset of .htaccess/web.config files
+
+STEP-1 COMPLETE @ 08:05:31 - RUNTIME: 0.0194 sec.
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-2 START @ 08:05:58
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+--------------------------------------
+DATABASE ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 10.1.21 -- Build Server: 5.6.35
+FILE SIZE:	database.sql (4.76MB) - installer-data.sql (4.76MB)
+TIMEOUT:	5000
+MAXPACK:	1048576
+SQLMODE:	NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[C:/xampp/htdocs/mybooktravels.com/installer-data.sql]
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+TABLES DROPPED:	88
+QUERIES RAN:	778
+
+mbt_bp_activity: (61)
+mbt_bp_activity_meta: (89)
+mbt_bp_friends: (2)
+mbt_bp_groups: (7)
+mbt_bp_groups_groupmeta: (33)
+mbt_bp_groups_members: (9)
+mbt_bp_messages_messages: (2)
+mbt_bp_messages_meta: (1)
+mbt_bp_messages_notices: (0)
+mbt_bp_messages_recipients: (3)
+mbt_bp_notifications: (13)
+mbt_bp_notifications_meta: (0)
+mbt_bp_user_blogs: (23)
+mbt_bp_user_blogs_blogmeta: (9)
+mbt_bp_xprofile_data: (8)
+mbt_bp_xprofile_fields: (2)
+mbt_bp_xprofile_groups: (1)
+mbt_bp_xprofile_meta: (10)
+mbt_bwg_album: (0)
+mbt_bwg_album_gallery: (0)
+mbt_bwg_gallery: (0)
+mbt_bwg_image: (0)
+mbt_bwg_image_comment: (0)
+mbt_bwg_image_rate: (0)
+mbt_bwg_image_tag: (0)
+mbt_bwg_shortcode: (0)
+mbt_bwg_theme: (2)
+mbt_commentmeta: (77)
+mbt_comments: (24)
+mbt_create_map: (1)
+mbt_duplicator_packages: (2)
+mbt_geo_mashup_administrative_names: (0)
+mbt_geo_mashup_location_relationships: (0)
+mbt_geo_mashup_locations: (1)
+mbt_gglcptch_whitelist: (0)
+mbt_gmwd_circles: (0)
+mbt_gmwd_maps: (1)
+mbt_gmwd_mapstyles: (0)
+mbt_gmwd_markercategories: (0)
+mbt_gmwd_markers: (2)
+mbt_gmwd_options: (10)
+mbt_gmwd_polygons: (0)
+mbt_gmwd_polylines: (1)
+mbt_gmwd_rectangles: (0)
+mbt_gmwd_shortcodes: (2)
+mbt_gmwd_themes: (1)
+mbt_group_map: (0)
+mbt_links: (0)
+mbt_loginizer_logs: (25)
+mbt_map_locations: (3)
+mbt_nwm_custom: (3)
+mbt_nwm_routes: (3)
+mbt_options: (1863)
+mbt_postmeta: (2528)
+mbt_posts: (677)
+mbt_revslider_css: (109)
+mbt_revslider_layer_animations: (0)
+mbt_revslider_navigations: (0)
+mbt_revslider_sliders: (0)
+mbt_revslider_slides: (0)
+mbt_revslider_static_slides: (0)
+mbt_rt_rtm_activity: (14)
+mbt_rt_rtm_api: (0)
+mbt_rt_rtm_media: (15)
+mbt_rt_rtm_media_interaction: (20)
+mbt_rt_rtm_media_meta: (7)
+mbt_signups: (1362)
+mbt_taxonomymeta: (0)
+mbt_term_relationships: (62)
+mbt_term_taxonomy: (33)
+mbt_termmeta: (0)
+mbt_terms: (33)
+mbt_tg_item_elements: (0)
+mbt_tg_item_skins: (0)
+mbt_usermeta: (203)
+mbt_users: (6)
+mbt_weforms_entries: (3)
+mbt_weforms_entrymeta: (9)
+mbt_wpgmza: (1)
+mbt_wpgmza_categories: (0)
+mbt_wpgmza_category_maps: (0)
+mbt_wpgmza_maps: (1)
+mbt_wpgmza_polygon: (0)
+mbt_wpgmza_polylines: (0)
+mbt_wpuf_transaction: (0)
+mbt_xyz_ihs_short_code: (1)
+mbt_yoast_seo_links: (64)
+mbt_yoast_seo_meta: (33)
+
+Removed '1333' cache/transient rows
+
+CREATE/INSTALL RUNTIME: 2.6087 sec.
+STEP-2 COMPLETE @ 08:06:02 - RUNTIME: 3.2036 sec.
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-3 START @ 08:06:11
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	latin1
+CHARSET CLIENT:	utf8
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+mbt_bp_activity~ (61)
+mbt_bp_activity_meta~ (89)
+mbt_bp_friends~ (2)
+mbt_bp_groups~ (7)
+mbt_bp_groups_groupmeta~ (33)
+mbt_bp_groups_members~ (9)
+mbt_bp_messages_messages~ (2)
+mbt_bp_messages_meta~ (1)
+mbt_bp_messages_notices^ (0)
+mbt_bp_messages_recipients~ (3)
+mbt_bp_notifications~ (13)
+mbt_bp_notifications_meta^ (0)
+mbt_bp_user_blogs~ (23)
+mbt_bp_user_blogs_blogmeta~ (9)
+mbt_bp_xprofile_data~ (8)
+mbt_bp_xprofile_fields~ (2)
+mbt_bp_xprofile_groups~ (1)
+mbt_bp_xprofile_meta~ (10)
+mbt_bwg_album^ (0)
+mbt_bwg_album_gallery^ (0)
+mbt_bwg_gallery^ (0)
+mbt_bwg_image^ (0)
+mbt_bwg_image_comment^ (0)
+mbt_bwg_image_rate^ (0)
+mbt_bwg_image_tag^ (0)
+mbt_bwg_shortcode^ (0)
+mbt_bwg_theme~ (2)
+mbt_commentmeta~ (77)
+mbt_comments~ (24)
+mbt_create_map~ (1)
+mbt_duplicator_packages^ (0)
+mbt_geo_mashup_administrative_names^ (0)
+mbt_geo_mashup_location_relationships^ (0)
+mbt_geo_mashup_locations~ (1)
+mbt_gglcptch_whitelist^ (0)
+mbt_gmwd_circles^ (0)
+mbt_gmwd_maps~ (1)
+mbt_gmwd_mapstyles^ (0)
+mbt_gmwd_markercategories^ (0)
+mbt_gmwd_markers~ (2)
+mbt_gmwd_options~ (10)
+mbt_gmwd_polygons^ (0)
+mbt_gmwd_polylines~ (1)
+mbt_gmwd_rectangles^ (0)
+mbt_gmwd_shortcodes~ (2)
+mbt_gmwd_themes~ (1)
+mbt_group_map^ (0)
+mbt_links^ (0)
+mbt_loginizer_logs~ (25)
+mbt_map_locations~ (3)
+mbt_nwm_custom~ (3)
+mbt_nwm_routes~ (3)
+mbt_options~ (529)
+mbt_postmeta~ (2528)
+mbt_posts~ (677)
+mbt_revslider_css~ (109)
+mbt_revslider_layer_animations^ (0)
+mbt_revslider_navigations^ (0)
+mbt_revslider_sliders^ (0)
+mbt_revslider_slides^ (0)
+mbt_revslider_static_slides^ (0)
+mbt_rt_rtm_activity~ (14)
+mbt_rt_rtm_api^ (0)
+mbt_rt_rtm_media~ (15)
+mbt_rt_rtm_media_interaction~ (20)
+mbt_rt_rtm_media_meta~ (7)
+mbt_signups~ (1362)
+mbt_taxonomymeta^ (0)
+mbt_term_relationships~ (62)
+mbt_term_taxonomy~ (33)
+mbt_termmeta^ (0)
+mbt_terms~ (33)
+mbt_tg_item_elements^ (0)
+mbt_tg_item_skins^ (0)
+mbt_usermeta~ (203)
+mbt_users~ (6)
+mbt_weforms_entries~ (3)
+mbt_weforms_entrymeta~ (9)
+mbt_wpgmza~ (1)
+mbt_wpgmza_categories^ (0)
+mbt_wpgmza_category_maps^ (0)
+mbt_wpgmza_maps~ (1)
+mbt_wpgmza_polygon^ (0)
+mbt_wpgmza_polylines^ (0)
+mbt_wpuf_transaction^ (0)
+mbt_xyz_ihs_short_code~ (1)
+mbt_yoast_seo_links~ (64)
+mbt_yoast_seo_meta~ (33)
+--------------------------------------
+Search1:	'/home/wqmmozeb/public_html/mybooktravels.com' 
+Change1:	'C:/xampp/htdocs/mybooktravels.com' 
+Search2:	'\/home\/wqmmozeb\/public_html\/mybooktravels.com' 
+Change2:	'C:\/xampp\/htdocs\/mybooktravels.com' 
+Search3:	'%2Fhome%2Fwqmmozeb%2Fpublic_html%2Fmybooktravels.com%2F' 
+Change3:	'C%3A%2Fxampp%2Fhtdocs%2Fmybooktravels.com%2F' 
+Search4:	'\home\wqmmozeb\public_html\mybooktravels.com' 
+Change4:	'C:/xampp/htdocs/mybooktravels.com' 
+Search5:	'//mybooktravels.com' 
+Change5:	'//localhost:8080/mybooktravels.com' 
+Search6:	'\/\/mybooktravels.com' 
+Change6:	'\/\/localhost:8080\/mybooktravels.com' 
+Search7:	'%2F%2Fmybooktravels.com' 
+Change7:	'%2F%2Flocalhost%3A8080%2Fmybooktravels.com' 
+Search8:	'https://localhost:8080/mybooktravels.com' 
+Change8:	'http://localhost:8080/mybooktravels.com' 
+Search9:	'https:\/\/localhost:8080\/mybooktravels.com' 
+Change9:	'http:\/\/localhost:8080\/mybooktravels.com' 
+Search10:	'https%3A%2F%2Flocalhost%3A8080%2Fmybooktravels.com' 
+Change10:	'http%3A%2F%2Flocalhost%3A8080%2Fmybooktravels.com' 
+SCANNED:	Tables:88 	|	 Rows:6139 	|	 Cells:48954 
+UPDATED:	Tables:1 	|	 Rows:89 	|	 Cells:93 
+ERRORS:		0 
+RUNTIME:	1.318300 sec
+
+====================================
+CONFIGURATION FILE UPDATES:
+====================================
+
+UPDATED WP-CONFIG: /wp-config.php' (if present)
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+- Preparing .htaccess file with basic setup.
+Basic .htaccess file edit complete.  If using IIS web.config this process will need to be done manually.
+
+====================================
+GENERAL UPDATES & CLEANUP:
+====================================
+
+- Created file wp-snapshots/index.php
+
+====================================
+NOTICES
+====================================
+
+NOTICE: The wp-config.php has the following values set [WPCACHEHOME]. 
+Please validate these values are correct in your wp-config.php file.  See the codex link for more details: https://codex.wordpress.org/Editing_wp-config.php
+
+STEP 3 COMPLETE @ 08:06:12 - RUNTIME: 1.3547 sec.
+
+

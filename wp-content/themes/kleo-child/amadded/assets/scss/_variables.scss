@@ -1,0 +1,36 @@
+/* responsive breakpoints */
+$bp-xlg:1440px;
+$bp-lg:1140px;
+$bp-md:960px;
+$bp-sm:768px;
+$bp-xs:480px;
+$bp-xxs:400px;
+
+$offset-1:10px;
+$offset-g1:15px;
+$offset-2:20px;
+$offset-g2:30px;
+
+$color_hyperlink:#3B9CFF;
+$color_hyperlink-hover:#2F7CCC;
+$color_hyperlink-active:#E91315;
+$color_disabled:rgb(200, 200, 200);
+
+$color_bg-body: #fff;
+$color_bg-content: #fff;
+$color_bg-breadcrumb: #f7f7f7;
+$color_hdr-nav:#999;
+$color_hdr-nav-hover:#000;
+$color_hdr-nav-active:#000;
+$color_hdr-subnav:#999;
+$color_hdr-subnav-bg:black;
+$color_hdr-subnav-hover:#fff;
+$color_hdr-subnav-hover-bg:#444;
+$color_button-bg: #fff;
+$color_button-bg-hover: #fff;
+$color_button-text: #999;
+$color_button-text-hover: #000;
+$color_button-border: #ddd;
+$color_button-border-hover: #000;
+$font-size_button:12px;
+$font-size_button-line-height:12px;

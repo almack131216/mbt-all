@@ -1,0 +1,59 @@
+/*
+Theme Name:     Kleo Child
+Theme URI:
+Description:    Child theme for Kleo
+Author:         SeventhQueen
+Author URI:     http://seventhqueen.com
+Template:       kleo
+Tags:  one-column, two-columns, right-sidebar, fluid-layout, custom-menu, featured-images, post-formats, sticky-post, translation-ready
+License: GNU General Public License
+License URI: license.txt
+*/
+
+/*
+* Please add your custom styles below
+*/
+
+.navbar-nav>li>a {
+    margin: 0 12px;
+    font-size: 20px;
+	text-transform:uppercase;
+}
+
+a,
+a > span,
+a > i,
+a.url,
+.main-color a, .main-color .navbar-nav .dropdown-menu li a, .main-color .dropdown-menu > li > a:hover, .main-color .dropdown-menu > li > a:focus, .main-color .dropdown-submenu:hover > a, .main-color .dropdown-submenu:focus > a, .main-color .dropdown-menu > .active > a, .main-color .dropdown-menu > .active > a:hover, .main-color .dropdown-menu > .active > a:focus, .main-color .form-control:focus, .main-color .wrap-canvas-menu .widget_nav_menu .offcanvas-menu .dropdown-menu > li > a, .main-color #buddypress a.button.unfav, .main-color .widget_bp_groups_widget .item-options a.selected, .main-color .widget_bp_core_members_widget .item-options a.selected, .main-color .widget_bp_core_friends_widget .item-options a.selected, .main-color .tabs-style-line > li.active > a, .main-color #buddypress #profile-edit-form ul.button-nav li.current a, .main-color .read-notifications td.notify-text a:hover, .main-color .unread-notifications td.notify-text a:hover, .woocommerce .main-color .widget_product_categories li.current-cat a {
+	color:#999999;
+font-weight:bold;
+}
+
+a:hover,
+a:hover > span,
+a:hover > i,
+a.url:hover,
+.breadcrumbs-container span.active,
+.main-color a:hover, .main-color #top-social li a:hover, .main-color .top-menu li > a:hover, .main-color .navbar-nav .dropdown-menu li a:hover, .main-color .sidebar ul li a:hover, .main-color .wrap-canvas-menu .widget_nav_menu .offcanvas-menu .dropdown-menu > li > a:hover, .main-color .wrap-canvas-menu .widget_nav_menu .offcanvas-menu .dropdown-menu > li > a:focus, .main-color #buddypress .activity-list li.load-more a:hover, .manage-members .main-color .member-name:hover, .manage-members .main-color .member-name a:hover, .main-color #rtm-media-options-list ul li .rtmedia-action-buttons:hover, .woocommerce .main-color .yith-wcwl-add-to-wishlist a:hover, .woocommerce .main-color li.product figcaption .shop-actions > a.button:hover, .main-color .kleo-toggle-menu .quick-view:hover {
+    color: #000000;
+font-weight:bold;
+}
+
+.widget_tag_cloud a {
+    line-height: 16px !important;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    font-size: 12px;
+}
+.widget_tag_cloud a:hover {
+	background:white;
+	border-color:black;
+}
+
+div#socket {
+	background:white;
+	border-top:1px solid #e5e5e5;
+}
