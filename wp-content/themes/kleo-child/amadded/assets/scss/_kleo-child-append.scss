@@ -24,7 +24,6 @@ a:hover,
 a:hover > span,
 a:hover > i,
 a.url:hover,
-.breadcrumbs-container span.active,
 .main-color a:hover, .main-color #top-social li a:hover,
 .main-color .top-menu li > a:hover,
 .main-color .sidebar ul li a:hover,
@@ -61,22 +60,35 @@ a.url:hover,
     // font-weight:bold;
 }
 
-.widget_tag_cloud a {
-    line-height: 16px !important;
-    border-style: solid;
-    border-width: 1px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    font-size: 12px;
+/* breadcrumbs */
+section.container-wrap {
+    background:$color_bg-content;
 
-    &:hover {
-        background:white;
-        border-color:black;
+    &.breadcrumbs-container {
+        background:$color_bg-breadcrumb;
+
+        div.kleo_framework.breadcrumb {
+            > span {
+                color:black;
+
+                &.active a {
+                    color:black;
+                }
+            }
+        }
     }
 }
+/* (END) breadcrumbs */
 
-div#socket {
-	background:white;
-	border-top:1px solid #e5e5e5;
+.widget_tag_cloud a {
+    @extend .g_btn-base-border;
+    text-transform:lowercase;
+    font-size:10px;
+    padding:5px;
+}
+
+.share-links span a {
+    @media (min-width:$bp-sm){
+        margin: 0 $offset-g1;
+    }
 }

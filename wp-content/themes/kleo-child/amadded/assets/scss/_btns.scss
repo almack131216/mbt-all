@@ -1,13 +1,30 @@
+/* btns */
+.i-right {
+    i.fa {
+        margin-left:$offset-1;
+    }
+}
+.i-left {
+    i.fa {
+        margin-right:$offset-1;
+    }
+}
+
 .g_btn-base {
+    cursor: pointer;
 	font-size:$font-size_button;	
 	text-transform:uppercase;
 	line-height:$font-size_button;
+    height:auto;
 	color:$color_button-text;
     font-weight:bold;
     padding: $offset-1 $offset-g1;
     background:$color_button-bg;
     text-shadow: none;
-    box-shadow: none;    
+    text-align: center;
+    box-shadow: none;
+    @include  border-radius(0px);
+    box-sizing: border-box;
 
     > span {
         font-size:$font-size_button;	
@@ -28,6 +45,23 @@
 }
 /* (END) .g_btn-base */
 
+.g_btn-color-priority {
+    background:$color_hdr-subnav-bg;
+    color:$color_hdr-subnav;
+    border-color:$color_hdr-subnav-bg;    
+
+    &:hover {
+        color:$color_hdr-subnav-hover;
+        background:$color_hdr-subnav-hover-bg;
+        border-color:$color_hdr-subnav-bg;
+
+        > span,
+        > i {
+            color:white;
+        }
+    }
+}
+
 .g_btn-base-border {
 	@extend .g_btn-base;
 	border:1px solid $color_button-border;
@@ -42,3 +76,8 @@
 	}
 }
 /* (END) .g_btn-base-border */
+
+.g_btn-base-border-priority {
+    @extend .g_btn-base-border;
+    @extend .g_btn-color-priority;
+}

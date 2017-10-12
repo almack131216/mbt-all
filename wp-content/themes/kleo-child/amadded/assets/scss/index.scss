@@ -4,13 +4,16 @@ base styles
 
 @import 'variables';
 @import 'offsets';
-@import 'kleo-child-append';
+@import 'mixins';
 @import 'btns';
+
 @import 'layout';
+@import 'kleo-child-append';
 @import 'navbar';
 @import 'contact-form';
 @import 'wpuf';
 @import 'the-grid';
+@import 'the-grid-filter';
 @import 'responsive';
 
 /* Mixins */
@@ -22,14 +25,6 @@ body {
 
 	#main {
 		background:$color_bg-body;
-		
-		section.container-wrap {
-			background:$color_bg-content;
-			
-			&.breadcrumbs-container {
-			    background:$color_bg-breadcrumb;	
-			}
-		}
 	}
 	
 }

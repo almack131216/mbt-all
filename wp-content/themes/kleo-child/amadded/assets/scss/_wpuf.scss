@@ -10,8 +10,15 @@ form.wpuf-form-add {
 
                 }
                 .wpuf-fields {
+                    // input[type="text"] {
+                    //     padding:$offset-1 $offset-g1;
+                    // }
                     textarea {
                         height:60px;
+                    }
+                    a.button {
+                        @extend .g_btn-base;
+                        padding:5px $offset-1;
                     }
                 }            
             }
@@ -19,8 +26,9 @@ form.wpuf-form-add {
                 .wpuf-label {
                     // display:none;
                 }
-                input[type=submit] {
+                input[type="submit"] {
                     @extend .g_btn-base-border;
+                    @extend .g_btn-color-priority;
                 }
                 a.btn {
                     @extend .g_btn-base;

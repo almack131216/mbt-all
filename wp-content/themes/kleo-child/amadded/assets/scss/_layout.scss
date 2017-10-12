@@ -7,38 +7,71 @@
 .template-page.tpl-right{
     .wrap-content {
         padding-right: $offset-g1;
+        @media (max-width:$bp-sm){
+            padding-right: 0px;
+        }
 
-        .article-content {
-			
+        .article-content {			
 			.am-title-bar {
-				
-				p {display:none;}
-
 				.btn-add-to-page {
                     @extend .g_btn-base-border;
                     float:right;
-                    // margin-top:$offset-g1;
 
-                    > i.fa {
-                        margin-right:5px;
-                    }
+                    @extend .i-left;
+
+                    // > i.fa {
+                    //     margin-right:5px;
+                    // }
                 }
 			}
-            
+            /* (END) .am-title-bar */
         }
     }
 }
-.sidebar {
-    .inner-content {
-        padding-left: $offset-g1;
+
+.container-wrap {
+    .container {
+        .sidebar {
+            @media (max-width:$bp-sm){
+                border-top:2px solid $color_priority-border;
+            }
+
+            .inner-content {
+                padding-left: $offset-g1;
+                @media (max-width:$bp-sm){
+                    padding-left: 0px;
+                }
+            }
+            h4 {
+                text-transform:uppercase;
+            }
+            .bp-login-widget-user-links {
+                min-height:60px;//height of user avatar
+            }
+        }
+        /* (END) .sidebar */
     }
-    h4 {
-        text-transform:uppercase;
-    }
-    .bp-login-widget-user-links {
-        min-height:60px;//height of user avatar
+    /* (END) .container */
+
+    #buddypress #item-body {
+        padding:$offset-g1;
     }
 }
+/* (END) .container-wrap */
+
+
+
+/* #socket (footer) */
+div#socket.socket-color {
+	background:white;
+	border-top:1px solid $color_layout-border;
+    
+    @media (max-width:$bp-sm){
+        border-top:2px solid $color_layout-border-priority;
+    }
+}
+/* (END) #socket */
+
 article .article-meta {
     width: 170px;
 }

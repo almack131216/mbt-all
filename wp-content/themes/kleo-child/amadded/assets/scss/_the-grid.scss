@@ -38,77 +38,12 @@ article.pracia {
 .pracia .tg-item-media-holder {
     background:#eee url(../../wp-content/uploads/default-image/default-image-150x150.png) no-repeat 50% 50%;   
 }
-/* .tg-filters-holder */
-.tg-filters-holder {
-	.tg-filter.tg-nav-font {
-		margin:0;
-		
-		> span.tg-nav-font {
-			@extend .g_btn-base;		
-		}
-
-		&.tg-filter-active {
-			position:relative;
-			padding:0;
-	
-			&:before {
-				content: "";
-				position: absolute;
-				width: 60%;
-				height: 1px;
-				bottom:0px;
-				left: 20%;
-				border-bottom: 2px solid black;  
-			}
-		}
-	}
-
-	.tg-dropdown-holder {
-		min-width:150px;
-		@extend .g_btn-base-border;
-		margin: 0;
-        text-align:center;
-        border-color:white !important;
-        // position:relative;                            
-
-        // &:hover:after {
-        //     @extend .subnav-arrow;
-        // }        
-	
-		> .tg-nav-font {		
-			font-size:inherit;
-			line-height:inherit;
-			padding:0;
-		}
-		
-	}
+.pracia .tg-item-title:hover,
+.pracia .tg-link-button:hover,
+.pracia .tg-cats-holder a:hover,
+.pracia .tg-media-button:hover {
+    opacity:1;
 }
-
-ul.tg-dropdown-list {
-    border:none;
-
-    > .no-touch .tg-dropdown-item,
-    > .tg-dropdown-item,
-    > .tg-dropdown-item.tg-filter.tg-show-filter {
-        @extend .subnav-item-a;        
-    }
-}
-
-// .no-touch .tg-dropdown-item,
-// .tg-dropdown-item,
-// .tg-dropdown-item.tg-filter.tg-show-filter {
-    
-
-//     &:hover,
-//     &:active {
-//         color:$color_hdr-nav-hover;
-
-//         > span {
-//             color:$color_hdr-nav-hover;
-//         }
-//     }
-// }
-/* (END) .tg-filters-holder */
 
 .tg-ajax-button {
 	@extend .g_btn-base-border;

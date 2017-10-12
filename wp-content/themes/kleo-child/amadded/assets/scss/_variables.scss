@@ -16,21 +16,34 @@ $color_hyperlink-hover:#2F7CCC;
 $color_hyperlink-active:#E91315;
 $color_disabled:rgb(200, 200, 200);
 
-$color_bg-body: #fff;
-$color_bg-content: #fff;
-$color_bg-breadcrumb: #f7f7f7;
-$color_hdr-nav:#999;
-$color_hdr-nav-hover:#000;
-$color_hdr-nav-active:#000;
-$color_hdr-subnav:#999;
-$color_hdr-subnav-bg:black;
-$color_hdr-subnav-hover:#fff;
-$color_hdr-subnav-hover-bg:#444;
-$color_button-bg: #fff;
-$color_button-bg-hover: #fff;
+$color_priority: #fff;
+$color_priority-bg: #000;
+$color_priority-bg-hover: #444;
+$color_priority-border: #000;
+
 $color_button-text: #999;
 $color_button-text-hover: #000;
+$color_button-bg: #f7f7f7;
+$color_button-bg-hover: #fff;
 $color_button-border: #ddd;
-$color_button-border-hover: #000;
+
+$color_bg-body: #fff;
+$color_bg-content: #fff;
+$color_bg-breadcrumb: $color_button-bg;
+
+$color_hdr-nav: $color_button-text;
+$color_hdr-nav-hover:$color_button-text-hover;
+$color_hdr-nav-active:$color_button-text-hover;
+
+$color_hdr-subnav:$color_priority;
+$color_hdr-subnav-bg:$color_priority-bg;
+$color_hdr-subnav-hover:$color_priority;
+$color_hdr-subnav-hover-bg: $color_priority-bg-hover;
+
+$color_button-border-hover: $color_button-text-hover;
+
+$color_layout-border: #e5e5e5;
+$color_layout-border-priority: $color_priority-border;
+
 $font-size_button:12px;
 $font-size_button-line-height:12px;
