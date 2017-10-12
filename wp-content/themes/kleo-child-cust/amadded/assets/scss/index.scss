@@ -1,0 +1,46 @@
+/*
+base styles
+*/
+
+@import 'variables';
+@import 'offsets';
+@import 'mixins';
+@import 'btns';
+
+@import 'layout';
+@import 'kleo-child-append';
+@import 'navbar';
+@import 'contact-form';
+@import 'wpuf';
+@import 'the-grid';
+@import 'the-grid-filter';
+@import 'responsive';
+
+body {
+	background:$color_bg-body;
+
+	#main {
+		background:$color_bg-body;
+
+        section.container-wrap {
+            p {
+                // font-family: "'Times New Roman', Times,serif";
+            }
+        }
+        
+	}
+	
+}
+/* (END) body */
+
+
+/* kleo-login */
+.kleo-form-modal {
+    max-width: 350px;
+}
+
+
+@media only screen and (min-width : 992px) {
+
+    
+}

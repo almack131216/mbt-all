@@ -1,0 +1,49 @@
+/* responsive breakpoints */
+$bp-xlg:1440px;
+$bp-lg:1140px;
+$bp-md:960px;
+$bp-sm:768px;
+$bp-xs:480px;
+$bp-xxs:400px;
+
+$offset-1:10px;
+$offset-g1:15px;
+$offset-2:20px;
+$offset-g2:30px;
+
+$color_hyperlink:#3B9CFF;
+$color_hyperlink-hover:#2F7CCC;
+$color_hyperlink-active:#E91315;
+$color_disabled:rgb(200, 200, 200);
+
+$color_priority: #fff;
+$color_priority-bg: #000;
+$color_priority-bg-hover: #444;
+$color_priority-border: #000;
+
+$color_button-text: #999;
+$color_button-text-hover: #000;
+$color_button-bg: #f7f7f7;
+$color_button-bg-hover: #fff;
+$color_button-border: #ddd;
+
+$color_bg-body: #fff;
+$color_bg-content: #fff;
+$color_bg-breadcrumb: $color_button-bg;
+
+$color_hdr-nav: $color_button-text;
+$color_hdr-nav-hover:$color_button-text-hover;
+$color_hdr-nav-active:$color_button-text-hover;
+
+$color_hdr-subnav:$color_priority;
+$color_hdr-subnav-bg:$color_priority-bg;
+$color_hdr-subnav-hover:$color_priority;
+$color_hdr-subnav-hover-bg: $color_priority-bg-hover;
+
+$color_button-border-hover: $color_button-text-hover;
+
+$color_layout-border: #e5e5e5;
+$color_layout-border-priority: $color_priority-border;
+
+$font-size_button:12px;
+$font-size_button-line-height:12px;
