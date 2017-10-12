@@ -19,7 +19,7 @@ get_header(); ?>
 
 <?php
 //Specific class for post listing */
-$blog_type = sq_option( 'blog_type', 'small' );//amedit 170927 (was 'masonry')
+$blog_type = sq_option( 'blog_type', 'masonry' );
 $blog_type = apply_filters( 'kleo_blog_type', $blog_type );
 
 $template_classes = $blog_type . '-listing';

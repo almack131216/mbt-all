@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(array("post-item")); ?>>
     <div class="row post-content animated animate-when-almost-visible el-appear">
 
-        <div class="col-xxs-12 col-xs-3">
+        <div class="col-sm-3">
         <?php
         global $kleo_config;
         $kleo_post_format = get_post_format();
@@ -171,7 +171,7 @@
         }
         ?>
         </div>
-        <div class="col-xxs-12 col-xs-9">
+        <div class="col-sm-9">
 
             <?php if ( ! in_array( $kleo_post_format, array('status', 'quote', 'link') ) ): ?>
             <div class="post-header">

@@ -16,6 +16,7 @@ function kleo_add_notifications_nav_item( $menu_items ) {
 add_filter('kleo_setup_nav_item_notifications' , 'kleo_setup_notifications_nav');
 function kleo_setup_notifications_nav( $menu_item ) {
     $menu_item->classes[] = 'kleo-toggle-menu';
+    $menu_item->classes[] = 'dropdown-submenu';
     if ( ! is_user_logged_in() ) {
         $menu_item->_invalid = true;
     } else {
@@ -42,10 +43,12 @@ function kleo_bp_mobile_notify() {
     if ( isset( $kleo_config['mobile_notify_icon'] ) ) {
         $icon = $kleo_config['mobile_notify_icon'];
     } else {
-        $icon = 'mail-2';
+        $icon = 'bell';
     }
 
-    $title = '<span class="notify-items"><i class="icon-' . $icon . '"></i> <span class="kleo-notifications ' . $alert . '">' . $count . '</span></span>';
+    $title = '<span class="notify-items sq-notify-mobile">' .
+                '<i class="icon-' . $icon . '"></i> <span class="kleo-notifications ' . $alert . '">' . $count . '</span>' .
+             '</span>';
     $output .= '<a title="' . __( 'View Notifications', 'kleo_framework' ) . '" class="notify-contents" href="' . $url .'">' . $title . '</a>';
     echo $output;
 }
@@ -82,11 +85,13 @@ if (! function_exists( 'kleo_menu_notifications' )) {
                 $title = $title_icon . ' ' . $item->title;
             }
 
-            //If we have the menu item then add it to the mobile menu
-            add_action( 'kleo_mobile_header_icons', 'kleo_bp_mobile_notify', 9 );
+
         } else {
             $title = $item->title;
         }
+
+        //If we have the menu item then add it to the mobile menu
+        add_action( 'kleo_mobile_header_icons', 'kleo_bp_mobile_notify', 9 );
 
         /* Menu style */
         $atts = array();
@@ -101,13 +106,16 @@ if (! function_exists( 'kleo_menu_notifications' )) {
         }
 
         $class = 'notify-contents';
+	    if ( $depth === 0 ) {
+		    $class .= ' js-activated';
+	    }
         $class .= isset($atts['class']) ? ' ' . $atts['class'] : '';
 
         $output .= '<a class="' . $class . '" href="' . $url . '" title="' . $attr_title . '">'
                    . '<span class="notify-items"> ' . $title . ' <span class="kleo-notifications ' . $alert . '">' . $count . '</span></span>'
                    . '</a>';
 
-        $output .= '<div class="kleo-toggle-submenu"><ul class="submenu-inner' . $status . '">';
+        $output .= '<div class="kleo-toggle-submenu dropdown-menu sub-menu"><ul class="submenu-inner' . $status . '">';
 
         if ( ! empty( $notifications ) ) {
             foreach ( (array) $notifications as $notification ) {

@@ -1,5 +1,5 @@
 <?php
-define( 'KLEO_THEME_VERSION', '4.2.8' );
+define( 'KLEO_THEME_VERSION', '4.2.12' );
 
 /* Configuration array */
 global $kleo_config;
@@ -254,7 +254,7 @@ if ( ! function_exists( 'kleo_title_section' ) ) {
 			'show_title'      => true,
 			'show_breadcrumb' => true,
 			'link'            => '',
-			'output'          => "<section class='{class} border-bottom breadcrumbs-container'><div class='container'><div class='breadcrumb-extra'>{breadcrumb_data}{extra}</div></div></section>",
+			'output'          => "<section class='{class} border-bottom breadcrumbs-container'><div class='container'>{title_data}<div class='breadcrumb-extra'>{breadcrumb_data}{extra}</div></div></section>",
 			'class'           => 'container-wrap main-title alternate-color ',
 			'extra'           => '<p class="page-info">' . do_shortcode( sq_option( 'title_info', '' ) ) . '</p>',
 			'heading'         => 'h1'
@@ -489,7 +489,7 @@ if ( sq_option( 'header_custom_search', 0 ) == 1 && sq_option( 'header_search_fo
 	if ( ! function_exists( 'kleo_get_search_menu_item' ) ) {
 		function kleo_get_search_menu_item() {
 			$output = '';
-			$output .= '<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>';
+			$output .= '<a class="search-trigger" href="#"><i class="icon icon-search"></i></a>';
 			$output .= '<div class="kleo-search-wrap searchHidden" id="ajax_search_container">';
 			$output .= '<div class="gse-loading"></div>';
 			$output .= sq_option( 'header_search_form', '' );
@@ -538,16 +538,16 @@ if ( ! function_exists( 'kleo_get_search_menu_item' ) ) {
 
 
 		ob_start();
+		$value = isset( $_REQUEST['s'] ) ? esc_attr( $_REQUEST['s'] ) : '';
+		$placeholder = esc_html__( "Start typing to search...", "kleo_framework" );
 		?>
-		<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
+		<a class="search-trigger" href="#"><i class="icon icon-search"></i></a>
 		<div class="kleo-search-wrap searchHidden" id="ajax_search_container">
 			<form class="form-inline" id="ajax_searchform" action="<?php echo $action; ?>"
 			      data-context="<?php echo $context; ?>">
 				<?php echo $hidden; ?>
 				<input name="<?php echo $input_name; ?>" class="ajax_s form-control" autocomplete="off" type="text"
-				       value="<?php if ( isset( $_REQUEST['s'] ) ) {
-					       echo esc_attr( $_REQUEST['s'] );
-				       } ?>" placeholder="<?php _e( "Start typing to search...", "kleo_framework" ); ?>">
+				       value="<?php echo $value; ?>" placeholder="<?php echo $placeholder; ?>" required>
 				<span class="kleo-ajax-search-loading"><i class="icon-spin6 animate-spin"></i></span>
 			</form>
 			<div class="kleo_ajax_results"></div>
@@ -901,7 +901,7 @@ if ( ! function_exists( 'kleo_wpml_wp_nav_menu_items_filter' ) && function_exist
 	function kleo_wpml_wp_nav_menu_items_filter( $items, $args ) {
 		if ( $args->theme_location == 'primary' ) {
 			$items = str_replace( '<a href="#" onclick="return false">', '<a href="#" class="js-activated">', $items );
-			$items = str_replace( '</a><ul class="sub-menu submenu-languages">', '<i class="fa fa-angle-down"></i></a><ul class="sub-menu submenu-languages dropdown-menu pull-left">', $items );
+			$items = str_replace( '</a><ul class="sub-menu submenu-languages">', '<span class="caret"></span></a><ul class="sub-menu submenu-languages dropdown-menu pull-left">', $items );
 		}
 
 		return $items;
@@ -965,7 +965,7 @@ function kleo_get_languages() {
 				if ( ! $lang['active'] ) {
 					$items .= '<a href="' . $lang['url'] . '">' . $entry . '</a>';
 				} else {
-					$active = '<a href="' . $lang['url'] . '" class="dropdown-toggle js-activated current-language" data-toggle="dropdown">' . $entry . ( count( $languages ) > 1 ? ' <i class="fa fa-angle-down"></i>' : '' ) . '</a>';
+					$active = '<a href="' . $lang['url'] . '" class="dropdown-toggle js-activated current-language" data-toggle="dropdown">' . $entry . ( count( $languages ) > 1 ? ' <span class="caret"></span>' : '' ) . '</a>';
 				}
 
 				$items .= '</li>';
@@ -1336,13 +1336,20 @@ if ( ! function_exists( 'kleo_postmeta_enabled' ) ) {
  *
  * @return int
  */
-function kleo_postmedia_enabled( $media_option = 'blog_media_status', $default = 1 ) {
+function kleo_postmedia_enabled( $media_option = 'blog_media_status', $default = 1, $is_singular = false ) {
 
 
 	global $conditional_thumb;
 	global $wp_query;
+	
+	if ( $is_singular === true ) {
+		$condition = is_singular();
+	} else {
+		$condition = is_single();
+	}
+	
 
-	if ( ! is_singular() ) {
+	if ( ! $condition ) {
 
 		//check for shortcode thumbnail condition
 		if ( isset( $conditional_thumb ) ) {

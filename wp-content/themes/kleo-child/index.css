@@ -476,9 +476,6 @@ body {
 body #main {
   background: #fff;
 }
-body #main section.container-wrap p {
-  font-family: "'Times New Roman', Times,serif";
-}
 /* (END) body */
 /* kleo-login */
 .kleo-form-modal {

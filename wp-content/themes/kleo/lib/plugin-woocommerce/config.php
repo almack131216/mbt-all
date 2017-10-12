@@ -1039,14 +1039,14 @@ if ( ! function_exists( 'kleo_woo_get_mini_cart' ) ) {
 		
 		if ( ! $just_inner ) {
 			$cart_output .= '<li class="menu-item kleo-toggle-menu shop-drop">'
-			                . '<a class="cart-contents" href="' . $woocommerce->cart->get_cart_url() . '" title="' . __( "View Cart", "woocommerce" ) . '">'
+			                . '<a class="cart-contents js-activated" href="' . $woocommerce->cart->get_cart_url() . '" title="' . __( "View Cart", "woocommerce" ) . '">'
 			                . '<span class="cart-items' . $cart_has_items . '"><i class="icon icon-basket-full-alt"></i> ';
 			
 			if ( $cart_count != "0" ) {
 				$cart_output .= "<span class='kleo-notifications new-alert'>" . $cart_count . "</span>";
 			}
 			
-			$cart_output .= '</span> <i class="fa fa-angle-down"></i>'
+			$cart_output .= '</span> <span class="caret"></span>'
 			                . '</a>'
 			                . '<ul class="kleo-toggle-submenu">';
 		}

@@ -91,7 +91,7 @@ function kleo_geodir_wp_footer(){
     ?>
     <script>
         jQuery(document).ready(function(){
-            jQuery('.kleo-gd-dropdown > a').addClass('js-activated').append('<i class="fa fa-angle-down"></i>');
+            jQuery('.kleo-gd-dropdown > a').addClass('js-activated').append('<span class="caret"></span>');
         });
     </script>
     <?php

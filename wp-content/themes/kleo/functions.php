@@ -1,8 +1,4 @@
 <?php
-//remove_filter ('the_content', 'wpautop');
-remove_filter('the_excerpt', 'wpautop' );
-?>
-<?php
 /**
  * @package WordPress
  * @subpackage Kleo
@@ -1127,14 +1123,39 @@ if ( ! function_exists( 'kleo_frontend_files' ) ) :
 		wp_enqueue_script( 'mediaelement' );
 		wp_enqueue_script( 'app' );
 
-		$regular_logo = sq_option_url( 'logo', '' );
-		if ( is_singular() && get_cfield( 'logo' ) ) {
-			$regular_logo = get_cfield( 'logo' );
+
+		$regular_logo = sq_option_url('logo', '');
+		if (is_singular() && get_cfield('logo')) {
+			$regular_logo = get_cfield('logo');
 		}
-		$retina_logo = sq_option_url( 'logo_retina' ) != '' ? sq_option_url( 'logo_retina' ) : '';
-		if ( is_singular() && get_cfield( 'logo_retina' ) ) {
-			$retina_logo = get_cfield( 'logo_retina' );
+		$retina_logo = sq_option_url('logo_retina') != '' ? sq_option_url('logo_retina') : '';
+		if (is_singular() && get_cfield('logo_retina')) {
+			$retina_logo = get_cfield('logo_retina');
 		}
+
+		if( wp_is_mobile() ) {
+			$mobile_logo = false;
+			if(sq_option_url('mobile_logo', '') != '') {
+				$regular_logo = sq_option_url('mobile_logo', '');
+				$mobile_logo = true;
+			}
+			if (is_singular() && get_cfield('mobile_logo')) {
+				$regular_logo = get_cfield('mobile_logo');
+				$mobile_logo = true;
+			}
+			if($mobile_logo) {
+				add_filter('kleo_logo', function ($logo) use ($regular_logo) {
+					return $regular_logo;
+				});
+			}
+			if( sq_option_url('mobile_logo_retina') != '' ) {
+				$retina_logo = sq_option_url('mobile_logo_retina');
+			}
+			if (is_singular() && get_cfield('mobile_logo_retina')) {
+				$retina_logo = get_cfield('mobile_logo_retina');
+			}
+		}
+
 		$header_height              = intval( sq_option( 'menu_height', 88 ) );
 		$header_height_scrolled     = intval( sq_option( 'menu_height_scrolled', '' ) );
 		$header_two_height          = intval( sq_option( 'menu_two_height', 88 ) );
@@ -1547,11 +1568,11 @@ if ( ! function_exists( 'kleo_lost_password_ajax' ) ) {
 				die();
 			}
 
-			$message = __( 'Someone requested that the password be reset for the following account:' ) . "\r\n\r\n";
+			$message = __( 'Someone requested that the password be reset for the following account:', 'kleo_framework' ) . "\r\n\r\n";
 			$message .= network_home_url( '/' ) . "\r\n\r\n";
 			$message .= sprintf( __( 'Username: %s' ), $user_login ) . "\r\n\r\n";
-			$message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' ) . "\r\n\r\n";
-			$message .= __( 'To reset your password, visit the following address:' ) . "\r\n\r\n";
+			$message .= __( 'If this was a mistake, just ignore this email and nothing will happen.', 'kleo_framework'  ) . "\r\n\r\n";
+			$message .= __( 'To reset your password, visit the following address:', 'kleo_framework'  ) . "\r\n\r\n";
 			$message .= '<' . network_site_url( "wp-login.php?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . ">\r\n";
 
 			if ( is_multisite() ) {
