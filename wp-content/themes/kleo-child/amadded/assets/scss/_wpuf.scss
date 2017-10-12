@@ -1,0 +1,32 @@
+/* WPUF */
+form.wpuf-form-add {
+	ul.wpuf-form.form-label-left {
+        li {
+            padding:0;
+            margin-bottom:$offset-g1;
+
+            &.wpuf-el {
+                .wpuf-label {
+
+                }
+                .wpuf-fields {
+                    textarea {
+                        height:60px;
+                    }
+                }            
+            }
+            &.wpuf-submit {
+                .wpuf-label {
+                    // display:none;
+                }
+                input[type=submit] {
+                    @extend .g_btn-base-border;
+                }
+                a.btn {
+                    @extend .g_btn-base;
+                }
+            } 
+        }               
+    }
+}
+/* (END) WPUF */
