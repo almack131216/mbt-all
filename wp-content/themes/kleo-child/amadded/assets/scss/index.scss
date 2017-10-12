@@ -25,6 +25,13 @@ body {
 
 	#main {
 		background:$color_bg-body;
+
+        section.container-wrap {
+            p {
+                // font-family: "'Times New Roman', Times,serif";
+            }
+        }
+        
 	}
 	
 }

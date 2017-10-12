@@ -30,7 +30,7 @@
 .i-left i.fa, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page i.fa {
   margin-right: 10px;
 }
-.g_btn-base, .g_btn-base-border, .g_btn-base-border-priority, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page, .widget_tag_cloud a, form.wpcf7-form input.wpcf7-submit, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"], .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font {
+.g_btn-base, .g_btn-base-border, .g_btn-base-border-priority, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, form.wpcf7-form input.wpcf7-submit, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"], .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font {
   cursor: pointer;
   font-size: 12px;
   text-transform: uppercase;
@@ -48,18 +48,18 @@
   border-radius: 0px;
   box-sizing: border-box;
 }
-.g_btn-base > span, .g_btn-base-border > span, .g_btn-base-border-priority > span, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page > span, .widget_tag_cloud a > span, form.wpcf7-form input.wpcf7-submit > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span, .tg-ajax-button > span, .tg-filters-holder .tg-dropdown-holder > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font > span {
+.g_btn-base > span, .g_btn-base-border > span, .g_btn-base-border-priority > span, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a > span, form.wpcf7-form input.wpcf7-submit > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button > span, .tg-filters-holder .tg-dropdown-holder > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font > span {
   font-size: 12px;
   text-transform: uppercase;
   line-height: 12px;
   color: #999;
   font-weight: bold;
 }
-.g_btn-base:hover, .g_btn-base-border:hover, .g_btn-base-border-priority:hover, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page:hover, .widget_tag_cloud a:hover, form.wpcf7-form input.wpcf7-submit:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover, .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover {
+.g_btn-base:hover, .g_btn-base-border:hover, .g_btn-base-border-priority:hover, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, form.wpcf7-form input.wpcf7-submit:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover {
   color: #000;
   background: #fff;
 }
-.g_btn-base:hover > span, .g_btn-base-border:hover > span, .g_btn-base-border-priority:hover > span, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page:hover > span, .widget_tag_cloud a:hover > span, form.wpcf7-form input.wpcf7-submit:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, .tg-ajax-button:hover > span, .tg-filters-holder .tg-dropdown-holder:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover > span {
+.g_btn-base:hover > span, .g_btn-base-border:hover > span, .g_btn-base-border-priority:hover > span, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page:hover > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover > span, form.wpcf7-form input.wpcf7-submit:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover > span, .tg-filters-holder .tg-dropdown-holder:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover > span {
   color: #000;
 }
 /* (END) .g_btn-base */
@@ -76,7 +76,7 @@
 .g_btn-color-priority:hover > span, .g_btn-base-border-priority:hover > span, .subnav-item-a:hover > span, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a:hover > span, ul.tg-dropdown-list > .no-touch .tg-dropdown-item:hover > span, ul.tg-dropdown-list > .tg-dropdown-item:hover > span, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, .g_btn-color-priority:hover > i, .g_btn-base-border-priority:hover > i, .subnav-item-a:hover > i, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a:hover > i, ul.tg-dropdown-list > .no-touch .tg-dropdown-item:hover > i, ul.tg-dropdown-list > .tg-dropdown-item:hover > i, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > i {
   color: white;
 }
-.g_btn-base-border, .g_btn-base-border-priority, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page, .widget_tag_cloud a, form.wpcf7-form input.wpcf7-submit, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"], .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder {
+.g_btn-base-border, .g_btn-base-border-priority, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, form.wpcf7-form input.wpcf7-submit, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"], .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder {
   border: 1px solid #ddd;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -84,7 +84,7 @@
   width: auto;
   min-width: auto;
 }
-.g_btn-base-border:hover, .g_btn-base-border-priority:hover, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page:hover, .widget_tag_cloud a:hover, form.wpcf7-form input.wpcf7-submit:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover, .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover {
+.g_btn-base-border:hover, .g_btn-base-border-priority:hover, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, form.wpcf7-form input.wpcf7-submit:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover {
   border-color: #000;
 }
 /* (END) .g_btn-base-border */
@@ -113,6 +113,10 @@
 }
 .container-wrap .container {
   /* (END) .sidebar */
+  /* (END) .hr-title.hr-long */
+}
+.container-wrap .container .sidebar {
+  /* (END) widget_tag_cloud */
 }
 @media (max-width: 768px) {
   .container-wrap .container .sidebar {
@@ -132,6 +136,17 @@
 }
 .container-wrap .container .sidebar .bp-login-widget-user-links {
   min-height: 60px;
+}
+.container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a {
+  text-transform: lowercase;
+  font-size: 10px;
+  padding: 5px;
+}
+.container-wrap .container .hr-title.hr-long {
+  border-color: #999;
+}
+.container-wrap .container .hr-title.hr-long > abbr {
+  color: #999;
 }
 .container-wrap #buddypress #item-body {
   padding: 15px;
@@ -188,10 +203,8 @@ section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb > spa
   color: black;
 }
 /* (END) breadcrumbs */
-.widget_tag_cloud a {
-  text-transform: lowercase;
-  font-size: 10px;
-  padding: 5px;
+.share-links span a {
+  margin: 0 10px;
 }
 @media (min-width: 768px) {
   .share-links span a {
@@ -324,16 +337,20 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button
 }
 /* (END) WPUF */
 /* The Grid */
-article.pracia .tg-item-media-holder {
+.tg-grid-wrapper .tg-grid-holder.tg-layout-grid {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.tg-grid-wrapper .tg-grid-holder.tg-layout-grid article.pracia .tg-item-media-holder {
   bottom: 30px;
 }
-article.pracia .tg-item-content-holder {
+.tg-grid-wrapper .tg-grid-holder.tg-layout-grid article.pracia .tg-item-content-holder {
   height: 30px;
 }
-article.pracia .tg-item-content-holder .tg-item-title, article.pracia .tg-item-content-holder .tg-item-title a {
+.tg-grid-wrapper .tg-grid-holder.tg-layout-grid article.pracia .tg-item-content-holder .tg-item-title, .tg-grid-wrapper .tg-grid-holder.tg-layout-grid article.pracia .tg-item-content-holder .tg-item-title a {
   font-size: 12px;
 }
-article.pracia .tg-item-content-holder .tg-cats-holder {
+.tg-grid-wrapper .tg-grid-holder.tg-layout-grid article.pracia .tg-item-content-holder .tg-cats-holder {
   font-size: 12px;
   margin-top: -64px;
   background: black;
@@ -341,23 +358,23 @@ article.pracia .tg-item-content-holder .tg-cats-holder {
   padding: 2px 5px;
   font-style: normal;
 }
-article.pracia .tg-item-content-holder .tg-cats-holder > span, article.pracia .tg-item-content-holder .tg-cats-holder > a:not(.category) {
+.tg-grid-wrapper .tg-grid-holder.tg-layout-grid article.pracia .tg-item-content-holder .tg-cats-holder > span, .tg-grid-wrapper .tg-grid-holder.tg-layout-grid article.pracia .tg-item-content-holder .tg-cats-holder > a:not(.category) {
   display: none;
 }
-article.pracia .tg-item-content-holder .tg-cats-holder > a.category > span {
+.tg-grid-wrapper .tg-grid-holder.tg-layout-grid article.pracia .tg-item-content-holder .tg-cats-holder > a.category > span {
   color: white;
   font-weight: normal;
 }
-.pracia .tg-item-media-holder {
+.tg-grid-wrapper .tg-grid-holder.tg-layout-grid .pracia .tg-item-media-holder {
   background: #eee url(../../wp-content/uploads/default-image/default-image-150x150.png) no-repeat 50% 50%;
 }
-.pracia .tg-item-title:hover, .pracia .tg-link-button:hover, .pracia .tg-cats-holder a:hover, .pracia .tg-media-button:hover {
+.tg-grid-wrapper .tg-grid-holder.tg-layout-grid .pracia .tg-item-title:hover, .tg-grid-wrapper .tg-grid-holder.tg-layout-grid .pracia .tg-link-button:hover, .tg-grid-wrapper .tg-grid-holder.tg-layout-grid .pracia .tg-cats-holder a:hover, .tg-grid-wrapper .tg-grid-holder.tg-layout-grid .pracia .tg-media-button:hover {
   opacity: 1;
 }
-.tg-grid-holder {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.tg-grid-wrapper .tg-grid-area-bottom1 {
+  margin-top: 15px;
 }
+/* (END) tg-grid-wrapper */
 /* (END) the grid */
 /* The Grid - FILTER */
 /* .tg-filters-holder */
@@ -458,6 +475,9 @@ body {
 }
 body #main {
   background: #fff;
+}
+body #main section.container-wrap p {
+  font-family: "'Times New Roman', Times,serif";
 }
 /* (END) body */
 /* kleo-login */

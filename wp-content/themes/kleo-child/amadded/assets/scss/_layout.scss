@@ -48,8 +48,30 @@
             .bp-login-widget-user-links {
                 min-height:60px;//height of user avatar
             }
+
+            .widget.widget_tag_cloud {
+                .tagcloud {
+                    > a {
+                        @extend .g_btn-base-border;
+                        text-transform:lowercase;
+                        font-size:10px;
+                        padding:5px;
+                    }                    
+                }                
+            }
+            /* (END) widget_tag_cloud */
+
         }
         /* (END) .sidebar */
+
+        .hr-title.hr-long {
+            border-color:$color_button-text;
+
+            > abbr {
+                color:$color_button-text;
+            }
+        }
+        /* (END) .hr-title.hr-long */
     }
     /* (END) .container */
 
