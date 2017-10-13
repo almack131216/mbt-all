@@ -1,4 +1,17 @@
 /*
+Theme Name: Kleo Child
+Theme URI: http://seventhqueen.com/themes/kleo
+Template: kleo
+Author: SeventhQueen
+Author URI: http://themeforest.net/user/SeventhQueen
+Description: Multipurpose Premium WordPress Theme
+Tags: one-column,two-columns,right-sidebar,fluid-layout,custom-menu,featured-images,post-formats,sticky-post,translation-ready
+Version: v1.0
+Updated: 2017-10-12 22:29:57
+
+*/
+
+/*
 base styles
 */
 
@@ -15,10 +28,6 @@ base styles
 @import 'the-grid';
 @import 'the-grid-filter';
 @import 'responsive';
-
-/* Mixins */
-
-/* (END) Mixins */
 
 body {
 	background:$color_bg-body;
