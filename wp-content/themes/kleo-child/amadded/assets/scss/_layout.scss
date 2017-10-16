@@ -11,7 +11,19 @@
             padding-right: 0px;
         }
 
-        .article-content {			
+        > .container.amcust_page-title-container {
+            @media (min-width:$bp-md){
+                display:none;
+            }
+        }
+
+        .article-content {
+            > .container.amcust_page-title-container {
+                @media (max-width:991px){
+                    display:none;
+                }
+            }
+
 			.am-title-bar {
 				.btn-add-to-page {
                     @extend .g_btn-base-border;
@@ -94,8 +106,12 @@ div#socket.socket-color {
 }
 /* (END) #socket */
 
+
+
 article .article-meta {
-    width: 170px;
+    @media (min-width: 992px) {
+        width: 170px;
+    }
 }
 .single .with-meta .article-media,
 .posts-listing.standard-listing.with-meta .article-media,

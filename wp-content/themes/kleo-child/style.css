@@ -50,7 +50,7 @@
   color: #999;
   font-weight: bold;
   padding: 10px 15px;
-  background: #f7f7f7;
+  background: #fff;
   text-shadow: none;
   text-align: center;
   box-shadow: none;
@@ -113,8 +113,18 @@
     padding-right: 0px;
   }
 }
+@media (min-width: 992px) {
+  .template-page.tpl-right .wrap-content > .container.amcust_page-title-container {
+    display: none;
+  }
+}
 .template-page.tpl-right .wrap-content .article-content {
   /* (END) .am-title-bar */
+}
+@media (max-width: 991px) {
+  .template-page.tpl-right .wrap-content .article-content > .container.amcust_page-title-container {
+    display: none;
+  }
 }
 .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page {
   float: right;
@@ -174,8 +184,10 @@ div#socket.socket-color {
   }
 }
 /* (END) #socket */
-article .article-meta {
-  width: 170px;
+@media (min-width: 992px) {
+  article .article-meta {
+    width: 170px;
+  }
 }
 .single .with-meta .article-media, .posts-listing.standard-listing.with-meta .article-media, .single .container .with-meta .article-content, .posts-listing.standard-listing.with-meta .article-content, #comments, .share-links {
   margin-left: 200px;
@@ -266,8 +278,8 @@ section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb > spa
 }
 .navbar .kleo-main-header ul.navbar-nav > li > a {
   color: #999;
-  margin: 0 12px;
-  font-size: 14px;
+  margin: 0 15px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 .navbar .kleo-main-header ul.navbar-nav > li > a > span.caret:before, .navbar .kleo-main-header ul.navbar-nav > li > a > i.fa {
