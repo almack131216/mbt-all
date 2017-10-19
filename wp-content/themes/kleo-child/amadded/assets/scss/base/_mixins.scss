@@ -97,7 +97,7 @@
 @mixin add-background($color){
     background:$color;
     
-    @if $color == $color-primary {
+    @if $color == $color_primary {
         color: $base-font-color;
     } @else {
         color: #fff;
@@ -108,8 +108,7 @@
 @mixin no-padding($side) {
     /*
     @include no-padding("left");
-    */
-    
+    */    
     @if $side == 'all' {
         .no-padding {
             padding: 0 !important;

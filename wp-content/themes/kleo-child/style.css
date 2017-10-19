@@ -1,3 +1,4 @@
+@import 'layouts/_xxxs-lite.scss';
 /*
  Theme Name: Kleo Child
  Theme URI: http://seventhqueen.com/themes/kleo
@@ -7,13 +8,360 @@
  Description: Multipurpose Premium WordPress Theme
  Tags: one-column,two-columns,right-sidebar,fluid-layout,custom-menu,featured-images,post-formats,sticky-post,translation-ready
  Version: v1.0
- Updated: 2017-10-12 22:29:57
+ Updated: 2017-10-19
  */
-/*
- base styles
- */
+/* BASE - base styles, variables, mixins etc */
+/* _variables.scss */
+/* Base colors */
+/* Font colors */
 /* responsive breakpoints */
-/* OFFSETS */
+/* offset: margins & paddings */
+/* forms */
+/* border-radius */
+/* social media buttons */
+/* table */
+/* modal */
+/* Mixins */
+/* _buttons-raised.scss */
+/* _base.scss */
+html, body {
+  font-family: "OpenSans", Arial, sans-serif;
+}
+body {
+  font-size: 14px;
+  color: #666;
+  background: #fff;
+}
+body #main {
+  background: #fff;
+}
+/* (END) body */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+.row-no-padding [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
+}
+.display-inline-block {
+  display: inline-block;
+}
+.display-table {
+  display: table;
+}
+.display-table-row {
+  display: table-row;
+}
+.display-table-cell {
+  display: table-cell;
+}
+.debug-bs {
+  background: white url(./img/symmetric-grid-bootstrap.png) center center scroll;
+  background-size: 100%;
+}
+.debug-bs .debug-bs-col:nth-child(even) {
+  background-color: rgba(255, 138, 138, 0.5);
+}
+.debug-bs .debug-bs-col:nth-child(even) {
+  background-color: rgba(0, 191, 38, 0.5);
+}
+hr {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+}
+/* _base-colors.scss */
+.color-danger {
+  color: #f00;
+}
+.color-primary {
+  color: #5fb624;
+}
+.color-base {
+  color: #666;
+}
+.color-hyperlink {
+  color: #49c5b6;
+}
+.color-white {
+  color: white;
+}
+.bg-white {
+  background: white;
+}
+.bg-gray-light {
+  background: #f4f4f4;
+}
+/* primary background color with white text for inner nodes */
+.bg-primary {
+  background-color: #5fb624;
+  color: white;
+}
+.bg-primary .container h1, .bg-primary .container h2, .bg-primary .container h3, .bg-primary .container h4, .bg-primary .container p, .bg-primary .container strong, .bg-primary .container b {
+  color: white;
+}
+.bg-primary a {
+  border-bottom-color: white;
+}
+.bg-primary table.table tr th {
+  color: white;
+  border-bottom-color: white;
+}
+.bg-primary table.table tr td {
+  border-top-color: #7bc14f;
+}
+/* MODULES - individual site components */
+/* _typography.scss */
+p, .pTag {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+b, strong, .strong {
+  font-weight: bold;
+  color: black;
+}
+.underline {
+  text-decoration: underline;
+}
+.underline-none, .navbar .kleo-main-header ul.navbar-nav > li > a > span.caret:after, .navbar .kleo-main-header ul.navbar-nav > li > a > i.fa, .share-links span a {
+  text-decoration: none !important;
+}
+.underline-none > i.fa, .navbar .kleo-main-header ul.navbar-nav > li > a > span.caret:after > i.fa, .navbar .kleo-main-header ul.navbar-nav > li > a > i.fa > i.fa, .share-links span a > i.fa {
+  text-decoration: none !important;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.text-align-center {
+  text-align: center;
+}
+.fmt-uppercase {
+  text-transform: uppercase;
+}
+.fmt-trim-string {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.snippet:after, .snippetWrap p:after {
+  content: '...';
+}
+/* _typography-resp.scss */
+/* S & XS */
+@media all and (max-width: 768px) {
+  h1, .h1, .jumbotron h1, .jumbotron .h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  h2, .h2 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+/* _typography-hyperlink.scss */
+.g_hyperlink-base, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button.fav {
+  color: #49c5b6;
+}
+.g_hyperlink-base > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button.fav > span {
+  color: #49c5b6;
+}
+.g_hyperlink-base-hover:hover, .g_hyperlink-base:hover, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button.fav:hover, a:hover, a:hover > span:hover, a:hover > i:hover, a.url:hover, .main-color a:hover, .main-color #top-social li a:hover, .main-color .top-menu li > a:hover, .main-color .sidebar ul li a:hover, .main-color #buddypress .activity-list li.load-more a:hover, .manage-members .main-color .member-name:hover, .manage-members .main-color .member-name a:hover, .main-color #rtm-media-options-list ul li .rtmedia-action-buttons:hover, .woocommerce .main-color .yith-wcwl-add-to-wishlist a:hover, .woocommerce .main-color li.product figcaption .shop-actions > a.button:hover, .main-color .kleo-toggle-menu .quick-view:hover {
+  color: #f90;
+  text-decoration: underline;
+}
+.g_hyperlink-base-hover:hover > span, .g_hyperlink-base:hover > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button.fav:hover > span, a:hover > span, a:hover > span:hover > span, a:hover > i:hover > span, a.url:hover > span, .main-color a:hover > span, .main-color #top-social li a:hover > span, .main-color .top-menu li > a:hover > span, .main-color .sidebar ul li a:hover > span, .main-color #buddypress .activity-list li.load-more a:hover > span, .manage-members .main-color .member-name:hover > span, .manage-members .main-color .member-name a:hover > span, .main-color #rtm-media-options-list ul li .rtmedia-action-buttons:hover > span, .woocommerce .main-color .yith-wcwl-add-to-wishlist a:hover > span, .woocommerce .main-color li.product figcaption .shop-actions > a.button:hover > span, .main-color .kleo-toggle-menu .quick-view:hover > span {
+  color: #f90;
+}
+/* _button-variables.scss */
+/* _button.scss */
+.g_btn-color-priority, .g_btn-base-border.priority:not(:hover):not(:active), .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.priority:not(:hover):not(:active), form.wpcf7-form input.wpcf7-submit.priority:not(:hover):not(:active), .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.priority:not(:hover):not(:active), .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.priority:not(:hover):not(:active), .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].priority:not(:hover):not(:active), .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).priority:not(:hover):not(:active), .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.priority:not(:hover):not(:active), .tg-filters-holder .tg-dropdown-holder.priority:not(:hover):not(:active), form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].priority:not(:hover):not(:active), form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] {
+  color: #fff;
+  background: #49c5b6;
+  border-color: #49c5b6;
+}
+.g_btn-color-priority > span, .g_btn-base-border.priority:not(:hover):not(:active) > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.priority:not(:hover):not(:active) > span, form.wpcf7-form input.wpcf7-submit.priority:not(:hover):not(:active) > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.priority:not(:hover):not(:active) > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.priority:not(:hover):not(:active) > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].priority:not(:hover):not(:active) > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).priority:not(:hover):not(:active) > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.priority:not(:hover):not(:active) > span, .tg-filters-holder .tg-dropdown-holder.priority:not(:hover):not(:active) > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].priority:not(:hover):not(:active) > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span, .g_btn-color-priority > i, .g_btn-base-border.priority:not(:hover):not(:active) > i, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.priority:not(:hover):not(:active) > i, form.wpcf7-form input.wpcf7-submit.priority:not(:hover):not(:active) > i, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.priority:not(:hover):not(:active) > i, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.priority:not(:hover):not(:active) > i, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].priority:not(:hover):not(:active) > i, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).priority:not(:hover):not(:active) > i, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.priority:not(:hover):not(:active) > i, .tg-filters-holder .tg-dropdown-holder.priority:not(:hover):not(:active) > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].priority:not(:hover):not(:active) > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > i {
+  color: #fff;
+}
+.g_btn-base, .g_btn-base-border, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page, form.wpcf7-form input.wpcf7-submit, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit], .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav), .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"], .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 10px 15px !important;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  color: #49c5b6;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  height: auto;
+  background: transparent;
+  text-shadow: none;
+  text-align: center;
+  box-shadow: none;
+  box-sizing: border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.g_btn-base.btn-md, .g_btn-base-border.btn-md, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.btn-md, form.wpcf7-form input.wpcf7-submit.btn-md, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.btn-md, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.btn-md, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].btn-md, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).btn-md, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.btn-md, .tg-filters-holder .tg-dropdown-holder.btn-md, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].btn-md, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font.btn-md, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button.btn-md, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn.btn-md {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 15px 20px !important;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+.g_btn-base.btn-lg, .g_btn-base-border.btn-lg, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.btn-lg, form.wpcf7-form input.wpcf7-submit.btn-lg, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.btn-lg, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.btn-lg, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].btn-lg, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).btn-lg, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.btn-lg, .tg-filters-holder .tg-dropdown-holder.btn-lg, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].btn-lg, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font.btn-lg, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button.btn-lg, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn.btn-lg {
+  font-size: 24px;
+  line-height: 24px;
+  padding: 15px 30px !important;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+.g_btn-base > span, .g_btn-base-border > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page > span, form.wpcf7-form input.wpcf7-submit > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav) > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button > span, .tg-filters-holder .tg-dropdown-holder > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn > span {
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none !important;
+}
+.g_btn-base:hover, .g_btn-base-border:hover, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover, form.wpcf7-form input.wpcf7-submit:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover {
+  color: #f90;
+  background: transparent;
+}
+.g_btn-base:hover > span, .g_btn-base-border:hover > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover > span, form.wpcf7-form input.wpcf7-submit:hover > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover > span, .tg-filters-holder .tg-dropdown-holder:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > span, .g_btn-base:hover:before, .g_btn-base-border:hover:before, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:before, form.wpcf7-form input.wpcf7-submit:hover:before, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:before, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:before, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:before, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:before, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:before, .tg-filters-holder .tg-dropdown-holder:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:before, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:before {
+  color: #f90;
+}
+.g_btn-base:hover:active, .g_btn-base-border:hover:active, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active, form.wpcf7-form input.wpcf7-submit:hover:active, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active, .tg-filters-holder .tg-dropdown-holder:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active {
+  color: #fff;
+  background: #f90;
+}
+.g_btn-base:hover:active > span, .g_btn-base-border:hover:active > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active > span, form.wpcf7-form input.wpcf7-submit:hover:active > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active > span, .tg-filters-holder .tg-dropdown-holder:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active > span, .g_btn-base:hover:active:before, .g_btn-base-border:hover:active:before, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active:before, form.wpcf7-form input.wpcf7-submit:hover:active:before, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active:before, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active:before, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active:before, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active:before, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active:before, .tg-filters-holder .tg-dropdown-holder:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active:before, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active:before {
+  color: #fff;
+}
+/* (END) .g_btn-base */
+.g_btn-base-border, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page, form.wpcf7-form input.wpcf7-submit, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit], .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav), .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] {
+  border: 1px solid #c3ebe6;
+  width: auto;
+  min-width: auto;
+}
+.g_btn-base-border:hover, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover, form.wpcf7-form input.wpcf7-submit:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover {
+  border-color: #f90;
+}
+.g_btn-base-border:hover:active, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active, form.wpcf7-form input.wpcf7-submit:hover:active, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active, .tg-filters-holder .tg-dropdown-holder:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active {
+  border-color: #f90;
+}
+/* (END) .g_btn-base-border */
+/* S & XS */
+@media all and (max-width: 768px) {
+  h1, .h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  h2, .h2 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+/* _form.scss */
+.span-check:before {
+  color: #5fb624;
+  margin: 0 5px 0 0;
+}
+.span-check.strong {
+  font-weight: bold;
+  color: black;
+}
+/* _img.scss */
+/* LAYOUTS - page layout styles */
+/* _offsets.scss */
+.margin-0 {
+  margin: 0 !important;
+}
+.margin-x-0 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.padding-0 {
+  padding: 0 !important;
+}
+.padding-y-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.padding-y-g2 {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+.padding-top-0 {
+  padding-top: 0 !important;
+}
+.padding-bottom-0 {
+  padding-bottom: 0 !important;
+}
+.padding-bottom-g2 {
+  padding-bottom: 30px !important;
+}
+.padding-x-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.padding-left-0 {
+  padding-left: 0 !important;
+}
+.padding-right-0 {
+  padding-right: 0 !important;
+}
+.margin-y-1 {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.margin-y-g1 {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+.margin-y-g2 {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+.margin-top-0 {
+  margin-top: 0px;
+}
+.margin-top-1 {
+  margin-top: 10px !important;
+}
+.margin-top-2 {
+  margin-top: 20px !important;
+}
+.margin-top-g1 {
+  margin-top: 15px !important;
+}
+.margin-top-g2 {
+  margin-top: 30px !important;
+}
+.margin-bottom-0 {
+  margin-bottom: 0px !important;
+}
+.margin-bottom-1 {
+  margin-bottom: 10px !important;
+}
+.margin-bottom-2 {
+  margin-bottom: 20px !important;
+}
+.margin-bottom-g1 {
+  margin-bottom: 15px !important;
+}
+.margin-bottom-g2 {
+  margin-bottom: 30px !important;
+}
 .margin-left-0 {
   margin-left: 0px !important;
 }
@@ -32,108 +380,348 @@
 .margin-right-2 {
   margin-right: 20px !important;
 }
-/* (END) OFFSETS */
-/* Mixins */
-/* btns */
-.i-right i.fa {
-  margin-left: 10px;
+.border-0 {
+  border: 0px !important;
 }
-.i-left i.fa, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page i.fa {
-  margin-right: 10px;
+.border-top-0 {
+  border-top: 0px !important;
 }
-.g_btn-base, .g_btn-base-border, .g_btn-base-border-priority, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, form.wpcf7-form input.wpcf7-submit, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"], .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font {
-  cursor: pointer;
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 12px;
-  height: auto;
-  color: #999;
-  font-weight: bold;
-  padding: 10px 15px;
-  background: #fff;
-  text-shadow: none;
-  text-align: center;
-  box-shadow: none;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  box-sizing: border-box;
+.border-bottom-0 {
+  border-bottom: 0px !important;
 }
-.g_btn-base > span, .g_btn-base-border > span, .g_btn-base-border-priority > span, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a > span, form.wpcf7-form input.wpcf7-submit > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button > span, .tg-filters-holder .tg-dropdown-holder > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font > span {
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 12px;
-  color: #999;
-  font-weight: bold;
+.border-left-0 {
+  border-left: 0px !important;
 }
-.g_btn-base:hover, .g_btn-base-border:hover, .g_btn-base-border-priority:hover, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, form.wpcf7-form input.wpcf7-submit:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover {
-  color: #000;
-  background: #fff;
+.border-right-0 {
+  border-right: 0px !important;
 }
-.g_btn-base:hover > span, .g_btn-base-border:hover > span, .g_btn-base-border-priority:hover > span, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page:hover > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover > span, form.wpcf7-form input.wpcf7-submit:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover > span, .tg-filters-holder .tg-dropdown-holder:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover > span {
-  color: #000;
+.full-width {
+  width: 100%;
 }
-/* (END) .g_btn-base */
-.g_btn-color-priority, .g_btn-base-border-priority, .subnav-item-a, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a, ul.tg-dropdown-list > .no-touch .tg-dropdown-item, ul.tg-dropdown-list > .tg-dropdown-item, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] {
-  background: #000;
-  color: #fff;
-  border-color: #000;
-}
-.g_btn-color-priority:hover, .g_btn-base-border-priority:hover, .subnav-item-a:hover, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a:hover, ul.tg-dropdown-list > .no-touch .tg-dropdown-item:hover, ul.tg-dropdown-list > .tg-dropdown-item:hover, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover {
-  color: #fff;
-  background: #444;
-  border-color: #000;
-}
-.g_btn-color-priority:hover > span, .g_btn-base-border-priority:hover > span, .subnav-item-a:hover > span, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a:hover > span, ul.tg-dropdown-list > .no-touch .tg-dropdown-item:hover > span, ul.tg-dropdown-list > .tg-dropdown-item:hover > span, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, .g_btn-color-priority:hover > i, .g_btn-base-border-priority:hover > i, .subnav-item-a:hover > i, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a:hover > i, ul.tg-dropdown-list > .no-touch .tg-dropdown-item:hover > i, ul.tg-dropdown-list > .tg-dropdown-item:hover > i, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > i {
-  color: white;
-}
-.g_btn-base-border, .g_btn-base-border-priority, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, form.wpcf7-form input.wpcf7-submit, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"], .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder {
-  border: 1px solid #ddd;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  width: auto;
-  min-width: auto;
-}
-.g_btn-base-border:hover, .g_btn-base-border-priority:hover, .template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, form.wpcf7-form input.wpcf7-submit:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover {
-  border-color: #000;
-}
-/* (END) .g_btn-base-border */
 /* page layout */
 .template-page, .sidebar {
   padding-top: 30px;
   padding-bottom: 40px;
   min-height: 1px;
 }
-.template-page.tpl-right .wrap-content {
+.template-page .wrap-content {
   padding-right: 15px;
+  /* (END) amcust_title-bar-with-button */
 }
 @media (max-width: 768px) {
-  .template-page.tpl-right .wrap-content {
+  .template-page .wrap-content {
     padding-right: 0px;
   }
 }
-@media (min-width: 992px) {
-  .template-page.tpl-right .wrap-content > .container.amcust_page-title-container {
+.template-page .wrap-content .container.amcust_page-title-container h1 {
+  margin: 0 0 10px 0;
+}
+.template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page {
+  float: right;
+}
+/* body.single-post */
+body.single-post .template-page {
+  /* (END) &.tpl-right */
+}
+body.single-post .template-page.tpl-right .wrap-content {
+  /* (END) > article.post */
+}
+@media (min-width: 960px) {
+  body.single-post .template-page.tpl-right .wrap-content > .container.amcust_page-title-container {
     display: none;
   }
 }
-.template-page.tpl-right .wrap-content .article-content {
-  /* (END) .am-title-bar */
+body.single-post .template-page.tpl-right .wrap-content > article.post .article-content > .container.amcust_page-title-container {
+  margin-top: 10px;
 }
 @media (max-width: 991px) {
-  .template-page.tpl-right .wrap-content .article-content > .container.amcust_page-title-container {
+  body.single-post .template-page.tpl-right .wrap-content > article.post .article-content > .container.amcust_page-title-container {
     display: none;
   }
 }
-.template-page.tpl-right .wrap-content .article-content .am-title-bar .btn-add-to-page {
-  float: right;
+/* (END) body.single-post */
+/* body.home-page */
+body.home-page section.breadcrumbs-container {
+  display: none;
+}
+body.home-page section .container.amcust_page-title-container {
+  display: none;
+}
+/* (END) body.home-page */
+@media (min-width: 992px) {
+  article .article-meta {
+    width: 170px;
+  }
+  article .article-meta .post-meta .avatar {
+    margin-bottom: 10px;
+  }
+}
+.single .with-meta .article-media, .posts-listing.standard-listing.with-meta .article-media, .single .container .with-meta .article-content, .posts-listing.standard-listing.with-meta .article-content, #comments, .share-links {
+  margin-left: 200px;
+}
+.single .with-meta .article-media .comment-respond, .posts-listing.standard-listing.with-meta .article-media .comment-respond, .single .container .with-meta .article-content .comment-respond, .posts-listing.standard-listing.with-meta .article-content .comment-respond, #comments .comment-respond, .share-links .comment-respond {
+  margin-left: 0;
+}
+@media (max-width: 991px) {
+  .single .with-meta .article-media, .posts-listing.standard-listing.with-meta .article-media, .single .container .with-meta .article-content, .posts-listing.standard-listing.with-meta .article-content, #comments, .share-links {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* (END) page layout */
+/* _breadcrumbs.scss */
+/* breadcrumbs */
+section.container-wrap {
+  background: #fff;
+}
+section.container-wrap.breadcrumbs-container {
+  background: #f7f7f7;
+}
+section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb {
+  /* make sure breadcrumb does not go on 2 lines or touch far-right button */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(100% - 100px);
+}
+@media (max-width: 768px) {
+  section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb {
+    max-width: calc(100% - 40px);
+  }
+}
+/* (END) breadcrumbs */
+/* _navbar.scss */
+.subnav-item-a, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a, ul.tg-dropdown-list > .no-touch .tg-dropdown-item, ul.tg-dropdown-list > .tg-dropdown-item, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: normal;
+  border: none;
+  color: #fff;
+  background: #000;
+  border-bottom: 1px solid #fff !important;
+}
+@media (min-width: 992px) {
+  .subnav-item-a, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a, ul.tg-dropdown-list > .no-touch .tg-dropdown-item, ul.tg-dropdown-list > .tg-dropdown-item, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter {
+    text-align: center;
+  }
+}
+.subnav-item-a:hover, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a:hover, ul.tg-dropdown-list > .no-touch .tg-dropdown-item:hover, ul.tg-dropdown-list > .tg-dropdown-item:hover, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter:hover {
+  color: #fff !important;
+  background: #444 !important;
+}
+.subnav-arrow, .navbar .kleo-main-header ul.navbar-nav > li.open:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #000;
+  margin-left: -5px;
+}
+.navbar .kleo-main-header {
+  /* (END) .kleo-main-header ul.navbar-nav */
+}
+.navbar .kleo-main-header .container .navbar-collapse.in {
+  padding-bottom: 15px;
+}
+.navbar .kleo-main-header .nav > li:hover > a, .navbar .kleo-main-header .nav > li.active > a {
+  box-shadow: none;
+}
+.navbar .kleo-main-header ul.navbar-nav {
+  /* underline on header nav active */
+  /* (END) li */
+}
+.navbar .kleo-main-header ul.navbar-nav > li {
+  /* (END) @media (min-width:992px){ */
+}
+.navbar .kleo-main-header ul.navbar-nav > li > a {
+  margin: 0 15px;
+  text-transform: uppercase;
+}
+.navbar .kleo-main-header ul.navbar-nav > li > a > span.caret:after, .navbar .kleo-main-header ul.navbar-nav > li > a > i.fa {
+  color: inherit;
+}
+.navbar .kleo-main-header ul.navbar-nav > li > a span.caret:hover:after, .navbar .kleo-main-header ul.navbar-nav > li > a i.fa:hover {
+  color: #f90;
+}
+.navbar .kleo-main-header ul.navbar-nav > li.active > a {
+  color: #000;
+}
+@media (min-width: 992px) {
+  .navbar .kleo-main-header ul.navbar-nav > li.active > a:before {
+    transition: all 0.5s ease;
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    bottom: 25px;
+    left: 20%;
+    border-bottom: 2px solid #49c5b6;
+  }
+}
+.navbar .kleo-main-header ul.navbar-nav > li.open > ul.dropdown-menu > li {
+  border-bottom: 0px;
+}
+@media (min-width: 992px) {
+  .navbar .kleo-main-header ul.navbar-nav > li.open {
+    position: relative;
+  }
+  .navbar .kleo-main-header ul.navbar-nav > li.open > ul.dropdown-menu {
+    border: none;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+  }
+  .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li.active > a {
+    background: #444 !important;
+  }
+}
+.navbar .is-sticky .kleo-main-header .navbar-nav > li.active > a:before {
+  bottom: 0px;
+  width: 100%;
+  left: 0;
+}
+/* (END) navbar */
+.logo img {
+  height: 60px;
+  width: auto;
+}
+#header .navbar-nav .dropdown-menu li > a:hover, #header .navbar-nav .dropdown-menu li > a:focus, #header .navbar-nav .dropdown-submenu:hover > a, #header .navbar-nav .dropdown-submenu:focus > a, #header .navbar-nav .dropdown-menu > .active > a {
+  background: #fff;
+}
+/* _navbar-resp.scss */
+/* _footer.scss */
+/* #socket (footer) */
+div#socket.socket-color {
+  background: white;
+  border-top: 1px solid #e5e5e5;
+}
+@media (max-width: 768px) {
+  div#socket.socket-color {
+    border-top: 2px solid #49c5b6;
+  }
+}
+/* (END) #socket */
+/* _register.scss */
+/* _contact-form.scss */
+form.wpcf7-form label {
+  width: 100%;
+}
+form.wpcf7-form label .mandatory {
+  color: red;
+}
+form.wpcf7-form input[type="text"], form.wpcf7-form input[type="email"], form.wpcf7-form input[type="tel"], form.wpcf7-form input[type="date"], form.wpcf7-form input[type="password"] {
+  border: 1px solid #c3ebe6;
+  background: white;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 5px 0 10px 0;
+  color: black;
+}
+/* (END) form.wpcf7-form */
+/* amAdded */
+/* 0 < 480 */
+/* 0 < 480 */
+@media (max-width: 480px) {
+  .hidden-xxs-down {
+    display: none !important;
+  }
+  .visible-xxs-down {
+    display: block !important;
+  }
+}
+/* 401 - 480 */
+.visible-xxs {
+  display: none !important;
+}
+@media (max-width: 480px) {
+  .hidden-xxs {
+    display: none !important;
+  }
+  .visible-xxs {
+    display: block !important;
+  }
+  [class*="col-xxs-"] {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+  }
+  .col-xxs-12 {
+    width: 100%;
+  }
+}
+/* _font-awesome-overrule.scss */
+i.fa {
+  font-size: 14px;
+  line-height: 14px;
+}
+i.fa.fa-info-circle {
+  cursor: pointer;
+}
+i.fa.fa-lg {
+  font-size: 16px;
+  line-height: 16px;
+}
+i.fa.fa-lg {
+  font-size: 20px;
+  line-height: 20px;
+}
+.i-right i.fa {
+  margin-left: 10px;
+}
+.i-left i.fa, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page i.fa {
+  margin-right: 10px;
+}
+.fa-dummy, .span-check:before, .fa-dummy-before:before {
+  content: "\f00c";
+  font: normal normal normal 18px/1 FontAwesome;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+/* _bootstrap-overrule.scss */
+/* _kleo-overrule.scss */
+a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main-color .wrap-canvas-menu .widget_nav_menu, .main-color #buddypress a.button.unfav, .main-color .widget_bp_groups_widget .item-options a.selected, .main-color .widget_bp_core_members_widget .item-options a.selected, .main-color .widget_bp_core_friends_widget .item-options a.selected, .main-color .tabs-style-line > li.active > a, .main-color #buddypress #profile-edit-form ul.button-nav li.current a, .main-color .read-notifications td.notify-text a:hover, .main-color .unread-notifications td.notify-text a:hover, .woocommerce .main-color .widget_product_categories li.current-cat a {
+  font-weight: bold;
+}
+/* submenus */
+.share-links span a {
+  margin: 0 5px;
+}
+@media (min-width: 768px) {
+  .share-links span a {
+    margin: 0 15px;
+  }
+}
+.kleo-banner-slider:hover .kleo-banner-prev:hover, .kleo-banner-slider:hover .kleo-banner-next:hover {
+  background: white;
+  color: #f90;
+}
+.kleo-banner-slider:hover .kleo-banner-prev:hover:active, .kleo-banner-slider:hover .kleo-banner-next:hover:active {
+  background: #f90;
+  color: #fff;
+}
+.masonry-listing .format-quote .inner-content {
+  margin-right: 15px;
+}
+/* kleo-login */
+.kleo-form-modal {
+  max-width: 350px;
 }
 .container-wrap {
   /* (END) .container */
 }
 .container-wrap .container {
   /* (END) .sidebar */
+  /* content dividing line & title */
+  /* ------ SHARE THIS ------ */
   /* (END) .hr-title.hr-long */
 }
 .container-wrap .container .sidebar {
@@ -161,204 +749,56 @@
 .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a {
   text-transform: lowercase;
   font-size: 10px;
-  padding: 5px;
+  font-weight: normal;
+  padding: 5px 10px !important;
 }
 .container-wrap .container .hr-title.hr-long {
-  border-color: #999;
+  border-color: #ccc;
 }
 .container-wrap .container .hr-title.hr-long > abbr {
-  color: #999;
+  color: #ccc;
 }
 .container-wrap #buddypress #item-body {
   padding: 15px;
 }
 /* (END) .container-wrap */
-/* #socket (footer) */
-div#socket.socket-color {
-  background: white;
-  border-top: 1px solid #e5e5e5;
+/* _buddypress-overrule.scss */
+.wrap-content {
+  /* (END) #buddypress */
 }
-@media (max-width: 768px) {
-  div#socket.socket-color {
-    border-top: 2px solid #000;
-  }
-}
-/* (END) #socket */
-@media (min-width: 992px) {
-  article .article-meta {
-    width: 170px;
-  }
-}
-.single .with-meta .article-media, .posts-listing.standard-listing.with-meta .article-media, .single .container .with-meta .article-content, .posts-listing.standard-listing.with-meta .article-content, #comments, .share-links {
-  margin-left: 200px;
-}
-.single .with-meta .article-media .comment-respond, .posts-listing.standard-listing.with-meta .article-media .comment-respond, .single .container .with-meta .article-content .comment-respond, .posts-listing.standard-listing.with-meta .article-content .comment-respond, #comments .comment-respond, .share-links .comment-respond {
-  margin-left: 0;
-}
-@media (max-width: 991px) {
-  .single .with-meta .article-media, .posts-listing.standard-listing.with-meta .article-media, .single .container .with-meta .article-content, .posts-listing.standard-listing.with-meta .article-content, #comments, .share-links {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-/* (END) page layout */
-/* kleo child append */
-a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main-color .wrap-canvas-menu .widget_nav_menu, .main-color #buddypress a.button.unfav, .main-color .widget_bp_groups_widget .item-options a.selected, .main-color .widget_bp_core_members_widget .item-options a.selected, .main-color .widget_bp_core_friends_widget .item-options a.selected, .main-color .tabs-style-line > li.active > a, .main-color #buddypress #profile-edit-form ul.button-nav li.current a, .main-color .read-notifications td.notify-text a:hover, .main-color .unread-notifications td.notify-text a:hover, .woocommerce .main-color .widget_product_categories li.current-cat a {
-  color: #999;
-  font-weight: bold;
-}
-a:hover, a:hover > span, a:hover > i, a.url:hover, .main-color a:hover, .main-color #top-social li a:hover, .main-color .top-menu li > a:hover, .main-color .sidebar ul li a:hover, .main-color #buddypress .activity-list li.load-more a:hover, .manage-members .main-color .member-name:hover, .manage-members .main-color .member-name a:hover, .main-color #rtm-media-options-list ul li .rtmedia-action-buttons:hover, .woocommerce .main-color .yith-wcwl-add-to-wishlist a:hover, .woocommerce .main-color li.product figcaption .shop-actions > a.button:hover, .main-color .kleo-toggle-menu .quick-view:hover {
-  color: #000;
-  font-weight: bold;
-}
-/* submenus */
-/* breadcrumbs */
-section.container-wrap {
-  background: #fff;
-}
-section.container-wrap.breadcrumbs-container {
+.wrap-content #buddypress form#whats-new-form {
   background: #f7f7f7;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  /* (END) #whats-new-options */
 }
-section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb > span {
-  color: black;
+.wrap-content #buddypress form#whats-new-form #whats-new-content {
+  margin-bottom: 0;
 }
-section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb > span.active a {
-  color: black;
-}
-/* (END) breadcrumbs */
-.share-links span a {
-  margin: 0 10px;
-}
-@media (min-width: 768px) {
-  .share-links span a {
-    margin: 0 15px;
-  }
-}
-.subnav-item-a, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a, ul.tg-dropdown-list > .no-touch .tg-dropdown-item, ul.tg-dropdown-list > .tg-dropdown-item, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter {
-  padding: 10px 15px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: normal;
-  border: none;
-  border-bottom: 1px solid #fff;
-}
-.subnav-item-a:hover, .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li > a:hover, ul.tg-dropdown-list > .no-touch .tg-dropdown-item:hover, ul.tg-dropdown-list > .tg-dropdown-item:hover, ul.tg-dropdown-list > .tg-dropdown-item.tg-filter.tg-show-filter:hover {
-  border-bottom-color: #fff;
-}
-.subnav-arrow, .navbar .kleo-main-header ul.navbar-nav > li.open:after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0px;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid black;
-  margin-left: -5px;
-}
-.navbar .kleo-main-header {
-  /* (END) .kleo-main-header ul.navbar-nav */
-}
-.navbar .kleo-main-header .container .navbar-collapse.in {
-  padding-bottom: 20px;
-  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 1.0);
-  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 1.0);
-  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 1.0);
-}
-.navbar .kleo-main-header .nav > li:hover > a, .navbar .kleo-main-header .nav > li.active > a {
-  box-shadow: none;
-}
-.navbar .kleo-main-header ul.navbar-nav {
-  /* underline on header nav active */
-  /* (END) li */
-}
-.navbar .kleo-main-header ul.navbar-nav > li {
-  /* (END) @media (min-width:992px){ */
-}
-.navbar .kleo-main-header ul.navbar-nav > li > a {
-  color: #999;
-  margin: 0 15px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-.navbar .kleo-main-header ul.navbar-nav > li > a > span.caret:before, .navbar .kleo-main-header ul.navbar-nav > li > a > i.fa {
-  color: #999;
-}
-.navbar .kleo-main-header ul.navbar-nav > li > a:hover {
-  color: #000;
-}
-.navbar .kleo-main-header ul.navbar-nav > li > a:hover span.caret:before, .navbar .kleo-main-header ul.navbar-nav > li > a:hover i.fa {
-  color: #000;
-}
-.navbar .kleo-main-header ul.navbar-nav > li.active > a {
-  color: #000;
-}
-@media only screen and (min-width: 992px) {
-  .navbar .kleo-main-header ul.navbar-nav > li.active > a:before {
-    transition: all 0.5s ease;
-    content: "";
-    position: absolute;
-    width: 60%;
-    height: 1px;
-    bottom: 25px;
-    left: 20%;
-    border-bottom: 2px solid black;
-  }
-}
-@media (min-width: 992px) {
-  .navbar .kleo-main-header ul.navbar-nav > li.open {
-    position: relative;
-  }
-  .navbar .kleo-main-header ul.navbar-nav > li.open > ul.dropdown-menu {
-    border: none;
-    width: 200px;
-    left: 50%;
-    margin-left: -100px;
-  }
-  .navbar .kleo-main-header ul.navbar-nav > li ul.dropdown-menu > li {
-    border: none;
-  }
-}
-.navbar .is-sticky .kleo-main-header .navbar-nav > li.active > a:before {
-  bottom: 0px;
-  width: 100%;
-  left: 0;
-}
-/* (END) navbar */
-.logo img {
-  height: 60px;
-  width: auto;
-}
-form.wpcf7-form label {
-  width: 100%;
-}
-form.wpcf7-form label .mandatory {
-  color: red;
-}
-form.wpcf7-form input[type="text"], form.wpcf7-form input[type="email"], form.wpcf7-form input[type="tel"], form.wpcf7-form input[type="date"], form.wpcf7-form input[type="password"] {
-  border: 1px solid #ddd;
+.wrap-content #buddypress form#whats-new-form #whats-new-content #whats-new-textarea textarea {
   background: white;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 10px;
-  width: 100%;
-  margin: 5px 0 10px 0;
-  color: black;
 }
-/* (END) form.wpcf7-form */
-/* WPUF */
-form.wpuf-form-add ul.wpuf-form.form-label-left li {
-  padding: 0;
-  margin-bottom: 15px;
+.wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container {
+  height: auto;
 }
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields textarea {
-  height: 60px;
+.wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button span.dashicons {
+  width: 12px;
+  height: 12px;
 }
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button {
-  padding: 5px 10px;
+.wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button span.dashicons:before {
+  width: 12px;
+  height: 12px;
 }
-/* (END) WPUF */
+.wrap-content #buddypress .activity ul.activity-list > li.activity-item {
+  /* (END) .activity-content */
+}
+.wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta {
+  padding-bottom: 30px;
+}
+.wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).delete-activity {
+  color: red !important;
+}
 /* The Grid */
 .tg-grid-wrapper .tg-grid-holder.tg-layout-grid {
   margin-top: 20px;
@@ -438,13 +878,6 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button
 ul.tg-dropdown-list {
   border: none;
 }
-/* (END) .tg-filters-holder */
-/* (END) The Grid - FILTER */
-/* amAdded */
-.row-no-padding [class*="col-"] {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
 /* 0 < 480 */
 @media (min-width: 481px) {
   .tg-grid-area-top1 {
@@ -469,36 +902,17 @@ ul.tg-dropdown-list {
     display: block !important;
   }
 }
-/* 401 - 480 */
-.visible-xxs {
-  display: none !important;
+/* (END) .tg-filters-holder */
+/* (END) The Grid - FILTER */
+/* _wpuf.scss */
+form.wpuf-form-add ul.wpuf-form.form-label-left li {
+  padding: 0;
+  margin-bottom: 15px;
 }
-@media (max-width: 480px) {
-  .hidden-xxs {
-    display: none !important;
-  }
-  .visible-xxs {
-    display: block !important;
-  }
-  [class*="col-xxs-"] {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    float: left;
-  }
-  .col-xxs-12 {
-    width: 100%;
-  }
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields textarea {
+  height: 60px;
 }
-body {
-  background: #fff;
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button {
+  padding: 5px 10px;
 }
-body #main {
-  background: #fff;
-}
-/* (END) body */
-/* kleo-login */
-.kleo-form-modal {
-  max-width: 350px;
-}
+/* (END) WPUF */

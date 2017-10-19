@@ -1,0 +1,105 @@
+/* _buddypress-overrule.scss */
+
+.wrap-content {
+
+    #buddypress {
+        form#whats-new-form {
+            background: $color_bg-breadcrumb;
+            padding: $offset-g1;
+            border-radius: 5px;
+            border: 1px solid $color_layout-border;
+
+            #whats-new-content {
+                margin-bottom:0;
+
+                #whats-new-textarea {
+                    textarea {
+                        background:white;
+                    }
+                }
+            }
+
+            #whats-new-options {
+                .rtmedia-plupload-container {
+                    height:auto;
+
+                    .rtmedia-add-media-button {
+                        @extend .g_btn-base-border;
+
+                        span.dashicons {
+                            width:12px;
+                            height:12px;
+
+                            &:before {
+                                width:12px;
+                                height:12px;
+                            }
+                        }
+                    }
+                }
+                #whats-new-submit {
+                    input[type=submit] {
+                        @extend .g_btn-base-border;
+                    }
+                }
+            }
+            /* (END) #whats-new-options */
+        }
+
+        .activity {
+            ul.activity-list {
+                > li.activity-item {
+                    
+                    .activity-content {                    
+
+                        .activity-meta {
+                            padding-bottom: $offset-g2;
+
+                            > a.button:not(.fav) {
+                                @extend .g_btn-base-border;
+
+                                &.delete-activity {
+                                    color:red !important;
+                                }
+                            }
+
+                            > a.button.fav {
+                                @extend .g_hyperlink-base;
+                            }
+
+                        }
+                    }
+                    /* (END) .activity-content */ 
+
+                }
+            }
+        }
+    }
+    /* (END) #buddypress */
+
+
+    .item-list-tabs {
+
+    }  
+    
+}
+
+.textwidget,
+.article-content,
+.activity-content,
+.archive-description {
+
+    p {
+        a {
+            // font-weight:normal;
+            //text-decoration:underline;
+            //border-bottom: 1px solid #dcdcdc;
+
+            &:hover {
+                //font-weight:bold;
+                //text-decoration:none;
+            }
+        }
+    }
+
+}

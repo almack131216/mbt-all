@@ -1,0 +1,174 @@
+/* _kleo-overrule.scss */
+
+a,
+a > span,
+a > i,
+a.url,
+.main-color a, 
+.main-color .form-control:focus,
+.main-color .wrap-canvas-menu .widget_nav_menu,
+.main-color #buddypress a.button.unfav,
+.main-color .widget_bp_groups_widget .item-options a.selected,
+.main-color .widget_bp_core_members_widget .item-options a.selected,
+.main-color .widget_bp_core_friends_widget .item-options a.selected,
+.main-color .tabs-style-line > li.active > a,
+.main-color #buddypress #profile-edit-form ul.button-nav li.current a,
+.main-color .read-notifications td.notify-text a:hover,
+.main-color .unread-notifications td.notify-text a:hover,
+.woocommerce .main-color .widget_product_categories li.current-cat a {
+	//color:#999999;
+    font-weight:bold;      
+}
+
+a:hover,
+a:hover > span,
+a:hover > i,
+a.url:hover,
+.main-color a:hover, .main-color #top-social li a:hover,
+.main-color .top-menu li > a:hover,
+.main-color .sidebar ul li a:hover,
+.main-color #buddypress .activity-list li.load-more a:hover,
+.manage-members .main-color .member-name:hover,
+.manage-members .main-color .member-name a:hover,
+.main-color #rtm-media-options-list ul li .rtmedia-action-buttons:hover,
+.woocommerce .main-color .yith-wcwl-add-to-wishlist a:hover,
+.woocommerce .main-color li.product figcaption .shop-actions > a.button:hover,
+.main-color .kleo-toggle-menu .quick-view:hover {
+    //color: #000000;
+    @extend .g_hyperlink-base-hover;
+    //font-weight:bold;    
+}
+
+/* submenus */
+.main-color .navbar-nav .dropdown-menu li a,
+.main-color .dropdown-menu > li > a:hover,
+.main-color .dropdown-menu > li > a:focus,
+.main-color .dropdown-submenu:hover > a,
+.main-color .dropdown-submenu:focus > a,
+.main-color .dropdown-menu > .active > a,
+.main-color .dropdown-menu > .active > a:hover,
+.main-color .dropdown-menu > .active > a:focus,
+.main-color .wrap-canvas-menu .widget_nav_menu .offcanvas-menu .dropdown-menu > li > a {
+	// color:#999999;
+    // font-weight:bold;
+}
+
+
+.main-color .navbar-nav .dropdown-menu li a:hover,
+.main-color .wrap-canvas-menu .widget_nav_menu .offcanvas-menu .dropdown-menu > li > a:hover,
+.main-color .wrap-canvas-menu .widget_nav_menu .offcanvas-menu .dropdown-menu > li > a:focus {
+    // color: #000000;
+    // font-weight:bold;
+}
+
+
+
+.share-links span a {
+    margin: 0 5px;
+    @extend .underline-none;
+
+    @media (min-width:$bp-sm){
+        margin: 0 $offset-g1;
+    }
+}
+
+.kleo-banner-slider {
+    &:hover {
+
+        .kleo-banner-prev,
+        .kleo-banner-next {
+
+            &:hover {
+                background:white;
+                color:$color_hyperlink-text-hover;
+
+                &:active {
+                    background:$color_hyperlink-bg-active;
+                    color:$color_hyperlink-text-active;
+                }
+            }  
+
+        }
+
+    }
+}
+
+#comments-list .comment-meta-actions,
+#comments-list .comment-meta-actions a {
+    //@extend .g_hyperlink-base-hover;
+}
+
+article.post-item.type-post {
+
+    .post-header .post-meta,
+    .post-footer {
+        a {
+           // @extend .g_hyperlink-base-hover;
+        }
+    }
+
+}
+
+.masonry-listing .format-quote .inner-content {
+    margin-right: $offset-g1;
+}
+
+/* kleo-login */
+.kleo-form-modal {
+    max-width: 350px;
+}
+
+.container-wrap {
+    .container {
+        .sidebar {
+            @media (max-width:$bp-sm){
+                border-top:2px solid #000;
+            }
+
+            .inner-content {
+                padding-left: $offset-g1;
+                @media (max-width:$bp-sm){
+                    padding-left: 0px;
+                }
+            }
+            h4 {
+                text-transform:uppercase;
+            }
+            .bp-login-widget-user-links {
+                min-height:60px;//height of user avatar
+            }
+
+            .widget.widget_tag_cloud {
+                .tagcloud {
+                    > a {
+                        @extend .g_btn-base-border;
+                        text-transform:lowercase;
+                        font-size:10px;
+                        font-weight:normal;
+                        padding:5px 10px !important;
+                    }                    
+                }                
+            }
+            /* (END) widget_tag_cloud */
+
+        }
+        /* (END) .sidebar */
+
+        /* content dividing line & title */
+        /* ------ SHARE THIS ------ */
+        .hr-title.hr-long {
+            border-color:$color_layout-border-strong;
+
+            > abbr {
+                color:$color_layout-border-strong;
+            }
+        }
+        /* (END) .hr-title.hr-long */
+    }
+    /* (END) .container */
+
+    #buddypress #item-body {
+        padding:$offset-g1;
+    }
+}
+/* (END) .container-wrap */

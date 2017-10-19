@@ -1,0 +1,21 @@
+/* _typography-hyperlink.scss */
+
+.g_hyperlink-base {
+    color:$color_hyperlink-text;
+    > span {
+        color:$color_hyperlink-text;
+    }
+    
+    @extend .g_hyperlink-base-hover;
+}
+
+.g_hyperlink-base-hover {
+    &:hover {
+        color:$color_hyperlink-text-hover;
+        text-decoration:underline;
+
+        > span {
+            color:$color_hyperlink-text-hover;
+        }
+    }
+}

@@ -1,0 +1,186 @@
+/* _button.scss */
+
+.g_btn-color-priority {
+    color:$color_priority-text;
+    background:$color_priority-bg;    
+    border-color:$color_priority-border;    
+
+    > span,
+    > i {
+        color:$color_priority-text;
+    }
+
+    // &:hover {
+    //     color:$color_priority-text-hover;
+    //     background:$color_priority-bg-hover;
+    //     border-color:$color_priority-border-hover;
+
+    //     > span,
+    //     > i {
+    //         color:$color_priority-text-hover;
+    //     }
+    // }
+
+    // &:active {
+    //     color:$color_priority-text-active !important;
+    //     background:$color_button-bg-active !important;
+    //     border-color:$color_button-border-active !important;
+
+    //     > span,
+    //     > i {
+    //         color:$color_priority-text-active !important;
+    //     }
+    // }
+}
+
+.g_btn-base {    
+	font-size:$font-size_button;
+    line-height:$font-size_button;
+    padding: $offset-1 $offset-g1 !important;	
+	text-transform:uppercase;
+    text-decoration:none !important;
+    color:$color_button-text;	
+    font-weight:bold;
+    
+    display:inline-block;
+    cursor: pointer;
+    height:auto;	    
+    
+    background:$color_button-bg;
+    text-shadow: none;
+    text-align: center;
+    box-shadow: none;    
+    box-sizing: border-box;
+    @include border-radius(20px);
+
+    &.btn-md {
+        font-size:$font-size_button-md;
+        line-height:$font-size_button-md;
+        padding: $offset-g1 $offset-2 !important;
+        @include border-radius(25px);
+    }
+
+    &.btn-lg {
+        font-size:$font-size_button-lg;
+        line-height:$font-size_button-lg;
+        padding: $offset-g1 $offset-g2 !important;
+        @include border-radius(30px);
+    }
+
+    > span {
+        font-size:inherit;
+        line-height:inherit;	
+        text-transform:inherit;        
+        color:inherit;
+        font-weight:inherit;
+        text-decoration:none !important;
+    }   
+
+    &:hover {
+		color:$color_button-text-hover;
+        background:$color_button-bg-hover;
+
+        > span,
+        &:before {
+            color:$color_button-text-hover;
+        }
+
+        &:active {
+            color:$color_button-text-active;
+            background:$color_button-bg-active;
+
+            > span,
+            &:before {
+                color:$color_button-text-active;
+            }
+        } 
+	}
+       
+}
+/* (END) .g_btn-base */
+
+.g_btn-base-border {
+	@extend .g_btn-base;
+	border:1px solid $color_button-border;
+    width: auto;
+    min-width: auto;
+
+    &:hover {
+        border-color:$color_button-border-hover;
+
+        // > span,
+        // > i,
+        // &:before {
+        //     color:$color_button-text-hover;
+        // }
+
+        &:active {
+            //color:$color_button-text-active;
+            //background:$color_button-bg-active;
+            border-color:$color_button-border-active;
+
+            // > span,
+            // &:before {
+            //     //color:$color_button-text-active;
+            // }
+        }
+	}
+
+    &.priority:not(:hover):not(:active) {
+        @extend .g_btn-color-priority;
+        // color:$color_priority-text;
+        // background:$color_priority-bg;    
+        // border-color:$color_priority-border;    
+
+        // > span,
+        // > i {
+        //     color:$color_priority-text;
+        // }
+
+        // &:hover {
+        //     color:$color_priority-text-hover;
+        //     background:$color_priority-bg-hover;
+        //     border-color:$color_priority-border-hover;
+
+        //     > span,
+        //     > i {
+        //         color:$color_priority-text-hover;
+        //     }
+        // }
+
+        // &:active {
+        //     color:$color_priority-text-active !important;
+        //     background:$color_button-bg-active !important;
+        //     border-color:$color_button-border-active !important;
+
+        //     > span,
+        //     > i {
+        //         color:$color_priority-text-active !important;
+        //     }
+        // }
+    }
+    
+}
+
+
+
+/* (END) .g_btn-base-border */
+
+// .g_btn-base-border-priority {
+//     @extend .g_btn-base-border;
+//     @extend .g_btn-color-priority;
+// }
+
+
+/* S & XS */
+@media all and (max-width: $bp-sm) {
+    h1,.h1 {
+        font-size:28px;
+        line-height:30px;
+    }
+
+    h2,.h2 {
+        font-size:26px;
+        line-height:30px;
+    }
+}

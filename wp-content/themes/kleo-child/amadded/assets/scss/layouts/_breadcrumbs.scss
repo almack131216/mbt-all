@@ -1,0 +1,28 @@
+/* _breadcrumbs.scss */
+
+/* breadcrumbs */
+section.container-wrap {
+    background:$color_bg-content;
+
+    &.breadcrumbs-container {
+        background:$color_bg-breadcrumb;
+
+        div.kleo_framework.breadcrumb {
+            /* make sure breadcrumb does not go on 2 lines or touch far-right button */            
+            @include trim-string();
+            max-width: calc(100% - 100px);
+
+            @media (max-width:$bp-sm){
+                max-width: calc(100% - 40px);
+            }
+
+            > span {
+                //color:black;
+                &.active a {
+                    //color:black;
+                }
+            }
+        }
+    }
+}
+/* (END) breadcrumbs */

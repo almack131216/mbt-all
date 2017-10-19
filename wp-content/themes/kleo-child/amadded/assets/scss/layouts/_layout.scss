@@ -1,0 +1,115 @@
+/* page layout */
+.template-page, .sidebar {
+    padding-top: $offset-g2;
+    padding-bottom: 40px;
+    min-height: 1px;
+}
+.template-page {
+    .wrap-content {
+        padding-right: $offset-g1;
+        @media (max-width:$bp-sm){
+            padding-right: 0px;
+        }
+
+        .container.amcust_page-title-container {
+            h1 {
+                margin:0 0 $offset-1 0;
+            }
+        }
+
+        .amcust_title-bar-with-button {
+            .btn-add-to-page {
+                @extend .g_btn-base-border;
+                float:right;
+
+                @extend .i-left;
+
+                // > i.fa {
+                //     margin-right:5px;
+                // }
+            }
+        }
+        /* (END) amcust_title-bar-with-button */
+
+    }
+}
+
+/* body.single-post */
+body.single-post {
+    .template-page {
+        &.tpl-right {
+            .wrap-content {
+
+                > .container.amcust_page-title-container {
+                    @media (min-width:$bp-md){
+                        display:none;
+                    }
+                }
+
+                > article.post {
+                    .article-content {
+                        > .container.amcust_page-title-container {
+                            margin-top:$offset-1;
+
+                            @media (max-width:991px){
+                                display:none;
+                            }
+                        }
+                    }
+                }
+                /* (END) > article.post */
+            }
+        }
+        /* (END) &.tpl-right */
+    }
+}
+/* (END) body.single-post */
+
+/* body.home-page */
+body.home-page {
+    
+    section {
+        &.breadcrumbs-container {
+            display:none;
+        }
+
+        .container.amcust_page-title-container {
+            display:none;
+        }
+    }
+    
+    
+}
+/* (END) body.home-page */
+
+
+article .article-meta {
+    @media (min-width: 992px) {
+        width: 170px;
+
+        .post-meta {
+            .avatar {
+                margin-bottom:$offset-1;
+            }
+        }
+    }
+}
+
+.single .with-meta .article-media,
+.posts-listing.standard-listing.with-meta .article-media,
+.single .container .with-meta .article-content,
+.posts-listing.standard-listing.with-meta .article-content,
+#comments,
+.share-links {
+     margin-left: 200px;
+     
+     .comment-respond {
+         margin-left:0;
+     }
+
+     @media (max-width: 991px) {
+        margin-left:0;
+        width:100%;
+     }    
+}
+/* (END) page layout */

@@ -59,6 +59,22 @@ ul.tg-dropdown-list {
     }
 }
 
+/* 0 < 480 */
+@media (min-width: 481px){
+	.tg-grid-area-top1 {display:block !important;}
+    .tg-grid-area-top2 {display:none !important;}
+}
+
+/* 0 < 480 */
+@media (max-width: $bp-xs){
+	.tg-grid-area-top1 {display:none !important;}
+    .tg-grid-area-top2 {display:block !important;}
+
+    .hidden-xxs-down {display: none!important;}
+    .visible-xxs-down {display: block!important;}
+    //.col-xxs-12 { width: 100%; }
+}
+
 // .no-touch .tg-dropdown-item,
 // .tg-dropdown-item,
 // .tg-dropdown-item.tg-filter.tg-show-filter {

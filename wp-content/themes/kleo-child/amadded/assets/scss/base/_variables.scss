@@ -1,0 +1,121 @@
+/* _variables.scss */
+
+/* Base colors */
+$color_accent: #49c5b6;
+$color_accent2: #f90;
+$color_disabled:rgb(200, 200, 200);
+
+$color_primary:#5fb624;//rgb(95,182,36)
+$color_light:#F0F0F0;
+$color_gray:#cacdd1;
+$color_gray-dark:#a5a9b0;
+$color_gray-light:#f4f4f4;
+
+/* Font colors */
+$color_validate-good:#5fb624;
+$color_validate-error:#C41A1A;
+
+$base-font-size:14px;
+$base-font-family:"OpenSans",Arial,sans-serif;
+$base-font-color:#666;
+$base-font-line-height:30px;
+
+$color_danger:#f00;
+
+/* responsive breakpoints */
+$bp-xlg:1440px;
+$bp-lg:1140px;
+$bp-md:960px;
+$bp-sm:768px;
+$bp-xs:480px;
+$bp-xxs:400px;
+
+/* offset: margins & paddings */
+$offset-0:0px;
+$offset-0-5:5px;
+$offset-1:10px;
+$offset-2:20px;
+$offset-3:30px;
+$offset-4:40px;
+$offset-g1:15px;
+$offset-g2:30px;
+$offset-g3:45px;
+$offset-g4:60px;
+
+/* forms */
+$form-input-gap:$offset-1;
+
+/* border-radius */
+$border-radius-panel:3px;
+$border-radius-input:3px;
+$border-radius-button:25px;
+
+/* social media buttons */
+$color_share:#a5a9b0;
+$color_share-raised:#84878c;
+$color_twitter:#3b9cff;
+$color_twitter-raised:#2f7ccc;
+$color_facebook:#2f7ccc;
+$color_facebook-raised:#2563a3;
+$color_youtube:#c41a1a;
+$color_youtube-raised:#9c1414;
+$color_instagram:#f89800;
+$color_instagram-raised:#c67900;
+
+/* table */
+$table-color-border-thead:$color_gray-dark;
+$table-color-border:$color_gray-light;
+$table-color-primary-border:#7BC14F;
+
+/* modal */
+$modal-width-default:470px;
+$modal-width-xlg:720px;
+$modal-width-lg:720px;
+$modal-width-md:640px;
+$modal-width-sm:580px;
+$modal-width-xs:435px;
+$modal-width-xxs:100%;
+
+$color_hyperlink-text:$color_accent;//#367bb7;
+$color_hyperlink-text-hover:$color_accent2;
+$color_hyperlink-text-active:#fff;
+$color_hyperlink-bg:transparent;
+$color_hyperlink-bg-hover:transparent;
+$color_hyperlink-bg-active:$color_hyperlink-text-hover;
+
+$color_priority-text: #fff;
+$color_priority-text-hover: $color_hyperlink-text-hover;
+$color_priority-text-active: #fff;
+$color_priority-bg: $color_hyperlink-text;
+$color_priority-bg-hover: #fff;
+$color_priority-bg-active: $color_hyperlink-text-hover;
+$color_priority-border: $color_hyperlink-text;
+$color_priority-border-hover: $color_hyperlink-text-hover;
+$color_priority-border-active: $color_hyperlink-text-hover;
+
+$color_button-text: $color_hyperlink-text;// #999;
+$color_button-text-hover: $color_hyperlink-text-hover;
+$color_button-text-active: $color_hyperlink-text-active;
+$color_button-bg: transparent;
+$color_button-bg-hover: transparent;
+$color_button-bg-active: $color_hyperlink-bg-active;
+$color_button-border: #C3EBE6;//$color_hyperlink-text;
+$color_button-border-hover: $color_hyperlink-text-hover;
+$color_button-border-active: $color_hyperlink-text-hover;
+
+$color_bg-body: #fff;
+$color_bg-content: #fff;
+$color_bg-breadcrumb: #f7f7f7;
+
+$color_hdr-nav: #000;// $color_button-text;
+$color_hdr-nav-hover:$color_hdr-nav;
+$color_hdr-nav-active:$color_hdr-nav;
+
+$color_hdr-subnav:#fff;
+$color_hdr-subnav-hover:#fff !important;
+$color_hdr-subnav-bg:#000;
+$color_hdr-subnav-bg-hover: #444 !important;
+
+$color_layout-border: #e5e5e5;
+$color_layout-border-strong: #ccc;
+$color_layout-border-priority: $color_priority-border;

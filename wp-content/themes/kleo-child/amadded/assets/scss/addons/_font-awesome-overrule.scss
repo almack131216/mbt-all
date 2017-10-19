@@ -1,0 +1,40 @@
+/* _font-awesome-overrule.scss */
+
+i.fa {
+    font-size:$base-font-size;
+    line-height:$base-font-size;
+
+    &.fa-info-circle {
+        cursor:pointer;//help / info (for tooltips)
+    }
+
+    &.fa-lg {
+        font-size:16px;
+        line-height:16px;
+    }
+
+    &.fa-lg {
+        font-size:20px;
+        line-height:20px;
+    }
+}
+
+.i-right {
+    i.fa {
+        margin-left:$offset-1;
+    }
+}
+.i-left {
+    i.fa {
+        margin-right:$offset-1;
+    }
+}
+
+.fa-dummy,
+.fa-dummy-before:before {
+    content:"\f00c";
+    font:normal normal normal 18px/1 FontAwesome;
+    display:inline-block;
+    width:20px;
+    height:20px;
+}
