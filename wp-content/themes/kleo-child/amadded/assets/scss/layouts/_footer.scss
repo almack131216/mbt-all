@@ -6,7 +6,7 @@ div#socket.socket-color {
 	border-top:1px solid $color_layout-border;
     
     @media (max-width:$bp-sm){
-        border-top:2px solid $color_layout-border-priority;
+        @include rwd_border-content-divide('top');
     }
 }
 /* (END) #socket */

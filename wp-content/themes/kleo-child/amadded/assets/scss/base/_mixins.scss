@@ -1,4 +1,35 @@
-/* Mixins */
+/* _mixins.scss */
+
+@mixin btn-sm() {
+    font-size:10px;
+    font-weight:normal;
+    padding:5px 10px !important;
+}
+
+@mixin btn-color-priority() {
+    color:$color_priority-text;
+    background:$color_priority-bg;    
+    border-color:$color_priority-border;    
+
+    > span,
+    > i {
+        color:$color_priority-text;
+    }
+}
+
+@mixin rwd_border-content-divide($position: 'top') {
+    
+    @if $position == 'bottom' {
+        border-top:2px solid $color_layout-border-strongest;
+    } @else if $position == 'left'{
+        border-left:2px solid $color_layout-border-strongest;
+    } @else if $position == 'right'{
+        border-right:2px solid $color_layout-border-strongest;
+    } @else {
+        border-top:2px solid $color_layout-border-strongest;
+    }
+}
+                
 @mixin box-shadow($inset:true) {
   @if $inset {
     -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);

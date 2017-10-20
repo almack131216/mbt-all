@@ -29,7 +29,7 @@ form.wpuf-form-add {
                 }
                 input[type="submit"] {
                     @extend .g_btn-base-border;
-                    @extend .g_btn-color-priority;
+                    @include btn-color-priority();;
                 }
                 a.btn {
                     @extend .g_btn-base;

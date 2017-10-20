@@ -1,7 +1,7 @@
 /* _navbar.scss */
 
 .subnav-item-a {
-    //@extend .g_btn-color-priority;
+    //@include btn-color-priority();;
     padding:$offset-1 $offset-g1;
     cursor: pointer;
     @media (min-width : 992px) {
@@ -12,6 +12,7 @@
     color:$color_hdr-subnav;
     background:$color_hdr-subnav-bg;
     border-bottom:1px solid $color_hdr-subnav !important;
+    text-transform:uppercase;
 
     &:hover {
         color:$color_hdr-subnav-hover;
@@ -92,10 +93,10 @@
                                 transition: all 0.5s ease;
                                 content: "";
                                 position: absolute;
-                                width: 60%;
+                                width: 70%;
                                 height: 1px;
                                 bottom:25px;
-                                left: 20%;
+                                left: 15%;
                                 border-bottom: 2px solid $color_accent;
                             }
                         }

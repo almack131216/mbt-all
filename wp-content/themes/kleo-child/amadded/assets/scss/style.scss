@@ -7,8 +7,12 @@ Author URI: http://themeforest.net/user/SeventhQueen
 Description: Multipurpose Premium WordPress Theme
 Tags: one-column,two-columns,right-sidebar,fluid-layout,custom-menu,featured-images,post-formats,sticky-post,translation-ready
 Version: v1.0
-Updated: 2017-10-19
+Updated: 2017-10-19 346
 
+*/
+
+/*
+base styles
 */
 
 /* BASE - base styles, variables, mixins etc */
@@ -37,11 +41,12 @@ Updated: 2017-10-19
 @import 'layouts/_register.scss';
 @import 'layouts/_contact-form.scss';
 @import 'layouts/_responsive.scss';
-@import 'layouts/_xxxs-lite.scss';
+// @import 'layouts/_xxxs-lite.scss';
 
 @import 'addons/_font-awesome-overrule.scss';
 @import 'addons/_bootstrap-overrule.scss';
 @import 'addons/_kleo-overrule.scss';
+@import 'addons/_kleo-posts-overrule.scss';
 @import 'addons/_buddypress-overrule.scss';
 
 @import 'plugins/_the-grid.scss';

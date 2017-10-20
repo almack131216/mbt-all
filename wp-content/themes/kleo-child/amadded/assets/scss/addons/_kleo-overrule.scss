@@ -122,7 +122,7 @@ article.post-item.type-post {
     .container {
         .sidebar {
             @media (max-width:$bp-sm){
-                border-top:2px solid #000;
+                @include rwd_border-content-divide('top');
             }
 
             .inner-content {
@@ -140,12 +140,10 @@ article.post-item.type-post {
 
             .widget.widget_tag_cloud {
                 .tagcloud {
-                    > a {
+                    > a {                        
                         @extend .g_btn-base-border;
+                        @include btn-sm();
                         text-transform:lowercase;
-                        font-size:10px;
-                        font-weight:normal;
-                        padding:5px 10px !important;
                     }                    
                 }                
             }
@@ -172,3 +170,57 @@ article.post-item.type-post {
     }
 }
 /* (END) .container-wrap */
+
+
+// #buddypress #friend-list div.action .generic-button a.send-message,
+// #buddypress #member-list div.action .generic-button a.send-message,
+// #buddypress #members-list div.action .generic-button a.send-message {
+//     @extend .g_btn-base-border;
+//     @include btn-sm();
+// }
+
+.buddypress .main-color .kleo-online-status.high-bg {
+    background-color:#009E1C;
+}
+
+#buddypress #friend-list div.action .generic-button > a,
+#buddypress #member-list div.action .generic-button > a,
+#buddypress #members-list div.action .generic-button > a {
+    @extend .g_btn-base;
+    
+    
+    &:not(.remove) {
+        @extend .g_btn-base-border;
+    }    
+    
+    &.add {
+        //@include btn-color-priority();;
+        // @include btn-color-priority();
+        @include btn-color-priority();
+    }
+    
+    &.remove,
+    &.add,
+    &.send-message {
+        @include btn-sm();
+    }
+    
+}
+
+.article-content section.container-wrap .posts-load-more .btn {
+    @extend .g_btn-base-border;
+    @include btn-color-priority();;
+}
+
+.article-content section.container-wrap .posts-load-more .btn,
+#buddypress div.generic-button a.add,
+.bp-full-width-profile div.generic-button a.add,
+#buddypress div.generic-button a.accept,
+#buddypress div.generic-button a.join-group,
+.rtm-primary-button,
+.rtmedia-container .drag-drop .start-media-upload,
+.rtmedia-activity-container .drag-drop .start-media-upload,
+#buddypress .rtmedia-container .rtmedia-uploader .drag-drop .start-media-upload {    
+    // @extend .g_btn-base-border;
+    // @include btn-color-priority();;
+}
