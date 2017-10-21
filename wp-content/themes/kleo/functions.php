@@ -904,7 +904,7 @@ if ( ! function_exists( 'kleo_title_main_content' ) ) {
 					$title = kleo_title();
 				}
 
-				echo '<div class="container amcust_page-title-container">';
+				echo '<div class="container amcust_page-title-container amcust-title-rwd-top">';
 				echo '<h1 class="page-title">' . $title . '</h1>';
 				echo '</div>';
 			}

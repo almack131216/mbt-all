@@ -61,7 +61,7 @@ if ( $is_single && get_cfield( 'centered_text' ) == 1 ) {
 <?php endif; ?>
 
 	<div class="article-content">
-		<div class="container amcust_page-title-container">
+		<div class="container amcust_page-title-container amcust-title-below-media">
 			<h1 class="page-title"><?php the_title(); ?></h1>
 		</div>
 		<?php do_action( 'kleo_before_inner_article_loop' ); ?>
