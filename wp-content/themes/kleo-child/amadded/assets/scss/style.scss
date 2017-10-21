@@ -45,9 +45,12 @@ base styles
 
 @import 'addons/_font-awesome-overrule.scss';
 @import 'addons/_bootstrap-overrule.scss';
-@import 'addons/_kleo-overrule.scss';
-@import 'addons/_kleo-posts-overrule.scss';
 @import 'addons/_buddypress-overrule.scss';
+@import 'addons/_restore-in-future.scss';
+
+@import 'kleo/_kleo-general-overrule.scss';
+@import 'kleo/_kleo-posts-overrule.scss';
+@import 'kleo/_kleo-btn-overrule.scss';
 
 @import 'plugins/_the-grid.scss';
 @import 'plugins/_the-grid-filter.scss';

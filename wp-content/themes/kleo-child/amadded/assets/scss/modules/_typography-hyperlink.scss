@@ -1,5 +1,9 @@
 /* _typography-hyperlink.scss */
 
+.underline {
+    text-decoration:underline;
+}
+
 .g_hyperlink-base {
     color:$color_hyperlink-text;
     > span {

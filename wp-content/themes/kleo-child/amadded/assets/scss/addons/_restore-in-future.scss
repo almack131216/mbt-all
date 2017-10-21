@@ -1,0 +1,23 @@
+
+
+#buddypress div.item-list-tabs#subnav {
+    > ul {
+        > li {
+            &#activity-all,
+            &#activity-friends,
+            &#activity-mentions,
+            &.feed {
+                display:none;
+            }
+
+            &#activity-filter-select {
+                float:left;
+
+                > label {
+                    @extend .strong;
+                }
+            }
+        }
+    }
+    
+}

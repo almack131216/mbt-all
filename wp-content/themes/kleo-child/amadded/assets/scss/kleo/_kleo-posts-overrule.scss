@@ -7,6 +7,12 @@ article .article-meta .post-meta .avatar {
 }
 
 .article-content {
+
+    p:first-child {
+        margin-top:0;
+    }
+
+
     section.container-wrap {
 
         .posts-listing {

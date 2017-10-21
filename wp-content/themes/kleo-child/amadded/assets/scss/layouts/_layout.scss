@@ -51,7 +51,7 @@ body.single-post {
                         > .container.amcust_page-title-container {
                             margin-top:$offset-1;
 
-                            @media (max-width:991px){
+                            @media (max-width:$bp-md-1){
                                 display:none;
                             }
                         }

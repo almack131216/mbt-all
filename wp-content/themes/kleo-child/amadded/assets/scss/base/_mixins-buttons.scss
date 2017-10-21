@@ -1,2 +1,34 @@
-/* _buttons-raised.scss */
+/* _mixins-buttons.scss */
 
+@mixin btn-sm() {
+    font-size:10px;
+    @media (max-width:$bp-xs){
+        font-size:12px;
+    }
+    font-weight:normal;
+    padding:5px 10px !important;
+}
+
+@mixin btn-color-priority() {
+    color:$color_priority-text;
+    background:$color_priority-bg;    
+    border-color:$color_priority-border;    
+
+    > span,
+    > i {
+        color:$color_priority-text;
+    }
+}
+
+@mixin underline-none() {
+    text-decoration:none !important;
+
+    > i.fa,
+    > i[class^="icon-"] {
+        text-decoration:none !important;
+
+        &:before {
+            text-decoration:none !important;
+        }
+    }
+}

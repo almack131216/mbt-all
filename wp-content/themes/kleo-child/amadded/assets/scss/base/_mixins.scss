@@ -1,22 +1,5 @@
 /* _mixins.scss */
 
-@mixin btn-sm() {
-    font-size:10px;
-    font-weight:normal;
-    padding:5px 10px !important;
-}
-
-@mixin btn-color-priority() {
-    color:$color_priority-text;
-    background:$color_priority-bg;    
-    border-color:$color_priority-border;    
-
-    > span,
-    > i {
-        color:$color_priority-text;
-    }
-}
-
 @mixin rwd_border-content-divide($position: 'top') {
     
     @if $position == 'bottom' {

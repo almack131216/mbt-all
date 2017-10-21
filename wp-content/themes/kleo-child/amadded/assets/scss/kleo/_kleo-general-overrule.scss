@@ -61,17 +61,6 @@ a.url:hover,
     // font-weight:bold;
 }
 
-
-
-.share-links span a {
-    margin: 0 5px;
-    @extend .underline-none;
-
-    @media (min-width:$bp-sm){
-        margin: 0 $offset-g1;
-    }
-}
-
 .kleo-banner-slider {
     &:hover {
 
@@ -99,6 +88,9 @@ a.url:hover,
 }
 
 article.post-item.type-post {
+    &.category-books {
+
+    }
 
     .post-header .post-meta,
     .post-footer {
@@ -107,6 +99,10 @@ article.post-item.type-post {
         }
     }
 
+}
+
+.masonry-listing .format-gallery.category-books .post-title {
+    border-color:black;
 }
 
 .masonry-listing .format-quote .inner-content {
@@ -130,6 +126,14 @@ article.post-item.type-post {
                 @media (max-width:$bp-sm){
                     padding-left: 0px;
                 }
+
+                .widget.widget_media_image {
+                    > img {
+                        @media (max-width:$bp-xs-1){
+                            width: 100%;
+                        }
+                    }
+                }
             }
             h4 {
                 text-transform:uppercase;
@@ -138,30 +142,8 @@ article.post-item.type-post {
                 min-height:60px;//height of user avatar
             }
 
-            .widget.widget_tag_cloud {
-                .tagcloud {
-                    > a {                        
-                        @extend .g_btn-base-border;
-                        @include btn-sm();
-                        text-transform:lowercase;
-                    }                    
-                }                
-            }
-            /* (END) widget_tag_cloud */
-
         }
         /* (END) .sidebar */
-
-        /* content dividing line & title */
-        /* ------ SHARE THIS ------ */
-        .hr-title.hr-long {
-            border-color:$color_layout-border-strong;
-
-            > abbr {
-                color:$color_layout-border-strong;
-            }
-        }
-        /* (END) .hr-title.hr-long */
     }
     /* (END) .container */
 

@@ -71,7 +71,7 @@
                     > span.caret:after,
                     > i.fa {
                         color:inherit;//$color_hdr-nav;
-                        @extend .underline-none;
+                        @include underline-none();
                     }
 
                     &:hover {

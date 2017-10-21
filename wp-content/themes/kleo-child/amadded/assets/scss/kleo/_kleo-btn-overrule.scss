@@ -1,0 +1,83 @@
+/* _kleo-btn-overrule.scss */
+
+.container-wrap {
+    .container {
+
+        .template-page {
+            .wrap-content {
+                .container {
+
+                }
+
+                article.post {
+
+                }
+                /* (END) article.post */
+
+                section.container-wrap {
+                    &.social-share-wrap {
+
+                        .share-links span a {
+                            margin: 0 5px;
+                            @include underline-none();
+
+                            > i,
+                            &.item-likes:before {
+                                font-size:$font-size_button-lg;
+                            }
+
+                            @media (min-width:$bp-sm){
+                                margin: 0 $offset-g1;
+                            }
+
+                            @media (max-width:$bp-xs-1){
+                                .item-likes-postfix {
+                                    display:none;//"likes"
+                                }
+                            }
+
+                            
+                        }
+                        /* (END) .share-links */
+                    }
+                }
+                /* (END) section.container-wrap */
+
+            }
+        }
+
+        .sidebar {
+            .widget.widget_tag_cloud {
+                .tagcloud {
+                    > a {                        
+                        @extend .g_btn-base-border;
+                        @include btn-sm();
+                        padding:5px;
+                        @include border-radius(0px);
+                        border-width:1px;
+                        text-transform:lowercase;
+                    }                    
+                }                
+            }
+            /* (END) widget_tag_cloud */
+        }
+        /* (END) .sidebar */
+
+        /* content dividing line & title */
+        /* ------ SHARE THIS ------ */
+        .hr-title.hr-long {
+            border-width:2px;
+            border-color:$color_layout-border-strongest;
+            margin-top:$offset-1;
+            margin-bottom:$offset-1;
+
+            > abbr {
+                color:$color_layout-border-strongest;
+                font-weight:bold;
+            }
+        }
+        /* (END) .hr-title.hr-long */
+    }
+    /* (END) .container */
+}
+/* (END) .container-wrap */

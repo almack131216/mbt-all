@@ -7,6 +7,11 @@ section.container-wrap {
     &.breadcrumbs-container {
         background:$color_bg-breadcrumb;
 
+        @media (max-width:$bp-xs-1){
+            padding-top:0;
+            padding-bottom:0;
+        }        
+
         div.kleo_framework.breadcrumb {
             /* make sure breadcrumb does not go on 2 lines or touch far-right button */            
             @include trim-string();
