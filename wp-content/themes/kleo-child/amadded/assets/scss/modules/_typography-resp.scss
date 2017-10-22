@@ -44,9 +44,8 @@
 //     line-height:$offset-g2;
 // }
 
-
 /* S & XS */
-@media all and (max-width: $bp-sm) {
+@media all and (max-width: $bp-sm-1) {
     h1,.h1,.jumbotron h1,.jumbotron .h1 {
         font-size:28px;
         line-height:30px;

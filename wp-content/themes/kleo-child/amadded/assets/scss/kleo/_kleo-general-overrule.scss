@@ -179,6 +179,7 @@ article.post-item.type-post {
         //@include btn-color-priority();;
         // @include btn-color-priority();
         @include btn-color-priority();
+        @include btn-lg();
     }
     
     &.remove,

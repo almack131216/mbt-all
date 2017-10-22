@@ -1,7 +1,7 @@
 /* _variables.scss */
 
 /* Base colors */
-$color_accent: #49c5b6;
+$color_accent: #49c5b6;//#02AD95
 $color_accent2: #f90;
 $color_disabled:rgb(200, 200, 200);
 
@@ -17,8 +17,8 @@ $color_validate-error:#C41A1A;
 
 $base-font-size:16px;
 $base-font-family:"OpenSans",Arial,sans-serif;
-$base-font-color:#666;
-$base-font-line-height:30px;
+$base-font-color:#444;
+$base-font-line-height:24px;
 
 $color_danger:#f00;
 
@@ -96,16 +96,6 @@ $color_priority-border: $color_hyperlink-text;
 $color_priority-border-hover: $color_hyperlink-text-hover;
 $color_priority-border-active: $color_hyperlink-text-hover;
 
-$color_button-text: $color_hyperlink-text;// #999;
-$color_button-text-hover: $color_hyperlink-text-hover;
-$color_button-text-active: $color_hyperlink-text-active;
-$color_button-bg: transparent;
-$color_button-bg-hover: transparent;
-$color_button-bg-active: $color_hyperlink-bg-active;
-$color_button-border: #C3EBE6;//$color_hyperlink-text;
-$color_button-border-hover: $color_hyperlink-text-hover;
-$color_button-border-active: $color_hyperlink-text-hover;
-
 $color_bg-body: #fff;
 $color_bg-content: #fff;
 $color_bg-breadcrumb: #f7f7f7;
@@ -115,9 +105,9 @@ $color_hdr-nav-hover:$color_hdr-nav;
 $color_hdr-nav-active:$color_hdr-nav;
 
 $color_hdr-subnav:#fff;
-$color_hdr-subnav-hover:#fff !important;
+$color_hdr-subnav-hover:#fff;// !important
 $color_hdr-subnav-bg:#000;
-$color_hdr-subnav-bg-hover: #444 !important;
+$color_hdr-subnav-bg-hover: #444;// !important
 
 $color_layout-border: #e5e5e5;
 $color_layout-border-strong: #ccc;

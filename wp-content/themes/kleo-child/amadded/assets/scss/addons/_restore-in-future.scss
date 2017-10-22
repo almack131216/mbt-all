@@ -1,23 +1,31 @@
+/* _restore-in-future.scss */
 
+#buddypress {
+    div.item-list-tabs.activity-type-tabs#subnav,
+    form#members-directory-form div.item-list-tabs#subnav {
+        > ul {
+            > li {
+                &#activity-all,
+                &#activity-friends,
+                &#activity-mentions,
+                &.feed,
+                &#members-all,
+                &#members-blogger,
+                &#members-user
+                {
+                    display:none;
+                }
 
-#buddypress div.item-list-tabs#subnav {
-    > ul {
-        > li {
-            &#activity-all,
-            &#activity-friends,
-            &#activity-mentions,
-            &.feed {
-                display:none;
-            }
+                &#activity-filter-select,
+                &#members-order-select {
+                    float:left;
 
-            &#activity-filter-select {
-                float:left;
-
-                > label {
-                    @extend .strong;
+                    > label {
+                        @extend .strong;
+                    }
                 }
             }
         }
+        /* (END) ul */            
     }
-    
 }

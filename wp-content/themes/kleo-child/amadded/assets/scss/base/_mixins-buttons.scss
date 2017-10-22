@@ -9,6 +9,22 @@
     padding:5px 10px !important;
 }
 
+@mixin btn-md() {
+    border-width: 3px;
+    font-size:$font-size_button-md;
+    line-height:$font-size_button-md;
+    padding: $offset-g1 $offset-2 !important;
+    @include border-radius(25px);
+}
+
+@mixin btn-lg() {
+    border-width: 3px;
+    font-size:$font-size_button-lg;
+    line-height:$font-size_button-lg;
+    padding: $offset-g1 $offset-g2 !important;
+    @include border-radius(30px);
+}
+
 @mixin btn-color-priority() {
     color:$color_priority-text;
     background:$color_priority-bg;    

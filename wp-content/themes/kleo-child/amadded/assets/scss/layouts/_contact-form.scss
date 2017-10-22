@@ -1,5 +1,31 @@
 /* _contact-form.scss */
 
+@mixin input-base(){
+    border: 2px solid $color_button-border;
+    background: white;
+    line-height: $base-font-line-height;
+    padding: $offset-1;
+    width: 100%;
+    font-size: $base-font-size;
+    margin: 5px 0 $offset-g1 0;
+    color: black;
+    box-shadow:none;
+
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+
+    &:focus {
+        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+        border-color:rgba(81, 203, 238, 1);
+    }
+}
+
+.g_input-base {
+    @include input-base();
+}
+
 form.wpcf7-form {
 	
 	label {width:100%;}
@@ -14,14 +40,18 @@ form.wpcf7-form {
     input[type="tel"],
     input[type="date"],
     input[type="password"] {
-        border: 1px solid $color_button-border;
-        background: white;
-        height: 30px;
-        line-height: 30px;
-        padding: 0 $offset-1;
-        width: 100%;
-        margin: 5px 0 $offset-1 0;
-        color: black;
+        @extend .g_input-base;
+        height: 45px;
+    }
+
+    textarea {
+        @extend .g_input-base;
+        height:90px;
+    }
+
+    input[type="submit"] {
+        @include btn-color-priority();
+        @include btn-lg();
     }
 }
 /* (END) form.wpcf7-form */
