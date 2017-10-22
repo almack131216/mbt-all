@@ -120,6 +120,13 @@ hr {
 }
 /* MODULES - individual site components */
 /* _typography.scss */
+h6 {
+  background: black;
+  color: white;
+  padding: 0 5px;
+  display: inline-block;
+  font-weight: bold;
+}
 b, strong, .strong, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#activity-filter-select > label, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#activity-filter-select > label, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#members-order-select > label, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#members-order-select > label {
   font-weight: bold;
   color: black;
@@ -163,6 +170,9 @@ b, strong, .strong, #buddypress div.item-list-tabs.activity-type-tabs#subnav > u
 .g_hyperlink-base > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button.fav > span {
   color: #49c5b6;
 }
+.g_hyperlink-base[target^="blank"], .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button.fav[target^="blank"] {
+  color: red !important;
+}
 .g_hyperlink-base-hover:hover, .g_hyperlink-base:hover, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button.fav:hover, a:hover, a:hover > span:hover, a:hover > i:hover, a.url:hover, .main-color a:hover, .main-color #top-social li a:hover, .main-color .top-menu li > a:hover, .main-color .sidebar ul li a:hover, .main-color #buddypress .activity-list li.load-more a:hover, .manage-members .main-color .member-name:hover, .manage-members .main-color .member-name a:hover, .main-color #rtm-media-options-list ul li .rtmedia-action-buttons:hover, .woocommerce .main-color .yith-wcwl-add-to-wishlist a:hover, .woocommerce .main-color li.product figcaption .shop-actions > a.button:hover, .main-color .kleo-toggle-menu .quick-view:hover {
   color: #f90;
   text-decoration: underline;
@@ -173,6 +183,71 @@ b, strong, .strong, #buddypress div.item-list-tabs.activity-type-tabs#subnav > u
 /* _button-variables.scss */
 /* colors */
 /* _button.scss */
+.g_btn-base, .g_btn-base-border, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit], .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav), #buddypress #friend-list div.action .generic-button > a:not(.remove), #buddypress #member-list div.action .generic-button > a:not(.remove), #buddypress #members-list div.action .generic-button > a:not(.remove), .article-content section.container-wrap .posts-load-more .btn, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"], #buddypress #friend-list div.action .generic-button > a, #buddypress #member-list div.action .generic-button > a, #buddypress #members-list div.action .generic-button > a, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 10px 15px !important;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  height: auto;
+  outline: none;
+  text-shadow: none;
+  text-align: center;
+  box-shadow: none;
+  box-sizing: border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  color: #49c5b6;
+  background: transparent;
+}
+.g_btn-base > span, .g_btn-base-border > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page > span, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav) > span, #buddypress #friend-list div.action .generic-button > a:not(.remove) > span, #buddypress #member-list div.action .generic-button > a:not(.remove) > span, #buddypress #members-list div.action .generic-button > a:not(.remove) > span, .article-content section.container-wrap .posts-load-more .btn > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button > span, .tg-filters-holder .tg-dropdown-holder > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span, #buddypress #friend-list div.action .generic-button > a > span, #buddypress #member-list div.action .generic-button > a > span, #buddypress #members-list div.action .generic-button > a > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn > span {
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none !important;
+}
+.g_btn-base:hover, .g_btn-base-border:hover, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover, #buddypress #member-list div.action .generic-button > a:not(.remove):hover, #buddypress #members-list div.action .generic-button > a:not(.remove):hover, .article-content section.container-wrap .posts-load-more .btn:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover, #buddypress #friend-list div.action .generic-button > a:hover, #buddypress #member-list div.action .generic-button > a:hover, #buddypress #members-list div.action .generic-button > a:hover, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover {
+  color: #f90;
+  background: transparent;
+}
+.g_btn-base:hover > span, .g_btn-base-border:hover > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover > span, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit:hover > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover > span, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover > span, #buddypress #member-list div.action .generic-button > a:not(.remove):hover > span, #buddypress #members-list div.action .generic-button > a:not(.remove):hover > span, .article-content section.container-wrap .posts-load-more .btn:hover > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover > span, .tg-filters-holder .tg-dropdown-holder:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, #buddypress #friend-list div.action .generic-button > a:hover > span, #buddypress #member-list div.action .generic-button > a:hover > span, #buddypress #members-list div.action .generic-button > a:hover > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > span, .g_btn-base:hover:before, .g_btn-base-border:hover:before, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:before, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit:hover:before, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:before, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:before, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:before, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:before, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:before, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:before, .article-content section.container-wrap .posts-load-more .btn:hover:before, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:before, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:before, .tg-filters-holder .tg-dropdown-holder:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:before, #buddypress #friend-list div.action .generic-button > a:hover:before, #buddypress #member-list div.action .generic-button > a:hover:before, #buddypress #members-list div.action .generic-button > a:hover:before, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:before {
+  color: #f90;
+}
+.g_btn-base:hover:active, .g_btn-base-border:hover:active, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active, .article-content section.container-wrap .posts-load-more .btn:hover:active, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active, .tg-filters-holder .tg-dropdown-holder:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active, #buddypress #friend-list div.action .generic-button > a:hover:active, #buddypress #member-list div.action .generic-button > a:hover:active, #buddypress #members-list div.action .generic-button > a:hover:active, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active {
+  color: #fff;
+  background: #f90;
+}
+.g_btn-base:hover:active > span, .g_btn-base-border:hover:active > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active > span, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit:hover:active > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active > span, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active > span, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active > span, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active > span, .article-content section.container-wrap .posts-load-more .btn:hover:active > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active > span, .tg-filters-holder .tg-dropdown-holder:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active > span, #buddypress #friend-list div.action .generic-button > a:hover:active > span, #buddypress #member-list div.action .generic-button > a:hover:active > span, #buddypress #members-list div.action .generic-button > a:hover:active > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active > span, .g_btn-base:hover:active:before, .g_btn-base-border:hover:active:before, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active:before, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit:hover:active:before, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active:before, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active:before, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active:before, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active:before, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active:before, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active:before, .article-content section.container-wrap .posts-load-more .btn:hover:active:before, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active:before, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active:before, .tg-filters-holder .tg-dropdown-holder:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active:before, #buddypress #friend-list div.action .generic-button > a:hover:active:before, #buddypress #member-list div.action .generic-button > a:hover:active:before, #buddypress #members-list div.action .generic-button > a:hover:active:before, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active:before {
+  color: #fff;
+}
+/* (END) .g_btn-base */
+.g_btn-base-border, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit], .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav), #buddypress #friend-list div.action .generic-button > a:not(.remove), #buddypress #member-list div.action .generic-button > a:not(.remove), #buddypress #members-list div.action .generic-button > a:not(.remove), .article-content section.container-wrap .posts-load-more .btn, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e5e5e5;
+  width: auto;
+  min-width: auto;
+}
+.g_btn-base-border:hover, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover, #buddypress #member-list div.action .generic-button > a:not(.remove):hover, #buddypress #members-list div.action .generic-button > a:not(.remove):hover, .article-content section.container-wrap .posts-load-more .btn:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover {
+  border-color: #f90;
+}
+.g_btn-base-border:hover:active, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active, .article-content section.container-wrap .posts-load-more .btn:hover:active, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active, .tg-filters-holder .tg-dropdown-holder:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active {
+  border-color: #f90;
+}
+.g_btn-base-border.priority:not(:hover):not(:active), .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.priority:not(:hover):not(:active), article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit.priority:not(:hover):not(:active), .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.priority:not(:hover):not(:active), .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].priority:not(:hover):not(:active), .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).priority:not(:hover):not(:active), #buddypress #friend-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active), #buddypress #member-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active), #buddypress #members-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active), .article-content section.container-wrap .posts-load-more .btn.priority:not(:hover):not(:active), .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.priority:not(:hover):not(:active), .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.priority:not(:hover):not(:active), .tg-filters-holder .tg-dropdown-holder.priority:not(:hover):not(:active), form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button.priority:not(:hover):not(:active), form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].priority:not(:hover):not(:active) {
+  color: #fff;
+  background: #49c5b6;
+  border-color: #49c5b6;
+}
+.g_btn-base-border.priority:not(:hover):not(:active) > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.priority:not(:hover):not(:active) > span, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit.priority:not(:hover):not(:active) > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.priority:not(:hover):not(:active) > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].priority:not(:hover):not(:active) > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).priority:not(:hover):not(:active) > span, #buddypress #friend-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > span, #buddypress #member-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > span, #buddypress #members-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > span, .article-content section.container-wrap .posts-load-more .btn.priority:not(:hover):not(:active) > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.priority:not(:hover):not(:active) > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.priority:not(:hover):not(:active) > span, .tg-filters-holder .tg-dropdown-holder.priority:not(:hover):not(:active) > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button.priority:not(:hover):not(:active) > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].priority:not(:hover):not(:active) > span, .g_btn-base-border.priority:not(:hover):not(:active) > i, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.priority:not(:hover):not(:active) > i, article .article-content .wpcf7 form.wpcf7-form input.wpcf7-submit.priority:not(:hover):not(:active) > i, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.priority:not(:hover):not(:active) > i, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].priority:not(:hover):not(:active) > i, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).priority:not(:hover):not(:active) > i, #buddypress #friend-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > i, #buddypress #member-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > i, #buddypress #members-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > i, .article-content section.container-wrap .posts-load-more .btn.priority:not(:hover):not(:active) > i, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.priority:not(:hover):not(:active) > i, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.priority:not(:hover):not(:active) > i, .tg-filters-holder .tg-dropdown-holder.priority:not(:hover):not(:active) > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button.priority:not(:hover):not(:active) > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].priority:not(:hover):not(:active) > i {
+  color: #fff;
+}
 .g_btn-color-priority {
   color: #fff;
   background: #49c5b6;
@@ -208,70 +283,6 @@ b, strong, .strong, #buddypress div.item-list-tabs.activity-type-tabs#subnav > u
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
-}
-.g_btn-base, .g_btn-base-border, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page, form.wpcf7-form input.wpcf7-submit, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit], .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav), #buddypress #friend-list div.action .generic-button > a:not(.remove), #buddypress #member-list div.action .generic-button > a:not(.remove), #buddypress #members-list div.action .generic-button > a:not(.remove), .article-content section.container-wrap .posts-load-more .btn, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"], #buddypress #friend-list div.action .generic-button > a, #buddypress #member-list div.action .generic-button > a, #buddypress #members-list div.action .generic-button > a, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn {
-  font-size: 12px;
-  line-height: 12px;
-  padding: 10px 15px !important;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  font-weight: bold;
-  display: inline-block;
-  cursor: pointer;
-  height: auto;
-  text-shadow: none;
-  text-align: center;
-  box-shadow: none;
-  box-sizing: border-box;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  color: #49c5b6;
-  background: transparent;
-}
-.g_btn-base > span, .g_btn-base-border > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page > span, form.wpcf7-form input.wpcf7-submit > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav) > span, #buddypress #friend-list div.action .generic-button > a:not(.remove) > span, #buddypress #member-list div.action .generic-button > a:not(.remove) > span, #buddypress #members-list div.action .generic-button > a:not(.remove) > span, .article-content section.container-wrap .posts-load-more .btn > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button > span, .tg-filters-holder .tg-dropdown-holder > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span, #buddypress #friend-list div.action .generic-button > a > span, #buddypress #member-list div.action .generic-button > a > span, #buddypress #members-list div.action .generic-button > a > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn > span {
-  font-size: inherit;
-  line-height: inherit;
-  text-transform: inherit;
-  color: inherit;
-  font-weight: inherit;
-  text-decoration: none !important;
-}
-.g_btn-base:hover, .g_btn-base-border:hover, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover, form.wpcf7-form input.wpcf7-submit:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover, #buddypress #member-list div.action .generic-button > a:not(.remove):hover, #buddypress #members-list div.action .generic-button > a:not(.remove):hover, .article-content section.container-wrap .posts-load-more .btn:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover, #buddypress #friend-list div.action .generic-button > a:hover, #buddypress #member-list div.action .generic-button > a:hover, #buddypress #members-list div.action .generic-button > a:hover, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover {
-  color: #f90;
-  background: transparent;
-}
-.g_btn-base:hover > span, .g_btn-base-border:hover > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover > span, form.wpcf7-form input.wpcf7-submit:hover > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover > span, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover > span, #buddypress #member-list div.action .generic-button > a:not(.remove):hover > span, #buddypress #members-list div.action .generic-button > a:not(.remove):hover > span, .article-content section.container-wrap .posts-load-more .btn:hover > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover > span, .tg-filters-holder .tg-dropdown-holder:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, #buddypress #friend-list div.action .generic-button > a:hover > span, #buddypress #member-list div.action .generic-button > a:hover > span, #buddypress #members-list div.action .generic-button > a:hover > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > span, .g_btn-base:hover:before, .g_btn-base-border:hover:before, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:before, form.wpcf7-form input.wpcf7-submit:hover:before, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:before, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:before, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:before, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:before, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:before, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:before, .article-content section.container-wrap .posts-load-more .btn:hover:before, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:before, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:before, .tg-filters-holder .tg-dropdown-holder:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:before, #buddypress #friend-list div.action .generic-button > a:hover:before, #buddypress #member-list div.action .generic-button > a:hover:before, #buddypress #members-list div.action .generic-button > a:hover:before, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:before {
-  color: #f90;
-}
-.g_btn-base:hover:active, .g_btn-base-border:hover:active, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active, form.wpcf7-form input.wpcf7-submit:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active, .article-content section.container-wrap .posts-load-more .btn:hover:active, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active, .tg-filters-holder .tg-dropdown-holder:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active, #buddypress #friend-list div.action .generic-button > a:hover:active, #buddypress #member-list div.action .generic-button > a:hover:active, #buddypress #members-list div.action .generic-button > a:hover:active, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active {
-  color: #fff;
-  background: #f90;
-}
-.g_btn-base:hover:active > span, .g_btn-base-border:hover:active > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active > span, form.wpcf7-form input.wpcf7-submit:hover:active > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active > span, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active > span, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active > span, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active > span, .article-content section.container-wrap .posts-load-more .btn:hover:active > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active > span, .tg-filters-holder .tg-dropdown-holder:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active > span, #buddypress #friend-list div.action .generic-button > a:hover:active > span, #buddypress #member-list div.action .generic-button > a:hover:active > span, #buddypress #members-list div.action .generic-button > a:hover:active > span, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active > span, .g_btn-base:hover:active:before, .g_btn-base-border:hover:active:before, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active:before, form.wpcf7-form input.wpcf7-submit:hover:active:before, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active:before, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active:before, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active:before, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active:before, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active:before, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active:before, .article-content section.container-wrap .posts-load-more .btn:hover:active:before, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active:before, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active:before, .tg-filters-holder .tg-dropdown-holder:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active:before, #buddypress #friend-list div.action .generic-button > a:hover:active:before, #buddypress #member-list div.action .generic-button > a:hover:active:before, #buddypress #members-list div.action .generic-button > a:hover:active:before, .tg-filters-holder .tg-filter.tg-nav-font > span.tg-nav-font:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active:before {
-  color: #fff;
-}
-/* (END) .g_btn-base */
-.g_btn-base-border, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page, form.wpcf7-form input.wpcf7-submit, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit], .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav), #buddypress #friend-list div.action .generic-button > a:not(.remove), #buddypress #member-list div.action .generic-button > a:not(.remove), #buddypress #members-list div.action .generic-button > a:not(.remove), .article-content section.container-wrap .posts-load-more .btn, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button, .tg-filters-holder .tg-dropdown-holder, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] {
-  border-width: 2px;
-  border-style: solid;
-  border-color: #e5e5e5;
-  width: auto;
-  min-width: auto;
-}
-.g_btn-base-border:hover, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover, form.wpcf7-form input.wpcf7-submit:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover, #buddypress #member-list div.action .generic-button > a:not(.remove):hover, #buddypress #members-list div.action .generic-button > a:not(.remove):hover, .article-content section.container-wrap .posts-load-more .btn:hover, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover, .tg-filters-holder .tg-dropdown-holder:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover {
-  border-color: #f90;
-}
-.g_btn-base-border:hover:active, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active, form.wpcf7-form input.wpcf7-submit:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active, #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active, #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active, #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active, .article-content section.container-wrap .posts-load-more .btn:hover:active, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button:hover:active, .tg-filters-holder .tg-dropdown-holder:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active {
-  border-color: #f90;
-}
-.g_btn-base-border.priority:not(:hover):not(:active), .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.priority:not(:hover):not(:active), form.wpcf7-form input.wpcf7-submit.priority:not(:hover):not(:active), .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.priority:not(:hover):not(:active), .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].priority:not(:hover):not(:active), .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).priority:not(:hover):not(:active), #buddypress #friend-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active), #buddypress #member-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active), #buddypress #members-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active), .article-content section.container-wrap .posts-load-more .btn.priority:not(:hover):not(:active), .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.priority:not(:hover):not(:active), .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.priority:not(:hover):not(:active), .tg-filters-holder .tg-dropdown-holder.priority:not(:hover):not(:active), form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button.priority:not(:hover):not(:active), form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].priority:not(:hover):not(:active) {
-  color: #fff;
-  background: #49c5b6;
-  border-color: #49c5b6;
-}
-.g_btn-base-border.priority:not(:hover):not(:active) > span, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.priority:not(:hover):not(:active) > span, form.wpcf7-form input.wpcf7-submit.priority:not(:hover):not(:active) > span, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.priority:not(:hover):not(:active) > span, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].priority:not(:hover):not(:active) > span, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).priority:not(:hover):not(:active) > span, #buddypress #friend-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > span, #buddypress #member-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > span, #buddypress #members-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > span, .article-content section.container-wrap .posts-load-more .btn.priority:not(:hover):not(:active) > span, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.priority:not(:hover):not(:active) > span, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.priority:not(:hover):not(:active) > span, .tg-filters-holder .tg-dropdown-holder.priority:not(:hover):not(:active) > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button.priority:not(:hover):not(:active) > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].priority:not(:hover):not(:active) > span, .g_btn-base-border.priority:not(:hover):not(:active) > i, .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page.priority:not(:hover):not(:active) > i, form.wpcf7-form input.wpcf7-submit.priority:not(:hover):not(:active) > i, .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button.priority:not(:hover):not(:active) > i, .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit].priority:not(:hover):not(:active) > i, .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav).priority:not(:hover):not(:active) > i, #buddypress #friend-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > i, #buddypress #member-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > i, #buddypress #members-list div.action .generic-button > a:not(.remove).priority:not(:hover):not(:active) > i, .article-content section.container-wrap .posts-load-more .btn.priority:not(:hover):not(:active) > i, .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a.priority:not(:hover):not(:active) > i, .tg-grid-wrapper .tg-grid-area-bottom1 .tg-ajax-button.priority:not(:hover):not(:active) > i, .tg-filters-holder .tg-dropdown-holder.priority:not(:hover):not(:active) > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields a.button.priority:not(:hover):not(:active) > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"].priority:not(:hover):not(:active) > i {
-  color: #fff;
 }
 /* (END) .g_btn-base-border */
 /* _form.scss */
@@ -434,6 +445,10 @@ body.single-post .template-page.tpl-right .wrap-content {
     display: none;
   }
 }
+body.single-post .template-page.tpl-right .wrap-content > article.post .article-content > p:nth-child(1) {
+  margin-top: 0 !important;
+  color: red !important;
+}
 body.single-post .template-page.tpl-right .wrap-content > article.post .article-content > .container.amcust_page-title-container {
   margin-top: 10px;
 }
@@ -482,8 +497,8 @@ section.container-wrap.breadcrumbs-container {
 }
 @media (max-width: 479px) {
   section.container-wrap.breadcrumbs-container {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb {
@@ -624,7 +639,7 @@ div#socket.socket-color {
 /* (END) #socket */
 /* _register.scss */
 /* _contact-form.scss */
-.g_input-base, form.wpcf7-form input[type="text"], form.wpcf7-form input[type="email"], form.wpcf7-form input[type="tel"], form.wpcf7-form input[type="date"], form.wpcf7-form input[type="password"], form.wpcf7-form textarea {
+.g_input-base, article .article-content .wpcf7 form.wpcf7-form input[type="text"], article .article-content .wpcf7 form.wpcf7-form input[type="email"], article .article-content .wpcf7 form.wpcf7-form input[type="tel"], article .article-content .wpcf7 form.wpcf7-form input[type="date"], article .article-content .wpcf7 form.wpcf7-form input[type="password"], article .article-content .wpcf7 form.wpcf7-form textarea {
   border: 2px solid #e5e5e5;
   background: white;
   line-height: 24px;
@@ -639,23 +654,29 @@ div#socket.socket-color {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
 }
-.g_input-base:focus, form.wpcf7-form input[type="text"]:focus, form.wpcf7-form input[type="email"]:focus, form.wpcf7-form input[type="tel"]:focus, form.wpcf7-form input[type="date"]:focus, form.wpcf7-form input[type="password"]:focus, form.wpcf7-form textarea:focus {
+.g_input-base.wpcf7-not-valid, article .article-content .wpcf7 form.wpcf7-form input[type="text"].wpcf7-not-valid, article .article-content .wpcf7 form.wpcf7-form input[type="email"].wpcf7-not-valid, article .article-content .wpcf7 form.wpcf7-form input[type="tel"].wpcf7-not-valid, article .article-content .wpcf7 form.wpcf7-form input[type="date"].wpcf7-not-valid, article .article-content .wpcf7 form.wpcf7-form input[type="password"].wpcf7-not-valid, article .article-content .wpcf7 form.wpcf7-form textarea.wpcf7-not-valid {
+  border-color: #c41a1a;
+}
+.g_input-base:focus, article .article-content .wpcf7 form.wpcf7-form input[type="text"]:focus, article .article-content .wpcf7 form.wpcf7-form input[type="email"]:focus, article .article-content .wpcf7 form.wpcf7-form input[type="tel"]:focus, article .article-content .wpcf7 form.wpcf7-form input[type="date"]:focus, article .article-content .wpcf7 form.wpcf7-form input[type="password"]:focus, article .article-content .wpcf7 form.wpcf7-form textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   border-color: rgba(81, 203, 238, 1);
 }
-form.wpcf7-form label {
+article .article-content .wpcf7 {
+  /* (END) form.wpcf7-form */
+}
+article .article-content .wpcf7 form.wpcf7-form label {
   width: 100%;
 }
-form.wpcf7-form label .mandatory {
+article .article-content .wpcf7 form.wpcf7-form label .mandatory {
   color: red;
 }
-form.wpcf7-form input[type="text"], form.wpcf7-form input[type="email"], form.wpcf7-form input[type="tel"], form.wpcf7-form input[type="date"], form.wpcf7-form input[type="password"] {
+article .article-content .wpcf7 form.wpcf7-form input[type="text"], article .article-content .wpcf7 form.wpcf7-form input[type="email"], article .article-content .wpcf7 form.wpcf7-form input[type="tel"], article .article-content .wpcf7 form.wpcf7-form input[type="date"], article .article-content .wpcf7 form.wpcf7-form input[type="password"] {
   height: 45px;
 }
-form.wpcf7-form textarea {
+article .article-content .wpcf7 form.wpcf7-form textarea {
   height: 90px;
 }
-form.wpcf7-form input[type="submit"] {
+article .article-content .wpcf7 form.wpcf7-form input[type="submit"] {
   color: #fff;
   background: #49c5b6;
   border-color: #49c5b6;
@@ -667,10 +688,13 @@ form.wpcf7-form input[type="submit"] {
   -moz-border-radius: 30px;
   border-radius: 30px;
 }
-form.wpcf7-form input[type="submit"] > span, form.wpcf7-form input[type="submit"] > i {
+article .article-content .wpcf7 form.wpcf7-form input[type="submit"] > span, article .article-content .wpcf7 form.wpcf7-form input[type="submit"] > i {
   color: #fff;
 }
-/* (END) form.wpcf7-form */
+/*
+ wpcf7-form-control wpcf7-text wpcf7-validates-as-required
+ wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid
+ */
 /* amAdded */
 /* 0 < 480 */
 /* 0 < 480 */
@@ -782,11 +806,12 @@ i.fa.fa-lg {
   text-decoration: none !important;
 }
 .textwidget p:first-child, .article-content p:first-child, .activity-content p:first-child, .archive-description p:first-child {
-  margin-top: 0;
+  margin-top: 0 !important;
   color: red !important;
 }
 /* _restore-in-future.scss */
 #buddypress div.item-list-tabs.activity-type-tabs#subnav, #buddypress form#members-directory-form div.item-list-tabs#subnav {
+  display: none;
   /* (END) ul */
 }
 #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#activity-all, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#activity-all, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#activity-friends, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#activity-friends, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#activity-mentions, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#activity-mentions, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li.feed, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li.feed, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#members-all, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#members-all, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#members-blogger, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#members-blogger, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#members-user, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#members-user {
@@ -800,20 +825,60 @@ a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main
   font-weight: bold;
 }
 /* submenus */
-.kleo-banner-slider:hover .kleo-banner-prev:hover, .kleo-banner-slider:hover .kleo-banner-next:hover {
+#main .kleo-banner-slider:hover .kleo-banner-prev:hover, #main .kleo-banner-slider:hover .kleo-banner-next:hover {
   background: white;
   color: #f90;
 }
-.kleo-banner-slider:hover .kleo-banner-prev:hover:active, .kleo-banner-slider:hover .kleo-banner-next:hover:active {
+#main .kleo-banner-slider:hover .kleo-banner-prev:hover:active, #main .kleo-banner-slider:hover .kleo-banner-next:hover:active {
   background: #f90;
   color: #fff;
 }
-.masonry-listing .format-gallery.category-books .post-title {
+#main article.post-item.type-post {
+  /* remove underline from like icon */
+  /* (END) &.category-quote */
+  /* (END) &.category-books */
+  /* (END) &.category-quote */
+}
+#main article.post-item.type-post .post-content a.item-likes {
+  text-decoration: none;
+}
+#main article.post-item.type-post .post-content a.item-likes:hover {
+  text-decoration: none;
+}
+#main article.post-item.type-post .post-content a.item-likes:hover > span {
+  text-decoration: underline;
+}
+#main article.post-item.type-post .post-content a.item-likes:hover:before {
+  text-decoration: none !important;
+}
+#main article.post-item.type-post.category-books .post-title {
   border-color: black;
 }
-.masonry-listing .format-quote .inner-content {
+#main article.post-item.type-post.category-quote .post-content {
+  background: #49c5b6;
+}
+#main article.post-item.type-post.category-quote .post-content a.item-likes {
+  color: white !important;
+}
+#main article.post-item.type-post.category-quote .post-content a.item-likes > span {
+  color: white !important;
+}
+#main article.post-item.type-post.category-quote .post-content a.item-likes:before {
+  color: white !important;
+}
+#main article.post-item.type-post.category-quote .post-content a.item-likes:hover > span {
+  color: white !important;
+}
+#main article.post-item.type-post .post-content .post-header h3.post-title.entry-title:hover {
+  border-color: #f90;
+}
+#main article.post-item.type-post .post-content .post-header h3.post-title.entry-title > a:hover {
+  color: #f90;
+}
+#main article.post-item.type-post .post-content .inner-content {
   margin-right: 15px;
 }
+/* (END) main */
 /* kleo-login */
 .kleo-form-modal {
   max-width: 350px;
@@ -887,6 +952,9 @@ a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main
 }
 .article-content section.container-wrap .posts-load-more .btn > span, .article-content section.container-wrap .posts-load-more .btn > i {
   color: #fff;
+}
+.kleo-form-modal {
+  max-width: 320px;
 }
 /* _kleo-posts-overrule.scss */
 article .post-meta .avatar, article .post-header .post-meta .avatar, article .article-meta .post-meta .avatar {
@@ -1091,6 +1159,9 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[ty
   -o-transition: all 0.3s ease-in-out;
   padding: 10px 15px;
 }
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[type="text"].wpcf7-not-valid, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[type="email"].wpcf7-not-valid, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[type="tel"].wpcf7-not-valid, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[type="date"].wpcf7-not-valid {
+  border-color: #c41a1a;
+}
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[type="text"]:focus, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[type="email"]:focus, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[type="tel"]:focus, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[type="date"]:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   border-color: rgba(81, 203, 238, 1);
@@ -1110,6 +1181,9 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields textarea
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   height: 60px;
+}
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields textarea.wpcf7-not-valid {
+  border-color: #c41a1a;
 }
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);

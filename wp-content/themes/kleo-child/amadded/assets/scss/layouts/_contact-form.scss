@@ -16,6 +16,10 @@
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
 
+    &.wpcf7-not-valid {
+        border-color:$color_validate-error;
+    }
+
     &:focus {
         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
         border-color:rgba(81, 203, 238, 1);
@@ -26,32 +30,46 @@
     @include input-base();
 }
 
-form.wpcf7-form {
-	
-	label {width:100%;}
-	input.wpcf7-submit {
-		@extend	.g_btn-base-border;
-	}
+article {
+    .article-content {
+        .wpcf7 {
 
-    label .mandatory {color:red;}
+            form.wpcf7-form {	
+                label {width:100%;}
+                input.wpcf7-submit {
+                    @extend	.g_btn-base-border;
+                }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    input[type="password"] {
-        @extend .g_input-base;
-        height: 45px;
-    }
+                label .mandatory {color:red;}
 
-    textarea {
-        @extend .g_input-base;
-        height:90px;
-    }
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"],
+                input[type="date"],
+                input[type="password"] {
+                    @extend .g_input-base;
+                    height: 45px;
+                }
 
-    input[type="submit"] {
-        @include btn-color-priority();
-        @include btn-lg();
+                textarea {
+                    @extend .g_input-base;
+                    height:90px;
+                }
+
+                input[type="submit"] {
+                    @include btn-color-priority();
+                    @include btn-lg();
+                }
+
+                
+            }
+            /* (END) form.wpcf7-form */
+
+        }
     }
 }
-/* (END) form.wpcf7-form */
+
+/*
+wpcf7-form-control wpcf7-text wpcf7-validates-as-required
+wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid
+*/

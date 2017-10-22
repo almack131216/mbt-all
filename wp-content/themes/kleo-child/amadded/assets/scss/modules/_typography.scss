@@ -1,5 +1,14 @@
 /* _typography.scss */
 
+
+h6 {
+    background: black;
+    color: white;
+    padding: 0 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
 b, strong, .strong {
     font-weight: bold;
     color:black;

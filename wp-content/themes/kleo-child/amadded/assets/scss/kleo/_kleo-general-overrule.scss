@@ -61,53 +61,117 @@ a.url:hover,
     // font-weight:bold;
 }
 
-.kleo-banner-slider {
-    &:hover {
+#main {
 
-        .kleo-banner-prev,
-        .kleo-banner-next {
+    .kleo-banner-slider {
+        &:hover {
 
-            &:hover {
-                background:white;
-                color:$color_hyperlink-text-hover;
+            .kleo-banner-prev,
+            .kleo-banner-next {
 
-                &:active {
-                    background:$color_hyperlink-bg-active;
-                    color:$color_hyperlink-text-active;
+                &:hover {
+                    background:white;
+                    color:$color_hyperlink-text-hover;
+
+                    &:active {
+                        background:$color_hyperlink-bg-active;
+                        color:$color_hyperlink-text-active;
+                    }
+                }  
+
+            }
+
+        }
+    }
+
+    #comments-list .comment-meta-actions,
+    #comments-list .comment-meta-actions a {
+        //@extend .g_hyperlink-base-hover;
+    }
+
+    article.post-item.type-post {
+
+        .post-content {
+            /* remove underline from like icon */
+            a.item-likes {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: none;
+
+                    > span {
+                        text-decoration: underline;
+                    }
+
+                    &:before {
+                        text-decoration: none !important;
+                    }
                 }
-            }  
+            }
+        }
+        /* (END) &.category-quote */
 
+        &.category-books {
+            .post-title {
+                border-color:black;
+            }
+        }
+        /* (END) &.category-books */
+
+        &.category-quote {
+            .post-content {
+                background: $color_accent;
+
+                a.item-likes {
+                    color: white !important;
+
+                    > span {
+                        color: white !important;
+                    }
+
+                    &:before {
+                        color: white !important;
+                    }
+
+                    &:hover {
+                        > span {
+                            color: white !important;
+                        }
+                    }
+                }
+            }
+        }
+        /* (END) &.category-quote */
+
+        .post-content {
+            .post-header {
+                h3.post-title.entry-title {
+                    &:hover {
+                        border-color: $color_hyperlink-text-hover
+                    }
+
+                    > a:hover {
+                        color: $color_hyperlink-text-hover;
+                    }
+                }
+            }
+            .inner-content {
+                margin-right: $offset-g1;
+            }
+        }
+        
+
+        .post-header .post-meta,
+        .post-footer {
+            a {
+            // @extend .g_hyperlink-base-hover;
+            }
         }
 
     }
 }
+/* (END) main */
 
-#comments-list .comment-meta-actions,
-#comments-list .comment-meta-actions a {
-    //@extend .g_hyperlink-base-hover;
-}
-
-article.post-item.type-post {
-    &.category-books {
-
-    }
-
-    .post-header .post-meta,
-    .post-footer {
-        a {
-           // @extend .g_hyperlink-base-hover;
-        }
-    }
-
-}
-
-.masonry-listing .format-gallery.category-books .post-title {
-    border-color:black;
-}
-
-.masonry-listing .format-quote .inner-content {
-    margin-right: $offset-g1;
-}
 
 /* kleo-login */
 .kleo-form-modal {
@@ -206,4 +270,8 @@ article.post-item.type-post {
 #buddypress .rtmedia-container .rtmedia-uploader .drag-drop .start-media-upload {    
     // @extend .g_btn-base-border;
     // @include btn-color-priority();;
+}
+
+.kleo-form-modal {
+    max-width: 320px;
 }

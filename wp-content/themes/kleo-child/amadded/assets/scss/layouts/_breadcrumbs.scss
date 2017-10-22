@@ -8,8 +8,8 @@ section.container-wrap {
         background:$color_bg-breadcrumb;
 
         @media (max-width:$bp-xs-1){
-            padding-top:0;
-            padding-bottom:0;
+            padding-top:5px;
+            padding-bottom:5px;
         }        
 
         div.kleo_framework.breadcrumb {

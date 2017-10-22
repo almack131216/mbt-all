@@ -11,6 +11,10 @@
     }
     
     @extend .g_hyperlink-base-hover;
+
+    &[target^="blank"] {
+
+    }
 }
 
 .g_hyperlink-base-hover {

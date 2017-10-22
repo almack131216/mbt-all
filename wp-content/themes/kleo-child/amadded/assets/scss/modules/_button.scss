@@ -1,22 +1,5 @@
 /* _button.scss */
 
-
-.g_btn-color-priority {
-    @include btn-color-priority();
-}
-
-.btn-sm {
-    @include btn-sm();
-}
-
-.btn-md {
-    @include btn-md();
-}
-
-.btn-lg {
-    @include btn-lg();
-}
-
 .g_btn-base {    
 	font-size:$font-size_button;
     line-height:$font-size_button;
@@ -27,7 +10,8 @@
     
     display:inline-block;
     cursor: pointer;
-    height:auto;	    
+    height:auto;
+    outline:none;	    
     
     text-shadow: none;
     text-align: center;
@@ -90,6 +74,22 @@
         @include btn-color-priority();
     }
     
+}
+
+.g_btn-color-priority {
+    @include btn-color-priority();
+}
+
+.btn-sm {
+    @include btn-sm();
+}
+
+.btn-md {
+    @include btn-md();
+}
+
+.btn-lg {
+    @include btn-lg();
 }
 
 /* (END) .g_btn-base-border */

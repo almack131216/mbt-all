@@ -48,6 +48,11 @@ body.single-post {
 
                 > article.post {
                     .article-content {
+
+                        > p:nth-child(1) {
+                            margin-top: 0 !important;
+                        }
+
                         > .container.amcust_page-title-container {
                             margin-top:$offset-1;
 

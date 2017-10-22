@@ -3,6 +3,8 @@
 #buddypress {
     div.item-list-tabs.activity-type-tabs#subnav,
     form#members-directory-form div.item-list-tabs#subnav {
+        display:none;
+        
         > ul {
             > li {
                 &#activity-all,
