@@ -13,7 +13,7 @@
 
         .container.amcust_page-title-container {
             h1 {
-                margin:0 0 $offset-1 0;
+                margin:0 0 $offset-g1 0;
             }
         }
 
@@ -54,7 +54,7 @@ body.single-post {
                         }
 
                         > .container.amcust_page-title-container {
-                            margin-top:$offset-1;
+                            margin-top:$offset-g1;
 
                             @media (max-width:$bp-md-1){
                                 display:none;
@@ -89,7 +89,7 @@ body.home-page {
 
 
 article .article-meta {
-    @media (min-width: 992px) {
+    @media (min-width: $bp-md) {
         width: 170px;
 
         .post-meta {

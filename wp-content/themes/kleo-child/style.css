@@ -425,7 +425,7 @@ b, strong, .strong, #buddypress div.item-list-tabs.activity-type-tabs#subnav > u
   }
 }
 .template-page .wrap-content .container.amcust_page-title-container h1 {
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
 }
 .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page {
   float: right;
@@ -446,7 +446,7 @@ body.single-post .template-page.tpl-right .wrap-content > article.post .article-
   margin-top: 0;
 }
 body.single-post .template-page.tpl-right .wrap-content > article.post .article-content > .container.amcust_page-title-container {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 @media (max-width: 991px) {
   body.single-post .template-page.tpl-right .wrap-content > article.post .article-content > .container.amcust_page-title-container {
@@ -590,6 +590,7 @@ section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb {
     line-height: 24px;
     padding: 10px;
     width: 100%;
+    min-height: 40px;
     font-size: 16px;
     margin: 5px 0 15px 0;
     color: black;
@@ -609,6 +610,13 @@ section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb {
   .navbar .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container form#ajax_searchform > input.ajax_s:focus {
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     border-color: rgba(81, 203, 238, 1);
+  }
+  .navbar .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container form#ajax_searchform > .kleo-ajax-search-loading {
+    top: 25px;
+    right: 25px;
+  }
+  .navbar .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container form#ajax_searchform > .kleo-ajax-search-loading > i {
+    color: #49c5b6;
   }
   .navbar .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results h4 {
     margin-left: 0;
@@ -637,6 +645,7 @@ section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb {
 }
 .navbar .kleo-main-header .container ul.navbar-nav > li {
   /* (END) @media (min-width:$bp-md){ */
+  /* (END) @media (max-width:$bp-md-1){ */
 }
 .navbar .kleo-main-header .container ul.navbar-nav > li > a {
   margin: 0 15px;
@@ -687,6 +696,13 @@ section.container-wrap.breadcrumbs-container div.kleo_framework.breadcrumb {
     background: #444 !important;
   }
 }
+@media (max-width: 991px) {
+  .navbar .kleo-main-header .container ul.navbar-nav > li.open:after {
+    bottom: auto;
+    top: 33px;
+    left: 30px;
+  }
+}
 .navbar .is-sticky .kleo-main-header .navbar-nav > li.active > a:before {
   bottom: 0px;
   width: 100%;
@@ -721,6 +737,7 @@ div#socket.socket-color {
   line-height: 24px;
   padding: 10px;
   width: 100%;
+  min-height: 40px;
   font-size: 16px;
   margin: 5px 0 15px 0;
   color: black;
@@ -911,49 +928,72 @@ a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main
   background: #f90;
   color: #fff;
 }
-#main article.post-item.type-post {
-  /* remove underline from like icon */
+#main article {
   /* (END) &.category-quote */
   /* (END) &.category-books */
   /* (END) &.category-quote */
 }
-#main article.post-item.type-post .post-content a.item-likes {
+#main article .article-meta > .post-meta > small {
+  line-height: 30px;
+}
+#main article .article-meta > .post-meta > small.meta-author > a > img.avatar {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 991px) {
+  #main article .article-meta > .post-meta {
+    margin-bottom: 15px;
+  }
+  #main article .article-meta > .post-meta .avatar {
+    float: left;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 991px) {
+  #main article .article-media {
+    margin-bottom: 15px;
+  }
+}
+#main article .post-content {
+  /* remove underline from like icon */
+}
+#main article .post-content a.item-likes {
   text-decoration: none;
 }
-#main article.post-item.type-post .post-content a.item-likes:hover {
+#main article .post-content a.item-likes:hover {
   text-decoration: none;
 }
-#main article.post-item.type-post .post-content a.item-likes:hover > span {
+#main article .post-content a.item-likes:hover > span {
   text-decoration: underline;
 }
-#main article.post-item.type-post .post-content a.item-likes:hover:before {
+#main article .post-content a.item-likes:hover:before {
   text-decoration: none !important;
 }
-#main article.post-item.type-post.category-books .post-title {
+#main article.category-books .post-title {
   border-color: black;
 }
-#main article.post-item.type-post.category-quote .post-content {
+#main article.category-quote .post-content {
   background: #49c5b6;
 }
-#main article.post-item.type-post.category-quote .post-content a.item-likes {
+#main article.category-quote .post-content a.item-likes {
   color: white !important;
 }
-#main article.post-item.type-post.category-quote .post-content a.item-likes > span {
+#main article.category-quote .post-content a.item-likes > span {
   color: white !important;
 }
-#main article.post-item.type-post.category-quote .post-content a.item-likes:before {
+#main article.category-quote .post-content a.item-likes:before {
   color: white !important;
 }
-#main article.post-item.type-post.category-quote .post-content a.item-likes:hover > span {
+#main article.category-quote .post-content a.item-likes:hover > span {
   color: white !important;
 }
-#main article.post-item.type-post .post-content .post-header h3.post-title.entry-title:hover {
+#main article .post-content .post-header h3.post-title.entry-title:hover {
   border-color: #f90;
 }
-#main article.post-item.type-post .post-content .post-header h3.post-title.entry-title > a:hover {
+#main article .post-content .post-header h3.post-title.entry-title > a:hover {
   color: #f90;
 }
-#main article.post-item.type-post .post-content .inner-content {
+#main article .post-content .inner-content {
   margin-right: 15px;
 }
 /* (END) main */
@@ -1035,9 +1075,6 @@ a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main
   max-width: 320px;
 }
 /* _kleo-posts-overrule.scss */
-article .post-meta .avatar, article .post-header .post-meta .avatar, article .article-meta .post-meta .avatar {
-  margin-right: 5px;
-}
 /* _kleo-btn-overrule.scss */
 .container-wrap {
   /* (END) .container */
@@ -1224,6 +1261,7 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields input[ty
   line-height: 24px;
   padding: 10px;
   width: 100%;
+  min-height: 40px;
   font-size: 16px;
   margin: 5px 0 15px 0;
   color: black;
@@ -1250,6 +1288,7 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el .wpuf-fields textarea
   line-height: 24px;
   padding: 10px;
   width: 100%;
+  min-height: 40px;
   font-size: 16px;
   margin: 5px 0 15px 0;
   color: black;

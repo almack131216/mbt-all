@@ -89,7 +89,36 @@ a.url:hover,
         //@extend .g_hyperlink-base-hover;
     }
 
-    article.post-item.type-post {
+    article {
+
+        .article-meta {
+            > .post-meta {
+                > small {                    
+                    line-height:$offset-g2;
+
+                    &.meta-author {
+                        > a > img.avatar {
+                            width:$offset-g2;
+                            height:$offset-g2;
+                        }
+                    }                    
+                }
+
+                @media (max-width: $bp-md-1){
+                    .avatar {
+                        float:left;
+                        margin-right: $offset-1;
+                    }
+                    margin-bottom: $offset-g1;
+                }
+            }            
+        }
+
+        .article-media {
+            @media (max-width: $bp-md-1){
+                margin-bottom: $offset-g1;
+            }
+        }
 
         .post-content {
             /* remove underline from like icon */

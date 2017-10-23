@@ -83,6 +83,14 @@
                                         @include input-base();
                                         margin:0;
                                     }
+
+                                    > .kleo-ajax-search-loading {
+                                        top: 25px;
+                                        right: 25px;
+                                        > i {
+                                            color:$color_accent;
+                                        }
+                                    }
                                 }
 
                                 .kleo_ajax_results {
@@ -118,9 +126,7 @@
                         > li {
                             > a {
 
-                            }
-
-                            
+                            }                            
                         }
                         /* (END) li */
                     }
@@ -190,7 +196,7 @@
                         }                    
                     }
 
-                    @media (min-width:$bp-md){
+                    @media (min-width: $bp-md){
                         &.open {
                             position:relative;                            
 
@@ -203,10 +209,6 @@
                                 width: 200px;
                                 left: 50%;
                                 margin-left: -100px;
-
-                                > li {
-
-                                }
                             }                    
                         }
 
@@ -225,6 +227,20 @@
                         }
                     }
                     /* (END) @media (min-width:$bp-md){ */
+
+                    @media (max-width: $bp-md-1){
+                        &.open {
+                            //position:static;                            
+
+                            &:after {
+                                //display:none
+                                bottom:auto;
+                                top:33px;
+                                left:$offset-g2;
+                            }                   
+                        }
+                    }
+                    /* (END) @media (max-width:$bp-md-1){ */
                 }
                 /* (END) li */            
             }
