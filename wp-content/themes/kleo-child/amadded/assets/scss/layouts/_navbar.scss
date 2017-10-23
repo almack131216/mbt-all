@@ -4,7 +4,7 @@
     //@include btn-color-priority();;
     padding:$offset-1 $offset-g1;
     cursor: pointer;
-    @media (min-width : 992px) {
+    @media (min-width: $bp-md) {
         text-align: center;
     }
     font-weight: normal;
@@ -16,7 +16,7 @@
 
     &:hover {
         color:$color_hdr-subnav-hover;
-        background:$color_hdr-subnav-bg-hover;
+        background:$color_hdr-subnav-bg-hover !important;
     }
 }
 
@@ -35,123 +35,204 @@
 
 .navbar {
     .kleo-main-header {
-		.container .navbar-collapse.in {
-            padding-bottom:$offset-g1;
-			// -webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,1.0);
-            // -moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,1.0);
-            // box-shadow: 0px 2px 0px 0px rgba(0,0,0,1.0);
-
-            > .nav.navbar-nav {
-                > li {
-                    > a {
-                        
-                    }
-                }
+        .container {
+            @media(max-width:$bp-xs-1){
+                background:$color_accent;
             }
-		}
-		
-        .nav > li {        
-            &:hover > a,
-            &.active > a {
-                box-shadow: none;
-            }
-        }
 
-        ul.navbar-nav {
-            /* underline on header nav active */
-
-            > li {                
-
-                > a {                    
-                    //color:$color_hdr-nav;
-                    margin: 0 $offset-g1;
-                    //font-size: $font-size_button;
-                    text-transform:uppercase;
-                    
-                    > span.caret:after,
-                    > i.fa {
-                        color:inherit;//$color_hdr-nav;
-                        @include underline-none();
-                    }
-
-                    &:hover {
-                        //color:$color_hyperlink-text-hover;//$color_hdr-nav-active;
-                    }
-
-                    span.caret:hover:after,
-                    i.fa:hover {
-                        color:$color_hyperlink-text-hover;//$color_hdr-nav-active;
-                    }
-                }
-
-                &.active {
-                    > a {
-                        color:$color_hdr-nav-active;
-
-                        @media (min-width : 992px) {
-                            &:before {
-                                transition: all 0.5s ease;
-                                content: "";
-                                position: absolute;
-                                width: 70%;
-                                height: 1px;
-                                bottom:25px;
-                                left: 15%;
-                                border-bottom: 2px solid $color_accent;
+            > .navbar-header {
+                > .kleo-mobile-switch {
+                    > button.navbar-toggle {
+                        > span.icon-bar {
+                            @media(max-width:$bp-xs-1){
+                                background-color: white;
                             }
                         }
-
-                    }        
+                    }
                 }
 
-                &.open {
-                    > ul.dropdown-menu {
+                > .logo {
+                    > a {
+                        @media(max-width:$bp-xs-1){
+                            img#logo_img {
+                                // display:none;
+                                content: url("./amadded/assets/img/logo-icon-text-240x60-white.png");
+                            }
+                        }                        
+                    }
+                }
+            }
+
+            .navbar-collapse {
+                > ul.nav.navbar-nav {
+                    background:white;
+
+                    > li {
+                        > #ajax_search_container {
+                            @media(max-width:$bp-xs-1){
+                                border-bottom: $offset-g1 solid $color_accent;
+                                // padding-left:$offset-g1;
+                                // padding-right:$offset-g1;
+
+                                form#ajax_searchform {
+                                    padding:0;
+                                    background:white;
+                                    padding:$offset-g1;
+                                    
+                                    > input.ajax_s {
+                                        @include input-base();
+                                        margin:0;
+                                    }
+                                }
+
+                                .kleo_ajax_results {
+                                    h4 {
+                                        margin-left:0;
+                                        padding:0 $offset-g1;
+                                    }
+                                    .kleo_ajax_entry {
+                                        padding:$offset-1 $offset-g1;
+                                    }
+                                    a.ajax_view_all {
+                                        @extend .g_btn-base-border;
+                                        // @include btn-md();
+                                        margin-top:$offset-g1;
+                                        margin-bottom:0;
+                                    }
+                                }
+                            }
+                            /* (END) @media */
+                        }
+                        /* (END) #ajax_search_container */
+                    }
+                }
+
+                &.in {
+                    //padding-bottom:$offset-g1;
+                    // -webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,1.0);
+                    // -moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,1.0);
+                    // box-shadow: 0px 2px 0px 0px rgba(0,0,0,1.0);
+
+                    > ul.nav.navbar-nav {
+
                         > li {
-                            border-bottom:0px;
+                            > a {
+
+                            }
+
+                            
                         }
-                    }                    
+                        /* (END) li */
+                    }
+                    /* (END) ul */
                 }
+            }
+            
+            .nav > li {        
+                &:hover > a,
+                &.active > a {
+                    box-shadow: none;
+                }
+            }
 
-                @media (min-width:992px){
-                    &.open {
-                        position:relative;                            
+            ul.navbar-nav {
+                /* underline on header nav active */
 
-                        &:after {
-                            @extend .subnav-arrow;
+                > li {                
+
+                    > a {                    
+                        //color:$color_hdr-nav;
+                        margin: 0 $offset-g1;
+                        //font-size: $font-size_button;
+                        text-transform:uppercase;
+                        
+                        > span.caret:after,
+                        > i.fa {
+                            color:inherit;//$color_hdr-nav;
+                            @include underline-none();
                         }
 
-                        > ul.dropdown-menu {                        
-                            border:none;
-                            width: 200px;
-                            left: 50%;
-                            margin-left: -100px;
+                        &:hover {
+                            //color:$color_hyperlink-text-hover;//$color_hdr-nav-active;
+                        }
 
+                        span.caret:hover:after,
+                        i.fa:hover {
+                            color:$color_hyperlink-text-hover;//$color_hdr-nav-active;
+                        }
+                    }
+
+                    &.active {
+                        > a {
+                            color:$color_hdr-nav-active;
+
+                            @media (min-width : $bp-md) {
+                                &:before {
+                                    transition: all 0.5s ease;
+                                    content: "";
+                                    position: absolute;
+                                    width: 70%;
+                                    height: 1px;
+                                    bottom:25px;
+                                    left: 15%;
+                                    border-bottom: 2px solid $color_accent;
+                                }
+                            }
+
+                        }        
+                    }
+
+                    &.open {
+                        > ul.dropdown-menu {
                             > li {
-
+                                border-bottom:0px;
                             }
                         }                    
                     }
 
-                    ul.dropdown-menu {
-                        > li {
-                            > a {
-                                @extend .subnav-item-a;
+                    @media (min-width:$bp-md){
+                        &.open {
+                            position:relative;                            
+
+                            &:after {
+                                @extend .subnav-arrow;
                             }
 
-                            &.active {
+                            > ul.dropdown-menu {                        
+                                border:none;
+                                width: 200px;
+                                left: 50%;
+                                margin-left: -100px;
+
+                                > li {
+
+                                }
+                            }                    
+                        }
+
+                        ul.dropdown-menu {
+                            > li {
                                 > a {
-                                    background:$color_hdr-subnav-bg-hover;
+                                    @extend .subnav-item-a;
+                                }
+
+                                &.active {
+                                    > a {
+                                        background:$color_hdr-subnav-bg-hover !important;
+                                    }
                                 }
                             }
                         }
                     }
+                    /* (END) @media (min-width:$bp-md){ */
                 }
-                /* (END) @media (min-width:992px){ */
+                /* (END) li */            
             }
-            /* (END) li */            
+            /* (END) .kleo-main-header ul.navbar-nav */
         }
-        /* (END) .kleo-main-header ul.navbar-nav */
+        /* (END) .container */
     }
+    /* (END) .kleo-main-header */
     .is-sticky .kleo-main-header .navbar-nav > li.active > a:before{
         bottom: 0px;
         width:100%;
