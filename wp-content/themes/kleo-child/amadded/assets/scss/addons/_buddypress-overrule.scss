@@ -98,6 +98,10 @@
 
     p {
 
+        &:first-child {
+            margin-top:0;
+        }
+
         a {
             // font-weight:normal;
             //text-decoration:underline;
