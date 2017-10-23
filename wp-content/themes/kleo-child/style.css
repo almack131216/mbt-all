@@ -933,18 +933,24 @@ a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main
   /* (END) &.category-books */
   /* (END) &.category-quote */
 }
+#main article .article-meta > .post-meta {
+  margin-bottom: 15px;
+  /* (END) small */
+}
 #main article .article-meta > .post-meta > small {
   line-height: 30px;
 }
 #main article .article-meta > .post-meta > small.meta-author > a > img.avatar {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
 }
 @media (max-width: 991px) {
-  #main article .article-meta > .post-meta {
-    margin-bottom: 15px;
+  #main article .article-meta > .post-meta > small {
+    line-height: 30px;
   }
-  #main article .article-meta > .post-meta .avatar {
+  #main article .article-meta > .post-meta > small.meta-author > a > img.avatar {
+    width: 30px;
+    height: 30px;
     float: left;
     margin-right: 10px;
   }

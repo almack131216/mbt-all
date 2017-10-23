@@ -93,24 +93,33 @@ a.url:hover,
 
         .article-meta {
             > .post-meta {
+                margin-bottom: $offset-g1;
+
                 > small {                    
                     line-height:$offset-g2;
 
                     &.meta-author {
                         > a > img.avatar {
-                            width:$offset-g2;
-                            height:$offset-g2;
+                            width:$offset-g4;
+                            height:$offset-g4;
                         }
-                    }                    
-                }
+                    }    
 
-                @media (max-width: $bp-md-1){
-                    .avatar {
-                        float:left;
-                        margin-right: $offset-1;
+                    @media (max-width: $bp-md-1){
+                        line-height:$offset-g2;
+
+                        &.meta-author {
+                            > a > img.avatar {
+                                width:$offset-g2;
+                                height:$offset-g2;
+                                float:left;
+                                margin-right: $offset-1;
+                            }
+                        }
+                        // margin-bottom: $offset-g1;
                     }
-                    margin-bottom: $offset-g1;
                 }
+                /* (END) small */                
             }            
         }
 
