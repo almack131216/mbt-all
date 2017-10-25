@@ -125,7 +125,6 @@ h6 {
   background: black;
   color: white !important;
   padding: 0 5px;
-  display: inline-block;
   font-weight: bold;
 }
 b, strong, .strong, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#activity-filter-select > label, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#activity-filter-select > label, #buddypress div.item-list-tabs.activity-type-tabs#subnav > ul > li#members-order-select > label, #buddypress form#members-directory-form div.item-list-tabs#subnav > ul > li#members-order-select > label {
@@ -1088,42 +1087,47 @@ a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main
   max-width: 320px;
 }
 /* _kleo-posts-overrule.scss */
-ul.ul-thumbnails {
+.amcust-wrap-thumbs {
+  margin: 45px 0 0 0;
+  /* (END) ul.ul-thumbnails */
+}
+.amcust-wrap-thumbs ul.ul-thumbnails {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: left;
+  text-align: center;
+  /* (END) li */
 }
-ul.ul-thumbnails > li {
+.amcust-wrap-thumbs ul.ul-thumbnails > li {
   width: 100px;
   display: inline-block;
   margin: 0 1px;
   padding: 0;
 }
-ul.ul-thumbnails > li > a {
+.amcust-wrap-thumbs ul.ul-thumbnails > li > a {
   display: block;
   float: left;
   width: 100%;
 }
-ul.ul-thumbnails > li > a > img {
+.amcust-wrap-thumbs ul.ul-thumbnails > li > a > img {
   width: 100%;
   height: auto;
 }
-ul.ul-thumbnails > li > a:hover > img {
+.amcust-wrap-thumbs ul.ul-thumbnails > li > a:hover > img {
   border: 3px solid #49c5b6;
 }
-ul.ul-thumbnails.has-5-thumbs > li {
+.amcust-wrap-thumbs ul.ul-thumbnails.has-5-thumbs > li {
   width: 19%;
   width: calc(20% - 2px);
 }
-ul.ul-thumbnails.has-4-thumbs > li {
+.amcust-wrap-thumbs ul.ul-thumbnails.has-4-thumbs > li {
   width: 24%;
   width: calc(25% - 2px);
 }
-ul.ul-thumbnails > li:first-child {
+.amcust-wrap-thumbs ul.ul-thumbnails > li:first-child {
   margin-left: 0;
 }
-ul.ul-thumbnails > li:last-child {
+.amcust-wrap-thumbs ul.ul-thumbnails > li:last-child {
   margin-right: 0;
 }
 /* _kleo-btn-overrule.scss */

@@ -23,3 +23,63 @@
 .article-content section.container-wrap .posts-load-more .btn {
 
 }
+
+.amcust-wrap-thumbs {
+    margin:$offset-g3 0 0 0;
+
+    ul.ul-thumbnails {
+        list-style:none;
+        margin:0;
+        padding:0;
+        text-align:center;
+
+        > li {
+            width:100px;
+            display:inline-block;
+            margin:0 1px;
+            padding:0;
+
+            > a {
+                display:block;
+                float:left;
+                width:100%;           
+
+                > img {
+                    width:100%;
+                    height:auto;
+                }
+
+                &:hover > img {
+                    // width: calc(100% - 6px);
+                    // height: calc(100% - 6px);
+                    border:3px solid $color_accent;
+                }
+            }
+        }
+        /* (END) li */
+        
+        &.has-5-thumbs {
+            > li {
+                width:19%;
+                width: calc(20% - 2px);
+            }
+        }
+
+        &.has-4-thumbs {
+            > li {
+                width:24%;
+                width: calc(25% - 2px);
+            }
+        }
+
+        > li {
+            &:first-child {
+                margin-left:0;
+            }
+            &:last-child {
+                margin-right:0;
+            }        
+        } 
+    }
+    /* (END) ul.ul-thumbnails */
+}
