@@ -12,11 +12,13 @@ $color_gray-dark:#a5a9b0;
 $color_gray-light:#f4f4f4;
 
 /* Font colors */
-$color_validate-good:#5fb624;
-$color_validate-error:#C41A1A;
+$color_validate-good-border:#5fb624;
+$color_validate-good-bg:white;
+$color_validate-error-border:#C41A1A;
+$color_validate-error-bg:white;
 
 $base-font-size:16px;
-$base-font-family:"OpenSans",Arial,sans-serif;
+$base-font-family:"Open Sans", Arial, Helvetica, sans-serif;
 $base-font-color:#444;
 $base-font-line-height:24px;
 

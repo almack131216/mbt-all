@@ -8,7 +8,7 @@
     width: 100%;
     min-height:40px;
     font-size: $base-font-size;
-    margin: 5px 0 $offset-g1 0;
+    margin: 0;//5px 0 $offset-g1 0;
     color: black;
     box-shadow:none;
     @include border-radius(0px);
@@ -19,7 +19,8 @@
     -o-transition: all 0.30s ease-in-out;
 
     &.wpcf7-not-valid {
-        border-color:$color_validate-error;
+        border-color:$color_validate-error-border;
+        background:$color_validate-error-bg;
     }
 
     &:focus {
