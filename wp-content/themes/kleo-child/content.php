@@ -87,7 +87,7 @@ if ( $is_single && get_cfield( 'centered_text' ) == 1 ) {
 		<?php else : ?>
 			<?php if($amcust_debug_content) echo '<h6>(OLD) the_content</h6>'; ?>
 			<?php
-				// the_content( esc_html__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'kleo_framework' ) );
+				//the_content( esc_html__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'kleo_framework' ) );
 			?>
 			<?php if($amcust_debug_content) echo '<h6>wp_link_pages</h6>'; ?>
 			<?php wp_link_pages( array(
@@ -153,13 +153,17 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 		echo '<div class="hr-title hr-long"><abbr>More Images</abbr></div>';
 		echo '<ul class="ul-thumbnails has-' . count($attachments) . '-thumbs">';
 		foreach ( $attachments as $attachment ) {
+			
 			$class = "";// "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
 			$thumbimg = wp_get_attachment_image_src( $attachment->ID, 'full', false );
 			if ( $image = image_downsize($attachment->ID, 'thumbnail') ) $thumb = $image;
+			$thumb_title = get_the_title($attachment->ID);
+			//print_r($thumb);
 			echo '<li>';
-			echo '<a href="' . $thumbimg[0] . '">';
-			echo '<img src="' . $thumb[0] .'">';
-			echo '</a>';
+			echo '<a href="'. $thumbimg[0] .'" title="'. $thumb_title .'" data-title="'. $thumb_title .'" rel="img-lightbox">';
+			echo '<img src="'. $thumb[0] .'" alt="'. $thumb_title .'" title="'. $thumb_title .'">';
+			echo '<span class="hover-element"><i>+</i></span>';
+			echo '</a>';			
 			echo '</li>';
 		}
 		echo '</ul>';

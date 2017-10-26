@@ -50,8 +50,9 @@ base styles
 @import 'addons/_restore-in-future.scss';
 
 @import 'kleo/_kleo-general-overrule.scss';
-@import 'kleo/_kleo-posts-overrule.scss';
 @import 'kleo/_kleo-btn-overrule.scss';
+@import 'kleo/_kleo-post-items-overrule.scss';
+@import 'kleo/_kleo-post-item-overrule.scss';
 
 @import 'plugins/_the-grid.scss';
 @import 'plugins/_the-grid-filter.scss';
