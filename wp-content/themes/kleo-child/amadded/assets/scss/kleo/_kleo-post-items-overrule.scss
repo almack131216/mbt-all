@@ -4,37 +4,70 @@
 
     article.post-item {
 
-        .article-meta {
-            > .post-meta {
-                margin-bottom: $offset-g1;
+        > .post-content {
+            > .post-image {
 
-                > small {                    
-                    line-height:$offset-g2;
+            }
+            /* (END) .post-image */
 
-                    &.meta-author {
-                        > a > img.avatar {
-                            width:$offset-g4;
-                            height:$offset-g4;
-                        }
-                    }    
+            > .post-header {
+                > .post-meta {
+                    margin-bottom: $offset-g1;
 
-                    @media (max-width: $bp-md-1){
+                    > small {                    
                         line-height:$offset-g2;
 
                         &.meta-author {
                             > a > img.avatar {
                                 width:$offset-g2;
                                 height:$offset-g2;
-                                float:left;
-                                margin-right: $offset-1;
+                                margin-right:$offset-0-5;
+
+                                // @media (max-width: $bp-md-1){
+                                //     width:$offset-g2;
+                                //     height:$offset-g2;                                    
+                                // }
                             }
                         }
-                        // margin-bottom: $offset-g1;
+                        /* (END) &.meta-author */  
+                    }
+                    /* (END) small */                
+                }
+                /* (END) .post-meta */
+            }
+            /* (END) .post-header */
+
+            > .post-info {
+
+            }
+            /* (END) .post-info */
+
+            > .post-footer {
+                /* remove underline from like icon */
+                a.item-likes {
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: none;
+
+                        > span {
+                            text-decoration: underline;
+                        }
+
+                        &:before {
+                            text-decoration: none !important;
+                        }
                     }
                 }
-                /* (END) small */                
-            }            
+            }
+            /* (END) .post-footer */
         }
+        /* (END) .post-content */
+
+        .article-meta {
+                      
+        }
+        /* END) article-meta */
 
         .article-media {
             @media (max-width: $bp-md-1){
@@ -42,36 +75,23 @@
             }
         }
 
-        .post-content {
-            /* remove underline from like icon */
-            a.item-likes {
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: none;
-
-                    > span {
-                        text-decoration: underline;
-                    }
-
-                    &:before {
-                        text-decoration: none !important;
-                    }
-                }
-            }
-        }
-        /* (END) &.category-quote */
-
         &.category-books {
             .post-title {
-                border-color:black;
+                border-color:$color_accent-books;
             }
         }
         /* (END) &.category-books */
 
-        &.category-quote {
+        &.category-news {
+            .post-title {
+                border-color:$color_accent-news;
+            }
+        }
+        /* (END) .category-news */
+
+        &.category-quotes {
             .post-content {
-                background: $color_accent-quote;
+                background: $color_accent-quotes;
 
                 a.item-likes {
                     color: white !important;
@@ -92,7 +112,7 @@
                 }
             }
         }
-        /* (END) &.category-quote */
+        /* (END) &.category-quotes */
 
         .post-content {
             .post-header {
@@ -130,8 +150,7 @@
 #buddypress #friend-list div.action .generic-button > a,
 #buddypress #member-list div.action .generic-button > a,
 #buddypress #members-list div.action .generic-button > a {
-    @extend .g_btn-base;
-    
+    @extend .g_btn-base;    
     
     &:not(.remove) {
         @extend .g_btn-base-border;
@@ -141,7 +160,7 @@
         //@include btn-color-priority();;
         // @include btn-color-priority();
         @include btn-color-priority();
-        @include btn-lg();
+        // @include btn-lg();
     }
     
     &.remove,
