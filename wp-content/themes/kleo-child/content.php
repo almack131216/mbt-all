@@ -128,11 +128,11 @@ $mk = filter_gpm( get_post_meta( get_the_ID() ) );
 // } 
 
 $post_type = get_post_type($post_id);
-echo '<p><strong>Post Type: </strong>' . $post->post_type . '</p>';
-echo '<p><strong>Post ID: </strong>' . get_the_ID() . '</p>';
-echo '<p><strong>Book Author: </strong>' . $mk['book_author'] . '</p>';
-echo '<p><strong>Book Journey: </strong>' . $mk['your_book_journey'] . '</p>';
-echo '<p><strong>Places Visited: </strong>' .  $mk['places_visited'] . '</p>';
+//echo '<p><strong>Post Type: </strong>' . $post->post_type . '</p>';
+//echo '<p><strong>Post ID: </strong>' . get_the_ID() . '</p>';
+if($mk['book_author']) echo '<p><strong>Book Author: </strong>' . $mk['book_author'] . '</p>';
+if($mk['your_book_journey']) echo '<p><strong>Book Journey: </strong>' . $mk['your_book_journey'] . '</p>';
+if($mk['places_visited']) echo '<p><strong>Places Visited: </strong>' .  $mk['places_visited'] . '</p>';
 
 if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 	//http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
