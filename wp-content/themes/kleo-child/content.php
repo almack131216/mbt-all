@@ -148,7 +148,7 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 	) );
 	//            'exclude'     => get_post_thumbnail_id()
 
-	if ( $attachments ) {
+	if ( count($attachments) > 1 ) {
 		echo '<div class="amcust-wrap-thumbs">';
 		echo '<div class="hr-title hr-long"><abbr>More Images</abbr></div>';
 		echo '<ul class="ul-thumbnails has-' . count($attachments) . '-thumbs">';
