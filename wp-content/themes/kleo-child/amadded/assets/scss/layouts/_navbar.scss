@@ -156,7 +156,8 @@
                             text-transform:uppercase;
                             
                             > span.caret:after,
-                            > i.fa {
+                            > i.fa,
+                            > i[class^="icon-"] {
                                 color:inherit;//$color_hdr-nav;
                                 @include underline-none();
                             }
@@ -166,7 +167,8 @@
                             }
 
                             span.caret:hover:after,
-                            i.fa:hover {
+                            i.fa:hover,
+                            i[class^="icon-"]:hover {
                                 color:$color_hyperlink-text-hover;//$color_hdr-nav-active;
                             }
                         }
@@ -253,10 +255,34 @@
         }
         /* (END) .kleo-main-header */
 
-        &.is-sticky > .kleo-main-header.header-scrolled > .container > .navbar-collapse > ul.navbar-nav > li.active > a:before{
-            bottom: 0px;
-            width:100%;
-            left:0;
+        &.is-sticky > .kleo-main-header.header-scrolled > .container {
+            > .navbar-headerXXX {
+                > strong.logo {
+                    > a {
+                        width: 40px;
+                        position: relative;
+                        height: 50px;
+                        overflow: hidden;
+
+                        img {
+                            /* max-height: 37.5px; */
+                            position: absolute;
+                            top: 10px;
+                            left: 0;
+                            /* float: none; */
+                            height: 40px !important;
+                            max-height: 40px !important;
+                            max-width: 160px !important;
+                            /* width: 200px; */
+                        }
+                    }
+                }
+            }
+            > .navbar-collapse > ul.navbar-nav > li.active > a:before{
+                bottom: 0px;
+                width:100%;
+                left:0;
+            }
         }
     }
     /* (END) .sticky-wrapper */    

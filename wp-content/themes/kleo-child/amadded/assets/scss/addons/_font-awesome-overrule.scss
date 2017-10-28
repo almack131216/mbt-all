@@ -1,6 +1,7 @@
 /* _font-awesome-overrule.scss */
 
-i.fa {
+i.fa,
+i[class^="icon-"] {
     font-size:$base-font-size;
     line-height:$base-font-size;
 
@@ -17,15 +18,24 @@ i.fa {
         font-size:20px;
         line-height:20px;
     }
+
+    &.fa-bold {
+        font-weight:bold;
+        &:before {
+            font-weight:bold;
+        }
+    }
 }
 
 .i-right {
-    i.fa {
+    i.fa,
+    i[class^="icon-"] {
         margin-left:$offset-1;
     }
 }
 .i-left {
-    i.fa {
+    i.fa,
+    i[class^="icon-"] {
         margin-right:$offset-1;
     }
 }

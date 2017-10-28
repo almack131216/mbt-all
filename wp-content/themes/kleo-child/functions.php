@@ -17,7 +17,7 @@ global $amCustIconSearch;
 
 $amCustStringPrefixTitleTag = 'Tagged: ';
 $amCustStringPrefixTitleCategory = '';
-$amCustIconSearch = 'fa fa-search fa-lg';//(was: icon icon-search)
+$amCustIconSearch = 'icon-search fa-lg fa-bold';//(was: icon icon-search)
 
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
