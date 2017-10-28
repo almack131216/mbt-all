@@ -169,6 +169,9 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 		echo '</ul>';
 		echo '</div>';
 	}
+
+	// the_excerpt();
+
 }
 
 			?>

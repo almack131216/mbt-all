@@ -11,15 +11,12 @@ Updated: 2017-10-19 346
 
 */
 
-/*
-base styles
-*/
-
 /* BASE - base styles, variables, mixins etc */
 @import 'base/_variables.scss';
 @import 'base/_mixins.scss';
 @import 'base/_mixins-buttons.scss';
 @import 'base/_mixins-forms.scss';
+@import 'base/_mixins-buddypress.scss';
 @import 'base/_base.scss';
 @import 'base/_base-colors.scss';
 

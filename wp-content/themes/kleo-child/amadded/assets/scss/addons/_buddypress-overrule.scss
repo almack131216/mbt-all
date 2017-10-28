@@ -4,50 +4,9 @@
 
     #buddypress {
         form#whats-new-form {
-            background: $color_bg-breadcrumb;
-            padding: $offset-g1;
-            border-radius: 5px;
-            border: 1px solid $color_layout-border;
-
-            #whats-new-content {
-                margin-bottom:0;
-
-                #whats-new-textarea {
-                    textarea {
-                        height:60px;
-                        background:white;
-                    }
-                }
-            }
-
-            #whats-new-options {
-                .rtmedia-plupload-container {
-                    height:auto;
-
-                    .rtmedia-add-media-button {
-                        background: white;
-                        @extend .g_btn-base-border;
-
-                        span.dashicons {
-                            width:12px;
-                            height:12px;
-
-                            &:before {
-                                width:12px;
-                                height:12px;
-                            }
-                        }
-                    }
-                }
-                #whats-new-submit {
-                    input[type=submit] {
-                        background: white;
-                        @extend .g_btn-base-border;
-                    }
-                }
-            }
-            /* (END) #whats-new-options */
+            @include whats-new-form();
         }
+        /* form#whats-new-form */
 
         .activity {
             ul.activity-list {

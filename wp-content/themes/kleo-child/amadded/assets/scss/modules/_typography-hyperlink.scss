@@ -22,6 +22,8 @@
         color:$color_hyperlink-text-hover;
         text-decoration:underline;
 
+        &:before,
+        > i,
         > span {
             color:$color_hyperlink-text-hover;
         }

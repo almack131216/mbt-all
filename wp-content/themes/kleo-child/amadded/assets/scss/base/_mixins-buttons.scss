@@ -36,6 +36,15 @@
     }
 }
 
+@mixin btn-color-delete() {
+    color:$color_danger;   
+
+    > span,
+    > i {
+        color:$color_danger;
+    }
+}
+
 @mixin underline-none() {
     text-decoration:none !important;
 
