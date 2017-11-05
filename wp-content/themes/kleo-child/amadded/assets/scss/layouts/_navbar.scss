@@ -256,27 +256,20 @@
         /* (END) .kleo-main-header */
 
         &.is-sticky > .kleo-main-header.header-scrolled > .container {
-            > .navbar-headerXXX {
-                > strong.logo {
-                    > a {
-                        width: 40px;
-                        position: relative;
-                        height: 50px;
+            > .navbar-header {
+                @media (min-width:$bp-md){
+                    strong.logo {//make logo just icon square
+                        width:40px;
+                        // height: 50px;
                         overflow: hidden;
 
-                        img {
-                            /* max-height: 37.5px; */
-                            position: absolute;
-                            top: 10px;
-                            left: 0;
-                            /* float: none; */
-                            height: 40px !important;
-                            max-height: 40px !important;
-                            max-width: 160px !important;
-                            /* width: 200px; */
+                        > a {
+                            width: 200px;
+                            height: 50px;
                         }
                     }
                 }
+                /* (END) @media (min-width:$bp-md) */
             }
             > .navbar-collapse > ul.navbar-nav > li.active > a:before{
                 bottom: 0px;
