@@ -47,7 +47,7 @@ if ($social_share != 1 && $like_status != 1) {
 ?>
 <section class="main-color container-wrap social-share-wrap">
     <div class="container">
-        <div class="share-links amcust_share-links">
+        <div class="share-links amcust_share-links circle">
 
             <div class="hr-title hr-long"><abbr><?php esc_html_e("Share this", "kleo_framework"); ?></abbr></div>
 

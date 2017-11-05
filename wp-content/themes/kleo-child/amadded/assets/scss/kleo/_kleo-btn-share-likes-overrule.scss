@@ -25,7 +25,7 @@
     }
     /* (END) basic styling */
 
-    &.amcust_share-links:not(.flat-square) {
+    &.amcust_share-links.basic {
         > span {
             &.kleo-facebook > a > i {
                 color:$color_facebook;        
@@ -48,9 +48,10 @@
             }
         }
     }
-    /* (END) &.amcust_share-links (basic using social brand colours) */
+    /* (END) &.amcust_share-links.basic (basic using social brand colours) */
 
-    &.amcust_share-links.flat-square {
+    &.amcust_share-links.square,
+    &.amcust_share-links.circle {
         > span {
             &.kleo-love > a {
                 padding-right:$offset-1;
@@ -110,6 +111,15 @@
             }
         }
     }
-    /* (END) &.amcust_share-links.flat-square */
+    /* (END) &.amcust_share-links */
+
+    &.amcust_share-links.circle {
+        > span {
+            a {
+                @include border-radius(20px);
+            }
+        }
+    }
+    /* (END) &.amcust_share-links.circle */
 
 }
