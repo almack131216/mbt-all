@@ -31,3 +31,31 @@
         /* (END) ul */            
     }
 }
+
+.homepage-header-wrap {
+    margin: 0 auto;
+    padding-bottom:$offset-g2;
+    text-align:center;
+    border-bottom:2px dotted $color_layout-border;
+
+    width:100%;
+    @media (min-width:$bp-lg){
+        width:60%;
+    }
+    @media (min-width:$bp-md) and (max-width:$bp-lg-1){
+        width:80%;
+    }    
+
+    > p > img {
+        margin:0 auto;
+        padding:0;
+    }
+
+    > h3 {
+        margin-top:$offset-g2;
+    }
+
+    > p > a.g_btn-base-border {
+        margin-top:$offset-g2;
+    }
+}

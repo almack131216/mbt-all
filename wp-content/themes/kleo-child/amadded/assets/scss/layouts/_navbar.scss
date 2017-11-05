@@ -36,6 +36,10 @@
 .navbar {
     .sticky-wrapper {
         .kleo-main-header {
+            @media(max-width:$bp-xs-1){
+                border-bottom:0px;
+            }
+
             .container {
                 @media(max-width:$bp-xs-1){
                     background:$color_accent;

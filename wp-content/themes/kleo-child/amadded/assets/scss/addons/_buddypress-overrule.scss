@@ -27,6 +27,9 @@
 
                             > a.button.fav {
                                 @extend .g_hyperlink-base;
+                                text-decoration:none !important;
+                                font-size:$font-size_button-md;
+                                line-height:$font-size_button-line-height-md;
 
                                 &:before {
                                     text-decoration:none !important;

@@ -75,6 +75,7 @@
     }
     
 }
+/* (END) .g_btn-base-border */
 
 .g_btn-color-priority {
     @include btn-color-priority();
@@ -92,7 +93,14 @@
     @include btn-lg();
 }
 
-/* (END) .g_btn-base-border */
+.btn-group {
+    > a:first-child {
+        @include border-radius-position(0px,'right');
+    }
+    > a:last-child {
+        @include border-radius-position(0px,'left');
+    }
+}
 
 // .g_btn-base-border-priority {
 //     @extend .g_btn-base-border;

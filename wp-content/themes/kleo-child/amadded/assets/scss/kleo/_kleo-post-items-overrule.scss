@@ -5,8 +5,17 @@
     article.post-item {
 
         > .post-content {
-            > .post-image {
+            border:1px solid $color_layout-border;
 
+            > .post-image {
+                > a {
+                    > span.hover-element {
+                        i {
+                            // font-size:40px;
+                            color:white !important;// +
+                        }
+                    }
+                }
             }
             /* (END) .post-image */
 
