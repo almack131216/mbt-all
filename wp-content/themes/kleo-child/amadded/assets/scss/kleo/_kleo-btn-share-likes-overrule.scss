@@ -1,0 +1,87 @@
+/* _kleo-btn-share-likes-overrule.scss */
+
+#main .container-wrap .container .template-page .wrap-content section.container-wrap.social-share-wrap .share-links {
+
+    > span:not(.amcust_share-links) {
+        a {
+            margin: 0 5px;
+            @include underline-none();
+
+            > i,
+            &.item-likes:before {
+                font-size:$font-size_button-lg;
+            }
+
+            @media (min-width:$bp-sm){
+                margin: 0 $offset-g1;
+            }
+
+            @media (max-width:$bp-xs-1){
+                .item-likes-postfix {
+                    display:none;//"likes"
+                }
+            }                                
+        }        
+    }
+
+    &.amcust_share-links {
+        > span {
+            &.kleo-love > a {
+                padding-right:$offset-1;
+            }
+
+            &.kleo-facebook > a {
+                background:$color_facebook;        
+            }
+
+            &.kleo-twitter > a {
+                background:$color_twitter;
+            }
+
+            &.kleo-googleplus > a {
+                background:$color_googleplus;
+            }
+
+            &.kleo-pinterest > a {
+                background:$color_pinterest;
+            }
+
+            &.kleo-whatsapp > a {
+                background:$color_whatsapp;
+            }
+
+            a {
+                margin: 1px;
+                background:transparent;
+                text-align:center;
+                min-width: 40px;
+                height: 40px;
+                line-height: 40px;                
+
+                i {
+                    font-size:20px;
+                    line-height: 40px;
+
+                    &.icon-gplus {
+                        margin-left: -3px;//because 'G+' is wide
+                    }
+                }
+            }
+
+            &:not(.kleo-love):not(.kleo-mail){
+                a {
+                    i {
+                        color:white !important;
+                        &:before {
+                            color:white !important;
+                        }
+                    }
+
+                    &:hover {
+                        background:$color_hyperlink-text-hover;
+                    }
+                }
+            }
+        }
+    }
+}

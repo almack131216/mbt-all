@@ -14,36 +14,6 @@
 
                     }
                     /* (END) article.post */
-
-                    section.container-wrap {
-                        &.social-share-wrap {
-
-                            .share-links span a {
-                                margin: 0 5px;
-                                @include underline-none();
-
-                                > i,
-                                &.item-likes:before {
-                                    font-size:$font-size_button-lg;
-                                }
-
-                                @media (min-width:$bp-sm){
-                                    margin: 0 $offset-g1;
-                                }
-
-                                @media (max-width:$bp-xs-1){
-                                    .item-likes-postfix {
-                                        display:none;//"likes"
-                                    }
-                                }
-
-                                
-                            }
-                            /* (END) .share-links */
-                        }
-                    }
-                    /* (END) section.container-wrap */
-
                 }
             }
 
@@ -53,6 +23,7 @@
                         > a {                        
                             @extend .g_btn-base-border;
                             @include btn-sm();
+                            margin:0;
                             padding:5px;
                             @include border-radius(0px);
                             border-width:1px;
