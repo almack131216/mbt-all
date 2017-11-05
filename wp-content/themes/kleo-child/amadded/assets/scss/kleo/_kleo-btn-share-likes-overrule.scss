@@ -23,8 +23,34 @@
             }                                
         }        
     }
+    /* (END) basic styling */
 
-    &.amcust_share-links {
+    &.amcust_share-links:not(.flat-square) {
+        > span {
+            &.kleo-facebook > a > i {
+                color:$color_facebook;        
+            }
+
+            &.kleo-twitter > a > i {
+                color:$color_twitter;
+            }
+
+            &.kleo-googleplus > a > i {
+                color:$color_googleplus;
+            }
+
+            &.kleo-pinterest > a > i {
+                color:$color_pinterest;
+            }
+
+            &.kleo-whatsapp > a > i {
+                color:$color_whatsapp;
+            }
+        }
+    }
+    /* (END) &.amcust_share-links (basic using social brand colours) */
+
+    &.amcust_share-links.flat-square {
         > span {
             &.kleo-love > a {
                 padding-right:$offset-1;
@@ -84,4 +110,6 @@
             }
         }
     }
+    /* (END) &.amcust_share-links.flat-square */
+
 }
