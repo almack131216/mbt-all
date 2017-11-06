@@ -151,7 +151,8 @@ $bp-subnav-mobile: $bp-md-1;
                 
                 .nav > li {        
                     &:hover > a,
-                    &.active > a {
+                    &.active > a,
+                    &.current-menu-parent > a {
                         box-shadow: none;
                     }
                 }
@@ -185,7 +186,8 @@ $bp-subnav-mobile: $bp-md-1;
                             }
                         }
 
-                        &.active {
+                        &.active,
+                        &.current-menu-parent {
                             > a {
                                 color:$color_hdr-nav-active;
 
