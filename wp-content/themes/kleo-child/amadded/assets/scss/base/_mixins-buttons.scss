@@ -1,5 +1,83 @@
 /* _mixins-buttons.scss */
 
+@mixin btn-base() {  
+	font-size:$font-size_button;
+    line-height:$font-size_button;
+    padding: $offset-1 $offset-g1 !important;	
+	text-transform:uppercase;
+    text-decoration:none !important;    	
+    font-weight:bold;
+    
+    display:inline-block;
+    cursor: pointer;
+    height:auto;
+    // outline:none;	    
+    
+    text-shadow: none;
+    text-align: center;
+    box-shadow: none;    
+    box-sizing: border-box;
+    @include border-radius(20px);
+
+    color:$color_button-text;
+    background:$color_button-bg;
+
+    > span {
+        font-size:inherit;
+        line-height:inherit;	
+        text-transform:inherit;        
+        color:inherit;
+        font-weight:inherit;
+        text-decoration:none !important;
+    }   
+
+    &:hover {
+		color:$color_button-text-hover;
+        background:$color_button-bg-hover;
+
+        > i,
+        > span,
+        &:before {
+            color:$color_button-text-hover;
+        }
+
+        &:active {
+            color:$color_button-text-active;
+            background:$color_button-bg-active;
+
+            > i,
+            > span,
+            &:before {
+                color:$color_button-text-active;
+            }
+        } 
+	}       
+}
+/* [END] g_btn-base() */
+
+@mixin btn-base-border() {
+	@include btn-base();
+	border-width: 2px;
+    border-style: solid;
+    border-color: $color_button-border;
+    width: auto;
+    min-width: auto;
+
+    &:hover {
+        border-color:$color_button-border-hover;
+
+        &:active {
+            border-color:$color_button-border-active;
+        }
+	}
+
+    &.priority:not(:hover):not(:active) {
+        @include btn-color-priority();
+    }
+    
+}
+/* [END] btn-base-border() */
+
 @mixin btn-sm() {
     font-size:10px;
     @media (max-width:$bp-xs){

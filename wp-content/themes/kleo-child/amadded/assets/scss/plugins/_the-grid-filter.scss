@@ -6,7 +6,7 @@
 		margin:0;
 		
 		> span.tg-nav-font {
-			@extend .g_btn-base;
+			@include btn-base();
             background:white;		
 		}
 
@@ -15,7 +15,7 @@
 			padding:0;
 	
 			&:before {
-				content: "";
+				content: '';
 				position: absolute;
 				width: 70%;
 				height: 1px;
@@ -28,7 +28,7 @@
 
 	.tg-dropdown-holder {
 		min-width:150px;
-		@extend .g_btn-base-border;
+		@include btn-base-border();
 		margin: 0;
         text-align:center;
         border-color:white !important;
@@ -36,7 +36,7 @@
         // position:relative;                            
 
         // &:hover:after {
-        //     @extend .subnav-arrow;
+        //     @include subnav-arrow();
         // }        
 	
 		> .tg-nav-font {		
@@ -45,7 +45,7 @@
 			padding:0;
 		}		
 	}
-    /* (END) .tg-dropdown-holder */
+    /* [END] .tg-dropdown-holder */
     
 }
 
@@ -89,6 +89,6 @@ ul.tg-dropdown-list {
 //         }
 //     }
 // }
-/* (END) .tg-filters-holder */
+/* [END] .tg-filters-holder */
 
-/* (END) The Grid - FILTER */
+/* [END] The Grid - FILTER */

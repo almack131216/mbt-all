@@ -19,7 +19,7 @@
 
         .amcust_title-bar-with-button {
             .btn-add-to-page {
-                @extend .g_btn-base-border;
+                @include btn-base-border();
                 float:right;
 
                 @extend .i-left;
@@ -30,7 +30,7 @@
                 // }
             }
         }
-        /* (END) amcust_title-bar-with-button */
+        /* [END] amcust_title-bar-with-button */
 
     }
 }
@@ -52,4 +52,4 @@ body.home-page {
     
     
 }
-/* (END) body.home-page */
+/* [END] body.home-page */

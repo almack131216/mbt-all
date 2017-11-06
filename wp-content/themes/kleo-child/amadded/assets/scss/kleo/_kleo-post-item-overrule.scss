@@ -34,13 +34,13 @@ body.single-post {
                                             }
                                         }
                                     }
-                                    /* (END) &.meta-author */  
+                                    /* [END] &.meta-author */  
                                 }
-                                /* (END) small */                
+                                /* [END] small */                
                             }
-                            /* (END) .post-meta */
+                            /* [END] .post-meta */
                         }
-                        /* (END) .article-meta */
+                        /* [END] .article-meta */
 
                         > .article-media {
                             margin-bottom:$offset-1;
@@ -61,15 +61,15 @@ body.single-post {
                             }
                         }
                     }
-                    /* (END) > article.post */
+                    /* [END] > article.post */
                 }
             }
-            /* (END) &.tpl-right */
+            /* [END] &.tpl-right */
         }
-        /* (END) .template-page */
+        /* [END] .template-page */
     }
 }
-/* (END) body.single-post */
+/* [END] body.single-post */
 
 .article-content {
 
@@ -81,8 +81,8 @@ body.single-post {
 
         .posts-load-more {
             > .btn {                
-                // @include btn-color-priority();;
-                // @extend .g_btn-base-border;
+                // @include btn-color-priority();
+                // @include btn-base-border();
             }
         }
     }
@@ -129,7 +129,7 @@ body.single-post {
                 }
             }
         }
-        /* (END) li */
+        /* [END] li */
         
         &.has-5-thumbs {
             > li {
@@ -154,7 +154,7 @@ body.single-post {
             }        
         } 
     }
-    /* (END) ul.ul-thumbnails */
+    /* [END] ul.ul-thumbnails */
 }
 
 
@@ -163,7 +163,7 @@ article .article-meta {
         width: 170px;
     }
 }
-/* (END) post-left */
+/* [END] post-left */
 
 .single .with-meta .article-media,
 .posts-listing.standard-listing.with-meta .article-media,
@@ -182,4 +182,4 @@ article .article-meta {
         width:100%;
      }    
 }
-/* (END) post-right */
+/* [END] post-right */

@@ -24,7 +24,7 @@ form.wpuf-form-add {
                         margin-bottom: 5px;
                     }
                     a.button {
-                        @extend .g_btn-base-border;
+                        @include btn-base-border();
                     }
 
                     .wpuf-help,
@@ -70,15 +70,15 @@ form.wpuf-form-add {
                     // display:none;
                 }
                 input[type="submit"] {
-                    @extend .g_btn-base-border;
+                    @include btn-base-border();
                     @include btn-color-priority();
                     @include btn-lg();
                 }
                 a.btn {
-                    @extend .g_btn-base;
+                    @include btn-base();
                 }
             } 
         }               
     }
 }
-/* (END) WPUF */
+/* [END] WPUF */

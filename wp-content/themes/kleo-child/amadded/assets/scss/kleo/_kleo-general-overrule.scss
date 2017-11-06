@@ -89,7 +89,7 @@ a.url:hover,
         //@extend .g_hyperlink-base-hover;
     }
 }
-/* (END) main */
+/* [END] main */
 
 
 /* kleo-login */
@@ -126,21 +126,21 @@ a.url:hover,
             }
 
         }
-        /* (END) .sidebar */
+        /* [END] .sidebar */
     }
-    /* (END) .container */
+    /* [END] .container */
 
     #buddypress #item-body {
         padding:$offset-g1;
     }
 }
-/* (END) .container-wrap */
+/* [END] .container-wrap */
 
 
 // #buddypress #friend-list div.action .generic-button a.send-message,
 // #buddypress #member-list div.action .generic-button a.send-message,
 // #buddypress #members-list div.action .generic-button a.send-message {
-//     @extend .g_btn-base-border;
+//     @include btn-base-border();
 //     @include btn-sm();
 // }
 

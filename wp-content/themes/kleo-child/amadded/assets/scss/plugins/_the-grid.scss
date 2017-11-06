@@ -57,10 +57,8 @@
         margin-top:$offset-g1;
 
         .tg-ajax-button {
-            @extend .g_btn-base-border;
+            @include btn-base-border();
         }
     }
 }
-/* (END) tg-grid-wrapper */
-
-/* (END) the grid */
+/* [END] tg-grid-wrapper */

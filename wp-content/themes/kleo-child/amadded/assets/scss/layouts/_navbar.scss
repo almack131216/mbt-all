@@ -1,7 +1,7 @@
 /* _navbar.scss */
 
-.subnav-item-a {
-    //@include btn-color-priority();;
+@mixin subnav-item-link() {
+    //@include btn-color-priority();
     padding:$offset-1 $offset-g1;
     cursor: pointer;
     @media (min-width: $bp-md) {
@@ -20,7 +20,11 @@
     }
 }
 
-.subnav-arrow {
+.subnav-item-a {
+    @include subnav-item-link();
+}
+
+@mixin subnav-arrow() {
     content:'';
     position:absolute;
     left:50%;
@@ -55,6 +59,7 @@
                             }
                         }
                     }
+                    /* [END] .kleo-mobile-switch */
 
                     > .logo {
                         > a {
@@ -66,8 +71,9 @@
                             }                        
                         }
                     }
+                    /* [END] .logo */
                 }
-                /* (END) .navbar-header */
+                /* [END] .navbar-header */
 
                 .navbar-collapse {
                     > ul.nav.navbar-nav {
@@ -108,16 +114,16 @@
                                             padding:$offset-1 $offset-g1;
                                         }
                                         a.ajax_view_all {
-                                            @extend .g_btn-base-border;
+                                            @include btn-base-border();
                                             // @include btn-md();
                                             margin-top:$offset-g1;
                                             margin-bottom:0;
                                         }
                                     }
                                 }
-                                /* (END) @media */
+                                /* [END] @media */
                             }
-                            /* (END) #ajax_search_container */
+                            /* [END] #ajax_search_container */
                         }
                     }
 
@@ -134,12 +140,12 @@
 
                                 }                            
                             }
-                            /* (END) li */
+                            /* [END] li */
                         }
-                        /* (END) ul */
+                        /* [END] ul */
                     }
                 }
-                /* (END) .navbar-collapse */
+                /* [END] .navbar-collapse */
                 
                 .nav > li {        
                     &:hover > a,
@@ -184,7 +190,7 @@
                                 @media (min-width : $bp-md) {
                                     &:before {
                                         transition: all 0.5s ease;
-                                        content: "";
+                                        content:'';
                                         position: absolute;
                                         width: 70%;
                                         height: 1px;
@@ -210,7 +216,7 @@
                                 position:relative;                            
 
                                 &:after {
-                                    @extend .subnav-arrow;
+                                    @include subnav-arrow();
                                 }
 
                                 > ul.dropdown-menu {                        
@@ -224,7 +230,7 @@
                             ul.dropdown-menu {
                                 > li {
                                     > a {
-                                        @extend .subnav-item-a;
+                                        @include subnav-item-link();
                                     }
 
                                     &.active {
@@ -234,8 +240,9 @@
                                     }
                                 }
                             }
+                            /* [END] ul.dropdown-menu */
                         }
-                        /* (END) @media (min-width:$bp-md){ */
+                        /* [END] @media (min-width:$bp-md) */
 
                         @media (max-width: $bp-md-1){
                             &.open {
@@ -249,15 +256,15 @@
                                 }                   
                             }
                         }
-                        /* (END) @media (max-width:$bp-md-1){ */
+                        /* [END] @media (max-width:$bp-md-1) */
                     }
-                    /* (END) li */            
+                    /* [END] li */            
                 }
-                /* (END) ul.navbar-nav */
+                /* [END] ul.navbar-nav */
             }
-            /* (END) .container */
+            /* [END] .container */
         }
-        /* (END) .kleo-main-header */
+        /* [END] .kleo-main-header */
 
         &.is-sticky > .kleo-main-header.header-scrolled > .container {
             > .navbar-header {
@@ -273,7 +280,7 @@
                         }
                     }
                 }
-                /* (END) @media (min-width:$bp-md) */
+                /* [END] @media (min-width:$bp-md) */
             }
             > .navbar-collapse > ul.navbar-nav > li.active > a:before{
                 bottom: 0px;
@@ -282,9 +289,9 @@
             }
         }
     }
-    /* (END) .sticky-wrapper */    
+    /* [END] .sticky-wrapper */    
 }
-/* (END) navbar */
+/* [END] navbar */
 
 .logo img {
 	height:60px;

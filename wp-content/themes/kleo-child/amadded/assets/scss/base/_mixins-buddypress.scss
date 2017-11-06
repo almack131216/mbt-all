@@ -23,7 +23,7 @@
 
             .rtmedia-add-media-button {
                 background: white;
-                @extend .g_btn-base-border;
+                @include btn-base-border();
 
                 span.dashicons {
                     width:12px;
@@ -39,10 +39,10 @@
         #whats-new-submit {
             input[type=submit] {
                 background: white;
-                @extend .g_btn-base-border;
+                @include btn-base-border();
             }
         }
     }
-    /* (END) #whats-new-options */
+    /* [END] #whats-new-options */
 }
 /* form#whats-new-form */

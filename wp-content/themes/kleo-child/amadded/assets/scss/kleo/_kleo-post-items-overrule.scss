@@ -17,7 +17,7 @@
                     }
                 }
             }
-            /* (END) .post-image */
+            /* [END] .post-image */
 
             > .post-header {
                 > .post-meta {
@@ -38,18 +38,18 @@
                                 // }
                             }
                         }
-                        /* (END) &.meta-author */  
+                        /* [END] &.meta-author */  
                     }
-                    /* (END) small */                
+                    /* [END] small */                
                 }
-                /* (END) .post-meta */
+                /* [END] .post-meta */
             }
-            /* (END) .post-header */
+            /* [END] .post-header */
 
             > .post-info {
 
             }
-            /* (END) .post-info */
+            /* [END] .post-info */
 
             > .post-footer {
                 /* remove underline from like icon */
@@ -69,9 +69,9 @@
                     }
                 }
             }
-            /* (END) .post-footer */
+            /* [END] .post-footer */
         }
-        /* (END) .post-content */
+        /* [END] .post-content */
 
         .article-meta {
                       
@@ -89,14 +89,14 @@
                 border-color:$color_accent-books;
             }
         }
-        /* (END) &.category-books */
+        /* [END] &.category-books */
 
         &.category-news {
             .post-title {
                 border-color:$color_accent-news;
             }
         }
-        /* (END) .category-news */
+        /* [END] .category-news */
 
         &.category-quotes {
             .post-content {
@@ -121,7 +121,7 @@
                 }
             }
         }
-        /* (END) &.category-quotes */
+        /* [END] &.category-quotes */
 
         .post-content {
             .post-header {
@@ -150,7 +150,7 @@
 
     }
 }
-/* (END) main */
+/* [END] main */
 
 .buddypress .main-color .kleo-online-status.high-bg {
     background-color:#009E1C;
@@ -159,14 +159,14 @@
 #buddypress #friend-list div.action .generic-button > a,
 #buddypress #member-list div.action .generic-button > a,
 #buddypress #members-list div.action .generic-button > a {
-    @extend .g_btn-base;    
+    @include btn-base();    
     
     &:not(.remove) {
-        @extend .g_btn-base-border;
+        @include btn-base-border();
     }    
     
     &.add {
-        //@include btn-color-priority();;
+        //@include btn-color-priority();
         // @include btn-color-priority();
         @include btn-color-priority();
         // @include btn-lg();
@@ -181,7 +181,7 @@
 }
 
 .article-content section.container-wrap .posts-load-more .btn {
-    @extend .g_btn-base-border;
+    @include btn-base-border();
     @include btn-color-priority();
 }
 
@@ -194,6 +194,6 @@
 .rtmedia-container .drag-drop .start-media-upload,
 .rtmedia-activity-container .drag-drop .start-media-upload,
 #buddypress .rtmedia-container .rtmedia-uploader .drag-drop .start-media-upload {    
-    // @extend .g_btn-base-border;
-    // @include btn-color-priority();;
+    // @include btn-base-border();
+    // @include btn-color-priority();
 }

@@ -1,61 +1,12 @@
 /* _button.scss */
 
 .g_btn-base {    
-	font-size:$font-size_button;
-    line-height:$font-size_button;
-    padding: $offset-1 $offset-g1 !important;	
-	text-transform:uppercase;
-    text-decoration:none !important;    	
-    font-weight:bold;
-    
-    display:inline-block;
-    cursor: pointer;
-    height:auto;
-    // outline:none;	    
-    
-    text-shadow: none;
-    text-align: center;
-    box-shadow: none;    
-    box-sizing: border-box;
-    @include border-radius(20px);
-
-    color:$color_button-text;
-    background:$color_button-bg;
-
-    > span {
-        font-size:inherit;
-        line-height:inherit;	
-        text-transform:inherit;        
-        color:inherit;
-        font-weight:inherit;
-        text-decoration:none !important;
-    }   
-
-    &:hover {
-		color:$color_button-text-hover;
-        background:$color_button-bg-hover;
-
-        > span,
-        &:before {
-            color:$color_button-text-hover;
-        }
-
-        &:active {
-            color:$color_button-text-active;
-            background:$color_button-bg-active;
-
-            > span,
-            &:before {
-                color:$color_button-text-active;
-            }
-        } 
-	}
-       
+	@include btn-base();    
 }
-/* (END) .g_btn-base */
+/* [END] .g_btn-base */
 
 .g_btn-base-border {
-	@extend .g_btn-base;
+	@include btn-base();
 	border-width: 2px;
     border-style: solid;
     border-color: $color_button-border;
@@ -75,7 +26,7 @@
     }
     
 }
-/* (END) .g_btn-base-border */
+/* [END] .g_btn-base-border */
 
 .g_btn-color-priority {
     @include btn-color-priority();
@@ -103,6 +54,6 @@
 }
 
 // .g_btn-base-border-priority {
-//     @extend .g_btn-base-border;
-//     @include btn-color-priority();;
+//     @include btn-base-border();
+//     @include btn-color-priority();
 // }

@@ -26,5 +26,9 @@ b, strong, .strong {
     text-transform: uppercase;
 }
 
-.fmt-trim-string {@include trim-string();}
-.snippet:after,.snippetWrap p:after {content:'...';}
+.fmt-trim-string {
+    @include trim-string();
+}
+.snippet:after,.snippetWrap p:after {
+    content:'...';
+}

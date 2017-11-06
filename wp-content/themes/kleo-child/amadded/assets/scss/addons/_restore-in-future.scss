@@ -28,7 +28,7 @@
                 }
             }
         }
-        /* (END) ul */            
+        /* [END] ul */            
     }
 }
 
@@ -53,6 +53,7 @@
 
     > h3 {
         margin-top:$offset-g2;
+        text-transform:uppercase;
     }
 
     > p > a.g_btn-base-border {

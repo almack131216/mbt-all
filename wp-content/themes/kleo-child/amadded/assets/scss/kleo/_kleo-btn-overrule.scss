@@ -13,7 +13,7 @@
                     article.post {
 
                     }
-                    /* (END) article.post */
+                    /* [END] article.post */
                 }
             }
 
@@ -21,7 +21,7 @@
                 .widget.widget_tag_cloud {
                     .tagcloud {
                         > a {                        
-                            @extend .g_btn-base-border;
+                            @include btn-base-border();
                             @include btn-sm();
                             margin:0;
                             padding:5px;
@@ -31,9 +31,9 @@
                         }                    
                     }                
                 }
-                /* (END) widget_tag_cloud */
+                /* [END] widget_tag_cloud */
             }
-            /* (END) .sidebar */
+            /* [END] .sidebar */
 
             /* content dividing line & title */
             /* ------ SHARE THIS ------ */
@@ -48,16 +48,16 @@
                     font-weight:bold;
                 }
             }
-            /* (END) .hr-title.hr-long */
+            /* [END] .hr-title.hr-long */
         }
-        /* (END) .container */
+        /* [END] .container */
     }
-    /* (END) .container-wrap */
+    /* [END] .container-wrap */
 }
-/* (END) main */
+/* [END] main */
 
 #buddypress #message-threads .button.confirm {
-    @extend .g_btn-base-border;
+    @include btn-base-border();
     @include btn-color-delete();
     @include btn-sm();
 }
@@ -138,7 +138,7 @@
             }
         }    
     }
-    /* (END) &.tabdrop */
+    /* [END] &.tabdrop */
     
 }
 
@@ -156,4 +156,4 @@
 #buddypress #item-body form#whats-new-form {
     @include whats-new-form();
 }
-/* (END) MEMBER PROFILE PAGE BUTTONS */
+/* [END] MEMBER PROFILE PAGE BUTTONS */

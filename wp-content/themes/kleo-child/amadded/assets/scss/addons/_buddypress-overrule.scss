@@ -18,7 +18,7 @@
                             padding-bottom: $offset-g2;
 
                             > a.button:not(.fav) {
-                                @extend .g_btn-base-border;
+                                @include btn-base-border();
 
                                 &.delete-activity {
                                     color:red !important;
@@ -38,13 +38,13 @@
 
                         }
                     }
-                    /* (END) .activity-content */ 
+                    /* [END] .activity-content */ 
 
                 }
             }
         }
     }
-    /* (END) #buddypress */
+    /* [END] #buddypress */
 
 
     .item-list-tabs {
