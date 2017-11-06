@@ -4,13 +4,13 @@
     margin: 0 auto;
     padding-bottom:$offset-g2;
     text-align:center;
-    border-bottom:2px dotted $color_layout-border;
+    // border-bottom:2px dotted $color_layout-border;
 
     width:100%;
     @media (min-width:$bp-lg){
         width:60%;
     }
-    @media (min-width:$bp-md) and (max-width:$bp-lg-1){
+    @media (min-width:$bp-xs) and (max-width:$bp-lg-1){
         width:80%;
     }    
 
@@ -37,7 +37,7 @@
 
 @media (max-width:$bp-xs-1){
     .homepage-header-wrap {
-        width:95%;
+        width:90%;
 
         p.img-wrap {
             position: relative;
@@ -60,5 +60,11 @@
         > p > a.g_btn-base-border {
             margin-top:$offset-2;
         }
+    }
+}
+
+body.home-page {
+    .article-content > section.container-wrap.main-color {
+        background:#f3f5f9;
     }
 }
