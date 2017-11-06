@@ -1,0 +1,64 @@
+/* _homepage.scss */
+
+.homepage-header-wrap {
+    margin: 0 auto;
+    padding-bottom:$offset-g2;
+    text-align:center;
+    border-bottom:2px dotted $color_layout-border;
+
+    width:100%;
+    @media (min-width:$bp-lg){
+        width:60%;
+    }
+    @media (min-width:$bp-md) and (max-width:$bp-lg-1){
+        width:80%;
+    }    
+
+
+    > p.img-wrap {
+        margin:0;
+
+        > img {
+            margin:0 auto;
+            padding:0;
+        }        
+    }
+
+    > h3 {
+        margin-top:$offset-g2;
+        text-transform:uppercase;
+    }
+
+    > p > a.g_btn-base-border {
+        margin-top:$offset-g2;
+    }
+}
+/* [END] .homepage-header-wrap */
+
+@media (max-width:$bp-xs-1){
+    .homepage-header-wrap {
+        width:95%;
+
+        p.img-wrap {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+
+            > img {
+                position: absolute;
+                left: 50%;
+                bottom: 0px;
+                margin-left: -50px;
+            }
+        }
+
+        h3 {
+            margin-top:$offset-2;
+        }
+
+        > p > a.g_btn-base-border {
+            margin-top:$offset-2;
+        }
+    }
+}
