@@ -1,7 +1,8 @@
 /* _navbar.scss */
 
+$bp-subnav-mobile: $bp-md-1;
+
 @mixin subnav-item-link() {
-    //@include btn-color-priority();
     padding:$offset-1 $offset-g1;
     cursor: pointer;
     @media (min-width: $bp-md) {
@@ -40,12 +41,13 @@
 .navbar {
     .sticky-wrapper {
         .kleo-main-header {
-            @media(max-width:$bp-xs-1){
+            @media(max-width:$bp-subnav-mobile){
                 border-bottom:0px;
+                background:$color_accent;
             }
 
             .container {
-                @media(max-width:$bp-xs-1){
+                @media(max-width:$bp-subnav-mobile){
                     background:$color_accent;
                 }
 
@@ -53,7 +55,7 @@
                     > .kleo-mobile-switch {
                         > button.navbar-toggle {
                             > span.icon-bar {
-                                @media(max-width:$bp-xs-1){
+                                @media(max-width:$bp-subnav-mobile){
                                     background-color: white;
                                 }
                             }
@@ -63,7 +65,7 @@
 
                     > .logo {
                         > a {
-                            @media(max-width:$bp-xs-1){
+                            @media(max-width:$bp-subnav-mobile){
                                 img#logo_img {
                                     // display:none;
                                     content: url("./amadded/assets/img/logo-icon-text-240x60-white.png");
@@ -81,7 +83,7 @@
 
                         > li {
                             > #ajax_search_container {
-                                @media(max-width:$bp-xs-1){
+                                @media(max-width:$bp-subnav-mobile){
                                     border-bottom: $offset-g1 solid $color_accent;
                                     // padding-left:$offset-g1;
                                     // padding-right:$offset-g1;
@@ -207,6 +209,14 @@
                             > ul.dropdown-menu {
                                 > li {
                                     border-bottom:0px;
+
+                                    @media (max-width: $bp-md-1){
+                                        a {
+                                            &:before {
+                                                width:$offset-g1;
+                                            }
+                                        }
+                                    }
                                 }
                             }                    
                         }
