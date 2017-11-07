@@ -6,11 +6,29 @@ form.wpuf-form-add {
             padding:0;
             margin-bottom:$offset-g1;
 
-            &.wpuf-el {
+            &.wpuf-el,
+            &.wpuf-el.field-size-medium {
                 > .wpuf-label {
-
+                    width:30%;
+                    @media (max-width:$bp-xs-1){
+                        &:not([class^="wpuf-el featured_image"]),
+                        &:not([class^="wpuf-el amcust_image"]) {
+                            width:100%;
+                        }
+                    }
                 }
+                /* [END] .wpuf-label */
+
                 > .wpuf-fields {
+                    width:70%;
+
+                    @media (max-width:$bp-xs-1){
+                        &:not([class^="wpuf-el featured_image"]),
+                        &:not([class^="wpuf-el amcust_image"]) {
+                            width:100%;
+                        }
+                    }
+
                     input[type="text"],
                     input[type="email"],
                     input[type="tel"],
@@ -37,6 +55,25 @@ form.wpuf-form-add {
                         display: block;
                     }
                 }
+                /* [END] .wpuf-fields */
+
+                &[class^="wpuf-el featured_image"],
+                &[class^="wpuf-el amcust_image"] {
+                    > .wpuf-label {
+                        @media (max-width:$bp-xs-1){
+                            float:left;
+                            width:40%;
+                        }
+                    }
+                    > .wpuf-fields {
+                        @media (max-width:$bp-xs-1){
+                            float:left;
+                            width:60%;
+                            overflow: hidden;
+                        }                      
+                    }
+                }
+                /* [END] IMAGE ROWS */
 
                 &.section_break {
                     margin-top:$offset-g1;
@@ -47,6 +84,7 @@ form.wpuf-form-add {
                         }
                     }    
                 }
+                /* [END] .section_break */
 
                 &.has-error {
                     background:white;
@@ -63,8 +101,12 @@ form.wpuf-form-add {
                         }
                     }
                 }
-                   
+                /* [END] .has-error */                   
             }
+            /* [END] .wpuf-el */
+
+
+
             &.wpuf-submit {
                 .wpuf-label {
                     // display:none;
