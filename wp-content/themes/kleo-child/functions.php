@@ -34,3 +34,30 @@ function avia_fix_breadcrumb_trail($trail)
 	return $trail;
 }
 add_filter('avia_breadcrumbs_trail','avia_fix_breadcrumb_trail');
+
+function member_only_shortcode($atts, $content = null)
+{
+    if (is_user_logged_in() && !is_null($content) && !is_feed()) {
+        return $content;
+    }
+}
+add_shortcode('member_only', 'member_only_shortcode');
+
+function visitor_only_shortcode($atts, $content = null)
+{
+    if (!is_user_logged_in() && !is_null($content) && !is_feed()) {
+        return $content;
+    }
+}
+add_shortcode('visitor_only', 'visitor_only_shortcode');
+
+function my_wp_nav_menu_args( $args = '' ) {
+ 
+if( is_user_logged_in() ) { 
+    $args['menu'] = 'Main Menu';
+} else { 
+    $args['menu'] = 'Main Menu - logged-out';
+} 
+    return $args;
+}
+//add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
