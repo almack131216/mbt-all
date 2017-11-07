@@ -1,31 +1,10 @@
 /* _variables.scss */
 
-/* Base colors */
-$color_accent: #49c5b6;//#009688 (dark)//#02AD95
-$color_accent2: #f90;
-$color_accent-books: #000;
-$color_accent-quotes: #005689;// #AD2345;//maroon//#E60278
-$color_accent-news: #C42F2F;//dark red
-$color_disabled:rgb(200, 200, 200);
-
-$color_primary:#5fb624;//rgb(95,182,36)
-$color_light:#F0F0F0;
-$color_gray:#cacdd1;
-$color_gray-dark:#a5a9b0;
-$color_gray-light:#f4f4f4;
-
-/* Font colors */
-$color_validate-good-border:#5fb624;
-$color_validate-good-bg:white;
-$color_validate-error-border:#C41A1A;
-$color_validate-error-bg:white;
-
+/* base font */
 $base-font-size:16px;
 $base-font-family:"Open Sans", Arial, Helvetica, sans-serif;
 $base-font-color:#444;
 $base-font-line-height:24px;
-
-$color_danger:#f00;
 
 /* responsive breakpoints */
 $bp-xlg:1440px;
@@ -59,21 +38,6 @@ $border-radius-panel:3px;
 $border-radius-input:3px;
 $border-radius-button:25px;
 
-/* social media buttons */
-$color_share:#a5a9b0;
-$color_twitter:#3b9cff;
-$color_facebook:#2f7ccc;
-$color_youtube:#c41a1a;
-$color_instagram:#f89800;
-$color_pinterest:#BD2026;
-$color_googleplus:#DC4A38;
-$color_whatsapp: #25D366;
-
-/* table */
-$table-color-border-thead:$color_gray-dark;
-$table-color-border:$color_gray-light;
-$table-color-primary-border:#7BC14F;
-
 /* modal */
 $modal-width-default:470px;
 $modal-width-xlg:720px;
@@ -82,39 +46,3 @@ $modal-width-md:640px;
 $modal-width-sm:580px;
 $modal-width-xs:435px;
 $modal-width-xxs:100%;
-
-$color_hyperlink-text:$color_accent;//#367bb7;
-$color_hyperlink-text-hover:$color_accent2;
-$color_hyperlink-text-active:#fff;
-$color_hyperlink-text-current:#000;
-$color_hyperlink-bg:transparent;
-$color_hyperlink-bg-hover:transparent;
-$color_hyperlink-bg-active:$color_hyperlink-text-hover;
-
-$color_priority-text: #fff;
-$color_priority-text-hover: $color_hyperlink-text-hover;
-$color_priority-text-active: #fff;
-$color_priority-bg: $color_hyperlink-text;
-$color_priority-bg-hover: #fff;
-$color_priority-bg-active: $color_hyperlink-text-hover;
-$color_priority-border: $color_hyperlink-text;
-$color_priority-border-hover: $color_hyperlink-text-hover;
-$color_priority-border-active: $color_hyperlink-text-hover;
-
-$color_bg-body: #fff;
-$color_bg-content: #fff;
-$color_bg-breadcrumb: #f7f7f7;
-
-$color_hdr-nav: #000;// $color_button-text;
-$color_hdr-nav-hover:$color_hdr-nav;
-$color_hdr-nav-active:$color_hdr-nav;
-
-$color_hdr-subnav:#fff;
-$color_hdr-subnav-hover:#fff;// !important
-$color_hdr-subnav-bg:#000;
-$color_hdr-subnav-bg-hover: #444;// !important
-
-$color_layout-border: #e5e5e5;
-$color_layout-border-strong: #ccc;
-$color_layout-border-strongest: #000;
-$color_layout-border-priority: $color_priority-border;

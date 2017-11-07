@@ -13,6 +13,8 @@ Updated: 2017-11-06 1520
 
 /* BASE - base styles, variables, mixins etc */
 @import 'base/_variables.scss';
+@import 'base/_variables-color.scss';
+@import 'base/_variables-button.scss';
 @import 'base/_mixins.scss';
 @import 'base/_mixins-buttons.scss';
 @import 'base/_mixins-forms.scss';
@@ -24,7 +26,6 @@ Updated: 2017-11-06 1520
 @import 'modules/_typography.scss';
 @import 'modules/_typography-resp.scss';
 @import 'modules/_typography-hyperlink.scss';
-@import 'modules/_button-variables.scss';
 @import 'modules/_button.scss';
 @import 'modules/_form.scss';
 @import 'modules/_img.scss';
@@ -34,7 +35,6 @@ Updated: 2017-11-06 1520
 @import 'layouts/_layout.scss';
 @import 'layouts/_breadcrumbs.scss';
 @import 'layouts/_navbar.scss';
-@import 'layouts/_navbar-resp.scss';
 @import 'layouts/_footer.scss';
 @import 'layouts/_register.scss';
 @import 'layouts/_contact-form.scss';
@@ -53,6 +53,6 @@ Updated: 2017-11-06 1520
 @import 'kleo/_kleo-post-item-overrule.scss';
 @import 'kleo/_kleo-btn-share-likes-overrule.scss';
 
-@import 'plugins/_the-grid.scss';
-@import 'plugins/_the-grid-filter.scss';
+// @import 'plugins/_the-grid.scss';
+// @import 'plugins/_the-grid-filter.scss';
 @import 'plugins/_wpuf.scss';
