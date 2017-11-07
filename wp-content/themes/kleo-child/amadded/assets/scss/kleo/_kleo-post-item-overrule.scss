@@ -4,8 +4,14 @@
 body.single-post {
     #main {
         .template-page {
+            background: $color_bg-content;
+
             &.tpl-right {
                 .wrap-content {
+                    @media (min-width:$bp-md){
+                        padding-right:$offset-g1;
+                    }
+                    
 
                     > .container.amcust_page-title-container {
                         @media (min-width:$bp-md){

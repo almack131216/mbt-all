@@ -153,7 +153,7 @@ $bp-subnav-mobile: $bp-md-1;
                     &:hover > a,
                     &.active > a,
                     &.current-menu-parent > a {
-                        box-shadow: none;
+                        @include box-shadow(false);
                     }
                 }
 

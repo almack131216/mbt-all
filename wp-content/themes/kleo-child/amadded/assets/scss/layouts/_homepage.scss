@@ -1,5 +1,17 @@
 /* _homepage.scss */
 
+body.home-page {
+    #main {
+        div#main-container {
+            background:$color_bg-content;
+        }
+
+        .article-content > section.container-wrap.main-color {
+            background:$color_bg-body;
+        }
+    }
+}
+
 .homepage-header-wrap {
     margin: 0 auto;
     padding-bottom:$offset-g2;
@@ -60,11 +72,5 @@
         > p > a.g_btn-base-border {
             margin-top:$offset-2;
         }
-    }
-}
-
-body.home-page {
-    .article-content > section.container-wrap.main-color {
-        background:#f3f5f9;
     }
 }

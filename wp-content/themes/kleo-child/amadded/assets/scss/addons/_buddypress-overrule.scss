@@ -1,56 +1,61 @@
 /* _buddypress-overrule.scss */
 
-.wrap-content {
-
-    #buddypress {
-        form#whats-new-form {
-            @include whats-new-form();
+#main .template-page.tpl-right {
+    .wrap-content {
+        @media (min-width:$bp-sm){
+            // padding-right:$offset-g1;
         }
-        /* form#whats-new-form */
 
-        .activity {
-            ul.activity-list {
-                > li.activity-item {
-                    
-                    .activity-content {                    
+        #buddypress {
+            form#whats-new-form {
+                @include whats-new-form();
+            }
+            /* form#whats-new-form */
 
-                        .activity-meta {
-                            padding-bottom: $offset-g2;
+            .activity {
+                ul.activity-list {
+                    > li.activity-item {
+                        
+                        .activity-content {                    
 
-                            > a.button:not(.fav) {
-                                @include btn-base-border();
+                            .activity-meta {
+                                padding-bottom: $offset-g2;
 
-                                &.delete-activity {
-                                    color:red !important;
+                                > a.button:not(.fav) {
+                                    @include btn-base-border();
+
+                                    &.delete-activity {
+                                        color:$color_danger !important;
+                                    }
                                 }
-                            }
 
-                            > a.button.fav {
-                                @extend .g_hyperlink-base;
-                                text-decoration:none !important;
-                                font-size:$font-size_button-md;
-                                line-height:$font-size_button-line-height-md;
-
-                                &:before {
+                                > a.button.fav {
+                                    @extend .g_hyperlink-base;
                                     text-decoration:none !important;
+                                    font-size:$font-size_button-md;
+                                    line-height:$font-size_button-line-height-md;
+
+                                    &:before {
+                                        text-decoration:none !important;
+                                    }
                                 }
+
                             }
-
                         }
-                    }
-                    /* [END] .activity-content */ 
+                        /* [END] .activity-content */ 
 
+                    }
                 }
             }
         }
+        /* [END] #buddypress */
+
+
+        .item-list-tabs {
+
+        }  
+        
     }
-    /* [END] #buddypress */
-
-
-    .item-list-tabs {
-
-    }  
-    
 }
 
 .textwidget,

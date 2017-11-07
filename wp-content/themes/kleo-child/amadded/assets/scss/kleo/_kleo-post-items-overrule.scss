@@ -1,11 +1,24 @@
 /* _kleo-post-items-overrule.scss */
 
+.base-box {
+    border:1px solid $color_layout-border;
+    background:white;
+    @include box-shadow(true);
+    @include border-radius(0px);
+
+    &:hover {
+        border-color:$color_layout-border-strong;
+        @include box-shadow(hover);
+    }
+}
+
 #main {
 
     article.post-item {
+        background:transparent;
 
         > .post-content {
-            border:1px solid $color_layout-border;
+            @extend .base-box;
 
             > .post-image {
                 > a {
@@ -154,6 +167,28 @@
 
 .buddypress .main-color .kleo-online-status.high-bg {
     background-color:#009E1C;
+}
+
+#buddypress ul#members-list {
+    > li.kleo-masonry-item {
+        > .member-inner-list {
+            @extend .base-box;
+            padding: $offset-g1;
+
+            > .item-avatar.rounded {
+                margin:0 $offset-1 $offset-1 0;
+            }
+            > .item {
+                > .item-title,
+                > .item-meta {
+                    margin-left:70px;
+                }
+            }
+            > .action {
+
+            }
+        }
+    }
 }
 
 #buddypress #friend-list div.action .generic-button > a,

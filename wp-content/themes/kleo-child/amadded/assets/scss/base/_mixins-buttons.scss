@@ -14,9 +14,9 @@
     // outline:none;	    
     
     text-shadow: none;
-    text-align: center;
-    box-shadow: none;    
+    text-align: center;   
     box-sizing: border-box;
+    @include box-shadow(false);
     @include border-radius(20px);
 
     color:$color_button-text;

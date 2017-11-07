@@ -73,6 +73,7 @@ form.wpuf-form-add {
                     @include btn-base-border();
                     @include btn-color-priority();
                     @include btn-lg();
+                    font-weight: bold;
                 }
                 a.btn {
                     @include btn-base();

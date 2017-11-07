@@ -1,10 +1,8 @@
 /* _breadcrumbs.scss */
 
 /* breadcrumbs */
-section.container-wrap {
-    background:$color_bg-content;
-
-    &.breadcrumbs-container {
+#main {
+    section.container-wrap.breadcrumbs-container {
         background:$color_bg-breadcrumb;
 
         @media (max-width:$bp-xs-1){

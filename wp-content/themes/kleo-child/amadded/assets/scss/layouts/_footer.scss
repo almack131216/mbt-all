@@ -2,7 +2,7 @@
 
 /* #socket (footer) */
 div#socket.socket-color {
-	background:white;
+	background:$color_bg-body;
 	border-top:1px solid $color_layout-border;
     
     @media (max-width:$bp-sm){

@@ -10,7 +10,7 @@
     font-size: $base-font-size;
     margin: 0;//5px 0 $offset-g1 0;
     color: black;
-    box-shadow:none;
+    @include box-shadow(false);
     @include border-radius(0px);
 
     -webkit-transition: all 0.30s ease-in-out;
@@ -24,7 +24,7 @@
     }
 
     &:focus {
-        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+        @include box-shadow-input-focus();        
         border-color:rgba(81, 203, 238, 1);
     }
 }
