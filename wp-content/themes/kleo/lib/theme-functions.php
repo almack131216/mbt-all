@@ -2568,7 +2568,7 @@ if ( sq_option( 'blog_exclude_cat' ) ) {
 if ( sq_option( 'blog_tag_cloud', 0 ) == 0 ) {
 	add_action( 'init', 'sq_tag_cloud_size' );
 	function sq_tag_cloud_size() {
-		sq_kleo()->add_css( '.widget_tag_cloud a { font-size: small !important; }' );
+		sq_kleo()->add_css( '.widget_tag_cloud a { font-size:inherit !important; }' );
 	}
 }
 
