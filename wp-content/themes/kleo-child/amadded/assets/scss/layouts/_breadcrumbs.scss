@@ -20,9 +20,10 @@
             }
 
             > span {
-                //color:black;
-                &.active a {
-                    //color:black;
+                color:$color_breadcrumb-hyperlink;
+
+                &.active {
+                    
                 }
             }
         }
