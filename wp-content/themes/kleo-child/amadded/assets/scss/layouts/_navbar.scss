@@ -317,6 +317,10 @@ $bp-subnav-mobile: $bp-md-1;
 .logo img {
 	height:60px;
 	width:auto;
+
+    @media (max-width:$bp-xxs-1){
+        height:50px;
+    }
 }
 
 #header .navbar-nav .dropdown-menu li > a:hover,
