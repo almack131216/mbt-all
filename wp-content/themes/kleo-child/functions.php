@@ -51,13 +51,16 @@ function visitor_only_shortcode($atts, $content = null)
 }
 add_shortcode('visitor_only', 'visitor_only_shortcode');
 
+/*
+// removed in favor of Nav User Roles plugin
 function my_wp_nav_menu_args( $args = '' ) {
- 
-if( is_user_logged_in() ) { 
-    $args['menu'] = 'Main Menu';
-} else { 
-    $args['menu'] = 'Main Menu - logged-out';
-} 
+	empty($args['menu']);
+	if( is_user_logged_in() ) { 
+		$args['menu'] = 'mm-logged-in';
+	} else { 
+		$args['menu'] = 'mm-logged-out';
+	} 
     return $args;
 }
-//add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
+add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
+*/
