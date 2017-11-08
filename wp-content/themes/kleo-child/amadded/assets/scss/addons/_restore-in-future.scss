@@ -31,3 +31,15 @@
         /* [END] ul */            
     }
 }
+
+
+/* members - hide pagination (restore when I get more members) */
+#buddypress div.pagination#pag-top,
+#buddypress div.pagination#pag-bottom {
+    display:none;
+
+    .pag-count#member-dir-count-top {
+
+    }
+}
+

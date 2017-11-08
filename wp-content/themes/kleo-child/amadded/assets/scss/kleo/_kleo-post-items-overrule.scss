@@ -1,7 +1,7 @@
 /* _kleo-post-items-overrule.scss */
 
 .base-box {
-    border:1px solid $color_layout-border;
+    border:0px;//1px solid $color_layout-border;
     background:white;
     @include box-shadow(true);
     @include border-radius(0px);
