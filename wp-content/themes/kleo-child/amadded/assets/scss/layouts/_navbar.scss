@@ -40,7 +40,7 @@ $bp-subnav-mobile: $bp-md-1;
 
 .navbar {
     @include border-radius(0px);
-    
+
     .sticky-wrapper {
         .kleo-main-header {
             border-color: $color_breadcrumb-border;
@@ -298,10 +298,15 @@ $bp-subnav-mobile: $bp-md-1;
                 }
                 /* [END] @media (min-width:$bp-md) */
             }
-            > .navbar-collapse > ul.navbar-nav > li.active > a:before{
-                bottom: 0px;
-                width:100%;
-                left:0;
+            > .navbar-collapse > ul.navbar-nav > li {
+                &.active,
+                &.current-menu-parent {
+                     > a:before {
+                        bottom: 0px;
+                        width:100%;
+                        left:0;
+                     }
+                }                
             }
         }
     }

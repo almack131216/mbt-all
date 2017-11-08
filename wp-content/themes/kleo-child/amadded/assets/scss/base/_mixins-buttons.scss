@@ -78,6 +78,29 @@
 }
 /* [END] btn-base-border() */
 
+@mixin btn-base-pagination( $state: false ) {
+	@include btn-base-border();
+    padding: 0px !important;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    //line-height: calc(40px - 4px);//remove border width top & bottom
+    font-size: $base-font-size;
+    @include border-radius(100%);
+
+    @if $state == current {
+        color:black;
+    } @else if $state == hover {
+
+    }
+
+    &.priority:not(:hover):not(:active) {
+        @include btn-color-priority();
+    }
+    
+}
+/* [END] btn-base-border() */
+
 @mixin btn-sm() {
     font-size:10px;
     @media (max-width:$bp-xs){
