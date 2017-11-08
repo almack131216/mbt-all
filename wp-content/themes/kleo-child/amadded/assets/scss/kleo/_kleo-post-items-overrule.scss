@@ -1,13 +1,13 @@
 /* _kleo-post-items-overrule.scss */
 
 .base-box {
-    border:0px;//1px solid $color_layout-border;
+    border:1px solid $color_layout-border;
     background:white;
-    @include box-shadow(true);
+    @include box-shadow(false);
     @include border-radius(0px);
 
     &:hover {
-        border-color:$color_layout-border-strong;
+        // border-color:$color_layout-border-strong;
         @include box-shadow(hover);
     }
 }

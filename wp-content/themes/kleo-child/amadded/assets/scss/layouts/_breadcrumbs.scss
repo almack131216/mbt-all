@@ -4,6 +4,7 @@
 #main {
     section.container-wrap.breadcrumbs-container {
         background:$color_bg-breadcrumb;
+        border-color: $color_breadcrumb-border;
 
         @media (max-width:$bp-xs-1){
             padding-top:5px;

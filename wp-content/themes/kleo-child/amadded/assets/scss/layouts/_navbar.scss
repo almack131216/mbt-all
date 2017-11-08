@@ -39,8 +39,12 @@ $bp-subnav-mobile: $bp-md-1;
 }
 
 .navbar {
+    @include border-radius(0px);
+    
     .sticky-wrapper {
         .kleo-main-header {
+            border-color: $color_breadcrumb-border;
+
             @media(max-width:$bp-subnav-mobile){
                 border-bottom:0px;
                 background:$color_accent;

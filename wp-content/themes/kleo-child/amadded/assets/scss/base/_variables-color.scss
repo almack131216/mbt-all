@@ -58,9 +58,9 @@ $color_priority-border: $color_hyperlink-text;
 $color_priority-border-hover: $color_hyperlink-text-hover;
 $color_priority-border-active: $color_hyperlink-text-hover;
 
-$color_bg-body: #f8f8f8;
+$color_bg-body: #f0f0f0;//#f1f1ef;//#f8f8f8;
 $color_bg-content: #ffffff;
-$color_bg-breadcrumb: #F0F0F0;
+$color_bg-breadcrumb: #f0f0f0;
 
 $color_hdr-nav: #000;// $color_button-text;
 $color_hdr-nav-hover:$color_hdr-nav;
@@ -71,10 +71,11 @@ $color_hdr-subnav-hover:#fff;// !important
 $color_hdr-subnav-bg:#000;
 $color_hdr-subnav-bg-hover: #444;// !important
 
-$color_layout-border: #e5e5e5;
+$color_layout-border: #dfdfdf;
 $color_layout-border-strong: #ccc;
 $color_layout-border-strongest: #000;
 $color_layout-border-priority: $color_priority-border;
 
 $color_breadcrumb-hyperlink: #999;
 $color_breadcrumb-text: #999;
+$color_breadcrumb-border: #ddd;
