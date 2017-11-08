@@ -1,0 +1,14 @@
+/* _kleo-recent-posts-overrule.scss */
+
+.widget {
+    ul.news-widget-wrap {
+        > li {
+            font-size:$base-font-size;
+            line-height:22px;
+
+            small {
+                font-size:70%;
+            }
+        }
+    }
+}
