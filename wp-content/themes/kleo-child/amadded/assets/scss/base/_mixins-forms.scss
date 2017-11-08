@@ -25,6 +25,5 @@
 
     &:focus {
         @include box-shadow-input-focus();        
-        border-color:rgba(81, 203, 238, 1);
     }
 }

@@ -38,7 +38,8 @@
     background-clip: padding-box;
 }
 
-@mixin box-shadow-input-focus(){
+@mixin box-shadow-input-focus(){            
+    border-color:rgba(81, 203, 238, 1);
     -webkit-box-shadow: 0 0 5px 0 rgba(81, 203, 238, 1);
     box-shadow: 0 0 5px 0 rgba(81, 203, 238, 1);
     -webkit-background-clip: padding-box;

@@ -1,10 +1,16 @@
 /* _mixins-buddypress.scss */
 
 @mixin whats-new-form() {
-    background: $color_bg-breadcrumb;
-    padding: $offset-g1;
+    background:transparent;// $color_bg-breadcrumb;
+    margin-bottom:$offset-g1;
+    padding: $offset-g1 0;
     border-radius: 5px;
-    border: 1px solid $color_layout-border;
+    border:0px;// 1px solid $color_layout-border;
+
+    p.activity-greeting {
+        font-style: italic;
+        font-weight: bold;
+    }
 
     #whats-new-content {
         margin-bottom:0;
@@ -13,6 +19,10 @@
             textarea {
                 height:60px;
                 background:white;
+
+                &:focus {
+                    @include box-shadow-input-focus();        
+                }
             }
         }
     }
@@ -22,24 +32,25 @@
             height:auto;
 
             .rtmedia-add-media-button {
-                background: white;
                 @include btn-base-border();
+                @include btn-md();
 
                 span.dashicons {
-                    width:12px;
-                    height:12px;
+                    width:$font-size_button-md;
+                    height:$font-size_button-md;
 
                     &:before {
-                        width:12px;
-                        height:12px;
+                        width:$font-size_button-md;
+                        height:$font-size_button-md;
                     }
                 }
             }
         }
         #whats-new-submit {
             input[type=submit] {
-                background: white;
                 @include btn-base-border();
+                @include btn-md();
+                @include btn-color-priority();
             }
         }
     }
