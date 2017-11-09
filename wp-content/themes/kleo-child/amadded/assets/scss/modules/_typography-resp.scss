@@ -60,3 +60,25 @@
         font-size:18px;
     }
 }
+
+@media (min-width:$bp-md){
+    h1,h2,h3 {
+        > strong {
+            font-size: 200%;
+        }
+    }
+}
+@media (min-width:$bp-xs) and (max-width:$bp-md-1){
+    h1,h2,h3 {
+        > strong {
+            font-size: 150%;
+        }
+    }
+}
+@media (max-width:$bp-xs-1){
+    h1,h2,h3 {
+        > strong {
+            font-size: 125%;
+        }
+    }
+}
