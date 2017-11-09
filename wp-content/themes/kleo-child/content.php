@@ -100,7 +100,7 @@ if ( $is_single && get_cfield( 'centered_text' ) == 1 ) {
 <?php 
 // $meta_print_value=get_post_meta(get_the_ID(),'',true);
 // print_r($meta_print_value);
-// echo "<h6>book_author: " + $post_meta_enabled + "</h6>";
+// echo "<h6>amcust_books_author: " + $post_meta_enabled + "</h6>";
 
 function array_push_assoc($array, $key, $value){
 	$array[$key] = $value;
@@ -128,13 +128,71 @@ $mk = filter_gpm( get_post_meta( get_the_ID() ) );
 // } 
 
 $post_type = get_post_type($post_id);
+// $page_object = get_page($post->ID );
+// echo $page_object->post_content;
+// echo '-???';
+// echo get_the_content($post->ID);
+// echo '-????';
+// echo get_post_field('post_content',$post->ID);
+// echo '-?????';
+// echo the_content();
+
 //echo '<p><strong>Post Type: </strong>' . $post->post_type . '</p>';
 //echo '<p><strong>Post ID: </strong>' . get_the_ID() . '</p>';
-if($mk['book_author']) echo '<p><strong>Book Author: </strong>' . $mk['book_author'] . '</p>';
-if($mk['your_book_journey']) echo '<p><strong>Book Journey: </strong>' . $mk['your_book_journey'] . '</p>';
-if($mk['places_visited']) echo '<p><strong>Places Visited: </strong>' .  $mk['places_visited'] . '</p>';
+
 
 if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
+	$item_table = '';
+	$item_table_arr = array();
+
+	if($mk['amcust_shortcode_amazon-code']){
+		$item_table_arr[] = array('Buy',do_shortcode(get_post_field('amcust_shortcode_amazon-code', $postid)));
+	}
+
+	if($mk['amcust_books_author']) {
+		$item_table_arr[] = array('Author',$mk['amcust_books_author']);
+	}
+	if($mk['amcust_books_book_journey']) {
+		$item_table_arr[] = array('Book Journey',$mk['amcust_books_book_journey']);
+	}
+	if($mk['amcust_books_places_visited']) {
+		$item_table_arr[] = array('Places Visited',wpautop($mk['amcust_books_places_visited']));
+	}
+	if($mk['amcust_news_source_url']) {
+		$amcust_news_source = $mk['amcust_news_source'] ? $mk['amcust_news_source'] : $mk['amcust_news_source_url'];
+		$amcust_news_source_url = $mk['amcust_news_source_url'] ? $mk['amcust_news_source_url'] : '';
+		$amcust_news_link = '<a href="'.$amcust_news_source_url.'" title="'.$amcust_news_source.'" class="new-window" target="_blank">' . $amcust_news_source . '</a>';
+		$item_table_arr[] = array('Source',$amcust_news_link);
+	}
+	if($mk['amcust_quotes_author']) {
+		$item_table_arr[] = array('By',$mk['amcust_quotes_author']);
+	}
+
+	$item_table .= '<table class="table item-spec">';
+
+	if(sizeof($item_table_arr)>0){
+		$x = 0;
+		while($x<sizeof($item_table_arr)){
+			$item_table .= '<tr>';
+			$item_table .= '<td><strong>'. $item_table_arr[$x][0] .'</strong></td>';
+			$item_table .= '<td>'. $item_table_arr[$x][1] .'</td>';
+			$item_table .= '</tr>';
+			$x++;
+		}		
+	}
+
+	$item_table .= '</table>';
+	echo $item_table;
+	
+	
+
+	//	echo do_shortcode(get_post_field('post_content', $postid));//https://stackoverflow.com/questions/22270147/wordpress-shortcode-doesnt-work-when-getting-post-content-using-function-get-p
+	if( '' !== get_post()->post_content ) {
+		//echo '<h2>My Book Journey</h2>';
+		echo do_shortcode(get_post_field('post_content', $postid));
+	}
+
+
 	//http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
 	//https://wordpress.stackexchange.com/questions/142163/how-can-i-return-multiple-image-attachments-with-wp-get-attachment-image-src
 	//https://codex.wordpress.org/Template_Tags/get_posts
@@ -170,7 +228,17 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 		echo '</div>';
 	}
 
-	// the_excerpt();
+	
+
+	
+
+	if($mk['amcust_shortcode-googlemap']){
+		echo '<div class="amcust-wrap-thumbs">';
+		echo '<div class="hr-title hr-long"><abbr>My Book Journey</abbr></div>';
+		echo do_shortcode($mk['amcust_shortcode-googlemap']);
+		echo '</div>';
+	}
+
 
 }
 
