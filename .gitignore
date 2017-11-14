@@ -4,6 +4,9 @@ tmp
 wp-admin
 wp-content/cache
 wp-content/plugins
+wp-content/themes/kleo/style.css
+wp-content/themes/kleo-child/style.css
+wp-content/themes/kleo-child/amadded/css/style.css
 wp-content/themes/archive
 wp-content/themes/kleoXXX
 wp-content/themes/kleo-4-2-8
