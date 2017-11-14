@@ -432,6 +432,7 @@ if ( ! function_exists( 'kleo_entry_meta' ) ) :
 		$cat_tag = array();
 
 		if ( isset( $categories_list ) && $categories_list ) {
+			echo '<span class="amcust_categoryLink">'.$categories_list.'</span>';
 			$cat_tag[] = $categories_list;
 		}
 
