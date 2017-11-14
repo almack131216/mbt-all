@@ -145,8 +145,8 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 	$item_table = '';
 	$item_table_arr = array();
 
-	if($mk['amcust_shortcode_amazon-code']){
-		$item_table_arr[] = array('Buy',do_shortcode(get_post_field('amcust_shortcode_amazon-code', $postid)));
+	if($mk['amcust_books_shortcode_amazon-code']){
+		$item_table_arr[] = array('Buy',do_shortcode(get_post_field('amcust_books_shortcode_amazon-code', $postid)));
 	}
 
 	if($mk['amcust_books_author']) {
@@ -192,6 +192,9 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 		echo do_shortcode(get_post_field('post_content', $postid));
 	}
 
+	//171112
+	//http://blog.teamtreehouse.com/adding-custom-fields-to-a-custom-post-type-the-right-way
+	
 
 	//http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
 	//https://wordpress.stackexchange.com/questions/142163/how-can-i-return-multiple-image-attachments-with-wp-get-attachment-image-src
@@ -232,10 +235,10 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 
 	
 
-	if($mk['amcust_shortcode-googlemap']){
+	if($mk['amcust_books_shortcode_googlemap']){
 		echo '<div class="amcust-wrap-thumbs">';
 		echo '<div class="hr-title hr-long"><abbr>My Book Journey</abbr></div>';
-		echo do_shortcode($mk['amcust_shortcode-googlemap']);
+		echo do_shortcode($mk['amcust_books_shortcode_googlemap']);
 		echo '</div>';
 	}
 
