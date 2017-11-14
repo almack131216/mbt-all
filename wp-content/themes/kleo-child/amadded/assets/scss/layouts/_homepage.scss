@@ -20,7 +20,6 @@ body.home-page {
     
     > .inner-content {
         margin:0 auto;
-        padding:$offset-2 0 $offset-g2 0;
 
         @media (min-width:$bp-lg){
             width:60%;
@@ -33,48 +32,67 @@ body.home-page {
         }
         @media (max-width:$bp-xs-1){
             width:100%;
-            padding:$offset-2 0;
         }
 
         h3 {
             text-align:center;
-            margin-top:0;
-            margin-bottom:$offset-g1;
+            margin:$offset-g2 auto;
             text-transform:uppercase;
-            display: inline-block;            
-            padding-bottom: 0px;
-            line-height: 200%;
-
-            @media (min-width:$bp-md){
-                
-            }
-            @media (min-width:$bp-xs) and (max-width:$bp-md-1){
-
-            }
-            
-
-            > strong {
-                /*
-                see _typography-resp.scss for size variants
-                */
-                border-bottom: 5px solid $color_accent;
-                @media (max-width:$bp-xs-1){
-                    border-width:3px;
-                }
-
-                /* force new strong text onto new line */
-                &:before {
-                    content: "\a ";
-                    white-space: pre;
-                }
-            }
-        } 
-
-        a.g_btn-base-border {
-            margin-top:$offset-g1;
         }
+
+        &.leading-title {
+            h3 {
+                text-align:center;
+                margin:$offset-1 auto $offset-g2 auto;
+                text-transform:uppercase;
+                display: inline-block;            
+                padding-bottom: 0px;
+                line-height: 60px;
+
+                @media (min-width:$bp-md){
+                    
+                }
+                @media (max-width:$bp-sm-1){
+                    margin-top:$offset-1;
+                    line-height: 40px;
+                }
+                
+
+                > strong {
+                    /*
+                    see _typography-resp.scss for size variants
+                    */
+                    border-bottom: 5px solid $color_accent;
+                    @media (max-width:$bp-xs-1){
+                        border-width:3px;
+                    }
+
+                    /* force new strong text onto new line */
+                    &:before {
+                        content: "\a ";
+                        white-space: pre;
+                    }
+                }
+            }
+            /* [END] h3 */
+        }
+        
+
+        > p {
+            margin:0 auto;
+        }
+
     }
     /* [END] .inner-content */
+
+    > .btn-wrap {        
+        text-align:center;
+        margin:$offset-g2 0 100px auto;
+
+        @media (max-width:$bp-xs-1){
+            margin-bottom:$offset-g4;
+        }
+    }
 
     > .img-wrap {
         margin:0 auto;
@@ -104,12 +122,6 @@ body.home-page {
 
 @media (max-width:$bp-xs-1){
     .homepage-header-wrap {
-        .inner-content {
-            h3 + p {
-                // margin-top:0;
-            }
-        }
-
         .img-wrap {            
             &.bookmark {
                 //reduce height of bookmark image

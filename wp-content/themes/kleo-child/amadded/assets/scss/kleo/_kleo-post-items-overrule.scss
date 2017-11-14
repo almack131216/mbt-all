@@ -36,6 +36,20 @@
                 > .post-meta {
                     margin-bottom: $offset-g1;
 
+                    > .amcust_categoryLink {
+                        position: absolute;
+                        top: -20px;
+                        left: 0;
+                        background: black;
+                        padding: 4px 8px;
+                        font-size: 12px;
+                        line-height: 12px;
+
+                        > a {
+                            color:white;
+                        }
+                    }
+
                     > small {                    
                         line-height:$offset-g2;
 

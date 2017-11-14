@@ -20,6 +20,8 @@
             .sidebar {
                 .widget.widget_tag_cloud {
                     .tagcloud {
+                        font-size: $font-size_button;
+                        
                         > a {                        
                             @include btn-base-border();
                             @include btn-sm();
