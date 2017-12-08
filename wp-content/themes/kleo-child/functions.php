@@ -79,3 +79,13 @@ add_action('get_header', 'remove_admin_login_header');
 function remove_admin_login_header() {
 	remove_action('wp_head', '_admin_bar_bump_cb');
 }
+
+// Load quickfixes child theme stylesheet
+function theme_styles_quickfixes()  
+{ 
+	// Load quickfixes stylesheet
+	// this is required for emergency style changes done online
+	// these changes shall be implemented into .scss files when streamlining
+	wp_enqueue_style( 'custom', get_stylesheet_directory_uri() . '/style-quickfixes.css' );
+}
+add_action('wp_enqueue_scripts', 'theme_styles_quickfixes');
