@@ -1385,12 +1385,12 @@ $sections[] = array(
 
 $font_fields   = array();
 $font_sections = array(
-	'h1'   => array( 'size' => '36', 'height' => '48', 'font' => 'Roboto Condensed', 'weight' => '300' ),
-	'h2'   => array( 'size' => '28', 'height' => '36', 'font' => 'Roboto Condensed', 'weight' => '300' ),
-	'h3'   => array( 'size' => '22', 'height' => '28', 'font' => 'Roboto Condensed', 'weight' => '300' ),
-	'h4'   => array( 'size' => '18', 'height' => '28', 'font' => 'Roboto Condensed', 'weight' => '300' ),
-	'h5'   => array( 'size' => '17', 'height' => '27', 'font' => 'Roboto Condensed', 'weight' => '300' ),
-	'h6'   => array( 'size' => '16', 'height' => '24', 'font' => 'Roboto Condensed', 'weight' => '300' ),
+	'h1'   => array( 'size' => '36', 'height' => '48', 'font' => 'Open Sans', 'weight' => '300' ),
+	'h2'   => array( 'size' => '28', 'height' => '36', 'font' => 'Open Sans', 'weight' => '300' ),
+	'h3'   => array( 'size' => '22', 'height' => '28', 'font' => 'Open Sans', 'weight' => '300' ),
+	'h4'   => array( 'size' => '18', 'height' => '28', 'font' => 'Open Sans', 'weight' => '300' ),
+	'h5'   => array( 'size' => '17', 'height' => '27', 'font' => 'Open Sans', 'weight' => '300' ),
+	'h6'   => array( 'size' => '16', 'height' => '24', 'font' => 'Open Sans', 'weight' => '300' ),
 	'body' => array( 'size' => '13', 'height' => '20', 'font' => 'Open Sans', 'weight' => '400' )
 );
 

@@ -51,16 +51,43 @@ function visitor_only_shortcode($atts, $content = null)
 }
 add_shortcode('visitor_only', 'visitor_only_shortcode');
 
-/*
-// removed in favor of Nav User Roles plugin
-function my_wp_nav_menu_args( $args = '' ) {
-	empty($args['menu']);
-	if( is_user_logged_in() ) { 
-		$args['menu'] = 'mm-logged-in';
-	} else { 
-		$args['menu'] = 'mm-logged-out';
-	} 
-    return $args;
+        
+if ( !function_exists( 'child_theme_configurator_css' ) ):
+    function child_theme_configurator_css() {
+        wp_enqueue_style( 'chld_thm_cfg_child', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array(  ) );
+    }
+endif;
+add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css' );
+
+// END ENQUEUE PARENT ACTION
+
+//https://codex.wordpress.org/Function_Reference/wp_dequeue_style
+function remove_excess_css(){
+	wp_dequeue_style( 'kleo-fonts' );
 }
-add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
-*/
+add_action( 'remove_excess_css', 'wp_67472455', 100 );
+
+add_filter( 'style_loader_src', function($href){
+	if(strpos($href, "//fonts.googleapis.com/css?family=Roboto") === false) {
+		return $href;
+	}
+	return false;
+});
+
+//ref: https://davidwalsh.name/remove-wordpress-admin-bar-css
+add_action('get_header', 'remove_admin_login_header');
+function remove_admin_login_header() {
+	remove_action('wp_head', '_admin_bar_bump_cb');
+}
+
+//wp_dequeue_style( 'noticons' );
+
+// Load the theme stylesheets
+function theme_styles_quickfixes()  
+{ 
+	// Load quickfixes stylesheet
+	// this is required for emergency style changes done online
+	// these changes shall be implemented into .scss files when streamlining
+	wp_enqueue_style( 'custom', get_stylesheet_directory_uri() . '/style-quickfixes.css' );
+}
+add_action('wp_enqueue_scripts', 'theme_styles_quickfixes');
