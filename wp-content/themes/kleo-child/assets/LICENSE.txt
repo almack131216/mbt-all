@@ -1,6 +1,15 @@
 Font license info
 
 
+## Font Awesome
+
+   Copyright (C) 2016 by Dave Gandy
+
+   Author:    Dave Gandy
+   License:   SIL ()
+   Homepage:  http://fortawesome.github.com/Font-Awesome/
+
+
 ## Entypo
 
    Copyright (C) 2012 by Daniel Bruce
@@ -8,33 +17,6 @@ Font license info
    Author:    Daniel Bruce
    License:   SIL (http://scripts.sil.org/OFL)
    Homepage:  http://www.entypo.com
-
-
-## Typicons
-
-   (c) Stephen Hutchings 2012
-
-   Author:    Stephen Hutchings
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://typicons.com/
-
-
-## Modern Pictograms
-
-   Copyright (c) 2012 by John Caserta. All rights reserved.
-
-   Author:    John Caserta
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://thedesignoffice.org/project/modern-pictograms/
-
-
-## Zocial
-
-   Copyright (C) 2012 by Sam Collins
-
-   Author:    Sam Collins
-   License:   MIT (http://opensource.org/licenses/mit-license.php)
-   Homepage:  http://zocial.smcllns.com/
 
 
 ## Web Symbols
@@ -46,22 +28,13 @@ Font license info
    Homepage:  http://www.justbenicestudio.com/
 
 
-## Iconic
+## Linecons
 
-   Copyright (C) 2012 by P.J. Onori
+   Copyright (C) 2013 by Designmodo
 
-   Author:    P.J. Onori
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://somerandomdude.com/work/iconic/
-
-
-## Font Awesome
-
-   Copyright (C) 2016 by Dave Gandy
-
-   Author:    Dave Gandy
-   License:   SIL ()
-   Homepage:  http://fortawesome.github.com/Font-Awesome/
+   Author:    Designmodo for Smashing Magazine
+   License:   CC BY ()
+   Homepage:  http://designmodo.com/linecons-free/
 
 
 ## Fontelico
@@ -73,13 +46,13 @@ Font license info
    Homepage:  http://fontello.com
 
 
-## Linecons
+## Iconic
 
-   Copyright (C) 2013 by Designmodo
+   Copyright (C) 2012 by P.J. Onori
 
-   Author:    Designmodo for Smashing Magazine
-   License:   CC BY ()
-   Homepage:  http://designmodo.com/linecons-free/
+   Author:    P.J. Onori
+   License:   SIL (http://scripts.sil.org/OFL)
+   Homepage:  http://somerandomdude.com/work/iconic/
 
 
 ## MFG Labs
@@ -89,14 +62,5 @@ Font license info
    Author:    MFG Labs
    License:   SIL (http://scripts.sil.org/OFL)
    Homepage:  http://www.mfglabs.com/
-
-
-## Elusive
-
-   Copyright (C) 2013 by Aristeides Stathopoulos
-
-   Author:    Aristeides Stathopoulos
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://aristeides.com/
 
 
