@@ -19,16 +19,21 @@ a.amazonbutton {
     text-align:center;
     
     font-size:$font-size_button;
-    line-height:$font-size_button;
+    line-height:16px;//$font-size_button;
     padding: $offset-1 $offset-g1;	
 	text-transform:uppercase;
     text-decoration:none;    	
     font-weight:bold;
 
+
     > i.icon-amazon {
         float:left;
         margin-right:$offset-1;
         font-size:16px;
+        color:black;
+        &:hover:before {
+            color:black;
+        }      
     }
 
 
@@ -38,6 +43,10 @@ a.amazonbutton {
         filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F5D589', endColorstr='#EEBA35');
         background-color:#eeba35;
         color:#000;
+
+        > i.icon-amazon {
+            color:black;
+        }
     }
     &:active {
         position:relative;

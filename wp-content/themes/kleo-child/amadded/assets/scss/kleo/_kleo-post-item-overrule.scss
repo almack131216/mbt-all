@@ -45,6 +45,10 @@ body.single-post {
                                 /* [END] small */                
                             }
                             /* [END] .post-meta */
+
+                            > .entry-date {
+                                font-size:16px;
+                            }
                         }
                         /* [END] .article-meta */
 
@@ -53,6 +57,18 @@ body.single-post {
                         }
 
                         > .article-content {
+
+                            table.item-spec {
+                                tr {
+                                    td {
+                                        padding:$offset-1;
+
+                                        &:first-child {
+                                            padding-left:0;
+                                        }
+                                    }
+                                }
+                            }
 
                             > p:first-of-type {
                                 margin-top: 0;
