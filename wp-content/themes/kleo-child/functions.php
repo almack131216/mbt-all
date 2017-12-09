@@ -51,13 +51,14 @@ function visitor_only_shortcode($atts, $content = null)
 }
 add_shortcode('visitor_only', 'visitor_only_shortcode');
 
-        
-if ( !function_exists( 'child_theme_configurator_css' ) ):
-    function child_theme_configurator_css() {
-        wp_enqueue_style( 'chld_thm_cfg_child', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array(  ) );
-    }
-endif;
-add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css' );
+// amcust 171209: disable this because child stylesheet is loaded elsewhere, via child configurator        
+// if ( !function_exists( 'child_theme_configurator_css' ) ):
+//     function child_theme_configurator_css() {
+//         wp_enqueue_style( 'chld_thm_cfg_child', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array(  ) );
+//     }
+// endif;
+// add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css' );
+
 
 // END ENQUEUE PARENT ACTION
 
@@ -75,10 +76,10 @@ add_filter( 'style_loader_src', function($href){
 });
 
 //ref: https://davidwalsh.name/remove-wordpress-admin-bar-css
-add_action('get_header', 'remove_admin_login_header');
 function remove_admin_login_header() {
 	remove_action('wp_head', '_admin_bar_bump_cb');
 }
+add_action('get_header', 'remove_admin_login_header');
 
 // Load quickfixes child theme stylesheet
 function theme_styles_quickfixes()  
@@ -89,3 +90,39 @@ function theme_styles_quickfixes()
 	wp_enqueue_style( 'custom', get_stylesheet_directory_uri() . '/style-quickfixes.css' );
 }
 add_action('wp_enqueue_scripts', 'theme_styles_quickfixes');
+
+// Streamline: remove excess remove excess styles
+//Dequeue Styles
+function project_dequeue_unnecessary_styles() {
+
+	wp_dequeue_style( 'bootstrap-map' );
+        wp_deregister_style( 'bootstrap-map' );
+
+	// wp_dequeue_style( 'kleo-style' );
+    //     wp_deregister_style( 'kleo-style' );
+
+	// wp_dequeue_style( 'kleo-combined' );
+    //     wp_deregister_style( 'kleo-combined' );
+
+	// wp_dequeue_style( 'kleo-colors' );
+    //     wp_deregister_style( 'kleo-colors' );
+
+	wp_dequeue_style( 'jetpack_css' );
+        wp_deregister_style( 'jetpack_css' );
+
+	wp_dequeue_style( 'jetpack_likes' );
+        wp_deregister_style( 'jetpack_likes' );
+
+	wp_dequeue_style( 'dashicons' );
+        wp_deregister_style( 'dashicons' );
+}
+add_action( 'wp_print_styles', 'project_dequeue_unnecessary_styles' );
+
+//Dequeue JavaScripts
+// function project_dequeue_unnecessary_scripts() {
+//     wp_dequeue_script( 'modernizr-js' );
+//         wp_deregister_script( 'modernizr-js' );
+//     wp_dequeue_script( 'project-js' );
+//         wp_deregister_script( 'project-js' );
+// }
+// add_action( 'wp_print_scripts', 'project_dequeue_unnecessary_scripts' );
