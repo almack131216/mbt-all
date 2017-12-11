@@ -10,6 +10,8 @@ form.wpuf-form-add {
             &.wpuf-el.field-size-medium {
                 > .wpuf-label {
                     width:30%;
+                    padding-right:$offset-1;
+                    
                     @media (max-width:$bp-xs-1){
                         &:not([class^="wpuf-el featured_image"]),
                         &:not([class^="wpuf-el amcust_image"]) {
@@ -53,6 +55,14 @@ form.wpuf-form-add {
                         font-style: italic;
                         font-family: sans-serif;
                         display: block;
+                    }
+
+                    .mce-container,
+                    .mce-container *,
+                    .mce-widget,
+                    .mce-widget *,
+                    .mce-reset {
+                        white-space:normal;
                     }
                 }
                 /* [END] .wpuf-fields */

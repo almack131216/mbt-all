@@ -23,6 +23,10 @@
             > span {
                 color:$color_breadcrumb-hyperlink;
 
+                a {
+                    color:$color_breadcrumb-hyperlink;
+                }
+
                 &.active {
                     
                 }

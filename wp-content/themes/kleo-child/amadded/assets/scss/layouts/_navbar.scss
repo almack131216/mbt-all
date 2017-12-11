@@ -56,6 +56,11 @@ $bp-subnav-mobile: $bp-md-1;
                 }
 
                 > .navbar-header {
+                    @media (max-width:$bp-xxs-1){
+                        height:60px !important;
+                        line-height:60px !important;
+                    }
+
                     > .kleo-mobile-switch {
                         > button.navbar-toggle {
                             > span.icon-bar {
@@ -286,7 +291,7 @@ $bp-subnav-mobile: $bp-md-1;
             > .navbar-header {
                 @media (min-width:$bp-md){
                     strong.logo {//make logo just icon square
-                        width:40px;
+                        width:45px;
                         // height: 50px;
                         overflow: hidden;
 
@@ -317,9 +322,12 @@ $bp-subnav-mobile: $bp-md-1;
 .logo img {
 	height:60px;
 	width:auto;
+    float:left;
+    margin:$offset-1 0 0 0;
 
     @media (max-width:$bp-xxs-1){
         height:50px;
+        margin:5px 0 0 0;
     }
 }
 
