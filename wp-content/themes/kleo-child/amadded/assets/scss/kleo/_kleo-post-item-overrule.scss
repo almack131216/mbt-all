@@ -25,6 +25,10 @@ body.single-post {
                             > .post-meta {
                                 margin-bottom:$offset-g1;
 
+                                > .amcust_categoryLink {
+                                    display:none;
+                                }
+
                                 > small {                   
 
                                     &.meta-author {
