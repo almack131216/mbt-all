@@ -147,3 +147,9 @@ a.url:hover,
 .kleo-form-modal {
     max-width: 320px;
 }
+
+.kleo-login-modal {
+    @media (max-width:$bp-xxs){
+        max-width:280px;
+    }
+}
