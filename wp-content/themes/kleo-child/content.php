@@ -232,13 +232,12 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 	}
 
 	
-
-	
-
-	if($mk['amcust_books_shortcode_googlemap']){
-		echo '<div class="amcust-wrap-thumbs">';
+	if($mk['amcust_books_google_map']){
+		//ref: https://wedevs.com/9655/display-google-map-single-author-page/
+		echo '<div class="amcust-wrap-thumbs text-align-center">';
 		echo '<div class="hr-title hr-long"><abbr>My Book Journey</abbr></div>';
-		echo do_shortcode($mk['amcust_books_shortcode_googlemap']);
+		echo wpuf_shortcode_map($mk['amcust_books_google_map'], false, array( 'width' => '100%', 'height' => 250, 'zoom' => 12));
+		echo '<a href="http://maps.google.com/?q='.$mk['amcust_books_google_map'].'" title="Open in Maps.Google.com" target="_blank" class="display-inline-block link-to-website iconInside">Open in Maps.Google.com</a>';
 		echo '</div>';
 	}
 
