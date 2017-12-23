@@ -2,10 +2,6 @@
 
 body.directory.members {
     .amcust_page-title-container {
-        // float: left;
-        // display: block;
-        // width: 100%;
-
         h1.page-title {
             text-align:center;
             margin:0 auto;
@@ -59,13 +55,6 @@ body.directory.members {
         width: 100%;
         height: 36px;
     }
-}
-
-#buddypress div#group-dir-search input[type=text],
-#buddypress div#groups-dir-search input[type=text],
-#buddypress .groups-members-search input[type=text],
-#buddypress div#members-dir-search input[type=text] {
-    
 }
 
 #buddypress div.message-search input[type=text],

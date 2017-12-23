@@ -39,28 +39,6 @@ a.url:hover,
     //font-weight:bold;    
 }
 
-/* submenus */
-.main-color .navbar-nav .dropdown-menu li a,
-.main-color .dropdown-menu > li > a:hover,
-.main-color .dropdown-menu > li > a:focus,
-.main-color .dropdown-submenu:hover > a,
-.main-color .dropdown-submenu:focus > a,
-.main-color .dropdown-menu > .active > a,
-.main-color .dropdown-menu > .active > a:hover,
-.main-color .dropdown-menu > .active > a:focus,
-.main-color .wrap-canvas-menu .widget_nav_menu .offcanvas-menu .dropdown-menu > li > a {
-	// color:#999999;
-    // font-weight:bold;
-}
-
-
-.main-color .navbar-nav .dropdown-menu li a:hover,
-.main-color .wrap-canvas-menu .widget_nav_menu .offcanvas-menu .dropdown-menu > li > a:hover,
-.main-color .wrap-canvas-menu .widget_nav_menu .offcanvas-menu .dropdown-menu > li > a:focus {
-    // color: #000000;
-    // font-weight:bold;
-}
-
 #main {
 
     .kleo-banner-slider {
@@ -83,14 +61,8 @@ a.url:hover,
 
         }
     }
-
-    #comments-list .comment-meta-actions,
-    #comments-list .comment-meta-actions a {
-        //@extend .g_hyperlink-base-hover;
-    }
 }
 /* [END] main */
-
 
 /* kleo-login */
 .kleo-form-modal {
@@ -135,14 +107,6 @@ a.url:hover,
     }
 }
 /* [END] .container-wrap */
-
-
-// #buddypress #friend-list div.action .generic-button a.send-message,
-// #buddypress #member-list div.action .generic-button a.send-message,
-// #buddypress #members-list div.action .generic-button a.send-message {
-//     @include btn-base-border();
-//     @include btn-sm();
-// }
 
 .kleo-form-modal {
     max-width: 320px;

@@ -6,10 +6,6 @@
 }
 .template-page {
     .wrap-content {
-        // padding-right: $offset-g1;
-        @media (max-width:$bp-sm){
-            // padding-right: 0px;
-        }
 
         .container.amcust_page-title-container {
             h1 {
@@ -31,11 +27,8 @@
             }
         }
         /* [END] amcust_title-bar-with-button */
-
     }
 }
-
-
 
 /* body.home-page */
 body.home-page {
@@ -48,8 +41,6 @@ body.home-page {
         .container.amcust_page-title-container {
             display:none;
         }
-    }
-    
-    
+    }    
 }
 /* [END] body.home-page */

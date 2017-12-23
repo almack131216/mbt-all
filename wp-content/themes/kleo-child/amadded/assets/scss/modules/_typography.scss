@@ -1,5 +1,10 @@
 /* _typography.scss */
 
+h3, .h3 {
+    font-size:24px;
+    line-height:$offset-g2;
+    font-weight: 700;
+}
 
 h6 {
     background: black;

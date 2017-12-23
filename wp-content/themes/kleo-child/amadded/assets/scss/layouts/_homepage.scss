@@ -26,7 +26,6 @@ body.home-page {
     }
 }
 
-
 .homepage-header-wrap {
     margin: 0 auto;
     text-align:center;
@@ -69,8 +68,7 @@ body.home-page {
                 @media (max-width:$bp-sm-1){
                     margin-top:$offset-1;
                     line-height: 40px;
-                }
-                
+                }                
 
                 > strong {
                     /*
@@ -89,8 +87,7 @@ body.home-page {
                 }
             }
             /* [END] h3 */
-        }
-        
+        }        
 
         > p {
             margin:0 auto;
@@ -102,10 +99,6 @@ body.home-page {
     > .btn-wrap {        
         text-align:center;
         margin:$offset-g2 auto;
-
-        // @media (max-width:$bp-xs-1){
-        //     margin-bottom:$offset-g4;
-        // }
     }
 
     > .img-wrap {

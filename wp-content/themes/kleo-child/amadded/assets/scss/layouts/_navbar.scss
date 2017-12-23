@@ -139,11 +139,6 @@ $bp-subnav-mobile: $bp-md-1;
                     }
 
                     &.in {
-                        //padding-bottom:$offset-g1;
-                        // -webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,1.0);
-                        // -moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,1.0);
-                        // box-shadow: 0px 2px 0px 0px rgba(0,0,0,1.0);
-
                         > ul.nav.navbar-nav {
 
                             > li {
@@ -168,7 +163,6 @@ $bp-subnav-mobile: $bp-md-1;
 
                 ul.navbar-nav {
                     /* underline on header nav active */
-
                     > li {                
 
                         > a {                    

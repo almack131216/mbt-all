@@ -91,28 +91,3 @@ body.directory.activity {
     /* [END] .template-page.tpl-right */
 }
 /* [END] #main */
-
-.textwidget,
-.article-content,
-.activity-content,
-.archive-description {
-
-    p {
-
-        &:first-child {
-            margin-top:0;
-        }
-
-        a {
-            // font-weight:normal;
-            //text-decoration:underline;
-            //border-bottom: 1px solid #dcdcdc;
-
-            &:hover {
-                //font-weight:bold;
-                //text-decoration:none;
-            }
-        }
-    }
-
-}

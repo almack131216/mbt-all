@@ -7,7 +7,6 @@
     @include border-radius(0px);
 
     &:hover {
-        // border-color:$color_layout-border-strong;
         @include box-shadow(hover);
     }
 }
@@ -16,10 +15,6 @@
 
     article.post-item {
         background:transparent;
-        @media (max-width:$bp-xxs-1){
-            // padding-left:0;
-            // padding-right:0;
-        }
 
         > .post-content {
             @extend .base-box;
@@ -28,8 +23,7 @@
                 > a {
                     > span.hover-element {
                         i {
-                            // font-size:40px;
-                            color:white !important;// +
+                            color:white !important;
                         }
                     }
                 }
@@ -63,11 +57,6 @@
                                 width:$offset-g2;
                                 height:$offset-g2;
                                 margin-right:$offset-0-5;
-
-                                // @media (max-width: $bp-md-1){
-                                //     width:$offset-g2;
-                                //     height:$offset-g2;                                    
-                                // }
                             }
                         }
                         /* [END] &.meta-author */  
@@ -170,8 +159,7 @@
             .inner-content {
                 margin-right: $offset-g1;
             }
-        }
-        
+        }        
 
         .post-header .post-meta,
         .post-footer {
@@ -237,17 +225,4 @@
 .article-content section.container-wrap .posts-load-more .btn {
     @include btn-base-border();
     @include btn-color-priority();
-}
-
-.article-content section.container-wrap .posts-load-more .btn,
-#buddypress div.generic-button a.add,
-.bp-full-width-profile div.generic-button a.add,
-#buddypress div.generic-button a.accept,
-#buddypress div.generic-button a.join-group,
-.rtm-primary-button,
-.rtmedia-container .drag-drop .start-media-upload,
-.rtmedia-activity-container .drag-drop .start-media-upload,
-#buddypress .rtmedia-container .rtmedia-uploader .drag-drop .start-media-upload {    
-    // @include btn-base-border();
-    // @include btn-color-priority();
 }

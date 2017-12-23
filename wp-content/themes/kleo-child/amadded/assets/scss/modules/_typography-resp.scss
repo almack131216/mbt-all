@@ -1,49 +1,5 @@
 /* _typography-resp.scss */
 
-// .jumbotron h1,.jumbotron .h1 {
-//     font-weight:800;
-//     color:black;
-// }
-
-// h1,.h1,
-// h2,.h2,
-// h3,.h3,
-// h4,.h4 {
-//     font-weight:bold;
-//     color:black;
-// }
-
-// h5,.h5 {
-//     font-weight:normal;
-//     color:black;
-// }
-
-// h1,.h1,.jumbotron h1,.jumbotron .h1 {
-//     font-size:72px;
-//     line-height:90px;
-// }
-
-// h2,.h2 {
-//     font-size:48px;
-//     line-height:60px;
-// }
-
-.h3 {
-    font-size:24px;
-    line-height:$offset-g2;
-    font-weight: 700;
-}
-
-// h4,.h4 {
-//     font-size:20px;
-//     line-height:$offset-g2;
-// }
-
-// h5,.h5 {
-//     font-size:20px;
-//     line-height:$offset-g2;
-// }
-
 /* S & XS */
 @media all and (max-width: $bp-sm-1) {
     h1,.h1,.jumbotron h1,.jumbotron .h1 {
