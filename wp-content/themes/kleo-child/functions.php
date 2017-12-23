@@ -93,6 +93,7 @@ add_action('wp_enqueue_scripts', 'theme_styles_quickfixes');
 
 // Streamline: remove excess remove excess styles
 //Dequeue Styles
+//ref: https://wordpress.stackexchange.com/questions/189985/how-to-properly-dequeue-scripts-and-styles-in-child-theme
 function project_dequeue_unnecessary_styles() {
 
 	wp_dequeue_style( 'bootstrap-map' );
@@ -117,6 +118,30 @@ function project_dequeue_unnecessary_styles() {
         wp_deregister_style( 'dashicons' );
 }
 add_action( 'wp_print_styles', 'project_dequeue_unnecessary_styles' );
+
+function sq7r_app_css_child_app() {
+    wp_deregister_style( 'kleo-app' );
+    wp_dequeue_style( 'kleo-app' );
+    wp_enqueue_style('kleo-app', get_stylesheet_directory_uri() . '/assets/css/app.css');
+}
+add_action('wp_enqueue_scripts', 'sq7r_app_css_child_app');
+
+function sq7r_app_css_child_combined() {
+	wp_deregister_style( 'kleo-combined' );
+    wp_dequeue_style( 'kleo-combined' );
+    wp_enqueue_style('kleo-combined', get_stylesheet_directory_uri() . '/assets/css/combined.css');
+}
+add_action('wp_enqueue_scripts', 'sq7r_app_css_child_combined');
+
+// function my_wp_nav_menu_args( $args = '' ) { 
+// 	if( is_user_logged_in() ) { 
+// 		$args['menu'] = 'mm-logged-in';
+// 	} else { 
+// 		$args['menu'] = 'mm-logged-out';
+// 	} 
+//     return $args;
+// }
+// add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
 
 //Dequeue JavaScripts
 // function project_dequeue_unnecessary_scripts() {
