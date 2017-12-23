@@ -8,9 +8,9 @@ See wp-cache.php for author details.
 $wpsc_last_post_update = 1505143892; //Added by WP-Cache Manager
 $wp_cache_debug_username = 'a90794b8e6f8a8c7b5cd6cc2f9310239'; //Added by WP-Cache Manager
 $cache_wptouch = '1'; //Added by WP-Cache Manager
-$wp_cache_mobile_groups = ''; //Added by WP-Cache Manager
-$wp_cache_home_path = '/'; //Added by WP-Cache Manager
-$wp_cache_slash_check = 1; //Added by WP-Cache Manager
+$wp_cache_mobile_groups = '';
+$wp_cache_home_path = '/mybooktravels.com/';
+$wp_cache_slash_check = 1;
 $cache_page_secret = '5ce4fcb318a1285e9035d96d69390be3'; //Added by WP-Cache Manager
 $cache_time_interval = 600; //Added by WP-Cache Manager
 if ( ! defined('WPCACHEHOME') )
@@ -47,7 +47,7 @@ if ( '/' != substr($cache_path, -1)) {
 
 $wp_cache_mobile = 0;
 $wp_cache_mobile_whitelist = 'Stand Alone/QNws';
-$wp_cache_mobile_browsers = '2.0 MMP, 240x320, 400X240, AvantGo, BlackBerry, Blazer, Cellphone, Danger, DoCoMo, Elaine/3.0, EudoraWeb, Googlebot-Mobile, hiptop, IEMobile, KYOCERA/WX310K, LG/U990, MIDP-2., MMEF20, MOT-V, NetFront, Newt, Nintendo Wii, Nitro, Nokia, Opera Mini, Palm, PlayStation Portable, portalmmm, Proxinet, ProxiNet, SHARP-TQ-GX10, SHG-i900, Small, SonyEricsson, Symbian OS, SymbianOS, TS21i-10, UP.Browser, UP.Link, webOS, Windows CE, WinWAP, YahooSeeker/M1A1-R2D2, iPhone, iPod, Android, BlackBerry9530, LG-TU915 Obigo, LGE VX, webOS, Nokia5800'; //Added by WP-Cache Manager
+$wp_cache_mobile_browsers = '2.0 MMP, 240x320, 400X240, AvantGo, BlackBerry, Blazer, Cellphone, Danger, DoCoMo, Elaine/3.0, EudoraWeb, Googlebot-Mobile, hiptop, IEMobile, KYOCERA/WX310K, LG/U990, MIDP-2., MMEF20, MOT-V, NetFront, Newt, Nintendo Wii, Nitro, Nokia, Opera Mini, Palm, PlayStation Portable, portalmmm, Proxinet, ProxiNet, SHARP-TQ-GX10, SHG-i900, Small, SonyEricsson, Symbian OS, SymbianOS, TS21i-10, UP.Browser, UP.Link, webOS, Windows CE, WinWAP, YahooSeeker/M1A1-R2D2, iPhone, iPod, Android, BlackBerry9530, LG-TU915 Obigo, LGE VX, webOS, Nokia5800';
 
 // change to relocate the supercache plugins directory
 $wp_cache_plugins_dir = WPCACHEHOME . 'plugins';
@@ -103,7 +103,7 @@ $wp_cache_preload_on = 0;
 $wp_cache_preload_taxonomies = 0;
 $wp_cache_preload_email_me = 0;
 $wp_cache_preload_email_volume = 'none';
-$wp_cache_mobile_prefixes = ''; //Added by WP-Cache Manager
+$wp_cache_mobile_prefixes = '';
 $cached_direct_pages = array(  ); //Added by WP-Cache Manager
 $wpsc_served_header = false;
 $cache_gc_email_me = 0; //Added by WP-Cache Manager

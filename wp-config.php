@@ -20,8 +20,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_CACHE', false); //Added by WP-Cache Manager
-define( 'WPCACHEHOME', '' ); //Added by WP-Cache Manager
+
+define('WP_CACHE', true);
+define( 'WPCACHEHOME', 'C:\xampp\htdocs\mybooktravels.com\wp-content\plugins\wp-super-cache/' );
+/*
+define( 'WP_CACHE', true );
+define( 'WPCACHEHOME', 'C:\xampp\htdocs\mybooktravels.com\wp-content\plugins\wp-super-cache/' );
+*/
 define('DB_NAME', 'mybooktravels');
 
 /** MySQL database username */
