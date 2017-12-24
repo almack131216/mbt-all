@@ -7,7 +7,12 @@ body.home-page {
 
             .container-wrap {
                 &.section-splash .section-container.container {
-                    padding:0 $offset-g1 $offset-g2 $offset-g1;
+                    padding:0 $offset-g1;
+
+                    .vc_column-inner {
+                        padding-top:0;
+                        padding-bottom:0;
+                    }
                 }
                 &.section-items .section-container.container {
                     padding:$offset-1 $offset-g1 $offset-g2 $offset-g1;
@@ -28,6 +33,7 @@ body.home-page {
 
 .homepage-header-wrap {
     margin: 0 auto;
+    padding: 0 0 $offset-g2 0;
     text-align:center;
     width:100%;
     
