@@ -32,6 +32,20 @@ a {
     }
 }
 
+.a-blackblock {
+    background: black;                        
+    font-size: 12px;
+    line-height: 12px;
+    padding: 4px 8px;
+    color:white;
+
+    &:hover {
+        background: $color_hyperlink-text-hover;
+        text-decoration:none;
+        color: white;
+    }
+}
+
 .underline {
     text-decoration:underline;
 }

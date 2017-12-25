@@ -12,7 +12,7 @@
         }        
 
         .breadcrumb-extra {
-            padding:0 $offset-g1;
+            // padding:0 $offset-g1;
 
             div.kleo_framework.breadcrumb {
                 /* make sure breadcrumb does not go on 2 lines or touch far-right button */            
@@ -34,7 +34,8 @@
             /* [END] .kleo_framework.breadcrumb */
 
             p.page-info {
-                margin-right:$offset-g1;
+                margin:0;
+                line-height:$base-font-size;
 
                 a {
                     color:$color_breadcrumb-hyperlink;

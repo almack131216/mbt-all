@@ -13,6 +13,10 @@
             }
         }
 
+        .container.amcust_page-title-container + .row {
+            margin-top:$offset-g2;
+        }
+
         .amcust_title-bar-with-button {
             .btn-add-to-page {
                 @include btn-base-border();

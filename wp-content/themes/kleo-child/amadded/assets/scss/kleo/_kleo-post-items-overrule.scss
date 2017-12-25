@@ -39,23 +39,12 @@
                         display:block;
                         position: absolute;
                         top: -20px;
-                        left: 0;
-                        background: black;
-                        padding: 4px 8px;
-                        font-size: 12px;
-                        line-height: 12px;
+                        left: 0;                        
 
                         > a {
-                            color:white;
-                        }
-
-                        &:hover {
-                            background: $color_hyperlink-text-hover;
-                            > a {
-                                text-decoration:none;
-                                color: white;
-                            }
-                        }
+                            float:left;
+                            @extend .a-blackblock;
+                        }                        
                     }
 
                     > small {
