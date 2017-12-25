@@ -23,12 +23,16 @@ body.single-post {
                         > .article-meta {
                             > .post-meta {
                                 margin-bottom:$offset-g1;
+                                color:$color_hyperlink-text-muted;
 
                                 > .amcust_categoryLink {
                                     display:none;
                                 }
 
-                                > small {                   
+                                > small {         
+                                    > a {
+                                        @extend .a-muted;
+                                    }          
 
                                     &.meta-author {
                                         > a > img.avatar {

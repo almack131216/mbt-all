@@ -1,9 +1,43 @@
 /* _typography.scss */
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size:$base-font-size;
+    color:$base-font-color;
+    line-height:$base-font-line-height;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+}
+
 h3, .h3 {
-    font-size:24px;
-    line-height:$offset-g2;
-    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 800;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
 }
 
 h6 {

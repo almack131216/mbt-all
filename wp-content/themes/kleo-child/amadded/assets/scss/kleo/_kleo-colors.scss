@@ -1,0 +1,39 @@
+/* _kleo-colors.scss */
+
+#buddypress div.item-list-tabs ul li.last select {
+    background:white;
+}
+
+.buddypress .kleo-online-status {
+    border-color: $color_layout-border;
+    background: #bbb;
+
+    .high-bg {
+        background-color:#009E1C;
+    }
+}
+
+
+#buddypress ul#members-list > li.kleo-masonry-item > .member-inner-list > .item-avatar.rounded {
+    border-color: $color_layout-border;
+}
+
+#buddypress #friend-list .item-title,
+#buddypress #member-list h5,
+#buddypress #members-list .item-title {
+    > a {
+        @extend .a-black;
+    }
+}
+
+#buddypress .activity-read-more a {
+    @extend .a-muted;
+}
+
+#buddypress .activity-list .activity-avatar {
+    border-color: $color_layout-border;
+}
+
+#buddypress .activity-timeline {
+    border-color: $color_layout-border;
+}

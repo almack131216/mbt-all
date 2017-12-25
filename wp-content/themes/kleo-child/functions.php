@@ -99,14 +99,14 @@ function project_dequeue_unnecessary_styles() {
 	wp_dequeue_style( 'bootstrap-map' );
         wp_deregister_style( 'bootstrap-map' );
 
-	// wp_dequeue_style( 'kleo-style' );
-    //     wp_deregister_style( 'kleo-style' );
+	wp_dequeue_style( 'kleo-style' );
+        wp_deregister_style( 'kleo-style' );
 
-	// wp_dequeue_style( 'kleo-combined' );
-    //     wp_deregister_style( 'kleo-combined' );
+	wp_dequeue_style( 'aalb_basics_css' );// font-awesome
+        wp_deregister_style( 'aalb_basics_css' );
 
-	// wp_dequeue_style( 'kleo-colors' );
-    //     wp_deregister_style( 'kleo-colors' );
+	wp_dequeue_style( 'kleo-colors' );
+        wp_deregister_style( 'kleo-colors' );
 
 	wp_dequeue_style( 'jetpack_css' );
         wp_deregister_style( 'jetpack_css' );

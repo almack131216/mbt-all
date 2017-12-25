@@ -1,19 +1,4 @@
-@mixin bg-tint ($opacity) {
-    @if $opacity == 'full' {
-        $opacity: 1.0;
-    } @else if $opacity == 'twothir'{
-        $opacity: 0.75;
-    } @else if $opacity == 'semi'{
-        $opacity: 0.5;
-    } @else if $opacity == 'zero'{
-        $opacity: 0.0;
-    }
-
-    /* Fallback for web browsers that don't support RGBa */
-    background-color: rgb(0, 0, 0);
-    /* RGBa with 0.6 opacity */
-    background-color: rgba(0, 0, 0, $opacity);
-}
+/* _mixins-not-used.scss */
 
 @mixin animate($speed:0.3s) {
     -webkit-transition: all $speed ease-in-out;

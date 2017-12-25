@@ -33,6 +33,7 @@
             > .post-header {
                 > .post-meta {
                     margin-bottom: $offset-g1;
+                    color:$color_hyperlink-text-muted;
 
                     > .amcust_categoryLink {
                         display:block;
@@ -47,10 +48,22 @@
                         > a {
                             color:white;
                         }
+
+                        &:hover {
+                            background: $color_hyperlink-text-hover;
+                            > a {
+                                text-decoration:none;
+                                color: white;
+                            }
+                        }
                     }
 
-                    > small {                    
+                    > small {
                         line-height:$offset-g2;
+
+                        a {
+                            @extend .a-muted;
+                        }
 
                         &.meta-author {
                             > a > img.avatar {
@@ -64,6 +77,12 @@
                     /* [END] small */                
                 }
                 /* [END] .post-meta */
+
+                > h3.post-title {
+                    > a {
+                        @extend .a-black;
+                    }
+                }
             }
             /* [END] .post-header */
 
@@ -73,8 +92,11 @@
             /* [END] .post-info */
 
             > .post-footer {
+                border-color:$color_layout-border;
+
                 /* remove underline from like icon */
                 a.item-likes {
+                    @extend .a-muted;
                     text-decoration: none;
 
                     &:hover {
@@ -150,9 +172,8 @@
                     &:hover {
                         border-color: $color_hyperlink-text-hover
                     }
-
-                    > a:hover {
-                        color: $color_hyperlink-text-hover;
+                    > a {
+                        @extend .a-black;
                     }
                 }
             }
@@ -171,10 +192,6 @@
     }
 }
 /* [END] main */
-
-.buddypress .main-color .kleo-online-status.high-bg {
-    background-color:#009E1C;
-}
 
 #buddypress ul#members-list {
     > li.kleo-masonry-item {

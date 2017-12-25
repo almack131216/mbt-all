@@ -3,12 +3,12 @@
 /* Base colors */
 $color_accent: #49c5b6;//#009688 (dark)//#02AD95
 $color_accent2: #f90;//#FF5533
-$color_accent-books: #000;
+$color_accent-books: $color_accent;
 $color_accent-quotes: #005689;// #AD2345;//maroon//#E60278
 $color_accent-news: #C42F2F;//dark red
 $color_disabled:rgb(200, 200, 200);
 
-$color_primary:#5fb624;//rgb(95,182,36)
+$color_primary:$color_accent;//rgb(95,182,36)
 $color_light:#F0F0F0;
 $color_gray:#cacdd1;
 $color_gray-dark:#a5a9b0;
@@ -40,6 +40,7 @@ $table-color-border:$color_gray-light;
 $table-color-primary-border:#7BC14F;
 
 /* hyperlink */
+$color_hyperlink-text-muted:#bbb;
 $color_hyperlink-text:$color_accent;//#367bb7;
 $color_hyperlink-text-hover:$color_accent2;
 $color_hyperlink-text-active:#fff;

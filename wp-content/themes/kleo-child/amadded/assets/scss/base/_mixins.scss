@@ -84,6 +84,30 @@
     }
 }
 
+@mixin bg-tint($color:black, $opacity:'full') {
+    @if $opacity == 'full' {
+        $opacity: 1.0;
+    } @else if $opacity == 'twothir'{
+        $opacity: 0.75;
+    } @else if $opacity == 'semi'{
+        $opacity: 0.5;
+    } @else if $opacity == 'zero'{
+        $opacity: 0.0;
+    }
+
+    @if $color == 'white' {
+        /* Fallback for web browsers that don't support RGBa */
+        background-color: rgb(255, 255, 255);
+        /* RGBa with 0.6 opacity */
+        background-color: rgba(255, 255, 255, $opacity);
+    } @else {
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, $opacity);
+    }
+
+    
+}
+
 @mixin hide-text(){
     text-indent: 100%;white-space: nowrap;overflow: hidden;
 }

@@ -12,3 +12,9 @@
         color:black;
     }
 }
+
+form#searchform {
+    background:white;
+    @include box-shadow(false);
+    border:2px solid $color_layout-border;
+}

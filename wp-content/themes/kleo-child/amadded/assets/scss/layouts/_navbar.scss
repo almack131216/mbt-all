@@ -43,6 +43,7 @@ $bp-subnav-mobile: $bp-md-1;
 
     .sticky-wrapper {
         .kleo-main-header {
+            background:white;            
             border-color: $color_breadcrumb-border;
 
             @media(max-width:$bp-subnav-mobile){
@@ -63,6 +64,12 @@ $bp-subnav-mobile: $bp-md-1;
 
                     > .kleo-mobile-switch {
                         > button.navbar-toggle {
+                            background:transparent;
+                            &:hover,
+                            &:focus {
+                                @include bg-tint('white', 'semi');
+                            }
+
                             > span.icon-bar {
                                 @media(max-width:$bp-subnav-mobile){
                                     background-color: white;
@@ -91,7 +98,77 @@ $bp-subnav-mobile: $bp-md-1;
                         background:white;
 
                         > li {
+                            > a {
+                                @extend .a-black;
+                            }
+
                             > #ajax_search_container {
+                                background:white;
+                                border-color:$color_layout-border;
+                                @include border-radius(0px);
+
+                                &:before {
+                                    background:white;
+                                    border-color:$color_layout-border;
+                                }
+
+                                .kleo_ajax_results {
+
+                                    > .kleo-ajax-part {
+                                        margin-top:$offset-g2;
+                                        &:first-child {
+                                            margin-top:0;
+                                        }
+
+                                        h4 {
+                                            margin-left:0;
+                                            padding:0 $offset-g1;
+                                            border-color:$color_layout-border-strong;
+
+                                            span {
+                                                background:white;
+                                                color:$color_layout-border-strong;
+                                                font-weight:bold;
+                                            }
+                                        }
+                                        /* [END] h4 */
+
+                                        .kleo_ajax_entry {
+                                            padding:$offset-1 $offset-g1;
+
+                                            .ajax_search_image {
+
+                                            }
+                                            .ajax_search_content {
+                                                font-size: $base-font-size-small;
+
+                                                a.search_title {
+                                                    font-size: $base-font-size-small;
+                                                    font-weight: bold;
+                                                    @extend .a-black;                                                        
+                                                    margin: 0;
+                                                    padding: 0;
+                                                }
+                                            }
+                                        }
+                                        /* [END ] .kleo_ajax_entry */                                            
+                                    }
+                                    /* [END] .kleo-ajax-part */
+
+                                    a.ajax_view_all {
+                                        @include btn-base-border();
+                                        // @include btn-md();
+                                        margin-top:$offset-g1;
+                                        margin-bottom:0;
+
+                                        &:after {
+                                            display:none;
+                                        }
+                                    }
+                                    /* [END] a.ajax_view_all */
+                                }
+                                /* [END] .kleo_ajax_results */
+
                                 @media(max-width:$bp-subnav-mobile){
                                     border-bottom: $offset-g1 solid $color_accent;
                                     // padding-left:$offset-g1;
@@ -115,22 +192,8 @@ $bp-subnav-mobile: $bp-md-1;
                                             }
                                         }
                                     }
-
-                                    .kleo_ajax_results {
-                                        h4 {
-                                            margin-left:0;
-                                            padding:0 $offset-g1;
-                                        }
-                                        .kleo_ajax_entry {
-                                            padding:$offset-1 $offset-g1;
-                                        }
-                                        a.ajax_view_all {
-                                            @include btn-base-border();
-                                            // @include btn-md();
-                                            margin-top:$offset-g1;
-                                            margin-bottom:0;
-                                        }
-                                    }
+                                    /* [END] #ajax_searchform */
+                                    
                                 }
                                 /* [END] @media */
                             }

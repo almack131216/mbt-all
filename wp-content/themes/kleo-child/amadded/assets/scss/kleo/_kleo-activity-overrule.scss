@@ -37,9 +37,20 @@ body.directory.activity {
                                 @include box-shadow(false);
                             }
 
-                            .activity-content {                    
+                            .activity-content {   
+                                border-color: $color_layout-border;
+
+                                .activity-header {
+                                    a:first-child {
+                                        @extend .a-black;
+                                    }
+                                }        
 
                                 .activity-meta {
+                                    &:empty {
+                                        display:none;
+                                    }
+
                                     padding-bottom: $offset-g2;
 
                                     > a.button:not(.fav) {
@@ -67,6 +78,10 @@ body.directory.activity {
 
                                 .activity-inner {
                                     padding-right:$offset-g2;
+                                }
+
+                                .activity-comments {
+
                                 }
                             }
                             /* [END] .activity-content */
