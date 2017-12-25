@@ -1,6 +1,8 @@
 .htpasswds
 170726_BO
 tmp
+_duplicator
+tmp-pulled
 wp-admin
 wp-content/cache
 wp-content/plugins
