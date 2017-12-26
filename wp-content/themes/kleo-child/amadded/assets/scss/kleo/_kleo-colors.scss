@@ -37,3 +37,9 @@
 #buddypress .activity-timeline {
     border-color: $color_layout-border;
 }
+
+.kleo-ajax-search-loading {
+    > i {
+        color:$color_accent;
+    }
+}

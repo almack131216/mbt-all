@@ -67,7 +67,7 @@ $bp-subnav-mobile: $bp-md-1;
                             background:transparent;
                             &:hover,
                             &:focus {
-                                @include bg-tint('white', 'semi');
+                                @include bg-tint('white', 'third');
                             }
 
                             > span.icon-bar {
@@ -143,7 +143,8 @@ $bp-subnav-mobile: $bp-md-1;
                                                 font-size: $base-font-size-small;
 
                                                 a.search_title {
-                                                    font-size: $base-font-size-small;
+                                                    font-size: 14px;
+                                                    line-height:20px;
                                                     font-weight: bold;
                                                     @extend .a-black;                                                        
                                                     margin: 0;
@@ -187,9 +188,6 @@ $bp-subnav-mobile: $bp-md-1;
                                         > .kleo-ajax-search-loading {
                                             top: 25px;
                                             right: 25px;
-                                            > i {
-                                                color:$color_accent;
-                                            }
                                         }
                                     }
                                     /* [END] #ajax_searchform */
@@ -277,14 +275,22 @@ $bp-subnav-mobile: $bp-md-1;
                             > ul.dropdown-menu {
                                 > li {
                                     border-bottom:0px;
+                                    
+                                    > a {
+                                        @media (max-width: $bp-md-1){
+                                            color: #777 !important;
+                                            font-weight:bold !important;
+                                            font-size:14px !important;
 
-                                    @media (max-width: $bp-md-1){
-                                        a {
                                             &:before {
-                                                width:$offset-g1;
+                                                width:$offset-g2 !important;
                                             }
-                                        }
-                                    }
+
+                                            &:hover {
+                                                color:$color_hyperlink-text-hover !important;
+                                            }   
+                                        }                                         
+                                    }                                    
                                 }
                             }                    
                         }

@@ -2,8 +2,8 @@
 
 @mixin whats-new-form() {
     background:transparent;// $color_bg-breadcrumb;
-    margin-bottom:$offset-g1;
-    padding: $offset-g1 0;
+    margin:0;
+    padding:0;
     border-radius: 5px;
     border:0px;// 1px solid $color_layout-border;
 

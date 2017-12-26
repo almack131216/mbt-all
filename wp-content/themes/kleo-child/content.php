@@ -161,7 +161,7 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 	if($mk['amcust_news_source_url']) {
 		$amcust_news_source = $mk['amcust_news_source'] ? $mk['amcust_news_source'] : $mk['amcust_news_source_url'];
 		$amcust_news_source_url = $mk['amcust_news_source_url'] ? $mk['amcust_news_source_url'] : '';
-		$amcust_news_link = '<a href="'.$amcust_news_source_url.'" title="'.$amcust_news_source.'" class="new-window" target="_blank">' . $amcust_news_source . '</a>';
+		$amcust_news_link = '<a href="'.$amcust_news_source_url.'" title="'.$amcust_news_source.'" class="new-window" target="_blank">' . $amcust_news_source . '<i class="icon-link-ext"></i></a>';
 		$item_table_arr[] = array('Source',$amcust_news_link);
 	}
 	if($mk['amcust_quotes_author']) {
@@ -237,7 +237,7 @@ if ( $post->post_type == 'post' && $post->post_status == 'publish' ) {
 		echo '<div class="amcust-wrap-thumbs text-align-center">';
 		echo '<div class="hr-title hr-long"><abbr>My Book Journey</abbr></div>';
 		echo wpuf_shortcode_map($mk['amcust_books_google_map'], false, array( 'width' => '100%', 'height' => 250, 'zoom' => 12));
-		echo '<a href="http://maps.google.com/?q='.$mk['amcust_books_google_map'].'" title="Open in Maps.Google.com" target="_blank" class="display-inline-block link-to-website iconInside">Open in Maps.Google.com</a>';
+		echo '<a href="http://maps.google.com/?q='.$mk['amcust_books_google_map'].'" title="Open in Maps.Google.com" target="_blank" class="new-window">Open in Maps.Google.com<i class="icon-link-ext"></i></a>';
 		echo '</div>';
 	}
 

@@ -31,8 +31,10 @@
             /* [END] .post-image */
 
             > .post-header {
+                padding:$offset-1;
+
                 > .post-meta {
-                    margin-bottom: $offset-g1;
+                    margin-bottom: 0;
                     color:$color_hyperlink-text-muted;
 
                     > .amcust_categoryLink {

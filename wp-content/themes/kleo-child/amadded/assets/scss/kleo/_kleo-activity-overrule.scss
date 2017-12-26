@@ -9,100 +9,105 @@ body.directory.activity {
     }
 }
 
-#main {
-    .template-page.tpl-right {
-        .wrap-content {
-            @media (min-width:$bp-sm){
-                padding-right:$offset-g1;
-            }
+body.activity {
+    #main {
+        .template-page.tpl-right {
+            .wrap-content {
+                // @media (min-width:$bp-sm){
+                //     padding-right:$offset-g1;
+                // }
 
-            #buddypress {
-                form#whats-new-form {
-                    @include whats-new-form();
-                }
-                /* form#whats-new-form */
-
-                .activity {
-                    margin-top:0;
-                    background:$color_bg-content;
-
-                    ul.activity-list {
-                        > li.activity-item {
-
-                            &:first-child {
-                                padding-top:$offset-2;
-                            }
-                            
-                            .activity-avatar.rounded {
-                                @include box-shadow(false);
-                            }
-
-                            .activity-content {   
-                                border-color: $color_layout-border;
-
-                                .activity-header {
-                                    a:first-child {
-                                        @extend .a-black;
-                                    }
-                                }        
-
-                                .activity-meta {
-                                    &:empty {
-                                        display:none;
-                                    }
-
-                                    padding-bottom: $offset-g2;
-
-                                    > a.button:not(.fav) {
-                                        @include btn-base-border();
-
-                                        &.delete-activity,
-                                        &.spam-activity {
-                                            color:$color_danger !important;
-                                        }
-                                    }
-
-                                    > a.button.fav {
-                                        @extend .g_hyperlink-base;
-                                        text-decoration:none !important;
-                                        font-size:$font-size_button-md;
-                                        line-height:$font-size_button-line-height-md;
-
-                                        &:before {
-                                            text-decoration:none !important;
-                                        }
-                                    }
-
-                                }
-                                /* [END] .activity-meta */
-
-                                .activity-inner {
-                                    padding-right:$offset-g2;
-                                }
-
-                                .activity-comments {
-
-                                }
-                            }
-                            /* [END] .activity-content */
-                        }
-                        /* [END] li.activity-item */
-
-                        > li.load-more {
-                            > a {
-                                @include btn-base-border();
-                                @include btn-color-priority();
-                            }
-                        }
+                #buddypress {
+                    form#whats-new-form {                        
+                        @include whats-new-form();
+                        margin-top:$offset-g2;
                     }
-                    /* [END] ul.activity-list */
+                    /* form#whats-new-form */
+
+                    .activity {
+                        margin-top:$offset-g2;
+                        background:$color_bg-content;
+
+                        ul.activity-list {
+                            > li.activity-item {
+
+                                &:first-child {
+                                    padding-top:$offset-2;
+                                }
+                                
+                                .activity-avatar.rounded {
+                                    @include box-shadow(false);
+                                }
+
+                                .activity-content {   
+                                    border-color: $color_layout-border;
+
+                                    .activity-header {
+                                        margin-right:$offset-g3;//need this to avoid crossover with LIKE STAR
+
+                                        a:first-child {
+                                            @extend .a-black;
+                                        }
+                                    }        
+
+                                    .activity-meta {
+                                        &:empty {
+                                            display:none;
+                                        }
+
+                                        padding-bottom: $offset-g2;
+
+                                        > a.button:not(.fav) {
+                                            @include btn-base-border();
+
+                                            &.delete-activity,
+                                            &.spam-activity {
+                                                color:$color_danger !important;
+                                            }
+                                        }
+
+                                        > a.button.fav {
+                                            @extend .g_hyperlink-base;
+                                            text-decoration:none !important;
+                                            font-size:$font-size_button-md;
+                                            line-height:$font-size_button-line-height-md;
+
+                                            &:before {
+                                                text-decoration:none !important;
+                                            }
+                                        }
+
+                                    }
+                                    /* [END] .activity-meta */
+
+                                    .activity-inner {
+                                        padding-right:$offset-g2;
+                                    }
+
+                                    .activity-comments {
+
+                                    }
+                                }
+                                /* [END] .activity-content */
+                            }
+                            /* [END] li.activity-item */
+
+                            > li.load-more {
+                                > a {
+                                    @include btn-base-border();
+                                    @include btn-color-priority();
+                                }
+                            }
+                        }
+                        /* [END] ul.activity-list */
+                    }
+                    /* [END] .activity */
                 }
-                /* [END] .activity */
+                /* [END] #buddypress */        
             }
-            /* [END] #buddypress */        
+            /* [END] .wrap-content */
         }
-        /* [END] .wrap-content */
+        /* [END] .template-page.tpl-right */
     }
-    /* [END] .template-page.tpl-right */
+    /* [END] #main */
 }
-/* [END] #main */

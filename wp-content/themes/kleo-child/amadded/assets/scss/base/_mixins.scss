@@ -91,6 +91,8 @@
         $opacity: 0.75;
     } @else if $opacity == 'semi'{
         $opacity: 0.5;
+    } @else if $opacity == 'third'{
+        $opacity: 0.33;
     } @else if $opacity == 'zero'{
         $opacity: 0.0;
     }

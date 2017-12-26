@@ -9,13 +9,15 @@
 
         .container.amcust_page-title-container {
             h1 {
+                font-size:40px;
+                line-height:50px;
                 margin:0;
             }
         }
 
-        .container.amcust_page-title-container + .row {
-            margin-top:$offset-g2;
-        }
+        // .container.amcust_page-title-container + .row {
+        //     margin-top:$offset-g2;
+        // }
 
         .amcust_title-bar-with-button {
             .btn-add-to-page {
@@ -35,8 +37,7 @@
 }
 
 /* body.home-page */
-body.home-page {
-    
+body.home-page {    
     section {
         &.breadcrumbs-container {
             display:none;

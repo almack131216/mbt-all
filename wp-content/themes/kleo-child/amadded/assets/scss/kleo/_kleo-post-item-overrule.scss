@@ -10,9 +10,13 @@ body.single-post {
                 .wrap-content {
                     @media (min-width:$bp-md){
                         padding-right:$offset-g1;
-                    }                    
+                    }
+                    @media (max-width:$bp-md-1){
+                        padding-right:0;
+                    }                
 
-                    > .container.amcust_page-title-container {
+                    > .container.amcust_page-title-container.amcust-title-rwd-top {
+                        margin-bottom:$offset-g1;
                         @media (min-width:$bp-md){
                             display:none;
                         }
@@ -32,6 +36,10 @@ body.single-post {
                                 > small {         
                                     > a {
                                         @extend .a-muted;
+
+                                        > .entry-date {
+                                            font-size:16px;
+                                        }
                                     }          
 
                                     &.meta-author {
@@ -52,10 +60,7 @@ body.single-post {
                                 /* [END] small */                
                             }
                             /* [END] .post-meta */
-
-                            > .entry-date {
-                                font-size:16px;
-                            }
+                            
                         }
                         /* [END] .article-meta */
 
@@ -66,12 +71,20 @@ body.single-post {
                         > .article-content {
 
                             table.item-spec {
+                                margin:$offset-g2 0;
+
                                 tr {
                                     td {
                                         padding:$offset-1;
 
                                         &:first-child {
                                             padding-left:0;
+                                        }
+
+                                        p {
+                                            &:first-child {
+                                                margin-top:0;
+                                            }
                                         }
                                     }
                                 }
@@ -96,6 +109,22 @@ body.single-post {
             /* [END] &.tpl-right */
         }
         /* [END] .template-page */
+
+        .sidebar.sidebar-main.sidebar-right {
+            > .inner-content.widgets-container {
+                @media (max-width:$bp-md-1) {
+                    padding-left:0;
+                }
+            }    
+
+            img {
+                margin-bottom:$offset-g1;
+                
+                @media (min-width:$bp-xs) and (max-width:$bp-sm-1) {
+                    max-width: 300px;
+                }                
+            }
+        }
     }
 }
 /* [END] body.single-post */

@@ -46,3 +46,19 @@
 .bp-light-icons #buddypress div#item-nav ul #friends-personal-li a:before {
     content: "\EA06";
 }
+
+.rtmedia-add-media-button {
+    > .dashicons.dashicons-admin-media {
+        &:before {
+            @extend .fa-dummy;
+            content: '+';
+            font-weight:bold;
+        }
+    }
+}
+
+a.new-window {
+    .icon-link-ext {
+        margin-left:5px;
+    }
+}
