@@ -133,6 +133,23 @@ function sq7r_app_css_child_combined() {
 }
 add_action('wp_enqueue_scripts', 'sq7r_app_css_child_combined');
 
+/* Remove emoji js
+ref: https://smartcatdesign.net/articles/stop-loading-wp-emoji-release-min-js-wordpress-site/
+*/
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+
+/* Remove jetpack devicex
+ref: https://wordpress.org/support/topic/slow-slow-sites-so-much-additional-js-junk/#post-8786976
+ref: https://wordpress.org/support/topic/remove-render-blocking-javascript-devicepx-jetpack-js/
+*/
+function jeherve_dequeue_devicepx() {
+    wp_dequeue_script( 'devicepx' );
+}
+add_action( 'wp_enqueue_scripts', 'jeherve_dequeue_devicepx' );
+
+
 // function my_wp_nav_menu_args( $args = '' ) { 
 // 	if( is_user_logged_in() ) { 
 // 		$args['menu'] = 'mm-logged-in';
