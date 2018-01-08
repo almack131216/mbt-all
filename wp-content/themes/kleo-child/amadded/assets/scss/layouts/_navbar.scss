@@ -350,32 +350,39 @@ $bp-subnav-mobile: $bp-md-1;
         }
         /* [END] .kleo-main-header */
 
-        &.is-sticky > .kleo-main-header.header-scrolled > .container {
-            > .navbar-header {
-                @media (min-width:$bp-md){
-                    strong.logo {//make logo just icon square
-                        width:45px;
-                        // height: 50px;
-                        overflow: hidden;
+        &.is-sticky > .kleo-main-header.header-scrolled {
+            @media (max-width:$bp-md-1){
+                @include box-shadow(false);
+            }
 
-                        > a {
-                            width: 200px;
-                            height: 50px;
+            > .container {
+                > .navbar-header {
+                    @media (min-width:$bp-md){
+                        strong.logo {//make logo just icon square
+                            width:45px;
+                            // height: 50px;
+                            overflow: hidden;
+
+                            > a {
+                                width: 200px;
+                                height: 50px;
+                            }
                         }
                     }
+                    /* [END] @media (min-width:$bp-md) */
                 }
-                /* [END] @media (min-width:$bp-md) */
+                > .navbar-collapse > ul.navbar-nav > li {
+                    &.active,
+                    &.current-menu-parent {
+                        > a:before {
+                            bottom: 0px;
+                            width:100%;
+                            left:0;
+                        }
+                    }                
+                }
             }
-            > .navbar-collapse > ul.navbar-nav > li {
-                &.active,
-                &.current-menu-parent {
-                     > a:before {
-                        bottom: 0px;
-                        width:100%;
-                        left:0;
-                     }
-                }                
-            }
+            /* (END) .container */
         }
     }
     /* [END] .sticky-wrapper */    

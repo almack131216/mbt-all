@@ -1,15 +1,33 @@
 /* _breadcrumbs.scss */
 
-/* breadcrumbs */
 #main {
     section.container-wrap.breadcrumbs-container {
         background:$color_bg-breadcrumb;
         border-color: $color_breadcrumb-border;
+        padding:0;
+        line-height:$offset-4;
+        font-size:$base-font-size-small;
 
         @media (max-width:$bp-xs-1){
-            padding-top:5px;
-            padding-bottom:5px;
-        }        
+            line-height:$offset-g2;
+        }       
+
+        p.page-info {
+            margin:0;
+            line-height:$offset-4;
+
+            @media (max-width:$bp-xs-1){
+                line-height:$offset-g2;
+            }
+
+            a {
+                color:$color_breadcrumb-hyperlink;
+                > i.icon-help {
+                    font-size:$base-font-size-small;
+                    line-height:$base-font-size-small;
+                }
+            }
+        }
 
         .breadcrumb-extra {
             // padding:0 $offset-g1;
@@ -33,14 +51,7 @@
             }
             /* [END] .kleo_framework.breadcrumb */
 
-            p.page-info {
-                margin:0;
-                line-height:$base-font-size;
-
-                a {
-                    color:$color_breadcrumb-hyperlink;
-                }
-            }
+            
         }
         /* [END] .breadcrumb-extra */
     }
