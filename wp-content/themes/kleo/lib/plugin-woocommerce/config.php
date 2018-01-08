@@ -1039,7 +1039,7 @@ if ( ! function_exists( 'kleo_woo_get_mini_cart' ) ) {
 		
 		if ( ! $just_inner ) {
 			$cart_output .= '<li class="menu-item kleo-toggle-menu shop-drop">'
-			                . '<a class="cart-contents js-activated" href="' . $woocommerce->cart->get_cart_url() . '" title="' . __( "View Cart", "woocommerce" ) . '">'
+			                . '<a class="cart-contents js-activated" href="' . wc_get_cart_url() . '" title="' . __( "View Cart", "woocommerce" ) . '">'
 			                . '<span class="cart-items' . $cart_has_items . '"><i class="icon icon-basket-full-alt"></i> ';
 			
 			if ( $cart_count != "0" ) {
@@ -1109,11 +1109,8 @@ if ( ! function_exists( 'kleo_woo_get_mini_cart' ) ) {
 			
 			if ( version_compare( WOOCOMMERCE_VERSION, '2.1.0' ) >= 0 ) {
 				
-				$cart_url     = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_cart_url() );
-				$checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() );
-				
-				$cart_output .= '<a class="btn btn-default" href="' . esc_url( $cart_url ) . '"><span class="text">' . __( 'View Cart', 'woocommerce' ) . '</span></a>';
-				$cart_output .= '<a class="btn btn-highlight checkout-button" href="' . esc_url( $checkout_url ) . '"><span class="text">' . __( 'Proceed to checkout', 'woocommerce' ) . '</span></a>';
+				$cart_output .= '<a class="btn btn-default" href="' . esc_url( wc_get_cart_url() ) . '"><span class="text">' . __( 'View Cart', 'woocommerce' ) . '</span></a>';
+				$cart_output .= '<a class="btn btn-highlight checkout-button" href="' . esc_url( wc_get_checkout_url() ) . '"><span class="text">' . __( 'Proceed to checkout', 'woocommerce' ) . '</span></a>';
 				
 			} else {
 				
@@ -1184,7 +1181,7 @@ function kleo_woo_get_mobile_icon() {
 		$cart_has_items = ' has-products';
 	}
 	
-	$output .= '<a class="cart-contents mheader" href="' . $woocommerce->cart->get_cart_url() . '" title="' . __( "View Cart", "woocommerce" ) . '">'
+	$output .= '<a class="cart-contents mheader" href="' . wc_get_cart_url() . '" title="' . __( "View Cart", "woocommerce" ) . '">'
 	           . '<span class="cart-items' . $cart_has_items . '"><i class="icon icon-basket-full-alt"></i> ';
 	
 	if ( $cart_count != "0" ) {
@@ -1245,7 +1242,7 @@ if ( ! function_exists( 'kleo_checkout_steps' ) ) {
 
 		<div class="checkout-steps">
 			<span class="step-cart"><a
-					href="<?php echo WC()->cart->get_cart_url(); ?>"><?php _e( 'Shopping Cart', 'kleo_framework' ); ?></a></span>
+					href="<?php echo wc_get_cart_url(); ?>"><?php _e( 'Shopping Cart', 'kleo_framework' ); ?></a></span>
 			<i class="icon icon-angle-right"></i>
 			<span class="step-checkout"><?php _e( 'Checkout details', 'kleo_framework' ); ?></span>
 			<i class="icon icon-angle-right"></i>

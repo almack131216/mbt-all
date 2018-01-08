@@ -95,6 +95,9 @@ BuddyPress styling
 #buddypress #activity-stream p {
   margin: 5px 0;
 }
+#buddypress #activity-stream p img {
+  display: block;
+}
 #buddypress #item-body .clear {
   clear: both;
 }
@@ -3352,12 +3355,6 @@ body.bp-header-small.bp-overlay-menu div#item-header {
     padding-left: 20px;
   }
 }
-
-.bp-overlay-menu #buddypress div#item-header ul span.count {
-  display: block;
-  color:#333333;
-}
-
 /*--------------------------------------------------------------
 4.0 - Media Queries
 --------------------------------------------------------------*/

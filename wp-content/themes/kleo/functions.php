@@ -432,7 +432,6 @@ if ( ! function_exists( 'kleo_entry_meta' ) ) :
 		$cat_tag = array();
 
 		if ( isset( $categories_list ) && $categories_list ) {
-			echo '<span class="amcust_categoryLink">'.$categories_list.'</span>';
 			$cat_tag[] = $categories_list;
 		}
 
@@ -905,7 +904,7 @@ if ( ! function_exists( 'kleo_title_main_content' ) ) {
 					$title = kleo_title();
 				}
 
-				echo '<div class="container amcust_page-title-container amcust-title-rwd-top">';
+				echo '<div class="container">';
 				echo '<h1 class="page-title">' . $title . '</h1>';
 				echo '</div>';
 			}
@@ -1518,6 +1517,8 @@ if ( ! function_exists( 'kleo_ajax_login' ) ) {
 
 if ( ! function_exists( 'kleo_lost_password_ajax' ) ) {
 	function kleo_lost_password_ajax() {
+		// Check the nonce, if it fails the function will break
+		check_ajax_referer( 'kleo-ajax-login-nonce', 'security' );
 
 		$errors = new WP_Error();
 

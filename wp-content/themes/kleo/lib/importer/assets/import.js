@@ -201,18 +201,22 @@ var sqImporter = sqImporter || {};
 
 				self.pendingRequest = self.ajaxRequest();
 
-				self.progressInterval = setInterval(function() {self.checkProgress(self);}, self.updatePeriod);
-
 			});
 		},
 
 		ajaxRequest: function(e) {
 			var self = null;
+			var hasFailed = false;
+
 			if ( e !== undefined ) {
 				self = e;
+				hasFailed = true;
 			} else {
 				self = this;
 			}
+
+			//console.log('starting ajax request');
+			delete self.data.check_progress;
 
 			return $.ajax({
 				url: ajaxurl,
@@ -220,8 +224,17 @@ var sqImporter = sqImporter || {};
 				data: self.data,
 				beforeSend: function( xhr ) {
 					//console.log('doing main ajax...');
-					self.importModal.close();
-					self.ajaxModal.open( { text: "Starting import...", buttons: false, nobg: true, loader: true, progressData: '10' } );
+					if (! hasFailed) {
+						self.importModal.close();
+						self.ajaxModal.open({
+							text: "Starting import...",
+							buttons: false,
+							nobg: true,
+							loader: true,
+							progressData: '1'
+						});
+					}
+					self.progressInterval = setInterval(function() {self.checkProgress(self);}, self.updatePeriod);
 				},
 				statusCode: {
 					500: function() {
@@ -247,12 +260,19 @@ var sqImporter = sqImporter || {};
 
 					if ( response.hasOwnProperty('success') ) {
 
-						dataText = 'Import is now complete!!!';
-						if (response.hasOwnProperty('data') && response.data.hasOwnProperty('message') ) {
-							dataText = response.data.message
+						var responseData = '';
+						if (response.hasOwnProperty('data') && response.data.hasOwnProperty('message')) {
+							responseData = response.data.message;
 						}
-						if (response.success == false ) {
-							dataText += '<br><small>Debug data: ' + JSON.stringify(response.data.debug) + '</small>';
+
+						if (response.success == true) {
+							dataText = 'Import is now complete!!!';
+							if ( responseData != '' ) {
+								dataText = responseData;
+							}
+
+						} else if (response.success == false ) {
+							dataText += '<small>' + responseData + '<br>Debug Data:' + JSON.stringify(response.data.debug) + '</small>';
 						}
 
 						self.ajaxModal.update({
@@ -264,37 +284,30 @@ var sqImporter = sqImporter || {};
 						});
 
 					} else {
-
-						dataText = JSON.stringify(response);
-
-						self.ajaxModal.update({
-							text: dataText,
-							loader: false,
-							closeBtn: true,
-							nobg: false,
-							progress: false
-						});
+						self.onFail(self);
 					}
 
 				})
 				.fail(function() {
 					self.onFail(self);
-				});
+			});
 		},
 		onFail: function(self) {
-
 			clearInterval(self.progressInterval);
 			if ( self.pendingProgress !== null ) {
 				//console.log('abortin');
 				self.pendingProgress.abort();
 			}
 
-			self.ajaxModal.close();
 			self.failedCount ++;
 			if (self.failedCount < self.failedMax) {
-				self.pendingRequest = self.ajaxRequest();
+				//console.log('fail start new ajax');
+				setTimeout(function(){
+					self.pendingRequest = self.ajaxRequest(self);
+				}, 1000);
 			} else {
 				self.pendingRequest = null;
+				self.ajaxModal.close();
 				self.ajaxModal.open( {text: '<div class="bg-msg fail-msg"><span class="dashicons dashicons-warning"></span></div>Failed to import all data. Please try again!', loader: false, closeBtn: true, nobg: false, progress: false, buttons: false } );
 			}
 
@@ -304,12 +317,13 @@ var sqImporter = sqImporter || {};
 
 			var self = e;
 			if(self.updatingProgress === true) return;
-			self.data.check_progress = 1;
+			var requestData = self.data;
+			requestData.check_progress = 1;
 
 			self.pendingProgress = $.ajax({
 				url: ajaxurl,
 				method: 'POST',
-				data: self.data,
+				data: requestData,
 				beforeSend: function( xhr ) {
 					self.updatingProgress = true;
 					//console.log('doing progress ajax...');

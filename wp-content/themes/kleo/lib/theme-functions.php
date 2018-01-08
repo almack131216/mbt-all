@@ -1,5 +1,5 @@
 <?php
-define( 'KLEO_THEME_VERSION', '4.2.12' );
+define( 'KLEO_THEME_VERSION', '4.3.2' );
 
 /* Configuration array */
 global $kleo_config;
@@ -488,10 +488,8 @@ if ( sq_option( 'header_custom_search', 0 ) == 1 && sq_option( 'header_search_fo
 	add_filter( 'body_class', 'kleo_gsb_body_class' );
 	if ( ! function_exists( 'kleo_get_search_menu_item' ) ) {
 		function kleo_get_search_menu_item() {
-			global $amCustIconSearch;
-
 			$output = '';
-			$output .= '<a class="search-trigger" href="#"><i class="'.$amCustIconSearch.'"></i></a>';
+			$output .= '<a class="search-trigger" href="#"><i class="icon icon-search"></i></a>';
 			$output .= '<div class="kleo-search-wrap searchHidden" id="ajax_search_container">';
 			$output .= '<div class="gse-loading"></div>';
 			$output .= sq_option( 'header_search_form', '' );
@@ -511,7 +509,6 @@ function kleo_gsb_body_class( $classes ) {
 if ( ! function_exists( 'kleo_get_search_menu_item' ) ) {
 
 	function kleo_get_search_menu_item() {
-		global $amCustIconSearch;
 
 		$context = sq_option( 'search_context', '' );
 		if ( is_array( $context ) ) {
@@ -544,7 +541,7 @@ if ( ! function_exists( 'kleo_get_search_menu_item' ) ) {
 		$value = isset( $_REQUEST['s'] ) ? esc_attr( $_REQUEST['s'] ) : '';
 		$placeholder = esc_html__( "Start typing to search...", "kleo_framework" );
 		?>
-		<a class="search-trigger" href="#"><i class="<?php echo $amCustIconSearch; ?>"></i></a>
+		<a class="search-trigger" href="#"><i class="icon icon-search"></i></a>
 		<div class="kleo-search-wrap searchHidden" id="ajax_search_container">
 			<form class="form-inline" id="ajax_searchform" action="<?php echo $action; ?>"
 			      data-context="<?php echo $context; ?>">
@@ -585,7 +582,7 @@ if ( ! function_exists( 'kleo_ajax_search' ) ) {
 			'numberposts'      => 4,
 			'posts_per_page'   => 20,
 			'post_type'        => 'any',
-			'post_status'      => 'publish',
+			'post_status'      =>  array('publish','inherit'),
 			'post_password'    => '',
 			'suppress_filters' => false,
 			's'                => $_REQUEST['s'],
@@ -743,27 +740,32 @@ if ( ! function_exists( 'kleo_ajax_search' ) ) {
 						continue;
 					}
 					$format = get_post_format( $post->ID );
-					if ( $img_url = kleo_get_post_thumbnail_url( $post->ID ) ) {
-						$image = aq_resize( $img_url, 44, 44, true, true, true );
-						if ( ! $image ) {
-							$image = $img_url;
-						}
-						$image = '<img src="' . $image . '" class="kleo-rounded">';
-					} else {
-						if ( $format == 'video' ) {
-							$image = "<i class='icon icon-video'></i>";
-						} elseif ( $format == 'image' || $format == 'gallery' ) {
-							$image = "<i class='icon icon-picture'></i>";
-						} else {
-							$image = "<i class='icon icon-link'></i>";
-						}
-					}
-
+                    if( $post->post_type == 'attachment') {
+                        $img_url = wp_get_attachment_thumb_url( $post->ID );
+                        $image = '<img src="'.aq_resize( $img_url, 44, 44, true, true, true ).'" class="kleo-rounded"/>';
+                    } else {
+                        if ($img_url = kleo_get_post_thumbnail_url($post->ID)) {
+                            $image = aq_resize($img_url, 44, 44, true, true, true);
+                            if (!$image) {
+                                $image = $img_url;
+                            }
+                            $image = '<img src="' . $image . '" class="kleo-rounded">';
+                        } else {
+                            if ($format == 'video') {
+                                $image = "<i class='icon icon-video'></i>";
+                            } elseif ($format == 'image' || $format == 'gallery') {
+                                $image = "<i class='icon icon-picture'></i>";
+                            } else {
+                                $image = "<i class='icon icon-link'></i>";
+                            }
+                        }
+                    }
 					$excerpt = "";
 
 					if ( ! empty( $post->post_content ) ) {
 						$excerpt = $post->post_content;
 						$excerpt = preg_replace( "/\[(.*?)(?:(\/))?\](?:(.+?)\[\/\2\])?/s", '', $excerpt );
+						$excerpt = wp_strip_all_tags($excerpt); //added to remove gogole adsense code from search excerpt
 						$excerpt = char_trim( trim( strip_tags( $excerpt ) ), 40, "..." );
 					}
 					$link    = apply_filters( 'kleo_custom_url', get_permalink( $post->ID ) );
@@ -2509,17 +2511,20 @@ if ( ! function_exists( 'kleo_get_schema_org_markup' ) ) {
 			$type = "Article";
 		} elseif ( is_singular( 'portfolio' ) ) {
 			$type = "VisualArtwork";
-		} else {
-			if ( is_author() ) {
-				$type = 'ProfilePage';
-			} // Is search results page
-			elseif ( is_search() ) {
-				$type = 'SearchResultsPage';
-			} else {
-				$type = 'WebPage';
-			}
 		}
-
+		elseif ( function_exists('bp_is_active') && bp_is_user() ) {
+			$type = 'ProfilePage';
+		}
+        elseif ( is_author() ) {
+            $type = 'ProfilePage';
+        } // Is search results page
+        elseif ( is_search() ) {
+            $type = 'SearchResultsPage';
+        }
+        else {
+            $type = 'WebPage';
+        }
+		
 		$type = apply_filters( 'kleo_schema_org_type', $type );
 
 		return 'itemscope itemtype="' . $schema . $type . '"';
@@ -2531,6 +2536,17 @@ function kleo_schema_org_markup() {
 	echo kleo_get_schema_org_markup();
 }
 
+function check_bbpress_components_add_schema() {
+    /* If bbpress plugin it's active add schema for their forum/topics components */
+    if(class_exists( 'bbPress')) {
+        if (bbp_is_forum_archive() || bbp_is_topic_archive() || bbp_is_single_forum() || bbp_is_single_topic() || bbp_is_single_reply() || bbp_is_single_view()) {
+            add_filter('kleo_schema_org_type', function () {
+                return 'DiscussionForumPosting';
+            });
+        }
+    }
+}
+add_action('wp', 'check_bbpress_components_add_schema');
 
 /**
  *
@@ -2568,7 +2584,7 @@ if ( sq_option( 'blog_exclude_cat' ) ) {
 if ( sq_option( 'blog_tag_cloud', 0 ) == 0 ) {
 	add_action( 'init', 'sq_tag_cloud_size' );
 	function sq_tag_cloud_size() {
-		sq_kleo()->add_css( '.widget_tag_cloud a { font-size:inherit !important; }' );
+		sq_kleo()->add_css( '.widget_tag_cloud a { font-size: small !important; }' );
 	}
 }
 

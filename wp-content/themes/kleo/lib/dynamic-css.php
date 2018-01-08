@@ -19,11 +19,13 @@ if( $kleo_dynamic_version == false ) {
 }
 
 //write the file if isn't there
-if ( $needs_update || ! file_exists ( trailingslashit( $kleo_config['custom_style_path'] ) . 'dynamic.css' ) ) {
+//if (! defined( 'DOING_AJAX' || ! DOING_AJAX ) ) {
+if ( $needs_update || ! file_exists( trailingslashit( $kleo_config['custom_style_path'] ) . 'dynamic.css' ) ) {
 	add_filter( 'kleo_add_dynamic_style', array( $kleo_theme, 'add_font_css' ) );
 	add_action( 'after_setup_theme', 'kleo_generate_dynamic_css', 999 );
-	update_option( 'sq_dynamic_' . KLEO_DOMAIN,  KLEO_THEME_VERSION );
+	update_option( 'sq_dynamic_' . KLEO_DOMAIN, KLEO_THEME_VERSION );
 }
+
 
 if ( ! is_admin() ) {
 	if ( wp_is_writable( trailingslashit( $kleo_config['upload_basedir'] ) ) ) {

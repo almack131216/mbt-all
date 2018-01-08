@@ -37,7 +37,7 @@
             <form action="<?php echo esc_url( $login_url ); ?>" id="login_form" name="login_form" method="post"
                   class="kleo-form-signin">
 				<?php wp_nonce_field( 'kleo-ajax-login-nonce', 'security' ); ?>
-                <input type="text" id="username" autofocus required name="log" class="form-control" value=""
+                <input type="text" id="username" required name="log" class="form-control" value=""
                        placeholder="<?php esc_html_e( "Username", 'kleo_framework' ); ?>">
                 <input type="password" id="password" required value="" name="pwd" class="form-control"
                        placeholder="<?php esc_html_e( "Password", 'kleo_framework' ); ?>">
@@ -52,6 +52,13 @@
                    class="kleo-show-lostpass kleo-other-action pull-right"><?php esc_html_e( 'Lost your password?' ); ?></a>
                 <span class="clearfix"></span>
 
+                <?php
+                /* Required by antispam plugins like Google Re-captcha, Invisible Re-Captcha */
+                /* Prevent kleo_fb_button to be displayed twice on login pop-up. */
+                remove_action( 'login_form', 'kleo_fb_button', 10 );
+                do_action('login_form');
+                add_action( 'login_form', 'kleo_fb_button', 10 );
+                ?>
 				<?php do_action( 'kleo_after_login_form' ); ?>
 
             </form>
@@ -72,8 +79,8 @@
 			<?php do_action( 'kleo_before_lostpass_form' ); ?>
 
             <form id="forgot_form" name="forgot_form" action="" method="post" class="kleo-form-signin">
-				<?php wp_nonce_field( 'kleo-ajax-login-nonce', 'security' ); ?>
-                <input type="text" id="forgot-email" autofocus required name="user_login" class="form-control"
+				<?php wp_nonce_field( 'kleo-ajax-login-nonce', 'security-pass' ); ?>
+                <input type="text" id="forgot-email" required name="user_login" class="form-control"
                        placeholder="<?php esc_html_e( "Username or Email", 'kleo_framework' ); ?>">
                 <div id="kleo-lost-result"></div>
                 <button class="btn btn-lg btn-default btn-block"

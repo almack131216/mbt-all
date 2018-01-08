@@ -14,7 +14,8 @@ if ( ! defined( 'WP_LOAD_IMPORTERS' ) )
 	return;
 
 /** Display verbose errors */
-define( 'IMPORT_DEBUG', false );
+if ( ! defined( 'IMPORT_DEBUG' ) )
+	define( 'IMPORT_DEBUG', false );
 
 // Load Importer API
 require_once ABSPATH . 'wp-admin/includes/import.php';
@@ -622,7 +623,8 @@ if ( class_exists( 'WP_Importer' ) ) {
 
 				$post_type_object = get_post_type_object( $post['post_type'] );
 
-				$post_exists = post_exists( $post['post_title'], '', $post['post_date'] );
+				//$post_exists = post_exists( $post['post_title'], '', $post['post_date'] );
+				$post_exists = post_exists( $post['post_title'] );
 
 				/**
 				 * Filter ID of the existing post corresponding to post currently importing.
@@ -696,8 +698,17 @@ if ( class_exists( 'WP_Importer' ) ) {
 
 						$comment_post_ID = $post_id = $this->process_attachment( $postdata, $remote_url );
 					} else {
-						$comment_post_ID = $post_id = wp_insert_post( $postdata, true );
-						do_action( 'wp_import_insert_post', $post_id, $original_post_ID, $postdata, $post );
+						// If the post already exists in the DB, we'll add this post as as a revision
+						if ( $post_exists ) {
+							$postdata['ID']  = $post_exists;
+							$comment_post_ID = $post_id = wp_update_post( $postdata );
+							do_action( 'wp_import_update_post', $post_id, $original_post_ID, $postdata, $post );
+
+						} else {
+							$comment_post_ID = $post_id = wp_insert_post( $postdata, true );
+							do_action( 'wp_import_insert_post', $post_id, $original_post_ID, $postdata, $post );
+						}
+
 					}
 
 					if ( is_wp_error( $post_id ) ) {
@@ -880,8 +891,14 @@ if ( class_exists( 'WP_Importer' ) ) {
 				$menu_id = is_array( $menu_id ) ? $menu_id['term_id'] : $menu_id;
 			}
 
-			foreach ( $item['postmeta'] as $meta )
-				$$meta['key'] = $meta['value'];
+			// Create an array to store all the post meta in
+			$menu_item_meta = array();
+
+			foreach ( $item['postmeta'] as $meta ) {
+				${$meta['key']} = $meta['value'];
+				$menu_item_meta[$meta['key']] = $meta['value'];
+			}
+
 
 			if ( 'taxonomy' == $_menu_item_type && isset( $this->processed_terms[intval($_menu_item_object_id)] ) ) {
 				$_menu_item_object_id = $this->processed_terms[intval($_menu_item_object_id)];
@@ -922,8 +939,27 @@ if ( class_exists( 'WP_Importer' ) ) {
 			);
 
 			$id = wp_update_nav_menu_item( $menu_id, 0, $args );
-			if ( $id && ! is_wp_error( $id ) )
-				$this->processed_menu_items[intval($item['post_id'])] = (int) $id;
+			if ( $id && ! is_wp_error( $id ) ) {
+				$this->processed_menu_items[ intval( $item['post_id'] ) ] = (int) $id;
+
+				// Add Custom Meta not already covered by $args
+
+				// Remove all default $args from $menu_item_meta array
+				foreach ( $args as $a => $arg ) {
+					unset( $menu_item_meta[ '_' . str_replace('-', '_', $a) ]);
+				}
+				// For some reason this doesn't follow the same naming convention so manually unset
+				unset ( $menu_item_meta['_menu_item_menu_item_parent'] );
+
+				$menu_item_meta = array_diff_assoc( $menu_item_meta, $args );
+
+				// update any other post meta
+				if ( ! empty ( $menu_item_meta ) ) {
+					foreach ( $menu_item_meta as $key => $value ) {
+						update_post_meta( (int) $id, $key, maybe_unserialize( $value ) );
+					}
+				}
+			}
 		}
 
 		/**
@@ -1115,7 +1151,7 @@ if ( class_exists( 'WP_Importer' ) ) {
 		// Display import page title
 		function header() {
 			echo '<div class="wrap">';
-			screen_icon();
+			//screen_icon();
 			echo '<h2>' . __( 'Import WordPress', 'wordpress-importer' ) . '</h2>';
 
 			$updates = get_plugin_updates();

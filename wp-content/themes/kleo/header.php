@@ -27,7 +27,7 @@ if ( defined( 'WP_INSTALLING' ) && WP_INSTALLING == true && ! function_exists( '
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -89,6 +89,7 @@ $site_style = apply_filters( 'kleo_site_style', $site_style );
 	<?php
 	/**
 	 * Header section
+	 *
 	 * @hooked kleo_show_header
 	 */
 	do_action( 'kleo_header' );
@@ -102,7 +103,5 @@ $site_style = apply_filters( 'kleo_site_style', $site_style );
 <?php
 /**
  * Hook into this action if you want to display something before any Main content
- *
  */
 do_action( 'kleo_before_main' );
-?>

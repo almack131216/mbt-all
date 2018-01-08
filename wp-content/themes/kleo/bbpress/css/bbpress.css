@@ -1942,7 +1942,30 @@ body.my-account #bbpress-forums {
 
 }
 
-
+div#wp-link-wrap[aria-labelledby="link-modal-title"] #wp-link #link-options div {
+	display: inline-block;
+	width: auto;
+	padding: 0 !important;
+	margin: 0 !important;
+	margin-top: 5px !important;
+}
+div#wp-link-wrap[aria-labelledby="link-modal-title"] #wp-link #link-options div label {
+	padding: 0 !important;
+	margin: 0 !important;
+	line-height: 10px;
+	max-width: initial !important;
+}
+div#wp-link-wrap[aria-labelledby="link-modal-title"] #wp-link #link-options { padding: 0;}
+div#wp-link-wrap[aria-labelledby="link-modal-title"] #wp-link #link-options label span,
+div#wp-link-wrap[aria-labelledby="link-modal-title"] #wp-link #search-panel label span.search-label {
+	max-width:inherit;text-align: left;padding-bottom: 5px;width: auto;min-width: initial;
+}
+div#wp-link-wrap[aria-labelledby="link-modal-title"] #wp-link .link-search-wrapper {
+	margin-bottom: 0px !important;
+}
+div#wp-link-wrap[aria-labelledby="link-modal-title"] #wp-link label input[type=text] {
+	margin-bottom: 0 !important;
+}
 
 
 

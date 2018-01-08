@@ -167,7 +167,7 @@ if ( $the_query->have_posts() ) : ?>
 	<?php if ( '' != $load_more && $the_query->max_num_pages >= $next_page  ) : ?>
 		<div class="clearfix clear"></div>
 		<div class="posts-load-more text-center">
-			<a data-paged="<?php echo $next_page; ?>" class="btn btn-highlight style2" href="#">Load more</a>
+			<a data-paged="<?php echo $next_page; ?>" class="btn btn-highlight style2" href="#"><?php _e('Load more', 'k-elements'); ?></a>
 		</div>
 	<?php endif; ?>
 	

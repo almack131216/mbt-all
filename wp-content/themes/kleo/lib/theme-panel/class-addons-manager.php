@@ -373,12 +373,10 @@ class SQ_Addons_Manager {
 	 * @param boolean $echo
 	 * @return void | array
 	 */
-	function do_plugin_install( $slug, $echo = true ) {
+	function do_plugin_install( $slug, $echo = true, $activate_too = true ) {
 		if( empty( $this->plugins[$slug] ) ){
 			return false;
 		}
-
-		$url = $this->get_download_url( $slug );
 		$status = $this->get_plugin_status( $slug );
 
 		if( ! current_user_can( 'install_plugins' ) ){
@@ -401,13 +399,29 @@ class SQ_Addons_Manager {
 			return true;
 		}
 
+		// Prep variables for Plugin_Installer_Skin class.
+		$extra         = array();
+		$extra['slug'] = $slug; // Needed for potentially renaming of directory name.
+		$source        = $this->get_download_url( $slug );
+
 		if ( ! class_exists( 'Plugin_Upgrader', false ) ) {
 			require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 		}
 
-		$skin = new Automatic_Upgrader_Skin();
+		$skin_args = array(
+			'type'   => ( 'bundled' !== $this->plugins[ $slug ]['source_type'] ) ? 'web' : 'upload',
+			'extra'  => $extra,
+		);
+
+		$skin = new Automatic_Upgrader_Skin( $skin_args );
 		$upgrader = new Plugin_Upgrader( $skin, array( 'clear_destination' => true ) );
-		$result = $upgrader->install( $url );
+
+		// Perform the action and install the plugin from the $source urldecode().
+		add_filter( 'upgrader_source_selection', array( $this->tgmpa, 'maybe_adjust_source_dir' ), 1, 3 );
+
+		$result = $upgrader->install( $source );
+
+		remove_filter( 'upgrader_source_selection', array( $this->tgmpa, 'maybe_adjust_source_dir' ), 1 );
 
 		// There is a bug in WP where the install method can return null in case the folder already exists
 		// see https://core.trac.wordpress.org/ticket/27365
@@ -425,14 +439,17 @@ class SQ_Addons_Manager {
 		}
 
 		$this->tgmpa->populate_file_path( $slug );
-		$plugin_activate = $upgrader->plugin_info();
-		$activate = activate_plugin( $plugin_activate );
-		if ( is_wp_error( $activate ) ) {
-			$status['error'] = wp_kses_post( $activate->get_error_message() );
-			if ( $echo ) {
-				wp_send_json_error( $status );
-			} else {
-				return $status;
+
+		if ( $activate_too ) {
+			$plugin_activate = $upgrader->plugin_info();
+			$activate        = activate_plugin( $plugin_activate );
+			if ( is_wp_error( $activate ) ) {
+				$status['error'] = wp_kses_post( $activate->get_error_message() );
+				if ( $echo ) {
+					wp_send_json_error( $status );
+				} else {
+					return $status;
+				}
 			}
 		}
 
@@ -485,7 +502,7 @@ class SQ_Addons_Manager {
 			}
 		}
 
-		$result = activate_plugin( $this->plugins[$slug]['file_path'] );
+		$result = activate_plugin( $this->plugins[$slug]['file_path']);
 		if ( is_wp_error( $result ) ) {
 			$status['error'] = $result->get_error_message();
 			if( $echo ) {

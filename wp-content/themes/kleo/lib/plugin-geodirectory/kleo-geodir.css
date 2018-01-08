@@ -503,3 +503,20 @@ input.geodir_button, input.btn_submit{
 #header .geodir_location_tab_container dd.geodir_location_tabs.gd-tab-active a:after {
     border-color: #000 transparent transparent transparent;
 }
+
+
+/* Simple modal */
+#simplemodal-container .row input, #simplemodal-container .row textarea {
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#simplemodal-container .button {
+    margin-left: 0;
+    padding: 12px 30px;
+}
+
+#basic-modal-content2 {
+    max-height: 500px;
+    height: auto;
+}

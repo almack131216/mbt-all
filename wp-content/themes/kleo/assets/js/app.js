@@ -405,7 +405,7 @@ window.matchMedia = window.matchMedia || function (a) {
             h = h.not("object object");
             h.each(function () {
                 var m = a(this);
-                if (this.tagName.toLowerCase() === "embed" && m.parent("object").length || m.parent(".fluid-width-video-wrapper").length) {
+                if (this.tagName.toLowerCase() === "embed" && m.parent("object").length || m.parent(".fluid-width-video-wrapper").length || m.parent(".article-content").length ) {
                     return
                 }
                 var i = (this.tagName.toLowerCase() === "object" || (m.attr("height") && !isNaN(parseInt(m.attr("height"), 10)))) ? parseInt(m.attr("height"), 10) : m.height(), j = !isNaN(parseInt(m.attr("width"), 10)) ? parseInt(m.attr("width"), 10) : m.width(), k = i / j;
@@ -1013,7 +1013,8 @@ window.matchMedia = window.matchMedia || function (a) {
                 return (Math.ceil($itemOfInterest.offset().top) >= (firstItemTop + firstItemHeight));
             }
 
-            if ($lastItem.length && needsMenu($lastItem) && numItems > s.threshold && !s.undo && $this.is(':visible') && !KLEO.isMobile.tabletLandscapeWidth()) {
+            //is > 768px
+            if ($lastItem.length && needsMenu($lastItem) && numItems > s.threshold && !s.undo && $this.is(':visible') && !KLEO.isMobile.tabletWidth()) {
 
                 var $popup = $('<ul class="flexMenu-popup" style="display:none;' + ((s.popupAbsolute) ? ' position: absolute;' : '') + '"></ul>');
                 // Add class if popupClass option is set
@@ -1422,7 +1423,7 @@ var KLEO = KLEO || {};
             KLEO.main.kleoAjaxLostPass();
 
             //Fit videos
-            $(".post-content, .activity-inner, .article-media, .kleo-video-embed, .wpb_video_widget, .bbp-reply-content").fitVids();
+            $(".post-content, .activity-inner, .article-media, .kleo-video-embed, .wpb_video_widget, .bbp-reply-content, .article-content").fitVids();
 
             // Sidebar menu toggle
             //if (!isMobile || KLEO.isotope.viewport().width > 992) {
@@ -2557,7 +2558,8 @@ var KLEO = KLEO || {};
                     type: 'POST',
                     data: {
                         action: 'kleo_lost_password',
-                        user_login: $("#forgot-email").val()
+                        user_login: $("#forgot-email").val(),
+                        security: $("form#forgot_form #security-pass").val()
                     },
                     success: function (data) {
                         $('#kleo-lost-result').html(data);
@@ -2655,6 +2657,13 @@ var KLEO = KLEO || {};
                 return window.matchMedia('(max-width: 991px)').matches;
             } else {
                 return $(window).innerWidth() < 976;
+            }
+        },
+        iPadTabletLandscapeWidth: function () {
+            if (window.matchMedia) {
+                return window.matchMedia('(max-width: 1024px)').matches;
+            } else {
+                return $(window).innerWidth() < 1009;
             }
         },
         any: function () {
@@ -3337,10 +3346,13 @@ var KLEO = KLEO || {};
 	        KLEO.header.doAjaxSearch();
 
             // Activate Hover menu
-            if (KLEO.isotope.viewport().width > 992) {
+            if (KLEO.isotope.viewport().width > 992 ) {
                 $('#header .js-activated').dropdownHover({delay: 400}).dropdown();
             }
             $('.js-activated').off('click');
+
+            KLEO.header.ipadTabletDropdown();
+            $window.on("debouncedresize", KLEO.header.ipadTabletDropdown);
 
             //Expand dropdown on caret click
             $('#header .caret').on('click', function () {
@@ -3379,6 +3391,21 @@ var KLEO = KLEO || {};
                 });
             }
 
+        },
+        ipadTabletDropdown: function () {
+            if ( KLEO.isMobile.iOS() && KLEO.isMobile.iPadTabletLandscapeWidth() ) {
+                //Expand dropdown on caret click
+                $('body').on('click','.flexMenu-viewMore a', function () {
+                    var liItem = $(this).closest("li");
+                    if (liItem.hasClass("open")) {
+                        liItem.removeClass("open");
+                    } else {
+                        liItem.addClass("open");
+                        $(this).next('ul').css('display', '');
+                    }
+                    return false;
+                });
+            }
         },
 
         loadLogoImg: function () {
