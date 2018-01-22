@@ -488,10 +488,8 @@ if ( sq_option( 'header_custom_search', 0 ) == 1 && sq_option( 'header_search_fo
 	add_filter( 'body_class', 'kleo_gsb_body_class' );
 	if ( ! function_exists( 'kleo_get_search_menu_item' ) ) {
 		function kleo_get_search_menu_item() {
-			global $amCustIconSearch;
-
 			$output = '';
-			$output .= '<a class="search-trigger" href="#"><i class="'.$amCustIconSearch.'"></i></a>';
+			$output .= '<a class="search-trigger" href="#"><i class="icon icon-search"></i></a>';
 			$output .= '<div class="kleo-search-wrap searchHidden" id="ajax_search_container">';
 			$output .= '<div class="gse-loading"></div>';
 			$output .= sq_option( 'header_search_form', '' );
@@ -511,7 +509,6 @@ function kleo_gsb_body_class( $classes ) {
 if ( ! function_exists( 'kleo_get_search_menu_item' ) ) {
 
 	function kleo_get_search_menu_item() {
-		global $amCustIconSearch;
 
 		$context = sq_option( 'search_context', '' );
 		if ( is_array( $context ) ) {
@@ -544,7 +541,7 @@ if ( ! function_exists( 'kleo_get_search_menu_item' ) ) {
 		$value = isset( $_REQUEST['s'] ) ? esc_attr( $_REQUEST['s'] ) : '';
 		$placeholder = esc_html__( "Start typing to search...", "kleo_framework" );
 		?>
-		<a class="search-trigger" href="#"><i class="<?php echo $amCustIconSearch; ?>"></i></a>
+		<a class="search-trigger" href="#"><i class="icon icon-search"></i></a>
 		<div class="kleo-search-wrap searchHidden" id="ajax_search_container">
 			<form class="form-inline" id="ajax_searchform" action="<?php echo $action; ?>"
 			      data-context="<?php echo $context; ?>">

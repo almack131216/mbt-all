@@ -350,15 +350,14 @@ if ( ! function_exists( 'kleo_title' ) ):
 	 */
 
 	function kleo_title() {
-		global $amCustStringPrefixTitleTag, $amCustStringPrefixTitleCategory;
 		$output = "";
 		if ( is_tag() ) {
-			$output = __( $amCustStringPrefixTitleTag , 'kleo_framework' ) . "\"" . single_tag_title( '', false ) . "\"";
+			$output = __( 'Tag Archive for:', 'kleo_framework' ) . " " . single_tag_title( '', false );
 		} elseif ( is_tax() ) {
 			$term   = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 			$output = $term->name;
 		} elseif ( is_category() ) {
-			$output = __( $amCustStringPrefixTitleCategory , 'kleo_framework' ) . single_cat_title( '', false );
+			$output = __( 'Archive for category:', 'kleo_framework' ) . " " . single_cat_title( '', false );
 		} elseif ( is_day() ) {
 			$output = __( 'Archive for date:', 'kleo_framework' ) . " " . get_the_time( 'F jS, Y' );
 		} elseif ( is_month() ) {

@@ -432,6 +432,7 @@ if ( ! function_exists( 'kleo_entry_meta' ) ) :
 		$cat_tag = array();
 
 		if ( isset( $categories_list ) && $categories_list ) {
+			echo '<span class="amcust_categoryLink">'.$categories_list.'</span>';
 			$cat_tag[] = $categories_list;
 		}
 
@@ -904,7 +905,7 @@ if ( ! function_exists( 'kleo_title_main_content' ) ) {
 					$title = kleo_title();
 				}
 
-				echo '<div class="container">';
+				echo '<div class="container amcust_page-title-container amcust-title-rwd-top">';
 				echo '<h1 class="page-title">' . $title . '</h1>';
 				echo '</div>';
 			}
