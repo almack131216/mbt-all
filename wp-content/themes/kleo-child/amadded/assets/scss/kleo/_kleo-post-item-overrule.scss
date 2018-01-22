@@ -129,88 +129,90 @@ body.single-post {
 }
 /* [END] body.single-post */
 
-.amcust-wrap-thumbs {
-    margin:$offset-g3 0 0 0;
-    text-align:center;
-
-    ul.ul-thumbnails {
-        list-style:none;
-        margin:0;
-        padding:0;
+#main {
+    .amcust-wrap-thumbs {
+        margin:$offset-g3 0 0 0;
         text-align:center;
 
-        > li {
-            width:100px;
-            @media (max-width: $bp-xs-1){
-                width:30%;
-            }
-            display:inline-block;
-            margin:0 1px;
+        ul.ul-thumbnails {
+            list-style:none;
+            margin:0;
             padding:0;
+            text-align:center;
 
-            > a {
-                display:block;
-                float:left;
-                width:100%;
-                position:relative;          
+            > li {
+                width:100px;
+                @media (max-width: $bp-xs-1){
+                    width:30%;
+                }
+                display:inline-block;
+                margin:0 1px;
+                padding:0;
 
-                > img {
+                > a {
+                    display:block;
+                    float:left;
                     width:100%;
-                    height:auto;
+                    position:relative;          
+
+                    > img {
+                        width:100%;
+                        height:auto;
+                    }
                 }
             }
+            /* [END] li */
+            
+            &.has-5-thumbs {
+                > li {
+                    width:19%;
+                    width: calc(20% - 2px);
+                }
+            }
+
+            &.has-4-thumbs {
+                > li {
+                    width:24%;
+                    width: calc(25% - 2px);
+                }
+            }
+
+            > li {
+                &:first-child {
+                    margin-left:0;
+                }
+                &:last-child {
+                    margin-right:0;
+                }        
+            } 
         }
-        /* [END] li */
+        /* [END] ul.ul-thumbnails */
+    }
+
+    article .article-meta {
+        @media (min-width: $bp-md) {
+            width: 170px;
+        }
+    }
+    /* [END] post-left */
+
+    .with-meta .article-media,
+    .with-meta .article-media,
+    .with-meta .article-content,
+    .with-meta .article-content,
+    #comments,
+    #comments-list,
+    .share-links {
+        margin-left: 200px;
         
-        &.has-5-thumbs {
-            > li {
-                width:19%;
-                width: calc(20% - 2px);
-            }
+        .comment-respond {
+            margin-left:0;
         }
 
-        &.has-4-thumbs {
-            > li {
-                width:24%;
-                width: calc(25% - 2px);
-            }
-        }
-
-        > li {
-            &:first-child {
-                margin-left:0;
-            }
-            &:last-child {
-                margin-right:0;
-            }        
-        } 
+        @media (max-width: $bp-md-1) {
+            margin-left:0;
+            width:100%;
+        }    
     }
-    /* [END] ul.ul-thumbnails */
+    /* [END] post-right */
 }
-
-
-article .article-meta {
-    @media (min-width: $bp-md) {
-        width: 170px;
-    }
-}
-/* [END] post-left */
-
-.single .with-meta .article-media,
-.posts-listing.standard-listing.with-meta .article-media,
-.single .container .with-meta .article-content,
-.posts-listing.standard-listing.with-meta .article-content,
-#comments,
-.share-links {
-     margin-left: 200px;
-     
-     .comment-respond {
-         margin-left:0;
-     }
-
-     @media (max-width: $bp-md-1) {
-        margin-left:0;
-        width:100%;
-     }    
-}
-/* [END] post-right */

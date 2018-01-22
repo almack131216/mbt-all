@@ -1,17 +1,19 @@
 /* _kleo-members.scss */
 
-#buddypress .activity-timeline {
-    border-color:$color_layout-border;
-}
+#main {
+    #buddypress .activity-timeline {
+        border-color:$color_layout-border;
+    }
 
-.activity-avatar.rounded {
-    border-color:$color_layout-border;
-}
+    .activity-avatar.rounded {
+        border-color:$color_layout-border;
+    }
 
-.activity-content {
-    border-color:$color_layout-border;
-}
+    .activity-content {
+        border-color:$color_layout-border;
+    }
 
-select.activity-filter-by {
-    background:white;
+    select.activity-filter-by {
+        background:white;
+    }
 }

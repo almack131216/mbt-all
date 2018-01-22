@@ -1,7 +1,13 @@
 /* _typography-hyperlink.scss */
 
-a {
-    color:$color-primary;
+#main {
+    a {
+        color:$color-primary;
+
+        &:hover {
+            color:$color_hyperlink-text-hover;
+        }
+    }
 }
 
 .a-muted {

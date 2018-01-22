@@ -181,56 +181,59 @@
         }
 
     }
-}
-/* [END] main */
 
-#buddypress ul#members-list {
-    > li.kleo-masonry-item {
-        > .member-inner-list {
-            @extend .base-box;
-            padding: $offset-g1;
 
-            > .item-avatar.rounded {
-                margin:0 $offset-1 $offset-1 0;
-            }
-            > .item {
-                > .item-title,
-                > .item-meta {
-                    margin-left:70px;
+
+    #buddypress ul#members-list {
+        > li.kleo-masonry-item {
+            > .member-inner-list {
+                @extend .base-box;
+                padding: $offset-g1;
+
+                > .item-avatar.rounded {
+                    margin:0 $offset-1 $offset-1 0;
                 }
-            }
-            > .action {
+                > .item {
+                    > .item-title,
+                    > .item-meta {
+                        margin-left:70px;
+                    }
+                }
+                > .action {
 
+                }
             }
         }
     }
-}
 
-#buddypress #friend-list div.action .generic-button > a,
-#buddypress #member-list div.action .generic-button > a,
-#buddypress #members-list div.action .generic-button > a {
-    @include btn-base();    
-    
-    &:not(.remove) {
+    #buddypress #friend-list div.action .generic-button > a,
+    #buddypress #member-list div.action .generic-button > a,
+    #buddypress #members-list div.action .generic-button > a {
+        @include btn-base();    
+        
+        &:not(.remove) {
+            @include btn-base-border();
+        }    
+        
+        &.add {
+            //@include btn-color-priority();
+            // @include btn-color-priority();
+            @include btn-color-priority();
+            // @include btn-lg();
+        }
+        
+        &.remove,
+        &.add,
+        &.send-message {
+            @include btn-sm();
+        }
+        
+    }
+
+    .article-content section.container-wrap .posts-load-more .btn {
         @include btn-base-border();
-    }    
-    
-    &.add {
-        //@include btn-color-priority();
-        // @include btn-color-priority();
         @include btn-color-priority();
-        // @include btn-lg();
     }
-    
-    &.remove,
-    &.add,
-    &.send-message {
-        @include btn-sm();
-    }
-    
-}
 
-.article-content section.container-wrap .posts-load-more .btn {
-    @include btn-base-border();
-    @include btn-color-priority();
 }
+/* [END] main */

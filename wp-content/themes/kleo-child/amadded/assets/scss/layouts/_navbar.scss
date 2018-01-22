@@ -38,6 +38,7 @@ $bp-subnav-mobile: $bp-md-1;
     margin-left:-5px;
 }
 
+
 .navbar {
     @include border-radius(0px);
 
@@ -359,13 +360,17 @@ $bp-subnav-mobile: $bp-md-1;
                 > .navbar-header {
                     @media (min-width:$bp-md){
                         strong.logo {//make logo just icon square
-                            width:45px;
-                            // height: 50px;
+                            width: 40px;
+                            height: 50px;
                             overflow: hidden;
 
                             > a {
                                 width: 200px;
                                 height: 50px;
+
+                                > img {
+                                    margin-top:5px !important;
+                                }
                             }
                         }
                     }
@@ -387,19 +392,20 @@ $bp-subnav-mobile: $bp-md-1;
     }
     /* [END] .sticky-wrapper */    
 }
-/* [END] navbar */
+/* [END] navbar */    
 
 .logo img {
-	height:60px;
-	width:auto;
+    height:60px;
+    width:auto;
     float:left;
-    margin:$offset-1 0 0 0;
+    margin:0;
+    margin-top:$offset-1 !important;
 
     @media (max-width:$bp-xxs-1){
         height:50px !important;
         max-height:50px !important;
         min-height:50px !important;
-        margin:5px 0 0 0;
+        margin-top:5px !important;
     }
 }
 

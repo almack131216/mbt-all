@@ -15,6 +15,7 @@
         p.page-info {
             margin:0;
             line-height:$offset-4;
+            font-size:$base-font-size-small;
 
             @media (max-width:$bp-xs-1){
                 line-height:$offset-g2;
