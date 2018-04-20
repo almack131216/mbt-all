@@ -82,10 +82,20 @@ $bp-subnav-mobile: $bp-md-1;
 
                     > .logo {
                         > a {
+                            img#logo_img {
+                                display:block;
+                            }
+                            img#logo_img_mobile {
+                                display:none;
+                            }
+
                             @media(max-width:$bp-subnav-mobile){
                                 img#logo_img {
-                                    // display:none;
-                                    content: url("./amadded/assets/img/logo-icon-text-240x60-white.png");
+                                    display:none;
+                                    // content: url("./amadded/assets/img/logo-icon-text-240x60-white.png");
+                                }
+                                img#logo_img_mobile {
+                                    display:block;
                                 }
                             }                        
                         }

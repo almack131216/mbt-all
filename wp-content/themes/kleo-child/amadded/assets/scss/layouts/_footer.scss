@@ -8,5 +8,49 @@ div#socket.socket-color {
     @media (max-width:$bp-sm){
         @include rwd_border-content-divide('top');
     }
+
+    .ftr-nav-wrap {
+        width:100%;
+        text-align:left;
+
+        @media (max-width:$bp-sm-1) {
+            text-align:center;
+
+            strong {
+                margin:$offset-1 auto;
+            }
+        }        
+
+        ul.ftr-nav {
+            list-style:none;
+            margin:0;
+            padding:0;
+            float:right;
+
+            @media (max-width:$bp-sm-1) {
+                float: none;
+            }
+
+            li {
+                display:inline;
+                margin:0;
+                border-left:1px solid black;
+                &:first-child {
+                    border-left:0px;
+                }
+
+                a {
+                    margin:0 $offset-1;
+                    color:black;
+                    font-weight:normal;
+
+                    &:hover {
+                        color:$color_hyperlink-text-hover;
+                    }
+                }
+            }
+        }
+    }
+    
 }
 /* [END] #socket */

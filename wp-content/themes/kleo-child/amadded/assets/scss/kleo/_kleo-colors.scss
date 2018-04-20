@@ -10,7 +10,7 @@
         border-color: $color_layout-border;
         background: #bbb;
 
-        .high-bg {
+        &.high-bg {
             background-color:#009E1C;
         }
     }

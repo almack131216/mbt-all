@@ -1,12 +1,16 @@
 /* _typography-hyperlink.scss */
 
 #main {
-    a {
+    a:not(.btn-danger) {
         color:$color-primary;
 
         &:hover {
             color:$color_hyperlink-text-hover;
         }
+    }
+
+    a.btn-danger {
+        color:white !important;
     }
 }
 

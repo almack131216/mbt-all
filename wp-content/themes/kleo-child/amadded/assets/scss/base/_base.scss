@@ -2,6 +2,7 @@
 
 html,
 body {
+    background:$color_bg-body;
     font-family: $base-font-family;
 }
 
@@ -9,7 +10,7 @@ body {
     font-size:$base-font-size;
     color:$base-font-color;
     //line-height:$base-font-line-height;
-	background:$color_bg-body;
+	// background:$color_bg-body;
     border-color:$color_layout-border;
 
 	#main {

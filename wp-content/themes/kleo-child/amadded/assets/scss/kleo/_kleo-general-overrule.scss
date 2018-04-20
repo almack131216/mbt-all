@@ -119,3 +119,20 @@ a.url:hover,
         max-width:280px;
     }
 }
+
+.items-table {
+    &.post {
+        width:100%;
+
+        td {
+            a {
+                img.attachment-thumbnail {
+                    width: 60px;
+                    max-width: 60px;
+                    min-width: 60px;
+                    height: auto;
+                }
+            }            
+        }
+    }
+}

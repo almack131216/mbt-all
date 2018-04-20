@@ -13,4 +13,29 @@
             }
         }
     }
+
+    #comments-list {
+        margin-left: 0 !important;
+
+        .activity-timeline {
+            border-color:$color_layout-border-strong;
+        }
+
+        ol {
+            li {
+                .comment-wrap {
+                    .comment-avatar {                        
+                        img {
+                            border-color:$color_layout-border-strong;
+                            border-width:2px;
+                        }
+                    }
+                    .comment-content {
+                        border-color:$color_layout-border-strong;
+                    }
+                }
+                
+            }
+        }
+    }
 }

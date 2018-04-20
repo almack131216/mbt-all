@@ -85,8 +85,11 @@
             span.count {
                 background:$color_button-text-hover;
             }
-        }
-        
+        }        
+    }
+
+    &#friends-personal-li a:before {
+        content: "\EA06" !important;
     }
 
     &.current,

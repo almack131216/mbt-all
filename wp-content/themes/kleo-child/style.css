@@ -7,7 +7,7 @@ Author URI: http://themeforest.net/user/SeventhQueen
 Description: Multipurpose Premium WordPress Theme
 Tags: one-column,two-columns,right-sidebar,fluid-layout,custom-menu,featured-images,post-formats,sticky-post,translation-ready
 Version: v1.0
-Updated: 2018-01-20 18:20
+Updated: 2018-04-20 10:20
 
 */
 /* BASE - base styles, variables, mixins etc */
@@ -35,9 +35,9 @@ Updated: 2018-01-20 18:20
 /* _mixins-buddypress.scss */
 /* form#whats-new-form */
 /* _base.scss */
-html, body { font-family: "Open Sans", Arial, Helvetica, sans-serif; }
+html, body { background: #f0f0f0; font-family: "Open Sans", Arial, Helvetica, sans-serif; }
 
-body { font-size: 14px; color: #333; background: #f0f0f0; border-color: #dfdfdf; }
+body { font-size: 14px; color: #333; border-color: #dfdfdf; }
 
 body #main { background: #f0f0f0; }
 
@@ -142,9 +142,11 @@ hr { display: block; width: 100%; border-top: 1px solid #dfdfdf; }
 @media (max-width: 479px) { #main h1 > strong, #main h2 > strong, #main h3 > strong { font-size: 125%; } }
 
 /* _typography-hyperlink.scss */
-#main a { color: #49c5b6; }
+#main a:not(.btn-danger) { color: #49c5b6; }
 
-#main a:hover { color: #f90; }
+#main a:not(.btn-danger):hover { color: #f90; }
+
+#main a.btn-danger { color: white !important; }
 
 .a-muted, #main #buddypress .activity-read-more a, #main article.post-item > .post-content > .post-header > .post-meta > small a, #main article.post-item > .post-content > .post-footer a.item-likes, body.single-post #main .template-page.tpl-right .wrap-content > article.post > .article-meta > .post-meta > small > a { color: #bbb; }
 
@@ -322,7 +324,12 @@ body.home-page section .container.amcust_page-title-container { display: none; }
 
 @media (max-width: 991px) { .navbar .sticky-wrapper .kleo-main-header .container > .navbar-header > .kleo-mobile-switch > button.navbar-toggle > span.icon-bar { background-color: white; } }
 
-@media (max-width: 991px) { .navbar .sticky-wrapper .kleo-main-header .container > .navbar-header > .logo > a img#logo_img { content: url("./amadded/assets/img/logo-icon-text-240x60-white.png"); } }
+.navbar .sticky-wrapper .kleo-main-header .container > .navbar-header > .logo > a img#logo_img { display: block; }
+
+.navbar .sticky-wrapper .kleo-main-header .container > .navbar-header > .logo > a img#logo_img_mobile { display: none; }
+
+@media (max-width: 991px) { .navbar .sticky-wrapper .kleo-main-header .container > .navbar-header > .logo > a img#logo_img { display: none; }
+  .navbar .sticky-wrapper .kleo-main-header .container > .navbar-header > .logo > a img#logo_img_mobile { display: block; } }
 
 .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav { background: white; }
 
@@ -444,6 +451,23 @@ body.home-page section .container.amcust_page-title-container { display: none; }
 div#socket.socket-color { background: #f0f0f0; border-top: 1px solid #dfdfdf; }
 
 @media (max-width: 768px) { div#socket.socket-color { border-top: 2px solid #000; } }
+
+div#socket.socket-color .ftr-nav-wrap { width: 100%; text-align: left; }
+
+@media (max-width: 767px) { div#socket.socket-color .ftr-nav-wrap { text-align: center; }
+  div#socket.socket-color .ftr-nav-wrap strong { margin: 10px auto; } }
+
+div#socket.socket-color .ftr-nav-wrap ul.ftr-nav { list-style: none; margin: 0; padding: 0; float: right; }
+
+@media (max-width: 767px) { div#socket.socket-color .ftr-nav-wrap ul.ftr-nav { float: none; } }
+
+div#socket.socket-color .ftr-nav-wrap ul.ftr-nav li { display: inline; margin: 0; border-left: 1px solid black; }
+
+div#socket.socket-color .ftr-nav-wrap ul.ftr-nav li:first-child { border-left: 0px; }
+
+div#socket.socket-color .ftr-nav-wrap ul.ftr-nav li a { margin: 0 10px; color: black; font-weight: normal; }
+
+div#socket.socket-color .ftr-nav-wrap ul.ftr-nav li a:hover { color: #f90; }
 
 /* [END] #socket */
 /* _register.scss */
@@ -578,18 +602,17 @@ i.fa.fa-bold:before, i[class^="icon-"].fa-bold:before { font-weight: bold; }
 /* members - hide pagination (restore when I get more members) */
 #buddypress div.pagination#pag-top, #buddypress div.pagination#pag-bottom { display: none; }
 
-.bp-light-icons #buddypress div#item-nav ul #friends-personal-li a:before { content: "\EA06"; }
-
 .rtmedia-add-media-button > .dashicons.dashicons-admin-media:before { content: '+'; font-weight: bold; }
 
 a.new-window .icon-link-ext { margin-left: 5px; }
 
+/* _debug.scss */
 /* _kleo-colors.scss */
 #main #buddypress div.item-list-tabs ul li.last select { background: white; }
 
 #main .kleo-online-status { border-color: #dfdfdf; background: #bbb; }
 
-#main .kleo-online-status .high-bg { background-color: #009E1C; }
+#main .kleo-online-status.high-bg { background-color: #009E1C; }
 
 #main #buddypress ul#members-list > li.kleo-masonry-item > .member-inner-list > .item-avatar.rounded { border-color: #dfdfdf; }
 
@@ -633,6 +656,10 @@ a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main
 .kleo-form-modal { max-width: 320px; }
 
 @media (max-width: 400px) { .kleo-login-modal { max-width: 280px; } }
+
+.items-table.post { width: 100%; }
+
+.items-table.post td a img.attachment-thumbnail { width: 60px; max-width: 60px; min-width: 60px; height: auto; }
 
 /* _kleo-btn-overrule.scss */
 #main { /* [END] .container-wrap */ }
@@ -712,6 +739,8 @@ a, a > span, a > i, a.url, .main-color a, .main-color .form-control:focus, .main
 #buddypress div#item-nav ul li a:hover:before { color: #f90; }
 
 #buddypress div#item-nav ul li a:hover span.count { background: #f90; }
+
+#buddypress div#item-nav ul li#friends-personal-li a:before { content: "\EA06" !important; }
 
 #buddypress div#item-nav ul li.current a, #buddypress div#item-nav ul li.selected a { color: #000; }
 
@@ -1015,6 +1044,14 @@ body.directory.members .amcust_page-title-container h1.page-title { text-align: 
 
 #main .widget ul.news-widget-wrap > li small { font-size: 70%; }
 
+#main #comments-list { margin-left: 0 !important; }
+
+#main #comments-list .activity-timeline { border-color: #ccc; }
+
+#main #comments-list ol li .comment-wrap .comment-avatar img { border-color: #ccc; border-width: 2px; }
+
+#main #comments-list ol li .comment-wrap .comment-content { border-color: #ccc; }
+
 /* _kleo-post-items-overrule.scss */
 .base-box, #main article.post-item > .post-content, #main #buddypress ul#members-list > li.kleo-masonry-item > .member-inner-list { border: 1px solid #dfdfdf; background: white; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; }
 
@@ -1055,6 +1092,10 @@ body.directory.members .amcust_page-title-container h1.page-title { text-align: 
 #main article.post-item.category-news .post-title { border-color: #C42F2F; }
 
 #main article.post-item.category-quotes .post-content { background: #005689; }
+
+#main article.post-item.category-quotes .post-content .inner-content { color: white; }
+
+#main article.post-item.category-quotes .post-content .inner-content p { color: white; }
 
 #main article.post-item.category-quotes .post-content a.item-likes { color: white !important; }
 
@@ -1443,14 +1484,14 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:activ
 
 /* [END] .wpuf-author */
 /* _amazon-link-builder.scss */
-a.amazonbutton { -moz-box-shadow: inset 0px 1px 0px 0px #f9eacf; -webkit-box-shadow: inset 0px 1px 0px 0px #f9eacf; box-shadow: inset 0px 1px 0px 0px #f9eacf; background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #F6DD9F), color-stop(1, #F0C24D)); background: -moz-linear-gradient(center top, #F6DD9F 5%, #F0C24D 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F6DD9F', endColorstr='#F0C24D'); background-color: #f5d78a; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-indent: 0px; border: 1px solid #cbaa5c; display: inline-block; color: #000; font-style: normal; width: auto; text-align: center; font-size: 12px; line-height: 16px; padding: 10px 15px; text-transform: uppercase; text-decoration: none; font-weight: bold; }
+#main a.amazonbutton { -moz-box-shadow: inset 0px 1px 0px 0px #f9eacf; -webkit-box-shadow: inset 0px 1px 0px 0px #f9eacf; box-shadow: inset 0px 1px 0px 0px #f9eacf; background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #F6DD9F), color-stop(1, #F0C24D)); background: -moz-linear-gradient(center top, #F6DD9F 5%, #F0C24D 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F6DD9F', endColorstr='#F0C24D'); background-color: #f5d78a; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-indent: 0px; border: 1px solid #cbaa5c; display: inline-block; color: #000; font-style: normal; width: auto; text-align: center; font-size: 12px; line-height: 16px; padding: 10px 15px; text-transform: uppercase; text-decoration: none; font-weight: bold; }
 
-a.amazonbutton > i.icon-amazon { float: left; margin-right: 10px; font-size: 16px; color: black; }
+#main a.amazonbutton > i.icon-amazon { float: left; margin-right: 10px; font-size: 16px; color: black; }
 
-a.amazonbutton > i.icon-amazon:hover:before { color: black; }
+#main a.amazonbutton > i.icon-amazon:hover:before { color: black; }
 
-a.amazonbutton:hover { background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #F5D589), color-stop(1, #EEBA35)); background: -moz-linear-gradient(center top, #F5D589 5%, #EEBA35 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F5D589', endColorstr='#EEBA35'); background-color: #eeba35; color: #000; }
+#main a.amazonbutton:hover { background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #F5D589), color-stop(1, #EEBA35)); background: -moz-linear-gradient(center top, #F5D589 5%, #EEBA35 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F5D589', endColorstr='#EEBA35'); background-color: #eeba35; color: #000; }
 
-a.amazonbutton:hover > i.icon-amazon { color: black; }
+#main a.amazonbutton:hover > i.icon-amazon { color: black; }
 
-a.amazonbutton:active { position: relative; top: 1px; color: #000; }
+#main a.amazonbutton:active { position: relative; top: 1px; color: #000; }

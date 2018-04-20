@@ -136,6 +136,13 @@
             .post-content {
                 background: $color_accent-quotes;
 
+                .inner-content {
+                    color:white;
+                    p {
+                        color:white;
+                    }
+                }
+
                 a.item-likes {
                     color: white !important;
 
