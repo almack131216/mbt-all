@@ -261,6 +261,66 @@ $bp-subnav-mobile: $bp-md-1;
                             }
                         }
 
+                        @media (min-width:$bp-md) {
+                            &.menu-item-906,
+                            &.menu-item-38,
+                            &.menu-item-1184,
+                            &.menu-item-1683,
+                            &.menu-item-1684 {
+                                // margin:0 $offset-1;
+                                > a:hover:after {
+                                    color: $color_hyperlink-text-hover !important;
+                                }                               
+
+                                > a {
+                                    position:relative;
+                                    color: transparent !important;
+                                    font-size:0px !important;
+                                    width:24px;
+                                    display:block;
+                                    
+                                    &:after {
+                                        font: 24px "fontello";
+                                        content: "\E844";
+                                        color: black;
+                                        margin: 0;
+                                        height: 24px;
+                                        width: 24px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left:0;
+                                        margin: -12px 0 0 0;
+                                        text-align:center;
+                                    }
+                                }
+                            }
+
+                            &.menu-item-906 > a:after {
+                                content: "\E843";// books
+                            }
+
+                            &.menu-item-38 > a:after {
+                                content: "\E98F";// members
+                            }
+
+                            &.menu-item-1184 > a:after {
+                                content: "\E876";// news
+                            }
+
+                            &.menu-item-1683 > a:after {
+                                content: "\E853";// quote
+                            }
+
+                            &.menu-item-1684 > a:after {
+                                content: "\E868";// check-in
+                            }
+
+                            //E9D0 // book
+                            //E901 // book2
+                            //E853 // quote
+                            //E868 // map marker
+                        }
+
                         &.active,
                         &.current-menu-parent {
                             > a {
@@ -273,7 +333,7 @@ $bp-subnav-mobile: $bp-md-1;
                                         position: absolute;
                                         width: 70%;
                                         height: 1px;
-                                        bottom:25px;
+                                        bottom:20px;
                                         left: 15%;
                                         border-bottom: 3px solid $color_accent;
                                     }

@@ -73,4 +73,11 @@
     .snippet:after,.snippetWrap p:after {
         content:'...';
     }
+
+    
+}
+
+.hide-text {
+    color: transparent !important;
+    font-size:0px !important;
 }

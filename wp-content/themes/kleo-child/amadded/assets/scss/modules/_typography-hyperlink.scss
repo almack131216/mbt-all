@@ -7,6 +7,11 @@
         &:hover {
             color:$color_hyperlink-text-hover;
         }
+
+        &:active {
+            background-color:$color_hyperlink-text-hover;
+            color:white;
+        }
     }
 
     a.btn-danger {
