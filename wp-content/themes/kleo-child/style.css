@@ -7,7 +7,7 @@ Author URI: http://themeforest.net/user/SeventhQueen
 Description: Multipurpose Premium WordPress Theme
 Tags: one-column,two-columns,right-sidebar,fluid-layout,custom-menu,featured-images,post-formats,sticky-post,translation-ready
 Version: v1.0
-Updated: 2018-04-23 16:00
+Updated: 2018-04-25 09:00
 
 */
 /* BASE - base styles, variables, mixins etc */
@@ -185,27 +185,27 @@ hr { display: block; width: 100%; border-top: 1px solid #dfdfdf; }
 /* _button.scss */
 #main { /* [END] .g_btn-base */ /* [END] .g_btn-base-border */ }
 
-#main .g_btn-base { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; }
-
-#main .g_btn-base > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#main .g_btn-base { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; }
 
 #main .g_btn-base:hover { color: #f90; background: #fff; }
 
-#main .g_btn-base:hover > i, #main .g_btn-base:hover > span, #main .g_btn-base:hover:before { color: #f90; }
-
 #main .g_btn-base:hover:active { color: #fff; background: #f90; }
+
+#main .g_btn-base > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#main .g_btn-base:hover > i, #main .g_btn-base:hover > span, #main .g_btn-base:hover:before { color: #f90; }
 
 #main .g_btn-base:hover:active > i, #main .g_btn-base:hover:active > span, #main .g_btn-base:hover:active:before { color: #fff; }
 
-#main .g_btn-base-border, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
-
-#main .g_btn-base-border > span, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#main .g_btn-base-border, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
 
 #main .g_btn-base-border:hover, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover { color: #f90; background: #fff; }
 
-#main .g_btn-base-border:hover > i, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover > i, #main .g_btn-base-border:hover > span, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover > span, #main .g_btn-base-border:hover:before, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover:before { color: #f90; }
-
 #main .g_btn-base-border:hover:active, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover:active { color: #fff; background: #f90; }
+
+#main .g_btn-base-border > span, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#main .g_btn-base-border:hover > i, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover > i, #main .g_btn-base-border:hover > span, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover > span, #main .g_btn-base-border:hover:before, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover:before { color: #f90; }
 
 #main .g_btn-base-border:hover:active > i, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover:active > i, #main .g_btn-base-border:hover:active > span, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover:active > span, #main .g_btn-base-border:hover:active:before, #main article .article-content .wpcf7 form.wpcf7-form .row > div input.wpcf7-submit:hover:active:before { color: #fff; }
 
@@ -249,15 +249,15 @@ form#searchform { background: white; -webkit-box-shadow: none; -moz-box-shadow: 
 
 #main .template-page .wrap-content .container.amcust_page-title-container h1 { font-size: 40px; line-height: 50px; margin: 0; }
 
-#main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; float: right; }
-
-#main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; float: right; }
 
 #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover { color: #f90; background: #fff; }
 
-#main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover > i, #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover > span, #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:before { color: #f90; }
-
 #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active { color: #fff; background: #f90; }
+
+#main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover > i, #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover > span, #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:before { color: #f90; }
 
 #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active > i, #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active > span, #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover:active:before { color: #fff; }
 
@@ -359,15 +359,15 @@ body.home-page section .container.amcust_page-title-container { display: none; }
 
 .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results > .kleo-ajax-part .kleo_ajax_entry .ajax_search_content a.search_title { font-size: 14px; line-height: 20px; font-weight: bold; margin: 0; padding: 0; }
 
-.navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; margin-top: 15px; margin-bottom: 0; }
-
-.navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+.navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; margin-top: 15px; margin-bottom: 0; }
 
 .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover { color: #f90; background: #fff; }
 
-.navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover > i, .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover > span, .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover:before { color: #f90; }
-
 .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover:active { color: #fff; background: #f90; }
+
+.navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+.navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover > i, .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover > span, .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover:before { color: #f90; }
 
 .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover:active > i, .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover:active > span, .navbar .sticky-wrapper .kleo-main-header .container .navbar-collapse > ul.nav.navbar-nav > li > #ajax_search_container .kleo_ajax_results a.ajax_view_all:hover:active:before { color: #fff; }
 
@@ -408,14 +408,15 @@ body.home-page section .container.amcust_page-title-container { display: none; }
 
 .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li > a span.caret:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li > a i.fa:hover, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li > a i[class^="icon-"]:hover { color: #f90; }
 
-@media (min-width: 992px) { .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:hover:after { color: #f90 !important; }
-  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a { position: relative; color: transparent !important; font-size: 0px !important; width: 24px; display: block; }
-  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:after { font: 24px "fontello"; content: "\E844"; color: black; margin: 0; height: 24px; width: 24px; position: absolute; top: 50%; left: 0; margin: -12px 0 0 0; text-align: center; }
-  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a:after { content: "\E843"; }
+@media (min-width: 992px) { .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a:hover:after { color: #f90 !important; }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a { position: relative; color: transparent !important; font-size: 0px !important; width: 24px; display: block; }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a:after { font: 24px "fontello"; content: "\E844"; color: black; margin: 0; height: 24px; width: 24px; position: absolute; top: 50%; left: 0; margin: -12px 0 0 0; text-align: center; }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a:after { content: "\E9D0"; }
   .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:after { content: "\E98F"; }
   .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:after { content: "\E876"; }
   .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:after { content: "\E853"; }
-  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:after { content: "\E868"; } }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:after { content: "\E843"; }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a:after { content: "\E868"; } }
 
 .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.active > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.current-menu-parent > a { color: #000; }
 
@@ -687,15 +688,15 @@ ul.wpuf-form li .wpuf-fields .bar { background-color: #49c5b6; }
 
 #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud { font-size: 12px; }
 
-#main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; font-size: 10px; font-weight: normal; padding: 5px 10px !important; margin: 0 3px 3px 0; padding: 5px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; border-width: 1px; text-transform: lowercase; color: #666; }
-
-#main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; font-size: 10px; font-weight: normal; padding: 5px 10px !important; margin: 0 3px 3px 0; padding: 5px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; border-width: 1px; text-transform: lowercase; color: #666; }
 
 #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover { color: #f90; background: #fff; }
 
-#main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover > i, #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover > span, #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:before { color: #f90; }
-
 #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active { color: #fff; background: #f90; }
+
+#main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover > i, #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover > span, #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:before { color: #f90; }
 
 #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active > i, #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active > span, #main .container-wrap .container .sidebar .widget.widget_tag_cloud .tagcloud > a:hover:active:before { color: #fff; }
 
@@ -714,15 +715,15 @@ ul.wpuf-form li .wpuf-fields .bar { background-color: #49c5b6; }
 #main .container-wrap .container .hr-title.hr-long > abbr { background: white; color: #ccc; font-weight: bold; }
 
 /* [END] main */
-#buddypress #message-threads .button.confirm { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; color: #f00; font-size: 10px; font-weight: normal; padding: 5px 10px !important; }
-
-#buddypress #message-threads .button.confirm > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#buddypress #message-threads .button.confirm { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; color: #f00; font-size: 10px; font-weight: normal; padding: 5px 10px !important; }
 
 #buddypress #message-threads .button.confirm:hover { color: #f90; background: #fff; }
 
-#buddypress #message-threads .button.confirm:hover > i, #buddypress #message-threads .button.confirm:hover > span, #buddypress #message-threads .button.confirm:hover:before { color: #f90; }
-
 #buddypress #message-threads .button.confirm:hover:active { color: #fff; background: #f90; }
+
+#buddypress #message-threads .button.confirm > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#buddypress #message-threads .button.confirm:hover > i, #buddypress #message-threads .button.confirm:hover > span, #buddypress #message-threads .button.confirm:hover:before { color: #f90; }
 
 #buddypress #message-threads .button.confirm:hover:active > i, #buddypress #message-threads .button.confirm:hover:active > span, #buddypress #message-threads .button.confirm:hover:active:before { color: #fff; }
 
@@ -789,15 +790,15 @@ ul.wpuf-form li .wpuf-fields .bar { background-color: #49c5b6; }
 
 #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container { height: auto; }
 
-#buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; border-width: 3px; font-size: 16px; line-height: 16px; padding: 15px 20px !important; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; }
-
-#buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; border-width: 3px; font-size: 16px; line-height: 16px; padding: 15px 20px !important; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; }
 
 #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover { color: #f90; background: #fff; }
 
-#buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > i, #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > span, #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:before { color: #f90; }
-
 #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active { color: #fff; background: #f90; }
+
+#buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > i, #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > span, #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:before { color: #f90; }
 
 #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active > i, #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active > span, #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active:before { color: #fff; }
 
@@ -813,15 +814,15 @@ ul.wpuf-form li .wpuf-fields .bar { background-color: #49c5b6; }
 
 #buddypress #item-body form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button span.dashicons:before { width: 16px; height: 16px; }
 
-#buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; border-width: 3px; font-size: 16px; line-height: 16px; padding: 15px 20px !important; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; color: #fff; background: #49c5b6; border-color: #49c5b6; }
-
-#buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; border-width: 3px; font-size: 16px; line-height: 16px; padding: 15px 20px !important; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; color: #fff; background: #49c5b6; border-color: #49c5b6; }
 
 #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover { color: #f90; background: #fff; }
 
-#buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > i, #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > span, #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:before { color: #f90; }
-
 #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active { color: #fff; background: #f90; }
+
+#buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > i, #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > span, #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:before { color: #f90; }
 
 #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active > i, #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active > span, #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active:before { color: #fff; }
 
@@ -836,15 +837,15 @@ ul.wpuf-form li .wpuf-fields .bar { background-color: #49c5b6; }
 #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] > span, #buddypress #item-body form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] > i { color: #fff; }
 
 /* [END] MEMBER PROFILE PAGE BUTTONS */
-.pagination-nav ul.pagination > li .page-numbers { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; padding: 0px !important; width: 40px; height: 40px; line-height: 36px; font-size: 14px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
-
-.pagination-nav ul.pagination > li .page-numbers > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+.pagination-nav ul.pagination > li .page-numbers { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; padding: 0px !important; width: 40px; height: 40px; line-height: 36px; font-size: 14px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
 
 .pagination-nav ul.pagination > li .page-numbers:hover { color: #f90; background: #fff; }
 
-.pagination-nav ul.pagination > li .page-numbers:hover > i, .pagination-nav ul.pagination > li .page-numbers:hover > span, .pagination-nav ul.pagination > li .page-numbers:hover:before { color: #f90; }
-
 .pagination-nav ul.pagination > li .page-numbers:hover:active { color: #fff; background: #f90; }
+
+.pagination-nav ul.pagination > li .page-numbers > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+.pagination-nav ul.pagination > li .page-numbers:hover > i, .pagination-nav ul.pagination > li .page-numbers:hover > span, .pagination-nav ul.pagination > li .page-numbers:hover:before { color: #f90; }
 
 .pagination-nav ul.pagination > li .page-numbers:hover:active > i, .pagination-nav ul.pagination > li .page-numbers:hover:active > span, .pagination-nav ul.pagination > li .page-numbers:hover:active:before { color: #fff; }
 
@@ -860,15 +861,15 @@ ul.wpuf-form li .wpuf-fields .bar { background-color: #49c5b6; }
 
 .pagination-nav ul.pagination > li .page-numbers.priority:not(:hover):not(:active) > span, .pagination-nav ul.pagination > li .page-numbers.priority:not(:hover):not(:active) > i { color: #fff; }
 
-.pagination-nav ul.pagination > li .page-numbers.current { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; padding: 0px !important; width: 40px; height: 40px; line-height: 36px; font-size: 14px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; color: black; }
-
-.pagination-nav ul.pagination > li .page-numbers.current > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+.pagination-nav ul.pagination > li .page-numbers.current { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; padding: 0px !important; width: 40px; height: 40px; line-height: 36px; font-size: 14px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; color: black; }
 
 .pagination-nav ul.pagination > li .page-numbers.current:hover { color: #f90; background: #fff; }
 
-.pagination-nav ul.pagination > li .page-numbers.current:hover > i, .pagination-nav ul.pagination > li .page-numbers.current:hover > span, .pagination-nav ul.pagination > li .page-numbers.current:hover:before { color: #f90; }
-
 .pagination-nav ul.pagination > li .page-numbers.current:hover:active { color: #fff; background: #f90; }
+
+.pagination-nav ul.pagination > li .page-numbers.current > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+.pagination-nav ul.pagination > li .page-numbers.current:hover > i, .pagination-nav ul.pagination > li .page-numbers.current:hover > span, .pagination-nav ul.pagination > li .page-numbers.current:hover:before { color: #f90; }
 
 .pagination-nav ul.pagination > li .page-numbers.current:hover:active > i, .pagination-nav ul.pagination > li .page-numbers.current:hover:active > span, .pagination-nav ul.pagination > li .page-numbers.current:hover:active:before { color: #fff; }
 
@@ -909,15 +910,15 @@ body.activity #main .template-page.tpl-right .wrap-content #buddypress form#what
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container { height: auto; }
 
-body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; border-width: 3px; font-size: 16px; line-height: 16px; padding: 15px 20px !important; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; }
-
-body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; border-width: 3px; font-size: 16px; line-height: 16px; padding: 15px 20px !important; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; }
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover { color: #f90; background: #fff; }
 
-body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:before { color: #f90; }
-
 body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active { color: #fff; background: #f90; }
+
+body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:before { color: #f90; }
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button:hover:active:before { color: #fff; }
 
@@ -933,15 +934,15 @@ body.activity #main .template-page.tpl-right .wrap-content #buddypress form#what
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options .rtmedia-plupload-container .rtmedia-add-media-button span.dashicons:before { width: 16px; height: 16px; }
 
-body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; border-width: 3px; font-size: 16px; line-height: 16px; padding: 15px 20px !important; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; color: #fff; background: #49c5b6; border-color: #49c5b6; }
-
-body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; border-width: 3px; font-size: 16px; line-height: 16px; padding: 15px 20px !important; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; color: #fff; background: #49c5b6; border-color: #49c5b6; }
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover { color: #f90; background: #fff; }
 
-body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:before { color: #f90; }
-
 body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active { color: #fff; background: #f90; }
+
+body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit] > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:before { color: #f90; }
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress form#whats-new-form #whats-new-options #whats-new-submit input[type=submit]:hover:active:before { color: #fff; }
 
@@ -973,15 +974,15 @@ body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta:empty { display: none; }
 
-body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav) { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
-
-body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav) > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav) { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover { color: #f90; background: #fff; }
 
-body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:before { color: #f90; }
-
 body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active { color: #fff; background: #f90; }
+
+body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav) > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:before { color: #f90; }
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-meta > a.button:not(.fav):hover:active:before { color: #fff; }
 
@@ -1001,15 +1002,15 @@ body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.activity-item .activity-content .activity-inner { padding-right: 30px; }
 
-body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; color: #fff; background: #49c5b6; border-color: #49c5b6; }
-
-body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; color: #fff; background: #49c5b6; border-color: #49c5b6; }
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover { color: #f90; background: #fff; }
 
-body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover:before { color: #f90; }
-
 body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover:active { color: #fff; background: #f90; }
+
+body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover:before { color: #f90; }
 
 body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover:active > i, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover:active > span, body.activity #main .template-page.tpl-right .wrap-content #buddypress .activity ul.activity-list > li.load-more > a:hover:active:before { color: #fff; }
 
@@ -1040,15 +1041,15 @@ body.directory.members .amcust_page-title-container h1.page-title { text-align: 
 
 #main #buddypress div.message-search input[type=text], #main #buddypress div.dir-search input[type=text] { height: 36px; margin: 0; }
 
-#main #buddypress div.message-search input[type=submit], #main #buddypress div.dir-search input[type=submit], #main #buddypress .groups-members-search input[type=submit] { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; float: right; text-indent: 0; width: auto; height: 36px; margin: 0; }
-
-#main #buddypress div.message-search input[type=submit] > span, #main #buddypress div.dir-search input[type=submit] > span, #main #buddypress .groups-members-search input[type=submit] > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#main #buddypress div.message-search input[type=submit], #main #buddypress div.dir-search input[type=submit], #main #buddypress .groups-members-search input[type=submit] { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; float: right; text-indent: 0; width: auto; height: 36px; margin: 0; }
 
 #main #buddypress div.message-search input[type=submit]:hover, #main #buddypress div.dir-search input[type=submit]:hover, #main #buddypress .groups-members-search input[type=submit]:hover { color: #f90; background: #fff; }
 
-#main #buddypress div.message-search input[type=submit]:hover > i, #main #buddypress div.message-search input[type=submit]:hover > span, #main #buddypress div.message-search input[type=submit]:hover:before, #main #buddypress div.dir-search input[type=submit]:hover > i, #main #buddypress div.dir-search input[type=submit]:hover > span, #main #buddypress div.dir-search input[type=submit]:hover:before, #main #buddypress .groups-members-search input[type=submit]:hover > i, #main #buddypress .groups-members-search input[type=submit]:hover > span, #main #buddypress .groups-members-search input[type=submit]:hover:before { color: #f90; }
-
 #main #buddypress div.message-search input[type=submit]:hover:active, #main #buddypress div.dir-search input[type=submit]:hover:active, #main #buddypress .groups-members-search input[type=submit]:hover:active { color: #fff; background: #f90; }
+
+#main #buddypress div.message-search input[type=submit] > span, #main #buddypress div.dir-search input[type=submit] > span, #main #buddypress .groups-members-search input[type=submit] > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#main #buddypress div.message-search input[type=submit]:hover > i, #main #buddypress div.message-search input[type=submit]:hover > span, #main #buddypress div.message-search input[type=submit]:hover:before, #main #buddypress div.dir-search input[type=submit]:hover > i, #main #buddypress div.dir-search input[type=submit]:hover > span, #main #buddypress div.dir-search input[type=submit]:hover:before, #main #buddypress .groups-members-search input[type=submit]:hover > i, #main #buddypress .groups-members-search input[type=submit]:hover > span, #main #buddypress .groups-members-search input[type=submit]:hover:before { color: #f90; }
 
 #main #buddypress div.message-search input[type=submit]:hover:active > i, #main #buddypress div.message-search input[type=submit]:hover:active > span, #main #buddypress div.message-search input[type=submit]:hover:active:before, #main #buddypress div.dir-search input[type=submit]:hover:active > i, #main #buddypress div.dir-search input[type=submit]:hover:active > span, #main #buddypress div.dir-search input[type=submit]:hover:active:before, #main #buddypress .groups-members-search input[type=submit]:hover:active > i, #main #buddypress .groups-members-search input[type=submit]:hover:active > span, #main #buddypress .groups-members-search input[type=submit]:hover:active:before { color: #fff; }
 
@@ -1130,27 +1131,27 @@ body.directory.members .amcust_page-title-container h1.page-title { text-align: 
 
 #main #buddypress ul#members-list > li.kleo-masonry-item > .member-inner-list > .item > .item-title, #main #buddypress ul#members-list > li.kleo-masonry-item > .member-inner-list > .item > .item-meta { margin-left: 70px; }
 
-#main #buddypress #friend-list div.action .generic-button > a, #main #buddypress #member-list div.action .generic-button > a, #main #buddypress #members-list div.action .generic-button > a { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; }
-
-#main #buddypress #friend-list div.action .generic-button > a > span, #main #buddypress #member-list div.action .generic-button > a > span, #main #buddypress #members-list div.action .generic-button > a > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#main #buddypress #friend-list div.action .generic-button > a, #main #buddypress #member-list div.action .generic-button > a, #main #buddypress #members-list div.action .generic-button > a { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; }
 
 #main #buddypress #friend-list div.action .generic-button > a:hover, #main #buddypress #member-list div.action .generic-button > a:hover, #main #buddypress #members-list div.action .generic-button > a:hover { color: #f90; background: #fff; }
 
-#main #buddypress #friend-list div.action .generic-button > a:hover > i, #main #buddypress #friend-list div.action .generic-button > a:hover > span, #main #buddypress #friend-list div.action .generic-button > a:hover:before, #main #buddypress #member-list div.action .generic-button > a:hover > i, #main #buddypress #member-list div.action .generic-button > a:hover > span, #main #buddypress #member-list div.action .generic-button > a:hover:before, #main #buddypress #members-list div.action .generic-button > a:hover > i, #main #buddypress #members-list div.action .generic-button > a:hover > span, #main #buddypress #members-list div.action .generic-button > a:hover:before { color: #f90; }
-
 #main #buddypress #friend-list div.action .generic-button > a:hover:active, #main #buddypress #member-list div.action .generic-button > a:hover:active, #main #buddypress #members-list div.action .generic-button > a:hover:active { color: #fff; background: #f90; }
+
+#main #buddypress #friend-list div.action .generic-button > a > span, #main #buddypress #member-list div.action .generic-button > a > span, #main #buddypress #members-list div.action .generic-button > a > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#main #buddypress #friend-list div.action .generic-button > a:hover > i, #main #buddypress #friend-list div.action .generic-button > a:hover > span, #main #buddypress #friend-list div.action .generic-button > a:hover:before, #main #buddypress #member-list div.action .generic-button > a:hover > i, #main #buddypress #member-list div.action .generic-button > a:hover > span, #main #buddypress #member-list div.action .generic-button > a:hover:before, #main #buddypress #members-list div.action .generic-button > a:hover > i, #main #buddypress #members-list div.action .generic-button > a:hover > span, #main #buddypress #members-list div.action .generic-button > a:hover:before { color: #f90; }
 
 #main #buddypress #friend-list div.action .generic-button > a:hover:active > i, #main #buddypress #friend-list div.action .generic-button > a:hover:active > span, #main #buddypress #friend-list div.action .generic-button > a:hover:active:before, #main #buddypress #member-list div.action .generic-button > a:hover:active > i, #main #buddypress #member-list div.action .generic-button > a:hover:active > span, #main #buddypress #member-list div.action .generic-button > a:hover:active:before, #main #buddypress #members-list div.action .generic-button > a:hover:active > i, #main #buddypress #members-list div.action .generic-button > a:hover:active > span, #main #buddypress #members-list div.action .generic-button > a:hover:active:before { color: #fff; }
 
-#main #buddypress #friend-list div.action .generic-button > a:not(.remove), #main #buddypress #member-list div.action .generic-button > a:not(.remove), #main #buddypress #members-list div.action .generic-button > a:not(.remove) { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
-
-#main #buddypress #friend-list div.action .generic-button > a:not(.remove) > span, #main #buddypress #member-list div.action .generic-button > a:not(.remove) > span, #main #buddypress #members-list div.action .generic-button > a:not(.remove) > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#main #buddypress #friend-list div.action .generic-button > a:not(.remove), #main #buddypress #member-list div.action .generic-button > a:not(.remove), #main #buddypress #members-list div.action .generic-button > a:not(.remove) { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
 
 #main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover { color: #f90; background: #fff; }
 
-#main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover > i, #main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover > span, #main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:before, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover > i, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover > span, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover:before, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover > i, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover > span, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover:before { color: #f90; }
-
 #main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active { color: #fff; background: #f90; }
+
+#main #buddypress #friend-list div.action .generic-button > a:not(.remove) > span, #main #buddypress #member-list div.action .generic-button > a:not(.remove) > span, #main #buddypress #members-list div.action .generic-button > a:not(.remove) > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover > i, #main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover > span, #main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:before, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover > i, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover > span, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover:before, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover > i, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover > span, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover:before { color: #f90; }
 
 #main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active > i, #main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active > span, #main #buddypress #friend-list div.action .generic-button > a:not(.remove):hover:active:before, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active > i, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active > span, #main #buddypress #member-list div.action .generic-button > a:not(.remove):hover:active:before, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active > i, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active > span, #main #buddypress #members-list div.action .generic-button > a:not(.remove):hover:active:before { color: #fff; }
 
@@ -1170,15 +1171,15 @@ body.directory.members .amcust_page-title-container h1.page-title { text-align: 
 
 @media (max-width: 480px) { #main #buddypress #friend-list div.action .generic-button > a.remove, #main #buddypress #friend-list div.action .generic-button > a.add, #main #buddypress #friend-list div.action .generic-button > a.send-message, #main #buddypress #member-list div.action .generic-button > a.remove, #main #buddypress #member-list div.action .generic-button > a.add, #main #buddypress #member-list div.action .generic-button > a.send-message, #main #buddypress #members-list div.action .generic-button > a.remove, #main #buddypress #members-list div.action .generic-button > a.add, #main #buddypress #members-list div.action .generic-button > a.send-message { font-size: 12px; } }
 
-#main .article-content section.container-wrap .posts-load-more .btn { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; color: #fff; background: #49c5b6; border-color: #49c5b6; }
-
-#main .article-content section.container-wrap .posts-load-more .btn > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+#main .article-content section.container-wrap .posts-load-more .btn { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; color: #fff; background: #49c5b6; border-color: #49c5b6; }
 
 #main .article-content section.container-wrap .posts-load-more .btn:hover { color: #f90; background: #fff; }
 
-#main .article-content section.container-wrap .posts-load-more .btn:hover > i, #main .article-content section.container-wrap .posts-load-more .btn:hover > span, #main .article-content section.container-wrap .posts-load-more .btn:hover:before { color: #f90; }
-
 #main .article-content section.container-wrap .posts-load-more .btn:hover:active { color: #fff; background: #f90; }
+
+#main .article-content section.container-wrap .posts-load-more .btn > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+#main .article-content section.container-wrap .posts-load-more .btn:hover > i, #main .article-content section.container-wrap .posts-load-more .btn:hover > span, #main .article-content section.container-wrap .posts-load-more .btn:hover:before { color: #f90; }
 
 #main .article-content section.container-wrap .posts-load-more .btn:hover:active > i, #main .article-content section.container-wrap .posts-load-more .btn:hover:active > span, #main .article-content section.container-wrap .posts-load-more .btn:hover:active:before { color: #fff; }
 
@@ -1354,15 +1355,15 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields textar
 
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields textarea:focus, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields textarea:focus { border-color: #51cbee; -webkit-box-shadow: 0 0 5px 0 #51cbee; box-shadow: 0 0 5px 0 #51cbee; -webkit-background-clip: padding-box; background-clip: padding-box; }
 
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
-
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
 
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover { color: #f90; background: #fff; }
 
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover:before { color: #f90; }
-
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover:active, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover:active { color: #fff; background: #f90; }
+
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover:before { color: #f90; }
 
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover:active > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el > .wpuf-fields a.button:hover:active:before, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover:active > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium > .wpuf-fields a.button:hover:active:before { color: #fff; }
 
@@ -1390,15 +1391,15 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.has-error > .wpuf-fie
 
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.has-error > .wpuf-fields .wpuf-error-msg, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-el.field-size-medium.has-error > .wpuf-fields .wpuf-error-msg { color: #f00; font-weight: bold; }
 
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; color: #fff; background: #49c5b6; border-color: #49c5b6; border-width: 3px; font-size: 24px; line-height: 24px; padding: 15px 30px !important; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-weight: bold; }
-
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; color: #fff; background: #49c5b6; border-color: #49c5b6; border-width: 3px; font-size: 24px; line-height: 24px; padding: 15px 30px !important; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-weight: bold; }
 
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover { color: #f90; background: #fff; }
 
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:before { color: #f90; }
-
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active { color: #fff; background: #f90; }
+
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:before { color: #f90; }
 
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"]:hover:active:before { color: #fff; }
 
@@ -1412,19 +1413,35 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submi
 
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit input[type="submit"] > i { color: #fff; }
 
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; }
-
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; }
 
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover { color: #f90; background: #fff; }
 
-form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:before { color: #f90; }
-
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active { color: #fff; background: #f90; }
+
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:before { color: #f90; }
 
 form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active > i, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active > span, form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:active:before { color: #fff; }
 
 /* [END] WPUF */
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li.active-step, .wpuf-form .wpuf-multistep-progressbar .ui-widget-header { background-color: #f90 !important; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; }
+
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li::before { border-left-color: #f0f0f0; z-index: 1; }
+
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li.active-step::after, .wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li::after { z-index: 2; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; }
+
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li.active-step::after { border-left-color: #f90 !important; }
+
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li:last-child::after { border: 0px; display: block; width: 5px; height: 50px; right: 0px; background: #f90; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; }
+
+.wpuf-form .btn.btn-primary { border-color: black; background: white; color: black; }
+
+.wpuf-form .btn.btn-primary:hover { color: #f90; border-color: #f90; background: white; }
+
+.wpuf-form .btn.btn-primary:active { color: white; border-color: #f90; background: #f90; }
+
 /* _wpuf-dashboard.scss */
 .wpuf-dashboard-container { /* [END] table.items-table */ /* [END] .wpuf-pagination */ }
 
@@ -1442,15 +1459,15 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:activ
 
 .wpuf-dashboard-container table.items-table tbody tr:first-child td { border-top: 0; }
 
-.wpuf-dashboard-container .wpuf-pagination .page-numbers { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; padding: 0px !important; width: 40px; height: 40px; line-height: 36px; font-size: 14px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
-
-.wpuf-dashboard-container .wpuf-pagination .page-numbers > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+.wpuf-dashboard-container .wpuf-pagination .page-numbers { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; padding: 0px !important; width: 40px; height: 40px; line-height: 36px; font-size: 14px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
 
 .wpuf-dashboard-container .wpuf-pagination .page-numbers:hover { color: #f90; background: #fff; }
 
-.wpuf-dashboard-container .wpuf-pagination .page-numbers:hover > i, .wpuf-dashboard-container .wpuf-pagination .page-numbers:hover > span, .wpuf-dashboard-container .wpuf-pagination .page-numbers:hover:before { color: #f90; }
-
 .wpuf-dashboard-container .wpuf-pagination .page-numbers:hover:active { color: #fff; background: #f90; }
+
+.wpuf-dashboard-container .wpuf-pagination .page-numbers > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+.wpuf-dashboard-container .wpuf-pagination .page-numbers:hover > i, .wpuf-dashboard-container .wpuf-pagination .page-numbers:hover > span, .wpuf-dashboard-container .wpuf-pagination .page-numbers:hover:before { color: #f90; }
 
 .wpuf-dashboard-container .wpuf-pagination .page-numbers:hover:active > i, .wpuf-dashboard-container .wpuf-pagination .page-numbers:hover:active > span, .wpuf-dashboard-container .wpuf-pagination .page-numbers:hover:active:before { color: #fff; }
 
@@ -1466,15 +1483,15 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:activ
 
 .wpuf-dashboard-container .wpuf-pagination .page-numbers.priority:not(:hover):not(:active) > span, .wpuf-dashboard-container .wpuf-pagination .page-numbers.priority:not(:hover):not(:active) > i { color: #fff; }
 
-.wpuf-dashboard-container .wpuf-pagination .page-numbers.current { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; color: #49c5b6; background: #fff; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; padding: 0px !important; width: 40px; height: 40px; line-height: 36px; font-size: 14px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; color: black; }
-
-.wpuf-dashboard-container .wpuf-pagination .page-numbers.current > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+.wpuf-dashboard-container .wpuf-pagination .page-numbers.current { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; padding: 0px !important; width: 40px; height: 40px; line-height: 36px; font-size: 14px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; color: black; }
 
 .wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover { color: #f90; background: #fff; }
 
-.wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover > i, .wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover > span, .wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover:before { color: #f90; }
-
 .wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover:active { color: #fff; background: #f90; }
+
+.wpuf-dashboard-container .wpuf-pagination .page-numbers.current > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+.wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover > i, .wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover > span, .wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover:before { color: #f90; }
 
 .wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover:active > i, .wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover:active > span, .wpuf-dashboard-container .wpuf-pagination .page-numbers.current:hover:active:before { color: #fff; }
 
@@ -1510,3 +1527,50 @@ form.wpuf-form-add ul.wpuf-form.form-label-left li.wpuf-submit a.btn:hover:activ
 #main a.amazonbutton:hover > i.icon-amazon { color: black; }
 
 #main a.amazonbutton:active { position: relative; top: 1px; color: #000; }
+
+/* _wpgm-map-page.scss */
+div.wpgmp_listing_container { margin: 0 !important; /* (END) wpgmp_filter_wrappers */ /* (END) wpgmp_listing_list */ }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers { background: transparent; margin: 30px 0 15px 0; padding: 0; /* (END) wpgmp_listing_header */ }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .wpgmp_listing_header { margin: 15px 0; /* (END) wpgmp_search_form */ }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .wpgmp_listing_header .wpgmp_search_form { margin: 0; }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .wpgmp_listing_header .wpgmp_search_form input { width: 100%; margin: 0; padding: 10px; padding-right: 0; border: 2px solid #dfdfdf; }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select { margin: 0; font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select:hover { color: #f90; background: #fff; }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select:hover:active { color: #fff; background: #f90; }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select:hover { border-color: #f90; }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select:hover:active { border-color: #f90; }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select.priority:not(:hover):not(:active) { color: #fff; background: #49c5b6; border-color: #49c5b6; }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select.priority:not(:hover):not(:active) > span, div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select.priority:not(:hover):not(:active) > i { color: #fff; }
+
+@media (min-width: 480px) { div.wpgmp_listing_container .wpgmp_filter_wrappers { position: relative; }
+  div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter { position: absolute; top: 0; right: 0; width: auto; }
+  div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select { width: 100%; } }
+
+div.wpgmp_listing_container .wpgmp_listing_list .fc-item-box { margin: 15px 0; padding: 0 !important; border: 1px solid #dfdfdf; }
+
+div.wpgmp_listing_container .wpgmp_listing_list .fc-item-box:first-child { margin-top: 0; }
+
+div.wpgmp_listing_container .wpgmp_listing_list .fc-item-box .fc-component-block .fc-component-content ul li.fc-component-text .fc-itemcontent-padding { padding: 20px; position: relative; }
+
+div.wpgmp_listing_container .wpgmp_listing_list .fc-item-box .fc-component-block .fc-component-content ul li.fc-component-text .fc-itemcontent-padding h3 { margin: 0 0 15px 0; }
+
+div.wpgmp_listing_container .wpgmp_listing_list .fc-item-box .fc-component-block .fc-component-content ul li.fc-component-text .fc-itemcontent-padding span.amcust_categoryLink { position: absolute; top: -1px; right: -1px; background: #f0f0f0; padding: 5px 10px; border: 1px solid #dfdfdf; }
+
+.fc-item-content .fc-item-featured { float: left; width: 35%; height: auto; margin-bottom: 0 !important; padding: 0 10px 0 0; }
+
+.fc-item-content .amcust_postExcerpt { position: relative; float: left; display: block; width: 65%; height: 100px; line-height: 20px; overflow: hidden; margin: 0; }
+
+.fc-item-content .amcust_postExcerpt p { margin: 0 0 15px 0; line-height: 20px; }
+
+.fc-item-content .amcust_postExcerpt:after { content: ""; text-align: right; position: absolute; bottom: 0; right: 0; width: 70%; height: 20px; background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%); }

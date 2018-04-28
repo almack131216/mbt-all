@@ -1,13 +1,16 @@
 /* _mixins-buttons.scss */
 
-@mixin btn-base() {  
-	font-size:$font-size_button;
+@mixin btn-base-shared() {
+    font-size:$font-size_button;
     line-height:$font-size_button;
     padding: $offset-1 $offset-g1 !important;	
 	text-transform:uppercase;
     text-decoration:none !important;    	
     font-weight:bold;
-    
+
+    color:$color_button-text;
+    background:$color_button-bg;
+
     display:inline-block;
     cursor: pointer;
     height:auto;
@@ -17,46 +20,19 @@
     text-align: center;   
     box-sizing: border-box;
     @include box-shadow(false);
-    @include border-radius(20px);
-
-    color:$color_button-text;
-    background:$color_button-bg;
-
-    > span {
-        font-size:inherit;
-        line-height:inherit;	
-        text-transform:inherit;        
-        color:inherit;
-        font-weight:inherit;
-        text-decoration:none !important;
-    }   
 
     &:hover {
 		color:$color_button-text-hover;
         background:$color_button-bg-hover;
 
-        > i,
-        > span,
-        &:before {
-            color:$color_button-text-hover;
-        }
-
         &:active {
             color:$color_button-text-active;
             background:$color_button-bg-active;
-
-            > i,
-            > span,
-            &:before {
-                color:$color_button-text-active;
-            }
         } 
-	}       
+	}
 }
-/* [END] g_btn-base() */
 
-@mixin btn-base-border() {
-	@include btn-base();
+@mixin btn-base-bordeshared() {
 	border-width: 2px;
     border-style: solid;
     border-color: $color_button-border;
@@ -75,6 +51,49 @@
         @include btn-color-priority();
     }
     
+}
+
+@mixin select-base() {
+    @include btn-base-shared();
+    @include border-radius(0px);
+    @include btn-base-bordeshared();
+}
+
+@mixin btn-base() {  
+	@include btn-base-shared();
+    @include border-radius($offset-2);
+
+    > span {
+        font-size:inherit;
+        line-height:inherit;	
+        text-transform:inherit;        
+        color:inherit;
+        font-weight:inherit;
+        text-decoration:none !important;
+    }   
+
+    &:hover {
+
+        > i,
+        > span,
+        &:before {
+            color:$color_button-text-hover;
+        }
+
+        &:active {
+            > i,
+            > span,
+            &:before {
+                color:$color_button-text-active;
+            }
+        } 
+	}       
+}
+/* [END] g_btn-base() */
+
+@mixin btn-base-border() {
+	@include btn-base();
+    @include btn-base-bordeshared();    
 }
 /* [END] btn-base-border() */
 

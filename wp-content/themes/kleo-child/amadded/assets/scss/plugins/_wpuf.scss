@@ -135,3 +135,52 @@ form.wpuf-form-add {
     }
 }
 /* [END] WPUF */
+
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li.active-step,
+.wpuf-form .wpuf-multistep-progressbar .ui-widget-header {
+    background-color: $color_accent2 !important;
+    @include border-radius(0px);
+}
+
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li::before {
+    border-left-color: #f0f0f0;
+    z-index: 1;
+}
+
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li.active-step::after,
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li::after {
+    z-index: 2;
+    @include border-radius(0px);
+}
+
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li.active-step::after {
+    border-left-color: $color_accent2 !important;
+}
+
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li:last-child::after {
+    border: 0px;
+    display: block;
+    width: 5px;
+    height: 50px;
+    right: 0px;
+    background: $color_accent2;
+    @include border-radius(0px);
+}
+
+.wpuf-form .btn.btn-primary {
+    border-color:black;
+    background:white;
+    color:black;
+
+    &:hover {
+        color: $color_hyperlink-text-hover;
+        border-color:$color_hyperlink-text-hover;
+        background:white;
+    }
+
+    &:active {
+        color: white;
+        border-color:$color_hyperlink-text-hover;
+        background:$color_hyperlink-text-hover
+    }
+}

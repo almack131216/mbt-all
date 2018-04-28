@@ -1,0 +1,138 @@
+/* _wpgm-map-page.scss */
+
+div.wpgmp_listing_container {
+    margin:0 !important;
+
+    .wpgmp_filter_wrappers {
+        background:transparent;
+        margin:$offset-g2 0 $offset-g1 0;
+        padding:0;
+
+        .wpgmp_listing_header {
+            margin:$offset-g1 0;
+
+            .wpgmp_search_form {
+                margin:0;
+
+                input {
+                    width:100%;
+                    margin:0;
+                    padding:$offset-1;
+                    padding-right:0;
+                    border:2px solid $color_layout-border;
+                }
+            }
+            /* (END) wpgmp_search_form */
+        }
+        /* (END) wpgmp_listing_header */
+
+        .categories_filter {
+            select {
+                margin:0;
+                @include select-base();                
+            }
+        }
+
+        @media (min-width:$bp-xs) {
+            position:relative;
+
+            .categories_filter {
+                position:absolute;
+                top:0;
+                right:0;
+                width:auto;
+
+                select {
+                    width:100%;
+                }
+            }
+        }
+    }
+    /* (END) wpgmp_filter_wrappers */
+
+    .wpgmp_listing_list {
+        .fc-item-box {
+            margin:$offset-g1 0;
+            padding:0 !important;
+            border:1px solid $color_layout-border;
+            
+            &:first-child {
+                margin-top:0;
+            }
+
+            .fc-component-block {
+                .fc-component-content {
+                    ul {
+                        li {
+                            &.fc-component-thumb {
+                                .fc-featured-hoverdiv {
+                                    
+                                }                                
+                            }
+                            &.fc-component-text {
+                                .fc-itemcontent-padding {
+                                    padding:$offset-2;
+                                    position:relative;
+
+                                    h3 {
+                                        margin:0 0 $offset-g1 0;
+                                    }
+
+                                    span.amcust_categoryLink {
+                                        position:absolute;
+                                        top:-1px;
+                                        right:-1px;
+                                        background:$color_bg-body;
+                                        padding:5px $offset-1;
+                                        border:1px solid $color_layout-border;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* (END) wpgmp_listing_list */
+}
+
+.fc-item-content {
+    .fc-item-featured {
+        float:left;
+        width: 35%;
+        height: auto;
+        margin-bottom:0 !important;
+        padding: 0 $offset-1 0 0;
+    }
+
+    .amcust_postExcerpt {
+        position: relative;
+        float:left;
+        display:block;
+        width:65%;
+        height:100px;
+        line-height:20px;
+        overflow: hidden;
+        margin:0;
+        
+        p {
+            margin:0 0 $offset-g1 0;
+            line-height:20px;
+        }
+    }
+
+    // ref: https://css-tricks.com/line-clampin/
+    .amcust_postExcerpt:after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+        height: 20px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+    }
+    
+
+}

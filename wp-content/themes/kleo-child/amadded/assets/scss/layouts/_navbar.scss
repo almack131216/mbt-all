@@ -266,7 +266,8 @@ $bp-subnav-mobile: $bp-md-1;
                             &.menu-item-38,
                             &.menu-item-1184,
                             &.menu-item-1683,
-                            &.menu-item-1684 {
+                            &.menu-item-1684,
+                            &.menu-item-1811 {
                                 // margin:0 $offset-1;
                                 > a:hover:after {
                                     color: $color_hyperlink-text-hover !important;
@@ -296,7 +297,7 @@ $bp-subnav-mobile: $bp-md-1;
                             }
 
                             &.menu-item-906 > a:after {
-                                content: "\E843";// books
+                                content: "\E9D0";// books
                             }
 
                             &.menu-item-38 > a:after {
@@ -312,7 +313,11 @@ $bp-subnav-mobile: $bp-md-1;
                             }
 
                             &.menu-item-1684 > a:after {
-                                content: "\E868";// check-in
+                                content: "\E843";// check-in (bookmark)
+                            }
+
+                            &.menu-item-1811 > a:after {
+                                content: "\E868";// locations pin
                             }
 
                             //E9D0 // book
