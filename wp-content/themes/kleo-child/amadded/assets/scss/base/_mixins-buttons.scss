@@ -59,6 +59,15 @@
     @include btn-base-bordeshared();
 }
 
+@mixin select-base-priority() {
+    @include select-base();
+    @include btn-color-priority();
+    color:$color_priority-text;
+    background:$color_priority-bg;    
+    border-color:$color_priority-border; 
+
+}
+
 @mixin btn-base() {  
 	@include btn-base-shared();
     @include border-radius($offset-2);

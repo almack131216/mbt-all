@@ -262,12 +262,13 @@ $bp-subnav-mobile: $bp-md-1;
                         }
 
                         @media (min-width:$bp-md) {
-                            &.menu-item-906,
+                            &.menu-item-1900,
                             &.menu-item-38,
                             &.menu-item-1184,
                             &.menu-item-1683,
                             &.menu-item-1684,
-                            &.menu-item-1811 {
+                            &.menu-item-1811,
+                            &.menu-item-1910 {
                                 // margin:0 $offset-1;
                                 > a:hover:after {
                                     color: $color_hyperlink-text-hover !important;
@@ -296,7 +297,7 @@ $bp-subnav-mobile: $bp-md-1;
                                 }
                             }
 
-                            &.menu-item-906 > a:after {
+                            &.menu-item-1900 > a:after {
                                 content: "\E9D0";// books
                             }
 
@@ -318,6 +319,14 @@ $bp-subnav-mobile: $bp-md-1;
 
                             &.menu-item-1811 > a:after {
                                 content: "\E868";// locations pin
+                            }
+
+                            &.menu-item-1910 > a:after {
+                                content: "\E932";// cafes
+                            }
+
+                            &.menu-item-1910 {
+                                display:none !important;// 2do - restore 'cafes' link?
                             }
 
                             //E9D0 // book

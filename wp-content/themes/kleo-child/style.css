@@ -7,7 +7,7 @@ Author URI: http://themeforest.net/user/SeventhQueen
 Description: Multipurpose Premium WordPress Theme
 Tags: one-column,two-columns,right-sidebar,fluid-layout,custom-menu,featured-images,post-formats,sticky-post,translation-ready
 Version: v1.0
-Updated: 2018-04-25 09:00
+Updated: 2018-05-02 18:00
 
 */
 /* BASE - base styles, variables, mixins etc */
@@ -408,15 +408,17 @@ body.home-page section .container.amcust_page-title-container { display: none; }
 
 .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li > a span.caret:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li > a i.fa:hover, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li > a i[class^="icon-"]:hover { color: #f90; }
 
-@media (min-width: 992px) { .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a:hover:after { color: #f90 !important; }
-  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a { position: relative; color: transparent !important; font-size: 0px !important; width: 24px; display: block; }
-  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a:after { font: 24px "fontello"; content: "\E844"; color: black; margin: 0; height: 24px; width: 24px; position: absolute; top: 50%; left: 0; margin: -12px 0 0 0; text-align: center; }
-  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-906 > a:after { content: "\E9D0"; }
+@media (min-width: 992px) { .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1900 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a:hover:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1910 > a:hover:after { color: #f90 !important; }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1900 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1910 > a { position: relative; color: transparent !important; font-size: 0px !important; width: 24px; display: block; }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1900 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a:after, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1910 > a:after { font: 24px "fontello"; content: "\E844"; color: black; margin: 0; height: 24px; width: 24px; position: absolute; top: 50%; left: 0; margin: -12px 0 0 0; text-align: center; }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1900 > a:after { content: "\E9D0"; }
   .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-38 > a:after { content: "\E98F"; }
   .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1184 > a:after { content: "\E876"; }
   .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1683 > a:after { content: "\E853"; }
   .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1684 > a:after { content: "\E843"; }
-  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a:after { content: "\E868"; } }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1811 > a:after { content: "\E868"; }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1910 > a:after { content: "\E932"; }
+  .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.menu-item-1910 { display: none !important; } }
 
 .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.active > a, .navbar .sticky-wrapper .kleo-main-header .container ul.navbar-nav > li.current-menu-parent > a { color: #000; }
 
@@ -1539,7 +1541,7 @@ div.wpgmp_listing_container .wpgmp_filter_wrappers .wpgmp_listing_header .wpgmp_
 
 div.wpgmp_listing_container .wpgmp_filter_wrappers .wpgmp_listing_header .wpgmp_search_form input { width: 100%; margin: 0; padding: 10px; padding-right: 0; border: 2px solid #dfdfdf; }
 
-div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select { margin: 0; font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; }
+div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select { margin: 0; font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; color: #fff; background: #49c5b6; border-color: #49c5b6; color: #fff; background: #49c5b6; border-color: #49c5b6; }
 
 div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select:hover { color: #f90; background: #fff; }
 
@@ -1552,6 +1554,8 @@ div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select:hov
 div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select.priority:not(:hover):not(:active) { color: #fff; background: #49c5b6; border-color: #49c5b6; }
 
 div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select.priority:not(:hover):not(:active) > span, div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select.priority:not(:hover):not(:active) > i { color: #fff; }
+
+div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select > span, div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter select > i { color: #fff; }
 
 @media (min-width: 480px) { div.wpgmp_listing_container .wpgmp_filter_wrappers { position: relative; }
   div.wpgmp_listing_container .wpgmp_filter_wrappers .categories_filter { position: absolute; top: 0; right: 0; width: auto; }

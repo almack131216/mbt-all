@@ -29,7 +29,7 @@ div.wpgmp_listing_container {
         .categories_filter {
             select {
                 margin:0;
-                @include select-base();                
+                @include select-base-priority();               
             }
         }
 
