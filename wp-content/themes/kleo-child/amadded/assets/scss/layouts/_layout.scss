@@ -10,7 +10,7 @@
     .template-page {
         .wrap-content {
 
-            .container.amcust_page-title-container {
+            .amcust_page-title-container {
                 h1 {
                     font-size:40px;
                     line-height:50px;
@@ -18,7 +18,7 @@
                 }
             }
 
-            // .container.amcust_page-title-container + .row {
+            // .amcust_page-title-container + .row {
             //     margin-top:$offset-g2;
             // }
 
@@ -48,7 +48,7 @@ body.home-page {
             display:none;
         }
 
-        .container.amcust_page-title-container {
+        .amcust_page-title-container {
             display:none;
         }
     }    

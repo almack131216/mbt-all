@@ -15,7 +15,7 @@ body.single-post {
                         padding-right:0;
                     }                
 
-                    > .container.amcust_page-title-container.amcust-title-rwd-top {
+                    > .amcust_page-title-container.amcust-title-rwd-top {
                         margin-bottom:$offset-g1;
                         @media (min-width:$bp-md){
                             display:none;
@@ -70,8 +70,51 @@ body.single-post {
 
                         > .article-content {
 
+                            .table-item-spec {
+                                display: block;
+                                width: 100%;
+                                float: left;
+                                margin: $offset-g2 0;
+                                @media (max-width:$bp-xs-1) {
+                                    margin-top:$offset-g1;
+                                }
+
+                                &.with-img {
+                                    .img-wrap {
+                                        float:left;
+                                        width:30%;
+                                        img {
+                                            width:100%;
+                                        }
+
+                                        @media (max-width:$bp-xs-1) {
+                                            width:100%;
+                                            text-align:center;
+                                            margin:0 0 $offset-g1 0;
+
+                                            img {
+                                                width:40%;
+                                                margin:0 auto;
+                                            }
+                                        }
+                                        
+                                    }
+                                    table.item-spec {
+                                        float:left;
+                                        width:60%;
+                                        width:calc(70% - #{$offset-g1});
+                                        margin-left:$offset-g1;
+                                        @media (max-width:$bp-xs-1) {
+                                            width:100%;
+                                            margin-left:0;
+                                        }
+                                    }
+                                }
+                            }
+
                             table.item-spec {
-                                margin:$offset-g2 0;
+                                width:100%;
+                                margin:0;                             
 
                                 tr {
                                     td {
@@ -94,7 +137,7 @@ body.single-post {
                                 margin-top: 0;
                             }
 
-                            > .container.amcust_page-title-container {
+                            > .amcust_page-title-container {
                                 margin-top:$offset-g1;
 
                                 @media (max-width:$bp-md-1){

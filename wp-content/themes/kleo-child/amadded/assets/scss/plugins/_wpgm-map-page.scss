@@ -3,6 +3,42 @@
 div.wpgmp_listing_container {
     margin:0 !important;
 
+    .map-title-with-key {
+        h2 {
+            display:inline-block;
+        }
+
+        ul {            
+            display:inline;
+            list-style:none;
+
+            li {
+                display:inline;
+                margin:0 0 0 $offset-1;
+
+                &:before {
+                    content:"";
+                    display:inline-block;
+                    width:16px;
+                    height:20px;
+                    background:transparent url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_black.png) no-repeat top left;
+                    margin:0 5px 0 0;
+                    background-size: 16px 20px;
+                }
+
+                &.cafes:before {
+                    background-image: url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_orange.png);
+                }
+                &.bookstores:before {
+                    background-image: url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_gold.png);
+                }
+                &.books:before {
+                    background-image: url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_red.png);
+                }
+            }
+        }
+    }
+
     .wpgmp_filter_wrappers {
         background:transparent;
         margin:$offset-g2 0 $offset-g1 0;

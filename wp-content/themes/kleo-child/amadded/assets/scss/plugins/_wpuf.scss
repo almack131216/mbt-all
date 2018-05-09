@@ -3,6 +3,13 @@
 form.wpuf-form-add {
 	ul.wpuf-form.form-label-left {
         li {
+
+            &.se_search_element_hidden_id,
+            &.se_search_element_hidden_author,
+            &.se_search_element_hidden_title {
+                display:none;
+            }
+
             padding:0;
             margin-bottom:$offset-g1;
 

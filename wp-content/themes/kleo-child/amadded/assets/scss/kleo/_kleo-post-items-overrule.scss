@@ -133,33 +133,80 @@
         /* [END] .category-news */
 
         &.category-quotes {
+            .post-title {
+                border-color:$color_accent-quotes;
+            }
+        }
+        /* [END] .category-quotes */
+
+        &.category-quotes {
             .post-content {
                 background: $color_accent-quotes;
 
-                .inner-content {
-                    color:white;
-                    p {
-                        color:white;
+                .post-header {
+                    padding:0;
+
+                    .post-title.entry-title {
+                        display:none;
                     }
-                }
-
-                a.item-likes {
-                    color: white !important;
-
-                    > span {
-                        color: white !important;
-                    }
-
-                    &:before {
-                        color: white !important;
-                    }
-
-                    &:hover {
-                        > span {
-                            color: white !important;
+                    .post-meta {
+                        .amcust_categoryLink {
+                            top:0;
+                        }
+                        > small,
+                        > .separater {
+                            display:none;
                         }
                     }
                 }
+
+                .entry-summary {
+                    color:white;
+                    margin:0 $offset-g1 0 25px;
+
+                    &:before {
+                        font: 160% "fontello";
+                        content: "\e854";
+                        color: #fff;
+                        margin-left: -38px;
+                        background: $color_accent-quotes;
+                        padding: 7px;
+                        padding-right:0;
+                        float: left;
+                    }
+
+                    p {
+                        color:white;
+                        font-style: italic;
+                    }
+
+                    strong {
+                        color: black;
+                    }
+                }
+
+                .post-footer {
+                    a {
+                        color: white !important;
+
+                        > span {
+                            color: white !important;
+                        }
+
+                        &:before {
+                            color: white !important;
+                        }
+
+                        &:hover {
+                            > span {
+                                color: white !important;
+                            }
+                        }
+                    }
+                    /* (END) a */
+                }
+
+                
             }
         }
         /* [END] &.category-quotes */
