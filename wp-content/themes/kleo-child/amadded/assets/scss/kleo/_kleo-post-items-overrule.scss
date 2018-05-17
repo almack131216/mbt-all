@@ -122,6 +122,17 @@
             .post-title {
                 border-color:$color_accent-books;
             }
+            .post-content {
+                .post-header {
+                    .post-meta {
+                        > small,
+                        > .separater {
+                            display:none;
+                        }
+                    }
+                }
+                
+            }
         }
         /* [END] &.category-books */
 
@@ -136,10 +147,7 @@
             .post-title {
                 border-color:$color_accent-quotes;
             }
-        }
-        /* [END] .category-quotes */
 
-        &.category-quotes {
             .post-content {
                 background: $color_accent-quotes;
 
@@ -210,6 +218,27 @@
             }
         }
         /* [END] &.category-quotes */
+
+        &.category-bookmarks {
+            .post-title {
+                border-color:$color_accent-bookmarks;
+            }
+        }
+        /* [END] &.category-bookmarks */
+
+        &.category-cafes {
+            .post-title {
+                border-color:$color_accent-cafes;
+            }
+        }
+        /* [END] &.category-cafes */
+
+        &.category-bookstores {
+            .post-title {
+                border-color:$color_accent-bookstores;
+            }
+        }
+        /* [END] &.category-bookstores */
 
         .post-content {
             .post-header {

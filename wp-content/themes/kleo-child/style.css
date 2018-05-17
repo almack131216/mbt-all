@@ -249,6 +249,8 @@ form#searchform { background: white; -webkit-box-shadow: none; -moz-box-shadow: 
 
 #main .template-page .wrap-content .amcust_page-title-container h1 { font-size: 40px; line-height: 50px; margin: 0; }
 
+@media (max-width: 479px) { #main .template-page .wrap-content .amcust_page-title-container h1 { font-size: 30px; line-height: 40px; } }
+
 #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page { font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; float: right; }
 
 #main .template-page .wrap-content .amcust_title-bar-with-button .btn-add-to-page:hover { color: #f90; background: #fff; }
@@ -466,6 +468,32 @@ body.home-page section .amcust_page-title-container { display: none; }
 /* #socket (footer) */
 div#socket.socket-color { background: #f0f0f0; border-top: 1px solid #dfdfdf; }
 
+div#socket.socket-color a.btn.btn-disc { position: fixed; bottom: 15px; right: 15px; z-index: 1; font-size: 12px; line-height: 12px; padding: 10px 15px !important; text-transform: uppercase; text-decoration: none !important; font-weight: bold; color: #49c5b6; background: #fff; display: inline-block; cursor: pointer; height: auto; text-shadow: none; text-align: center; box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; transition: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border-width: 2px; border-style: solid; border-color: #dfdfdf; width: auto; min-width: auto; padding: 0px !important; width: 40px; height: 40px; line-height: 36px; font-size: 14px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; color: #fff; background: #49c5b6; border-color: #49c5b6; }
+
+div#socket.socket-color a.btn.btn-disc:hover { color: #f90; background: #fff; }
+
+div#socket.socket-color a.btn.btn-disc:hover:active { color: #fff; background: #f90; }
+
+div#socket.socket-color a.btn.btn-disc > span { font-size: inherit; line-height: inherit; text-transform: inherit; color: inherit; font-weight: inherit; text-decoration: none !important; }
+
+div#socket.socket-color a.btn.btn-disc:hover > i, div#socket.socket-color a.btn.btn-disc:hover > span, div#socket.socket-color a.btn.btn-disc:hover:before { color: #f90; }
+
+div#socket.socket-color a.btn.btn-disc:hover:active > i, div#socket.socket-color a.btn.btn-disc:hover:active > span, div#socket.socket-color a.btn.btn-disc:hover:active:before { color: #fff; }
+
+div#socket.socket-color a.btn.btn-disc:hover { border-color: #f90; }
+
+div#socket.socket-color a.btn.btn-disc:hover:active { border-color: #f90; }
+
+div#socket.socket-color a.btn.btn-disc.priority:not(:hover):not(:active) { color: #fff; background: #49c5b6; border-color: #49c5b6; }
+
+div#socket.socket-color a.btn.btn-disc.priority:not(:hover):not(:active) > span, div#socket.socket-color a.btn.btn-disc.priority:not(:hover):not(:active) > i { color: #fff; }
+
+div#socket.socket-color a.btn.btn-disc.priority:not(:hover):not(:active) { color: #fff; background: #49c5b6; border-color: #49c5b6; }
+
+div#socket.socket-color a.btn.btn-disc.priority:not(:hover):not(:active) > span, div#socket.socket-color a.btn.btn-disc.priority:not(:hover):not(:active) > i { color: #fff; }
+
+div#socket.socket-color a.btn.btn-disc > span, div#socket.socket-color a.btn.btn-disc > i { color: #fff; }
+
 @media (max-width: 768px) { div#socket.socket-color { border-top: 2px solid #000; } }
 
 div#socket.socket-color .ftr-nav-wrap { width: 100%; text-align: left; }
@@ -485,6 +513,9 @@ div#socket.socket-color .ftr-nav-wrap ul.ftr-nav li a { margin: 0 10px; color: b
 
 div#socket.socket-color .ftr-nav-wrap ul.ftr-nav li a:hover { color: #f90; }
 
+.page-id-152 div#socket.socket-color a.btn.btn-disc, .page-id-1843 div#socket.socket-color a.btn.btn-disc, .page-id-1406 div#socket.socket-color a.btn.btn-disc, .page-id-1548 div#socket.socket-color a.btn.btn-disc { display: none; }
+
+/* (END) hide add button */
 /* [END] #socket */
 /* _register.scss */
 /* _contact-form.scss */
@@ -1075,7 +1106,7 @@ body.directory.members .amcust_page-title-container h1.page-title { text-align: 
 
 .base-box:hover, #main article.post-item > .post-content:hover, #main #buddypress ul#members-list > li.kleo-masonry-item > .member-inner-list:hover { -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.3); box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.3); }
 
-#main article.post-item { background: transparent; /* [END] .post-content */ /* END) article-meta */ /* [END] &.category-books */ /* [END] .category-news */ /* [END] .category-quotes */ /* [END] &.category-quotes */ }
+#main article.post-item { background: transparent; /* [END] .post-content */ /* END) article-meta */ /* [END] &.category-books */ /* [END] .category-news */ /* [END] &.category-quotes */ /* [END] &.category-bookmarks */ /* [END] &.category-cafes */ /* [END] &.category-bookstores */ }
 
 #main article.post-item > .post-content { /* [END] .post-image */ /* [END] .post-header */ /* [END] .post-info */ /* [END] .post-footer */ }
 
@@ -1107,7 +1138,9 @@ body.directory.members .amcust_page-title-container h1.page-title { text-align: 
 
 #main article.post-item.category-books .post-title { border-color: #49c5b6; }
 
-#main article.post-item.category-news .post-title { border-color: #C42F2F; }
+#main article.post-item.category-books .post-content .post-header .post-meta > small, #main article.post-item.category-books .post-content .post-header .post-meta > .separater { display: none; }
+
+#main article.post-item.category-news .post-title { border-color: #0596ED; }
 
 #main article.post-item.category-quotes .post-title { border-color: #C19F46; }
 
@@ -1138,6 +1171,12 @@ body.directory.members .amcust_page-title-container h1.page-title { text-align: 
 #main article.post-item.category-quotes .post-content .post-footer a:before { color: white !important; }
 
 #main article.post-item.category-quotes .post-content .post-footer a:hover > span { color: white !important; }
+
+#main article.post-item.category-bookmarks .post-title { border-color: #000; }
+
+#main article.post-item.category-cafes .post-title { border-color: #d32628; }
+
+#main article.post-item.category-bookstores .post-title { border-color: #a03078; }
 
 #main article.post-item .post-content .post-header h3.post-title.entry-title:hover { border-color: #f90; }
 
@@ -1238,7 +1277,7 @@ body.single-post #main .template-page.tpl-right .wrap-content > article.post > .
 
 body.single-post #main .template-page.tpl-right .wrap-content > article.post > .article-meta > .post-meta > small { /* [END] &.meta-author */ }
 
-body.single-post #main .template-page.tpl-right .wrap-content > article.post > .article-meta > .post-meta > small > a > .entry-date { font-size: 16px; }
+@media (min-width: 992px) { body.single-post #main .template-page.tpl-right .wrap-content > article.post > .article-meta > .post-meta > small > a > .entry-date { font-size: 16px; } }
 
 body.single-post #main .template-page.tpl-right .wrap-content > article.post > .article-meta > .post-meta > small.meta-author > a > img.avatar { width: 60px; height: 60px; margin-bottom: 10px; }
 
@@ -1574,11 +1613,11 @@ div.wpgmp_listing_container .map-title-with-key ul li { display: inline; margin:
 
 div.wpgmp_listing_container .map-title-with-key ul li:before { content: ""; display: inline-block; width: 16px; height: 20px; background: transparent url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_black.png) no-repeat top left; margin: 0 5px 0 0; background-size: 16px 20px; }
 
-div.wpgmp_listing_container .map-title-with-key ul li.cafes:before { background-image: url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_orange.png); }
+div.wpgmp_listing_container .map-title-with-key ul li.cafes:before { background-image: url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_red.png); }
 
-div.wpgmp_listing_container .map-title-with-key ul li.bookstores:before { background-image: url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_gold.png); }
+div.wpgmp_listing_container .map-title-with-key ul li.bookstores:before { background-image: url(https://mybooktravels.com/wp-content/uploads/2018/05/marker_purple.png); }
 
-div.wpgmp_listing_container .map-title-with-key ul li.books:before { background-image: url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_red.png); }
+div.wpgmp_listing_container .map-title-with-key ul li.books:before { background-image: url(https://mybooktravels.com/wp-content/uploads/2018/04/marker_orange.png); }
 
 div.wpgmp_listing_container .wpgmp_filter_wrappers { background: transparent; margin: 30px 0 15px 0; padding: 0; /* (END) wpgmp_listing_header */ }
 

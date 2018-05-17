@@ -3,7 +3,7 @@
 		================================================ -->
 
 		<div id="socket" class="socket-color">
-			[member_only]<a href="/add-bookmark" class="btn btn-disc">+</a>[/member_only]
+			<a href="/add-pin" class="btn btn-highlight btn-disc btn-i-before i-plus"></a>
 			<div class="container">
 				<div class="template-page tpl-no col-xs-12 col-sm-12">
 					<div class="wrap-content">

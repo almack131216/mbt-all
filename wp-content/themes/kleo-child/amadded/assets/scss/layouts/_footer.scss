@@ -4,6 +4,15 @@
 div#socket.socket-color {
 	background:$color_bg-body;
 	border-top:1px solid $color_layout-border;
+
+    a.btn.btn-disc {
+        position:fixed;
+        bottom:$offset-g1;
+        right:$offset-g1;
+        z-index:1;
+        @include btn-base-pagination(false);
+        @include btn-color-priority();
+    }
     
     @media (max-width:$bp-sm){
         @include rwd_border-content-divide('top');
@@ -53,4 +62,17 @@ div#socket.socket-color {
     }
     
 }
+
+.page-id-152,
+.page-id-1843,
+.page-id-1406,
+.page-id-1548 {
+    div#socket.socket-color {
+        a.btn.btn-disc {
+            display:none;
+        }
+    }
+}
+/* (END) hide add button */
+
 /* [END] #socket */
